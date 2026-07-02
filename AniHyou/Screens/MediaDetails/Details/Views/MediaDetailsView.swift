@@ -18,6 +18,8 @@ struct MediaDetailsView: View {
     @State private var attributedSynopsis = NSAttributedString(string: "Loading")
 
     @Environment(\.dismiss) private var dismiss
+    @AppStorage(HIDE_SCORES) private var hideScores = false
+    @State private var hiddenScores: Bool = true
     @State private var hasScrolled = false
 
     var body: some View {
@@ -134,10 +136,20 @@ struct MediaDetailsView: View {
                         name: "Mean Score",
                         value: "\(viewModel.mediaDetails?.meanScore ?? 0)%"
                     )
+                    .redacted(isEnabled: hideScores && hiddenScores)
+                    .onTapGesture {
+                        hiddenScores.toggle()
+                    }
+                    
                     MediaStatView(
                         name: "Average Score",
                         value: "\(viewModel.mediaDetails?.averageScore ?? 0)%"
                     )
+                    .redacted(isEnabled: hideScores && hiddenScores)
+                    .onTapGesture {
+                        hiddenScores.toggle()
+                    }
+                    
                     MediaStatView(
                         name: "Status",
                         value: viewModel.mediaDetails?.status?.value?.localizedName

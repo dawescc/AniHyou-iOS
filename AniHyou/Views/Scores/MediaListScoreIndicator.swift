@@ -12,44 +12,49 @@ struct MediaListScoreIndicator: View {
 
     let score: Double
     @Environment(\.scoreFormat) private var format: ScoreFormat
+    @AppStorage(HIDE_SCORES) private var hideScores = false
     var color: Color {
         format.color(score: Int(round(score)))
     }
 
     var body: some View {
-        switch format {
-        case .point100, .point10, .point5:
-            HStack(alignment: .center) {
-                if score == 0 {
-                    Text(UNKNOWN_CHAR)
-                } else {
-                    Text(String(Int(score)))
+        if hideScores {
+            EmptyView()
+        } else {
+            switch format {
+            case .point100, .point10, .point5:
+                HStack(alignment: .center) {
+                    if score == 0 {
+                        Text(UNKNOWN_CHAR)
+                    } else {
+                        Text(String(Int(score)))
+                    }
+                    Image(systemName: "star.fill")
                 }
-                Image(systemName: "star.fill")
-            }
-            .foregroundStyle(color)
-            .font(.footnote)
-        case .point10Decimal:
-            HStack(alignment: .center) {
-                if score == 0 {
-                    Text(UNKNOWN_CHAR)
-                } else {
-                    Text(score.formatted())
+                .foregroundStyle(color)
+                .font(.footnote)
+            case .point10Decimal:
+                HStack(alignment: .center) {
+                    if score == 0 {
+                        Text(UNKNOWN_CHAR)
+                    } else {
+                        Text(score.formatted())
+                    }
+                    Image(systemName: "star.fill")
                 }
-                Image(systemName: "star.fill")
-            }
-            .foregroundStyle(color)
-            .font(.footnote)
-        case .point3:
-            if let icon = format.smileyIcon(score: Int(score)) {
-                Image(icon)
-                    .resizable()
-                    .frame(width: 18, height: 18)
-                    .foregroundStyle(color)
-            } else {
-                Text(UNKNOWN_CHAR)
-                    .foregroundStyle(.gray)
-                    .font(.footnote)
+                .foregroundStyle(color)
+                .font(.footnote)
+            case .point3:
+                if let icon = format.smileyIcon(score: Int(score)) {
+                    Image(icon)
+                        .resizable()
+                        .frame(width: 18, height: 18)
+                        .foregroundStyle(color)
+                } else {
+                    Text(UNKNOWN_CHAR)
+                        .foregroundStyle(.gray)
+                        .font(.footnote)
+                }
             }
         }
     }

@@ -84,4 +84,13 @@ extension View {
             self
         }
     }
+    
+    @ViewBuilder
+    func redacted(reason: RedactionReasons = .placeholder, isEnabled: Bool = true) -> some View {
+        if isEnabled {
+            self.redacted(reason: reason)
+        } else {
+            self
+        }
+    }
 }

@@ -71,17 +71,11 @@ struct CharacterDetailsView: View {
                     Text(viewModel.alternativeNamesFormatted ?? "")
                     
                     if viewModel.alternativeNamesSpoilerFormatted?.isEmpty == false {
-                        Group {
-                            if showNameSpoiler {
-                                Text(viewModel.alternativeNamesSpoilerFormatted!)
-                            } else {
-                                Text(viewModel.alternativeNamesSpoilerFormatted!)
-                                    .redacted(reason: .placeholder)
+                        Text(viewModel.alternativeNamesSpoilerFormatted!)
+                            .redacted(isEnabled: !showNameSpoiler)
+                            .onTapGesture {
+                                showNameSpoiler.toggle()
                             }
-                        }
-                        .onTapGesture {
-                            showNameSpoiler.toggle()
-                        }
                     }
                 }
                 .font(.subheadline)

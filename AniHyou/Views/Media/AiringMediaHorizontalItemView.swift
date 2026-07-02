@@ -20,6 +20,8 @@ struct AiringMediaHorizontalItemView: View {
     var airingAt: Int?
     var status: MediaListStatus?
     var blurCover = false
+    
+    @AppStorage(HIDE_SCORES) private var hideScores = false
 
     var body: some View {
         HStack {
@@ -59,7 +61,7 @@ struct AiringMediaHorizontalItemView: View {
                     .multilineTextAlignment(.leading)
                 }
 
-                if let meanScore {
+                if let meanScore, !hideScores {
                     HStack(alignment: .bottom, spacing: 4) {
                         Image(systemName: "star.fill")
                             .font(.footnote)

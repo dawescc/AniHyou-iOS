@@ -67,6 +67,7 @@ struct SettingsView: View {
     @AppStorage(NOTIFICATIONS_ENABLED_KEY) private var notificationsEnabled = false
     @AppStorage(NOTIFICATIONS_FETCH_REPEAT_KEY) private var notificationsFetchHours = 6
     @AppStorage(BLUR_ADULT_MEDIA) private var blurAdultMedia = true
+    @AppStorage(HIDE_SCORES) private var hideScores = false
     @State private var showDonationAlert = false
     @State private var navigateToDonations = false
 
@@ -80,14 +81,16 @@ struct SettingsView: View {
                         Text(direction.localizedName).tag(direction)
                     }
                 }
-            } header: {
+            } footer: {
                 Text("Increment Episode / Chapter")
             }
             
-            // content
             Section {
                 Toggle("Blur adult media", isOn: $blurAdultMedia)
+                Toggle("Hide scores", isOn: $hideScores)
                 Toggle("Airing on my list", isOn: $airingOnMyList)
+            } header: {
+                Text("Content")
             } footer: {
                 Text("Show only airing soon anime that are in your list")
             }
@@ -101,11 +104,11 @@ struct SettingsView: View {
                     Text("12h").tag(12)
                     Text("24h").tag(24)
                 }
-                NavigationLink("Account settings", destination: AccountSettingsView(viewModel: viewModel))
             }
 
             // log in session
             Section {
+                NavigationLink("Account settings", destination: AccountSettingsView(viewModel: viewModel))
                 if WCSession.default.isWatchAppInstalled {
                     Button("Sync account with Apple Watch") {
                         viewModel.syncAccountWithAppleWatch()
