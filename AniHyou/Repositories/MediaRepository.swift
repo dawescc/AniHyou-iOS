@@ -205,9 +205,17 @@ struct MediaRepository {
             let result = try await Network.shared.apollo.fetch(
                 query: MediaDetailsQuery(mediaId: .some(mediaId))
             )
+            if let error = result.errorsToString() {
+                DispatchQueue.main.async {
+                    NotificationCenter.default.post(name: "networkError", object: error)
+                }
+            }
             return result.data?.media
         } catch {
             print(error)
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: "networkError", object: "\(error)")
+            }
             return nil
         }
     }

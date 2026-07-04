@@ -14,6 +14,8 @@ struct AniHyouApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @State private var globalAppState = GlobalAppState.shared
     @AppStorage(ACCENT_COLOR_KEY, store: UserDefaults(suiteName: ANIHYOU_GROUP)) private var accentColor = ANIHYOU_COLOR
+    @State private var showingAlert: Bool = false
+    @State private var alertMessage: String?
 
     var body: some Scene {
         WindowGroup {
@@ -30,6 +32,24 @@ struct AniHyouApp: App {
                 }
                 .sheet(isPresented: $globalAppState.openNotifications) {
                     NotificationsView()
+                }
+                .onReceive(
+                    NotificationCenter.default.publisher(for: "networkError")
+                ) { notification in
+                    if let error = notification.object as? String {
+                        alertMessage = error
+                        showingAlert = true
+                    }
+                }
+                .alert(
+                    "Error",
+                    isPresented: $showingAlert
+                ) {
+                    Button("OK") {
+                        showingAlert = false
+                    }
+                } message: {
+                    Text(alertMessage ?? "Unknown error")
                 }
         }
         .backgroundTask(.appRefresh(FETCH_NOTIFICATIONS_BACKGROUND_TASK_IDENTIFIER)) {

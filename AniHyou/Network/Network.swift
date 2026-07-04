@@ -39,6 +39,9 @@ final class Network: Sendable {
             return try JSONDecoder().decode(T.self, from: data)
         } catch {
             print(error)
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: "networkError", object: "\(error)")
+            }
             return nil
         }
     }
@@ -63,12 +66,38 @@ final class Network: Sendable {
                     page: Int32((pageInfo?.currentPage ?? 1) + 1),
                     hasNextPage: pageInfo?.hasNextPage == true
                 )
+            } else if let error = result.errorsToString() {
+                DispatchQueue.main.async {
+                    NotificationCenter.default.post(name: "networkError", object: error)
+                }
             }
             return nil
         } catch {
             print(error)
+            if !(error is CancellationError) {
+                DispatchQueue.main.async {
+                    NotificationCenter.default.post(name: "networkError", object: "\(error)")
+                }
+            }
             return nil
         }
     }
+}
 
+extension GraphQLError {
+    func toErrorString() -> String {
+        """
+            \(errorDescription?.prefix(500) ?? "")
+            Reason:
+            \(failureReason ?? "")
+            Recovery:
+            \(recoverySuggestion ?? "")
+            """
+    }
+}
+
+extension GraphQLResponse {
+    func errorsToString() -> String? {
+        errors?.map({ $0.toErrorString() }).joined(separator: "\n")
+    }
 }
