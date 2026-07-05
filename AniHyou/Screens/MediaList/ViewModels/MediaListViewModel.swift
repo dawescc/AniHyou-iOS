@@ -13,6 +13,7 @@ import AniListAPI
 @Observable class MediaListViewModel {
 
     var userId: Int = LoginRepository.authUserId()
+    var isMyList: Bool = true
     private var lists: [String: [CommonMediaListEntry]] = [:]
     var listNames: [String] = []
     var mediaList = [CommonMediaListEntry]()
@@ -67,6 +68,13 @@ import AniListAPI
                         newEntries.append(contentsOf: entries)
                     } else if name == selectedListName {
                         newEntries.append(contentsOf: entries)
+                    }
+                    
+                    // follow user section order set in settings
+                    if isMyList {
+                        if let sectionOrder = UserDefaults.standard.stringArray(forKey: mediaType.customListsKey) {
+                            listNames = sectionOrder
+                        }
                     }
                 }
             }

@@ -171,11 +171,11 @@ struct UserRepository {
                 forKey: ADVANCED_SCORES_KEY
             )
             UserDefaults.standard.setValue(
-                viewer.mediaListOptions?.animeList?.customLists?.compactMap { $0 } ?? [],
+                viewer.mediaListOptions?.animeList?.sectionOrder?.compactMap { $0 } ?? [],
                 forKey: ANIME_CUSTOM_LISTS_KEY
             )
             UserDefaults.standard.setValue(
-                viewer.mediaListOptions?.mangaList?.customLists?.compactMap { $0 } ?? [],
+                viewer.mediaListOptions?.mangaList?.sectionOrder?.compactMap { $0 } ?? [],
                 forKey: MANGA_CUSTOM_LISTS_KEY
             )
             return viewer

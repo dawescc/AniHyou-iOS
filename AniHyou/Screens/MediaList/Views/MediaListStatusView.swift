@@ -56,6 +56,7 @@ struct MediaListStatusView: View {
             viewModel.mediaType = mediaType
             if let userId {
                 viewModel.userId = userId
+                viewModel.isMyList = false
                 await viewModel.refreshList()
             } else {
                 if let selectedList = UserDefaults.standard.string(forKey: mediaType.listStatusKey) {

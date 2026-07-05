@@ -6,7 +6,7 @@
 
 nonisolated public struct UserInfo: AniListAPI.MutableSelectionSet, Fragment, Identifiable {
   public static var fragmentDefinition: StaticString {
-    #"fragment UserInfo on User { __typename id name avatar { __typename large } bannerImage about(asHtml: true) options { __typename profileColor staffNameLanguage titleLanguage } mediaListOptions { __typename scoreFormat animeList { __typename advancedScoring advancedScoringEnabled customLists } mangaList { __typename customLists } } isFollowing isFollower donatorBadge donatorTier }"#
+    #"fragment UserInfo on User { __typename id name avatar { __typename large } bannerImage about(asHtml: true) options { __typename profileColor staffNameLanguage titleLanguage } mediaListOptions { __typename scoreFormat animeList { __typename advancedScoring advancedScoringEnabled customLists sectionOrder } mangaList { __typename customLists sectionOrder } } isFollowing isFollower donatorBadge donatorTier }"#
   }
 
   @_spi(Unsafe) public var __data: DataDict
@@ -256,6 +256,7 @@ nonisolated public struct UserInfo: AniListAPI.MutableSelectionSet, Fragment, Id
         .field("advancedScoring", [String?]?.self),
         .field("advancedScoringEnabled", Bool?.self),
         .field("customLists", [String?]?.self),
+        .field("sectionOrder", [String?]?.self),
       ] }
       @_spi(Execution) public static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
         UserInfo.MediaListOptions.AnimeList.self
@@ -276,17 +277,24 @@ nonisolated public struct UserInfo: AniListAPI.MutableSelectionSet, Fragment, Id
         get { __data["customLists"] }
         set { __data["customLists"] = newValue }
       }
+      /// The order each list should be displayed in
+      public var sectionOrder: [String?]? {
+        get { __data["sectionOrder"] }
+        set { __data["sectionOrder"] = newValue }
+      }
 
       public init(
         advancedScoring: [String?]? = nil,
         advancedScoringEnabled: Bool? = nil,
-        customLists: [String?]? = nil
+        customLists: [String?]? = nil,
+        sectionOrder: [String?]? = nil
       ) {
         self.init(unsafelyWithData: [
           "__typename": AniListAPI.Objects.MediaListTypeOptions.typename,
           "advancedScoring": advancedScoring,
           "advancedScoringEnabled": advancedScoringEnabled,
           "customLists": customLists,
+          "sectionOrder": sectionOrder,
         ])
       }
     }
@@ -302,6 +310,7 @@ nonisolated public struct UserInfo: AniListAPI.MutableSelectionSet, Fragment, Id
       @_spi(Execution) public static var __selections: [ApolloAPI.Selection] { [
         .field("__typename", String.self),
         .field("customLists", [String?]?.self),
+        .field("sectionOrder", [String?]?.self),
       ] }
       @_spi(Execution) public static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
         UserInfo.MediaListOptions.MangaList.self
@@ -312,13 +321,20 @@ nonisolated public struct UserInfo: AniListAPI.MutableSelectionSet, Fragment, Id
         get { __data["customLists"] }
         set { __data["customLists"] = newValue }
       }
+      /// The order each list should be displayed in
+      public var sectionOrder: [String?]? {
+        get { __data["sectionOrder"] }
+        set { __data["sectionOrder"] = newValue }
+      }
 
       public init(
-        customLists: [String?]? = nil
+        customLists: [String?]? = nil,
+        sectionOrder: [String?]? = nil
       ) {
         self.init(unsafelyWithData: [
           "__typename": AniListAPI.Objects.MediaListTypeOptions.typename,
           "customLists": customLists,
+          "sectionOrder": sectionOrder,
         ])
       }
     }
