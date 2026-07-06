@@ -11,7 +11,10 @@ import RegexBuilder
 
 @MainActor
 private let imageRegex = Regex {
-    "img"
+    ChoiceOf {
+        "img"
+        "webp"
+    }
     Capture {
       Regex {
         ZeroOrMore(.digit)
