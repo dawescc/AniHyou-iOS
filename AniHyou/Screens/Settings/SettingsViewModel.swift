@@ -61,7 +61,8 @@ import AniListAPI
             _ = await UserRepository.updateUserOptions(
                 titleLanguage: titleLanguage,
                 staffNameLanguage: staffNameLanguage,
-                scoreFormat: scoreFormat
+                scoreFormat: scoreFormat,
+                airingNotifications: airingNotifications
             )
             isLoading = false
         }
