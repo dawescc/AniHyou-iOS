@@ -48,7 +48,8 @@ struct AppIconSelector: View {
                     .onTapGesture {
                         if hasDonated {
                             selectedAppIcon = icon
-                            var iconName: String? = "AppIcon-\(colorName)"
+                            let prefix = if #available(iOS 26.0, *) { "AniHyou" } else { "AppIcon" }
+                            var iconName: String? = "\(prefix)-\(colorName)"
                             if icon == "AniHyou-Default" {
                                 iconName = nil
                             }

@@ -314,6 +314,12 @@
 		48F27936297029C7000827F7 /* UpdatedMediaEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBC66128CE3E88009AAF4A /* UpdatedMediaEntry.swift */; };
 		48F2793929703748000827F7 /* UpdateMediaEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2793829703747000827F7 /* UpdateMediaEntryView.swift */; };
 		48F36D492E8A80EC00A53A4B /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 48F36D482E8A80EC00A53A4B /* Apollo */; };
+		48F3E848300B834900DE2881 /* AniHyou-Green.icon in Resources */ = {isa = PBXBuildFile; fileRef = 48F3E847300B834900DE2881 /* AniHyou-Green.icon */; };
+		48F3E84B300B83B400DE2881 /* AniHyou-Gray.icon in Resources */ = {isa = PBXBuildFile; fileRef = 48F3E84A300B83B400DE2881 /* AniHyou-Gray.icon */; };
+		48F3E84D300B83E800DE2881 /* AniHyou-Orange.icon in Resources */ = {isa = PBXBuildFile; fileRef = 48F3E84C300B83E800DE2881 /* AniHyou-Orange.icon */; };
+		48F3E851300B848B00DE2881 /* AniHyou-Red.icon in Resources */ = {isa = PBXBuildFile; fileRef = 48F3E850300B848B00DE2881 /* AniHyou-Red.icon */; };
+		48F3E852300B848B00DE2881 /* AniHyou-Pink.icon in Resources */ = {isa = PBXBuildFile; fileRef = 48F3E84E300B848B00DE2881 /* AniHyou-Pink.icon */; };
+		48F3E853300B848B00DE2881 /* AniHyou-Purple.icon in Resources */ = {isa = PBXBuildFile; fileRef = 48F3E84F300B848B00DE2881 /* AniHyou-Purple.icon */; };
 		48F763E828ACDE0200C82D75 /* UserFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F763E728ACDE0200C82D75 /* UserFavoritesView.swift */; };
 		48F7640828ACE70800C82D75 /* CharacterStaffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F7640728ACE70800C82D75 /* CharacterStaffViewModel.swift */; };
 		48F7640D28ACE81000C82D75 /* RelationRecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F7640C28ACE81000C82D75 /* RelationRecommendationViewModel.swift */; };
@@ -726,6 +732,12 @@
 		48F2793829703747000827F7 /* UpdateMediaEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMediaEntryView.swift; sourceTree = "<group>"; };
 		48F332E52CC28A4B006B910F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		48F332E62CC28A4B006B910F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		48F3E847300B834900DE2881 /* AniHyou-Green.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "AniHyou-Green.icon"; sourceTree = "<group>"; };
+		48F3E84A300B83B400DE2881 /* AniHyou-Gray.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "AniHyou-Gray.icon"; sourceTree = "<group>"; };
+		48F3E84C300B83E800DE2881 /* AniHyou-Orange.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "AniHyou-Orange.icon"; sourceTree = "<group>"; };
+		48F3E84E300B848B00DE2881 /* AniHyou-Pink.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "AniHyou-Pink.icon"; sourceTree = "<group>"; };
+		48F3E84F300B848B00DE2881 /* AniHyou-Purple.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "AniHyou-Purple.icon"; sourceTree = "<group>"; };
+		48F3E850300B848B00DE2881 /* AniHyou-Red.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "AniHyou-Red.icon"; sourceTree = "<group>"; };
 		48F763E728ACDE0200C82D75 /* UserFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFavoritesView.swift; sourceTree = "<group>"; };
 		48F763E928ACDFBB00C82D75 /* UserFavoritesAnime.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UserFavoritesAnime.graphql; sourceTree = "<group>"; };
 		48F763EB28ACE01E00C82D75 /* UserFavoritesManga.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UserFavoritesManga.graphql; sourceTree = "<group>"; };
@@ -920,7 +932,7 @@
 				488C267A2853801A0005EE15 /* Constants.swift */,
 				481AD4E32851CE74001779EE /* Preview Content */,
 				481AD4E12851CE74001779EE /* Assets.xcassets */,
-				48FFC8BA2E10969900831B8E /* AniHyou.icon */,
+				48F3E849300B835200DE2881 /* AppIcons */,
 				48EFCDFF29FFED440096BF6E /* AniHyou.entitlements */,
 				488C2681285386600005EE15 /* Info.plist */,
 				488C267F2853822E0005EE15 /* Config.xcconfig */,
@@ -1740,6 +1752,20 @@
 			path = MediaList;
 			sourceTree = "<group>";
 		};
+		48F3E849300B835200DE2881 /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				48FFC8BA2E10969900831B8E /* AniHyou.icon */,
+				48F3E84A300B83B400DE2881 /* AniHyou-Gray.icon */,
+				48F3E847300B834900DE2881 /* AniHyou-Green.icon */,
+				48F3E84C300B83E800DE2881 /* AniHyou-Orange.icon */,
+				48F3E84E300B848B00DE2881 /* AniHyou-Pink.icon */,
+				48F3E84F300B848B00DE2881 /* AniHyou-Purple.icon */,
+				48F3E850300B848B00DE2881 /* AniHyou-Red.icon */,
+			);
+			path = AppIcons;
+			sourceTree = "<group>";
+		};
 		48F763F328ACE4B500C82D75 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -2210,10 +2236,16 @@
 		481AD4D82851CE73001779EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				48F3E848300B834900DE2881 /* AniHyou-Green.icon in Resources */,
 				48C5014A2AD9091600E4243D /* Localizable.strings in Resources */,
+				48F3E851300B848B00DE2881 /* AniHyou-Red.icon in Resources */,
+				48F3E852300B848B00DE2881 /* AniHyou-Pink.icon in Resources */,
+				48F3E853300B848B00DE2881 /* AniHyou-Purple.icon in Resources */,
+				48F3E84D300B83E800DE2881 /* AniHyou-Orange.icon in Resources */,
 				48B7ABE92BB346BA0047998F /* PrivacyInfo.xcprivacy in Resources */,
 				481AD4E52851CE74001779EE /* Preview Assets.xcassets in Resources */,
 				481AD4E22851CE74001779EE /* Assets.xcassets in Resources */,
+				48F3E84B300B83B400DE2881 /* AniHyou-Gray.icon in Resources */,
 				48FFC8BC2E10969900831B8E /* AniHyou.icon in Resources */,
 				48218B002BC57B9300A03421 /* StudioMedia.graphql in Resources */,
 			);
@@ -2797,6 +2829,7 @@
 		481AD4E92851CE74001779EE /* Debug configuration for PBXNativeTarget "AniHyou" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AniHyou-Gray AniHyou-Green AniHyou-Orange AniHyou-Pink AniHyou-Purple AniHyou-Red";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AniHyou;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -2831,6 +2864,7 @@
 		481AD4EA2851CE74001779EE /* Release configuration for PBXNativeTarget "AniHyou" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AniHyou-Gray AniHyou-Green AniHyou-Orange AniHyou-Pink AniHyou-Purple AniHyou-Red";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AniHyou;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
