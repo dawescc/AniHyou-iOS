@@ -20,7 +20,7 @@ private let translations = [
     "ja_JP": "axiel7",
     "pl_PL": "xiggeush, YOGI_AOGI",
     "pt_BR": "Crono0, Torti, Ratolino, RickyM7, SamOak",
-    "ru_RU": "Ronner231, grin3671, Speech100",
+    "ru_RU": "Ronner231, grin3671, Speech100, venyavis",
     "es_ES": "axiel7",
     "th-TH": "PiyaRawing",
     "tr_TR": "hsinankirdar",
