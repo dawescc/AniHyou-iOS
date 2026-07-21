@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 enum HomeTab: Int, CaseIterable {
-    case activity = 1
     case current = 2
+    case activity = 1
 }
 
 extension HomeTab {
