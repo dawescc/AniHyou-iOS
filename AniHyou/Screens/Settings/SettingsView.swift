@@ -232,15 +232,9 @@ struct SettingsView: View {
         } footer: {
             Text("Version \(appVersion ?? "")")
         }
-
-        Section("Developers") {
-            Link("axiel7", destination: URL(string: "https://github.com/axiel7")!)
-            Link("BitForger", destination: URL(string: "https://github.com/BitForger")!)
-            Link("alexay7", destination: URL(string: "https://github.com/alexay7")!)
-            Link("SquishyLeaf", destination: URL(string: "https://github.com/SquishyLeaf")!)
-        }
         
         Section {
+            NavigationLink("Contributors", destination: ContributorsCredits())
             NavigationLink("Translations", destination: TranslationCredits())
         }
     }

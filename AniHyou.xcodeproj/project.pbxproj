@@ -138,6 +138,7 @@
 		48801D212C3BEDC5000BEA3A /* CurrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D202C3BEDC5000BEA3A /* CurrentView.swift */; };
 		48801D232C3BF093000BEA3A /* CurrentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D222C3BF08B000BEA3A /* CurrentViewModel.swift */; };
 		48801D252C3BF397000BEA3A /* CurrentListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D242C3BF397000BEA3A /* CurrentListItemView.swift */; };
+		48824805300FB5DC00023331 /* ContributorsCredits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48824804300FB5DC00023331 /* ContributorsCredits.swift */; };
 		4882BA582F939010002C10DE /* Textual in Frameworks */ = {isa = PBXBuildFile; productRef = 4882BA572F939010002C10DE /* Textual */; };
 		488408CD2BF88B5A00580DA0 /* MediaListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488408CC2BF88B5A00580DA0 /* MediaListViewModel.swift */; };
 		488408D42BFB86FA00580DA0 /* MediaCustomListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488408D32BFB86FA00580DA0 /* MediaCustomListsView.swift */; };
@@ -540,6 +541,7 @@
 		48801D222C3BF08B000BEA3A /* CurrentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentViewModel.swift; sourceTree = "<group>"; };
 		48801D242C3BF397000BEA3A /* CurrentListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentListItemView.swift; sourceTree = "<group>"; };
 		48801D262C3BFA06000BEA3A /* UserMediaList.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UserMediaList.graphql; sourceTree = "<group>"; };
+		48824804300FB5DC00023331 /* ContributorsCredits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsCredits.swift; sourceTree = "<group>"; };
 		488408CC2BF88B5A00580DA0 /* MediaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewModel.swift; sourceTree = "<group>"; };
 		488408CE2BF88CAD00580DA0 /* ShouUserMediaList.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ShouUserMediaList.graphql; sourceTree = "<group>"; };
 		488408D32BFB86FA00580DA0 /* MediaCustomListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCustomListsView.swift; sourceTree = "<group>"; };
@@ -865,6 +867,7 @@
 				4809995F288B29A9005AE427 /* SettingsViewModel.swift */,
 				48438E072A67AB2D0042BCD9 /* AppIconSelector.swift */,
 				48C501592ADA340F00E4243D /* TranslationCredits.swift */,
+				48824804300FB5DC00023331 /* ContributorsCredits.swift */,
 				48BB9E222ADBC08D00970D01 /* AccountSettingsView.swift */,
 			);
 			path = Settings;
@@ -2379,6 +2382,7 @@
 				480D76A529AB6A9800B56DE1 /* UserSocialViewModel.swift in Sources */,
 				48B7AC1F2BB59D2F0047998F /* VoiceActorsStatsView.swift in Sources */,
 				48B7ABF52BB4749F0047998F /* ToolbarBackButton.swift in Sources */,
+				48824805300FB5DC00023331 /* ContributorsCredits.swift in Sources */,
 				48F7640D28ACE81000C82D75 /* RelationRecommendationViewModel.swift in Sources */,
 				484D22832AEE5B9100A20FE6 /* TriPicker.swift in Sources */,
 				4892AB7D2A52E6CE004F07C9 /* ColorUtils.swift in Sources */,
