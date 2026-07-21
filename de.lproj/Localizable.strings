@@ -931,9 +931,7 @@ No comment provided by engineer. */
 Japanese
 No comment provided by engineer. */
 "Japanese" = "Japanisch";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
+/* sort option */
 "Last Added" = "Zuletzt hinzugefügt";
 /* sort by update date */
 "Last Updated" = "Zuletzt aktualisiert";
@@ -1572,9 +1570,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "Nutzer";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "Benutzer gefällt";
 /* en.lproj/Localizable.strings
 Video Editing

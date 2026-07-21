@@ -501,9 +501,7 @@ No comment provided by engineer. */
 Japanese
 No comment provided by engineer. */
 "Japanese" = "日本語";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
+/* sort option */
 "Last Added" = "追加日";
 /* sort by update date */
 "Last Updated" = "更新日時";
@@ -963,7 +961,7 @@ Spring */
 Staff
 No comment provided by engineer. */
 "Staff" = "スタッフ";
-/* you can use (and) instead of (&) */
+/* you can use "and" instead of "&amp;" */
 "Staff & Character name language" = "スタッフとキャラクター名の言語";
 /* en.lproj/Localizable.strings
 Standard
@@ -1163,9 +1161,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "ユーザー";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "ユーザーのいいね！";
 /* en.lproj/Localizable.strings
 Version %@

@@ -9,6 +9,8 @@ No comment provided by engineer. */
 /* num of volumes.
 Eg: 23 volumes */
 "%lld volumes" = "%lld volumi";
+/* 1 hour interval */
+"1h" = "1h";
 /* en.lproj/Localizable.strings
 1st Key Animation Director
 No comment provided by engineer. */
@@ -49,10 +51,14 @@ No comment provided by engineer. */
 3DCG
 No comment provided by engineer. */
 "3DCG" = "3DCG";
+/* 3 hours interval */
+"3h" = "3h";
 /* en.lproj/Localizable.strings
 5 Star (3/5)
 No comment provided by engineer. */
 "5 Star (3/5)" = "5 Stelle (3/5)";
+/* 6 hours interval */
+"6h" = "6h";
 /* en.lproj/Localizable.strings
 10 Point (5/10)
 No comment provided by engineer. */
@@ -61,6 +67,10 @@ No comment provided by engineer. */
 10 Point Decimal (5.5/10)
 No comment provided by engineer. */
 "10 Point Decimal (5.5/10)" = "10 punti decimali (5,5/10)";
+/* 12 hours interval */
+"12h" = "12h";
+/* 24 hours interval */
+"24h" = "24h";
 /* en.lproj/Localizable.strings
 100 Point (55/100)
 No comment provided by engineer. */
@@ -969,9 +979,7 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "Assistenza animazioni chiave";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
+/* sort option */
 "Last Added" = "Ultimi aggiunti";
 /* sort by update date */
 "Last Updated" = "Ultimo aggiornamento";
@@ -1512,6 +1520,10 @@ Score format
 No comment provided by engineer. */
 "Score format" = "Formato del punteggio";
 /* en.lproj/Localizable.strings
+Script
+No comment provided by engineer. */
+"Script" = "Sceneggiatura";
+/* en.lproj/Localizable.strings
 Search type
 No comment provided by engineer. */
 "Search type" = "Tipo ricerca";
@@ -1627,7 +1639,7 @@ Spring */
 Staff
 No comment provided by engineer. */
 "Staff" = "Staff";
-/* you can use (and) instead of (&) */
+/* you can use "and" instead of "&amp;" */
 "Staff & Character name language" = "Staff & Lingua del nome del personaggio";
 /* en.lproj/Localizable.strings
 Standard
@@ -1659,6 +1671,10 @@ No comment provided by engineer. */
 Status distribution
 No comment provided by engineer. */
 "Status distribution" = "Stato distribuzione";
+/* en.lproj/Localizable.strings
+Story
+No comment provided by engineer. */
+"Story" = "Storia";
 /* en.lproj/Localizable.strings
 Streaming sites
 No comment provided by engineer. */
@@ -1851,9 +1867,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "Utenti";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "Agli utenti piace";
 /* en.lproj/Localizable.strings
 Version %@

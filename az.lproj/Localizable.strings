@@ -504,9 +504,7 @@ No comment provided by engineer. */
 Japanese
 No comment provided by engineer. */
 "Japanese" = "Yapon dili";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
+/* sort option */
 "Last Added" = "Son əlavə edilən";
 /* sort by update date */
 "Last Updated" = "Son yenilənən";
@@ -969,7 +967,7 @@ Spring */
 Staff
 No comment provided by engineer. */
 "Staff" = "Heyət";
-/* you can use (and) instead of (&) */
+/* you can use "and" instead of "&amp;" */
 "Staff & Character name language" = "Heyət & Xarakter adlarının dili";
 /* en.lproj/Localizable.strings
 Standard
@@ -1183,9 +1181,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "İstifadəçilər";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "Bəyənən istifadəçilər";
 /* en.lproj/Localizable.strings
 Version %@

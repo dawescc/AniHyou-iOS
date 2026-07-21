@@ -1109,9 +1109,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "المستخدمون";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "أعجب المستخدمين";
 /* en.lproj/Localizable.strings
 Version %@

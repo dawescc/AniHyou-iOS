@@ -987,9 +987,7 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "Assistance à l\'animation clé";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
+/* sort option */
 "Last Added" = "Derniers ajoutés";
 /* sort by update date */
 "Last Updated" = "Dernière mise à jour";
@@ -1789,7 +1787,7 @@ Spring */
 Staff
 No comment provided by engineer. */
 "Staff" = "Équipe";
-/* you can use (and) instead of (&) */
+/* you can use "and" instead of "&amp;" */
 "Staff & Character name language" = "Langue du personnel et du nom des personnages";
 /* en.lproj/Localizable.strings
 Standard
@@ -2119,9 +2117,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "Utilisateurs";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "Utilisateurs ont aimés";
 /* en.lproj/Localizable.strings
 Version %@

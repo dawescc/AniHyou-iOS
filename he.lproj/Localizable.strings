@@ -1491,7 +1491,7 @@ Spring */
 Staff
 No comment provided by engineer. */
 "Staff" = "צוות";
-/* you can use (and) instead of (&) */
+/* you can use "and" instead of "&amp;" */
 "Staff & Character name language" = "צוות & שפת שמות הדמויות";
 /* en.lproj/Localizable.strings
 Standard
@@ -1653,9 +1653,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "משתמשים";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "המשתמשים אוהבים";
 /* en.lproj/Localizable.strings
 Version %@

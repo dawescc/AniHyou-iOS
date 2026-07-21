@@ -983,9 +983,7 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "關鍵幀動畫協助";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
+/* sort option */
 "Last Added" = "最後新增";
 /* sort by update date */
 "Last Updated" = "最後更新";
@@ -1785,7 +1783,7 @@ Spring */
 Staff
 No comment provided by engineer. */
 "Staff" = "製作人員";
-/* you can use (and) instead of (&) */
+/* you can use "and" instead of "&amp;" */
 "Staff & Character name language" = "製作人員和角色名稱的語言";
 /* en.lproj/Localizable.strings
 Standard
@@ -2115,9 +2113,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "用戶";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "用戶收藏";
 /* en.lproj/Localizable.strings
 Version %@

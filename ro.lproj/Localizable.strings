@@ -983,9 +983,7 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "Asistență pentru animație cheie";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
+/* sort option */
 "Last Added" = "Ultimele adăugate";
 /* sort by update date */
 "Last Updated" = "Ultima actualizare";
@@ -1785,7 +1783,7 @@ Spring */
 Staff
 No comment provided by engineer. */
 "Staff" = "Personal";
-/* you can use (and) instead of (&) */
+/* you can use "and" instead of "&amp;" */
 "Staff & Character name language" = "Personal & Limba numelui personajului";
 /* en.lproj/Localizable.strings
 Standard
@@ -2115,9 +2113,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "Utilizatori";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "Utilizatorilor le place";
 /* en.lproj/Localizable.strings
 Version %@

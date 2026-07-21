@@ -13,6 +13,8 @@ Eg: 23 volumes */
 +1
 No comment provided by engineer. */
 "+1" = "+1";
+/* 1 hour interval */
+"1h" = "1ч";
 /* en.lproj/Localizable.strings
 1st Key Animation Director
 No comment provided by engineer. */
@@ -53,10 +55,14 @@ No comment provided by engineer. */
 3DCG
 No comment provided by engineer. */
 "3DCG" = "3DCG";
+/* 3 hours interval */
+"3h" = "3ч";
 /* en.lproj/Localizable.strings
 5 Star (3/5)
 No comment provided by engineer. */
 "5 Star (3/5)" = "5 Звезд (3/5)";
+/* 6 hours interval */
+"6h" = "6ч";
 /* en.lproj/Localizable.strings
 10 Point (5/10)
 No comment provided by engineer. */
@@ -65,6 +71,10 @@ No comment provided by engineer. */
 10 Point Decimal (5.5/10)
 No comment provided by engineer. */
 "10 Point Decimal (5.5/10)" = "10-балльная десятичная система (5,5/10)";
+/* 12 hours interval */
+"12h" = "12ч";
+/* 24 hours interval */
+"24h" = "24ч";
 /* en.lproj/Localizable.strings
 100 Point (55/100)
 No comment provided by engineer. */
@@ -329,6 +339,8 @@ No comment provided by engineer. */
 Blood type
 No comment provided by engineer. */
 "Blood type" = "Группа крови";
+/* Hide poster covers for adult anime/manga */
+"Blur adult media" = "Скрыть материалы 18+";
 /* en.lproj/Localizable.strings
 CG Animation
 No comment provided by engineer. */
@@ -991,9 +1003,7 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "Помощь в создании ключевых анимаций";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
+/* sort option */
 "Last Added" = "Недавно добавлено";
 /* sort by update date */
 "Last Updated" = "Последнее обновление";
@@ -1793,7 +1803,7 @@ Spring */
 Staff
 No comment provided by engineer. */
 "Staff" = "Персонал";
-/* you can use (and) instead of (&) */
+/* you can use "and" instead of "&amp;" */
 "Staff & Character name language" = "Персонал & Язык имен персонажей";
 /* en.lproj/Localizable.strings
 Standard
@@ -1853,6 +1863,8 @@ No comment provided by engineer. */
 Sub Character Design
 No comment provided by engineer. */
 "Sub Character Design" = "Дизайн субперсонажей";
+/* Notification type for data submission requests to AniList database */
+"Submission" = "Заявка";
 /* en.lproj/Localizable.strings
 Summary
 No comment provided by engineer. */
@@ -2127,9 +2139,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "Пользователи";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "Пользователям понравилось";
 /* en.lproj/Localizable.strings
 Version %@

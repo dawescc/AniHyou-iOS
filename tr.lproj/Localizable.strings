@@ -1003,9 +1003,7 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "Anahtar Animasyon Asistanı";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
+/* sort option */
 "Last Added" = "Son Eklenen";
 /* sort by update date */
 "Last Updated" = "Son Güncelleme";
@@ -1805,7 +1803,7 @@ Spring */
 Staff
 No comment provided by engineer. */
 "Staff" = "Ekip";
-/* you can use (and) instead of (&) */
+/* you can use "and" instead of "&amp;" */
 "Staff & Character name language" = "Ekip & Karakter adı dili";
 /* en.lproj/Localizable.strings
 Standard
@@ -2141,9 +2139,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "Kullanıcılar";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "Kullanıcıların beğendikleri";
 /* en.lproj/Localizable.strings
 Version %@

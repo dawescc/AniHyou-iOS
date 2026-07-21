@@ -980,9 +980,7 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "ผู้ช่วยแอนิเมชันหลัก";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
+/* sort option */
 "Last Added" = "เพิ่มล่าสุด";
 /* sort by update date */
 "Last Updated" = "อัปเดตล่าสุด";
@@ -2085,9 +2083,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "ผู้ใช้";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "จำนวนผู้ชื่นชอบ";
 /* en.lproj/Localizable.strings
 Version %@

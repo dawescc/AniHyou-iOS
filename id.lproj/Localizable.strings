@@ -991,9 +991,7 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "Bantuan Animasi Utama";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
+/* sort option */
 "Last Added" = "Terakhir ditambahkan";
 /* sort by update date */
 "Last Updated" = "Terakhir Diperbarui";
@@ -1793,7 +1791,7 @@ Spring */
 Staff
 No comment provided by engineer. */
 "Staff" = "Staff";
-/* you can use (and) instead of (&) */
+/* you can use "and" instead of "&amp;" */
 "Staff & Character name language" = "Bahasa untuk nama Staff & Karakter";
 /* en.lproj/Localizable.strings
 Standard
@@ -2127,9 +2125,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "Pengguna";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "Like pengguna";
 /* en.lproj/Localizable.strings
 Version %@

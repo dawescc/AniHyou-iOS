@@ -1,18 +1,20 @@
 /* en.lproj/Localizable.strings
 %lld chapters
 No comment provided by engineer. */
-"%lld chapters" = "%lld розділів";
+"%lld chapters" = "%lld розд";
 /* en.lproj/Localizable.strings
 %lld episodes
 No comment provided by engineer. */
-"%lld episodes" = "%lld серій";
+"%lld episodes" = "%lld епізод.";
 /* num of volumes.
 Eg: 23 volumes */
-"%lld volumes" = "%lld томів";
+"%lld volumes" = "%lld том.";
 /* en.lproj/Localizable.strings
 +1
 No comment provided by engineer. */
 "+1" = "+1";
+/* 1 hour interval */
+"1h" = "1 год";
 /* en.lproj/Localizable.strings
 1st Key Animation Director
 No comment provided by engineer. */
@@ -28,7 +30,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 2D Effects
 No comment provided by engineer. */
-"2D Effects" = "2D ефекти";
+"2D Effects" = "2D-ефекти";
 /* en.lproj/Localizable.strings
 2D Works
 No comment provided by engineer. */
@@ -36,15 +38,15 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 2nd Key Animation
 No comment provided by engineer. */
-"2nd Key Animation" = "Друга ключова анімація";
+"2nd Key Animation" = "2-га ключова анімація";
 /* en.lproj/Localizable.strings
 3 Point Smiley :)
 No comment provided by engineer. */
-"3 Point Smiley :)" = "3-бальна посміхашка :)";
+"3 Point Smiley :)" = "3-значний усміхайлик :)";
 /* en.lproj/Localizable.strings
 3D Art
 No comment provided by engineer. */
-"3D Art" = "3D художник";
+"3D Art" = "Художник 3D";
 /* en.lproj/Localizable.strings
 3D Works
 No comment provided by engineer. */
@@ -52,23 +54,31 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 3DCG
 No comment provided by engineer. */
-"3DCG" = "3DКГ";
+"3DCG" = "Комп\'ютерна 3D-графіка";
+/* 3 hours interval */
+"3h" = "3 год";
 /* en.lproj/Localizable.strings
 5 Star (3/5)
 No comment provided by engineer. */
-"5 Star (3/5)" = "5 Зіркова (3/5)";
+"5 Star (3/5)" = "5-зіркова (3/5)";
+/* 6 hours interval */
+"6h" = "6 год";
 /* en.lproj/Localizable.strings
 10 Point (5/10)
 No comment provided by engineer. */
-"10 Point (5/10)" = "10 бальна (5/10)";
+"10 Point (5/10)" = "10-бальна (5/10)";
 /* en.lproj/Localizable.strings
 10 Point Decimal (5.5/10)
 No comment provided by engineer. */
-"10 Point Decimal (5.5/10)" = "10-значна десяткова (5.5/10)";
+"10 Point Decimal (5.5/10)" = "10-бальна десяткова (5.5/10)";
+/* 12 hours interval */
+"12h" = "12 год";
+/* 24 hours interval */
+"24h" = "24 год";
 /* en.lproj/Localizable.strings
 100 Point (55/100)
 No comment provided by engineer. */
-"100 Point (55/100)" = "100 бальна (55/100)";
+"100 Point (55/100)" = "100-бальна (55/100)";
 /* en.lproj/Localizable.strings
 A&R Producer
 No comment provided by engineer. */
@@ -88,11 +98,11 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Account settings
 No comment provided by engineer. */
-"Account settings" = "Параметри облікового запису";
+"Account settings" = "Налаштування акаунту AniList";
 /* en.lproj/Localizable.strings
 Action
 No comment provided by engineer. */
-"Action" = "Екшн";
+"Action" = "Бойовик";
 /* en.lproj/Localizable.strings
 Action Animation Director
 No comment provided by engineer. */
@@ -140,7 +150,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Advertising Producer
 No comment provided by engineer. */
-"Advertising Producer" = "Маркетинговий Продюсер";
+"Advertising Producer" = "Директор з маркетингу";
 /* en.lproj/Localizable.strings
 Age
 No comment provided by engineer. */
@@ -152,10 +162,10 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Airing Anime
 No comment provided by engineer. */
-"Airing Anime" = "Аніме які виходять";
+"Airing Anime" = "Аніме, які виходять";
 /* en.lproj/Localizable.strings
 Airing Next */
-"Airing Next" = "Продовжує виходити";
+"Airing Next" = "Вийде невдовзі";
 /* en.lproj/Localizable.strings
 Airing anime notifications
 No comment provided by engineer. */
@@ -163,7 +173,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Airing on my list
 No comment provided by engineer. */
-"Airing on my list" = "Виходять у моєму каталозі";
+"Airing on my list" = "Вихідні тайтли у моєму каталозі";
 /* for this one use the masculine form when applied. */
 "All" = "Усі";
 /* en.lproj/Localizable.strings
@@ -177,19 +187,19 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Animation Director
 No comment provided by engineer. */
-"Animation Director" = "Режисер Анімації";
+"Animation Director" = "Режисер анімації";
 /* en.lproj/Localizable.strings
 Animation Producer
 No comment provided by engineer. */
-"Animation Producer" = "Анімаційний Продюсер";
+"Animation Producer" = "Продюсер анімації";
 /* en.lproj/Localizable.strings
 Animation Production Assistance
 No comment provided by engineer. */
-"Animation Production Assistance" = "Помічник у виробництві анімації";
+"Animation Production Assistance" = "Поміч із виробництвом анімації";
 /* en.lproj/Localizable.strings
 Animation Supervisor
 No comment provided by engineer. */
-"Animation Supervisor" = "Управління анімацією";
+"Animation Supervisor" = "Наглядач за анімацією";
 /* en.lproj/Localizable.strings
 Anime
 No comment provided by engineer. */
@@ -203,15 +213,15 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Anime, Manga, and More
 No comment provided by engineer. */
-"Anime, Manga, and More" = "Аніме, манґа, та інше";
+"Anime, Manga, and More" = "Аніме, манґа та інше";
 /* en.lproj/Localizable.strings
 App Icon
 No comment provided by engineer. */
-"App Icon" = "Іконка застосунку";
+"App Icon" = "Піктограма застосунку";
 /* en.lproj/Localizable.strings
 Are you sure you want to log out?
 No comment provided by engineer. */
-"Are you sure you want to log out?" = "Ви впевнені, що хочете вийти з системи?";
+"Are you sure you want to log out?" = "Ви дійсно хочете вийти з акаунта?";
 /* en.lproj/Localizable.strings
 Art
 No comment provided by engineer. */
@@ -219,11 +229,11 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Art Board
 No comment provided by engineer. */
-"Art Board" = "Рада Художників";
+"Art Board" = "Рада художників";
 /* en.lproj/Localizable.strings
 Art Composition
 No comment provided by engineer. */
-"Art Composition" = "Художня Композиція";
+"Art Composition" = "Художня композиція";
 /* en.lproj/Localizable.strings
 Art Design
 No comment provided by engineer. */
@@ -231,12 +241,12 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Art Director
 No comment provided by engineer. */
-"Art Director" = "Художній Режисер";
+"Art Director" = "Художній керівник";
 /* Please try to use the same break lines */
 "As you may known this app is completely free and Open Source,
 but creating an app requires a lot of time and effort.
 By making a donation you will help cover the costs of
-development, maintenance, and new features." = "Як ви знаєте, цей додаток є повністю безкоштовним і з відкритим вихідним кодом,\nале створення програми вимагає багато часу і зусиль.\nЗробивши пожертву, ви допоможете покрити витрати на\nрозробку, технічне обслуговування та нові функції.";
+development, maintenance, and new features." = "Як ви знаєте, цей застосунок — повністю безплатний і має\nвідкритий код, але створення застосунку вимагає багато часу\nі зусиль. Задонативши, ви допоможете покрити витрати на\nрозробку, технічне обслуговування та нові функції.";
 /* en.lproj/Localizable.strings
 Ascending
 No comment provided by engineer. */
@@ -244,7 +254,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Assistance
 No comment provided by engineer. */
-"Assistance" = "Помічник";
+"Assistance" = "Поміч";
 /* en.lproj/Localizable.strings
 Assistant
 No comment provided by engineer. */
@@ -252,53 +262,53 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Assistant Animation Director
 No comment provided by engineer. */
-"Assistant Animation Director" = "Помічник Режисера Анімації";
+"Assistant Animation Director" = "Помічний режисер анімації";
 /* en.lproj/Localizable.strings
 Assistant Art Director
 No comment provided by engineer. */
-"Assistant Art Director" = "Помічник Художнього Режисера";
+"Assistant Art Director" = "Помічний художній керівник";
 /* en.lproj/Localizable.strings
 Assistant Chief Animation Director
 No comment provided by engineer. */
-"Assistant Chief Animation Director" = "Помічник Головного Режисера Анімації";
+"Assistant Chief Animation Director" = "Помічний головного режисера анімації";
 /* en.lproj/Localizable.strings
 Assistant Chief Director
 No comment provided by engineer. */
-"Assistant Chief Director" = "Помічник головного режисера";
+"Assistant Chief Director" = "Помічний головний режисер";
 /* en.lproj/Localizable.strings
 Assistant Director
 No comment provided by engineer. */
-"Assistant Director" = "Помічник режисера";
+"Assistant Director" = "Режисер-помічник";
 /* en.lproj/Localizable.strings
 Assistant Director of Photography
 No comment provided by engineer. */
-"Assistant Director of Photography" = "Помічник режисера з фотозйомки";
+"Assistant Director of Photography" = "Помічний оператор-постановник";
 /* en.lproj/Localizable.strings
 Assistant Episode Director
 No comment provided by engineer. */
-"Assistant Episode Director" = "Помічник режисера епізоду";
+"Assistant Episode Director" = "Помічний режисер епізоду";
 /* en.lproj/Localizable.strings
 Assistant Producer
 No comment provided by engineer. */
-"Assistant Producer" = "Помічник продюсера";
+"Assistant Producer" = "Продюсер-помічник";
 /* en.lproj/Localizable.strings
 Assistant Production Manager
 No comment provided by engineer. */
-"Assistant Production Manager" = "Помічник керівника виробництва";
+"Assistant Production Manager" = "Помічний виробничий менеджер";
 /* en.lproj/Localizable.strings
 Assistant Unit Director
 No comment provided by engineer. */
-"Assistant Unit Director" = "Помічник директора підрозділу";
+"Assistant Unit Director" = "Помічний одиничний режисер";
 /* en.lproj/Localizable.strings
 Associate Producer
 No comment provided by engineer. */
-"Associate Producer" = "Співпродюсер";
+"Associate Producer" = "Асоційований продюсер";
 /* weighted Average Score */
-"Average Score" = "Середній бал";
+"Average Score" = "Середня оцінка";
 /* en.lproj/Localizable.strings
 Background
 No comment provided by engineer. */
-"Background" = "Контекст";
+"Background" = "Масовка";
 /* en.lproj/Localizable.strings
 Background Art
 No comment provided by engineer. */
@@ -306,7 +316,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Background Art Assistance
 No comment provided by engineer. */
-"Background Art Assistance" = "Помічник з тлом";
+"Background Art Assistance" = "Поміч із тлом";
 /* en.lproj/Localizable.strings
 Background Manager
 No comment provided by engineer. */
@@ -329,6 +339,8 @@ No comment provided by engineer. */
 Blood type
 No comment provided by engineer. */
 "Blood type" = "Група крові";
+/* Hide poster covers for adult anime/manga */
+"Blur adult media" = "Розмиття вмісту для дорослих";
 /* en.lproj/Localizable.strings
 CG Animation
 No comment provided by engineer. */
@@ -390,7 +402,7 @@ Cancelled
 No comment provided by engineer. */
 "Cancelled" = "Скасовано";
 /* chapter abbreviation */
-"Ch" = "Р";
+"Ch" = "Розд.";
 /* en.lproj/Localizable.strings
 Changes will take effect on app restart
 No comment provided by engineer. */
@@ -456,7 +468,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Chief Unit Director
 No comment provided by engineer. */
-"Chief Unit Director" = "Головний директор відділу";
+"Chief Unit Director" = "Головний одиничний режисер";
 /* en.lproj/Localizable.strings
 China
 No comment provided by engineer. */
@@ -464,7 +476,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Choose between Anime or Manga.
 No comment provided by engineer. */
-"Choose between Anime or Manga." = "Виберіть між Аніме та Манґою.";
+"Choose between Anime or Manga." = "Виберіть між аніме та манґою.";
 /* en.lproj/Localizable.strings
 Clear
 No comment provided by engineer. */
@@ -488,7 +500,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Color Design Assistance
 No comment provided by engineer. */
-"Color Design Assistance" = "Поміч із дизайном кольору";
+"Color Design Assistance" = "Поміч із кольоровим дизайном";
 /* en.lproj/Localizable.strings
 Coloring
 No comment provided by engineer. */
@@ -511,25 +523,25 @@ No comment provided by engineer. */
 "Compilation" = "Збірка";
 /* en.lproj/Localizable.strings
 Completed */
-"Completed" = "Завершено";
+"Completed" = "Завершені";
 /* An user list activity status.
 Eg: Completed [Anime/Manga Title] */
-"Completed %@" = "Завершено %@";
+"Completed %@" = "Завершує «%@»";
 /* en.lproj/Localizable.strings
 Concept Art
 No comment provided by engineer. */
 "Concept Art" = "Замальовки";
 /* Text shown in airing widget when empty. Indicates that you watched all the episodes of currently airing anime */
 "Congratulations, you are up to date!
-(๑>◡<๑)" = "Вітаємо, ви в курсі подій!\n(๑>◡<๑)";
+(๑>◡<๑)" = "Вітаємо, ви все переглянули!\n(๑>◡<๑)";
 /* en.lproj/Localizable.strings
 Contains
 No comment provided by engineer. */
-"Contains" = "Вміст";
+"Contains" = "Уміст";
 /* en.lproj/Localizable.strings
 Content
 No comment provided by engineer. */
-"Content" = "Вміст";
+"Content" = "Уміст";
 /* en.lproj/Localizable.strings
 Costume Design
 No comment provided by engineer. */
@@ -552,31 +564,31 @@ No comment provided by engineer. */
 "Creature Design" = "Дизайн істот";
 /* en.lproj/Localizable.strings
 Current */
-"Current" = "Поточні";
+"Current" = "Поточне";
 /* custom app color */
-"Custom" = "Користувацький";
+"Custom" = "Власний";
 /* en.lproj/Localizable.strings
 Custom color
 No comment provided by engineer. */
-"Custom color" = "Користувацький колір";
+"Custom color" = "Власний колір";
 /* en.lproj/Localizable.strings
 Custom lists
 No comment provided by engineer. */
-"Custom lists" = "Користувацькі каталоги";
+"Custom lists" = "Власні каталоги";
 /* Dates: start date and end date */
 "Dates" = "Дати";
 /* stats */
-"Days Watched" = "Дні перегляду";
+"Days Watched" = "Днів перегляду";
 /* date of death */
 "Death" = "Смерть";
 /* en.lproj/Localizable.strings
 Default
 No comment provided by engineer. */
-"Default" = "Типово";
+"Default" = "Типовий";
 /* en.lproj/Localizable.strings
 Default tab
 No comment provided by engineer. */
-"Default tab" = "Початкове меню";
+"Default tab" = "Типове початкове меню";
 /* en.lproj/Localizable.strings
 Delete
 No comment provided by engineer. */
@@ -584,7 +596,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Delete this entry?
 No comment provided by engineer. */
-"Delete this entry?" = "Вилучити цей запис?";
+"Delete this entry?" = "Видалити цей запис?";
 /* en.lproj/Localizable.strings
 Descending
 No comment provided by engineer. */
@@ -640,7 +652,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Discord server
 No comment provided by engineer. */
-"Discord server" = "Discord сервер";
+"Discord server" = "Сервер у Discord";
 /* en.lproj/Localizable.strings
 Display
 No comment provided by engineer. */
@@ -651,11 +663,11 @@ Title count, mean score, or time spent */
 /* en.lproj/Localizable.strings
 Donate
 Settings -> donate button */
-"Donate" = "Пожертвувати";
+"Donate" = "Задонатити";
 /* en.lproj/Localizable.strings
 Donate!
 No comment provided by engineer. */
-"Donate!" = "Пожертвувати!";
+"Donate!" = "Задонаньте!";
 /* en.lproj/Localizable.strings
 Donation
 No comment provided by engineer. */
@@ -678,9 +690,9 @@ No comment provided by engineer. */
 "Drama" = "Драма";
 /* en.lproj/Localizable.strings
 Dropped */
-"Dropped" = "Кинуто";
+"Dropped" = "Кинуті";
 /* (User) Dropped [Anime/Manga Title] */
-"Dropped %@" = "Випущено %@";
+"Dropped %@" = "Кидає «%@»";
 /* en.lproj/Localizable.strings
 Duration
 No comment provided by engineer. */
@@ -700,11 +712,11 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Editing Assistant
 No comment provided by engineer. */
-"Editing Assistant" = "Помічник з монтажу";
+"Editing Assistant" = "Монтажер-помічник";
 /* en.lproj/Localizable.strings
 Editing Manager
 No comment provided by engineer. */
-"Editing Manager" = "Керівник монтажем";
+"Editing Manager" = "Керівник монтажу";
 /* en.lproj/Localizable.strings
 Effects
 No comment provided by engineer. */
@@ -712,7 +724,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Effects Animation Director
 No comment provided by engineer. */
-"Effects Animation Director" = "Помічник режисера анімації";
+"Effects Animation Director" = "Режисер анімації ефектів";
 /* en.lproj/Localizable.strings
 End date
 No comment provided by engineer. */
@@ -726,13 +738,13 @@ English
 No comment provided by engineer. */
 "English" = "Англійська";
 /* episodes abbreviation */
-"Ep" = "Сер";
+"Ep" = "Еп";
 /* Episode abbreviation with number and time.
 Eg: Ep [23] [in 35 minutes] */
-"Ep %lld %@" = "Сер %lld %@";
+"Ep %lld %@" = "Еп %lld %@";
 /* Episode abbreviation with number and a specific hour.
 Eg: Ep [23] at [12:30] */
-"Ep %lld at %@" = "Сер %lld о %@";
+"Ep %lld at %@" = "Еп %lld о %@";
 /* en.lproj/Localizable.strings
 Episode Count
 No comment provided by engineer. */
@@ -752,9 +764,9 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Episodes
 No comment provided by engineer. */
-"Episodes" = "епізод(-ів)";
+"Episodes" = "Епізоди";
 /* stats */
-"Episodes Watched" = "Переглянуті серії";
+"Episodes Watched" = "Переглянуто епізодів";
 /* en.lproj/Localizable.strings
 Executive Producer
 No comment provided by engineer. */
@@ -835,7 +847,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Following
 No comment provided by engineer. */
-"Following" = "Підписаний";
+"Following" = "Підписки";
 /* en.lproj/Localizable.strings
 Follows
 No comment provided by engineer. */
@@ -867,7 +879,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Gender
 No comment provided by engineer. */
-"Gender" = "Ґендер";
+"Gender" = "Стать";
 /* general information about the anime/manga */
 "General" = "Загальне";
 /* en.lproj/Localizable.strings
@@ -946,7 +958,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Increment Episode / Chapter
 No comment provided by engineer. */
-"Increment Episode / Chapter" = "Збільшення Серії / Розділу";
+"Increment Episode / Chapter" = "Додання епізоду/розділу";
 /* en.lproj/Localizable.strings
 Info type
 No comment provided by engineer. */
@@ -991,12 +1003,10 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "Поміч із ключовою анімацією";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
-"Last Added" = "Нещодавно додано";
+/* sort option */
+"Last Added" = "Нещодавно додане";
 /* sort by update date */
-"Last Updated" = "Останнє оновлення";
+"Last Updated" = "Останнє оновлене";
 /* en.lproj/Localizable.strings
 Last used
 No comment provided by engineer. */
@@ -1012,7 +1022,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Layout Animation Supervisor
 No comment provided by engineer. */
-"Layout Animation Supervisor" = "Наглядач за верстальною анімацією";
+"Layout Animation Supervisor" = "Наглядач за композиційною анімацією";
 /* en.lproj/Localizable.strings
 Layout Editor
 No comment provided by engineer. */
@@ -1020,9 +1030,9 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Layout Supervisor
 No comment provided by engineer. */
-"Layout Supervisor" = "Наглядач за версткою";
+"Layout Supervisor" = "Наглядач за композицією";
 /* Left swipe direction */
-"Left" = "Зліва";
+"Left" = "Ліво";
 /* en.lproj/Localizable.strings
 Lettering
 No comment provided by engineer. */
@@ -1038,7 +1048,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 List Progress
 No comment provided by engineer. */
-"List Progress" = "Прогрес в Каталозі";
+"List Progress" = "Прогрес у каталозі";
 /* not a very important string. used for app intents */
 "List entry ID" = "ID запису в каталозі";
 /* en.lproj/Localizable.strings
@@ -1064,13 +1074,13 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Log out
 No comment provided by engineer. */
-"Log out" = "Вийти з облікового запису";
+"Log out" = "Вийти з акаунта";
 /* en.lproj/Localizable.strings
 Login
 No comment provided by engineer. */
 "Login" = "Увійти";
 /* or (Swipe Direction) for short */
-"Long Swipe Direction" = "Напрямок довгого свайпу";
+"Long Swipe Direction" = "Напрямок довгого маху";
 /* en.lproj/Localizable.strings
 Mahou Shoujo
 No comment provided by engineer. */
@@ -1097,7 +1107,7 @@ No comment provided by engineer. */
 "Manga List" = "Каталог манґи";
 /* normalized score.
 You can translate it simply as (Score) */
-"Mean Score" = "Середній бал";
+"Mean Score" = "Серединна оцінка";
 /* en.lproj/Localizable.strings
 Mean score
 No comment provided by engineer. */
@@ -1117,7 +1127,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Mechanical Supervisor
 No comment provided by engineer. */
-"Mechanical Supervisor" = "Наглядач-механік";
+"Mechanical Supervisor" = "Наглядач за механікою";
 /* en.lproj/Localizable.strings
 Media
 No comment provided by engineer. */
@@ -1234,13 +1244,13 @@ No airing anime in your list
 (*´-`)
 No comment provided by engineer. */
 "No airing anime in your list
-(*´-`)" = "Немає аніме-онгоінгів у вашому каталозі\n(*\'-`)";
+(*´-`)" = "Немає аніме-онґоїнгів у вашому каталозі\n(*\'-`)";
 /* en.lproj/Localizable.strings
 No anime for today
 (*´-`)
 No comment provided by engineer. */
 "No anime for today
-(*´-`)" = "На сьогодні аніме немає\n(*\'-`)";
+(*´-`)" = "Немає аніме на сьогодні\n(*\'-`)";
 /* en.lproj/Localizable.strings
 No media
 No comment provided by engineer. */
@@ -1256,7 +1266,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Non-binary
 No comment provided by engineer. */
-"Non-binary" = "Небінарний";
+"Non-binary" = "Небінарна";
 /* nothing selected */
 "None" = "Немає";
 /* en.lproj/Localizable.strings
@@ -1278,7 +1288,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Novel
 No comment provided by engineer. */
-"Novel" = "Новела";
+"Novel" = "Роман";
 /* en.lproj/Localizable.strings
 OK
 No comment provided by engineer. */
@@ -1294,7 +1304,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Occupations
 No comment provided by engineer. */
-"Occupations" = "Професії";
+"Occupations" = "Посади";
 /* en.lproj/Localizable.strings
 Offline Editing
 No comment provided by engineer. */
@@ -1302,7 +1312,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Offline Editing Manager
 No comment provided by engineer. */
-"Offline Editing Manager" = "Менеджер офлайн монтажу";
+"Offline Editing Manager" = "Керівник офлайн монтажу";
 /* en.lproj/Localizable.strings
 On my list
 No comment provided by engineer. */
@@ -1310,7 +1320,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 OneShot
 No comment provided by engineer. */
-"OneShot" = "Ваншот";
+"OneShot" = "Ван-шот";
 /* en.lproj/Localizable.strings
 Online Editing
 No comment provided by engineer. */
@@ -1318,11 +1328,11 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Online Editing Manager
 No comment provided by engineer. */
-"Online Editing Manager" = "Менеджер онлайн монтажу";
+"Online Editing Manager" = "Керівник онлайн монтажу";
 /* en.lproj/Localizable.strings
 Online HD Editing
 No comment provided by engineer. */
-"Online HD Editing" = "Онлайн монтаж HD";
+"Online HD Editing" = "Онлайн HD-монтаж ";
 /* en.lproj/Localizable.strings
 Optical Recording
 No comment provided by engineer. */
@@ -1360,7 +1370,7 @@ Other
 No comment provided by engineer. */
 "Other" = "Інше";
 /* text for a button that opens AniList website */
-"Other account settings" = "Інші налаштування облікового запису";
+"Other account settings" = "Інші налаштування акаунта";
 /* en.lproj/Localizable.strings
 Overseas Advertising Producer
 No comment provided by engineer. */
@@ -1379,9 +1389,9 @@ No comment provided by engineer. */
 "Parent" = "Джерело";
 /* en.lproj/Localizable.strings
 Paused */
-"Paused" = "Призупинено";
+"Paused" = "Призупинені";
 /* (User) Paused [Anime/Manga Title] */
-"Paused %@" = "Зупинено %@";
+"Paused %@" = "Відкладає «%@»";
 /* en.lproj/Localizable.strings
 Photography
 No comment provided by engineer. */
@@ -1401,10 +1411,10 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Picture book
 No comment provided by engineer. */
-"Picture book" = "Книжка з малюнками";
+"Picture book" = "Книжка-картинка";
 /* en.lproj/Localizable.strings
 Planning */
-"Planning" = "Планується";
+"Planning" = "Заплановані";
 /* en.lproj/Localizable.strings
 Planning Assistance
 No comment provided by engineer. */
@@ -1414,17 +1424,17 @@ Planning Producer
 No comment provided by engineer. */
 "Planning Producer" = "Продюсер планування";
 /* Plans to read [Manga Title] */
-"Plans to read %@" = "У планах прочитати %@";
+"Plans to read %@" = "Планує прочитати «%@»";
 /* Plans to watch [Anime Title] */
-"Plans to watch %@" = "Плани на перегляд %@";
+"Plans to watch %@" = "Планує переглянути «%@»";
 /* en.lproj/Localizable.strings
 Please login to use this feature
 No comment provided by engineer. */
-"Please login to use this feature" = "Будь ласка, увійдіть, щоб скористатися цією функцією";
+"Please login to use this feature" = "Будь ласка, увійдіть, щоб скористатися цією функцією.";
 /* en.lproj/Localizable.strings
 Please open the AniHyou app on your iPhone and go to Profile -> Settings -> Sync account with Apple Watch
 No comment provided by engineer. */
-"Please open the AniHyou app on your iPhone and go to Profile -> Settings -> Sync account with Apple Watch" = "Будь ласка, відкрийте застосунок AniHyou на вашому iPhone та перейдіть до профілю -> Налаштування -> Синхронізуйте обліковий запис з Apple Watch";
+"Please open the AniHyou app on your iPhone and go to Profile -> Settings -> Sync account with Apple Watch" = "Будь ласка, відкрийте застосунок AniHyou на своєму iPhone та перейдіть за Профіль -> Налаштування -> Синхронізувати акаунт із Apple Watch";
 /* en.lproj/Localizable.strings
 Popular Anime
 No comment provided by engineer. */
@@ -1436,7 +1446,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Popularity
 No comment provided by engineer. */
-"Popularity" = "За популярністю";
+"Popularity" = "Популярне";
 /* en.lproj/Localizable.strings
 Prequel
 No comment provided by engineer. */
@@ -1484,7 +1494,7 @@ No comment provided by engineer. */
 /* as short as possible */
 "Profile" = "Профіль";
 /* list entry progress */
-"Progress" = "Прогрес";
+"Progress" = "Поступ";
 /* en.lproj/Localizable.strings
 Prop Design
 No comment provided by engineer. */
@@ -1499,7 +1509,7 @@ No comment provided by engineer. */
 "Publishing" = "Публікується";
 /* screen title.
 Manga that are being published */
-"Publishing Manga" = "Манґа, що публікується";
+"Publishing Manga" = "Публікована зараз манґа";
 /* en.lproj/Localizable.strings
 Push notifications
 No comment provided by engineer. */
@@ -1519,7 +1529,7 @@ Read Year
 No comment provided by engineer. */
 "Read Year" = "Рік читання";
 /* Eg: (User) Read chapter [25] of [Manga Title] */
-"Read chapter %1$@ of %2$@" = "Прочитати розділ %1$@ в %2$@";
+"Read chapter %1$@ of %2$@" = "Прочитує %1$@ розділ у «%2$@»";
 /* en.lproj/Localizable.strings
 Reading
 No comment provided by engineer. */
@@ -1545,11 +1555,11 @@ Recording Engineer
 No comment provided by engineer. */
 "Recording Engineer" = "Записоінженер";
 /* Related anime/manga */
-"Relations" = "Зв\'язки";
+"Relations" = "Пов\'язане";
 /* en.lproj/Localizable.strings
 Relations and Recommendations
 No comment provided by engineer. */
-"Relations and Recommendations" = "Зв\'язки та рекомендації";
+"Relations and Recommendations" = "Пов\'язане та рекомендації";
 /* en.lproj/Localizable.strings
 Release Date
 No comment provided by engineer. */
@@ -1561,20 +1571,20 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Releasing
 No comment provided by engineer. */
-"Releasing" = "Реліз";
+"Releasing" = "Випускається";
 /* sort by repeat count */
-"Repeat" = "Повторити";
+"Repeat" = "За повторами";
 /* en.lproj/Localizable.strings
 Repeat Count
 No comment provided by engineer. */
 "Repeat Count" = "Кількість повторів";
 /* en.lproj/Localizable.strings
 Repeating */
-"Repeating" = "Повторювані";
+"Repeating" = "Повторюю";
 /* Reread [Kimetsu no Yaiba] */
-"Reread %@" = "Перечитані %@";
+"Reread %@" = "Перечитує «%@»";
 /* (User) Reread chapter [1 - 27] of [Kimetsu no Yaiba] */
-"Reread chapter %1$@ of %2$@" = "Перечитано розділ %1$@ з %2$@";
+"Reread chapter %1$@ of %2$@" = "Перечитує %1$@ розділ у «%2$@»";
 /* en.lproj/Localizable.strings
 Rereading */
 "Rereading" = "Перечитую";
@@ -1585,22 +1595,22 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Review and Threads
 No comment provided by engineer. */
-"Review and Threads" = "Огляд та теми";
+"Review and Threads" = "Відгуки та обговорення";
 /* en.lproj/Localizable.strings
 Reviews
 No comment provided by engineer. */
 "Reviews" = "Відгуки";
 /* Rewatched [Kimetsu no Yaiba] */
-"Rewatched %@" = "Повторно переглянуті %@";
+"Rewatched %@" = "Пере-переглядає «%@»";
 /* (User) Rewatched episode [1 - 27] of [Kimetsu no Yaiba] */
-"Rewatched episode %1$@ of %2$@" = "Повторно переглянуто епізод %1$@ з %2$@";
+"Rewatched episode %1$@ of %2$@" = "Повторно переглядає епізод %1$@ «%2$@»";
 /* en.lproj/Localizable.strings
 Rewatching */
-"Rewatching" = "Пере-передивляюсь";
+"Rewatching" = "Пере-переглядаю";
 /* en.lproj/Localizable.strings
 Right
 No comment provided by engineer. */
-"Right" = "Праворуч";
+"Right" = "Право";
 /* en.lproj/Localizable.strings
 Romaji
 No comment provided by engineer. */
@@ -1624,11 +1634,11 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Score
 No comment provided by engineer. */
-"Score" = "За оцінкою";
+"Score" = "Оцінка";
 /* en.lproj/Localizable.strings
 Score distribution
 No comment provided by engineer. */
-"Score distribution" = "Розподіл балів";
+"Score distribution" = "Розподіл оцінок";
 /* en.lproj/Localizable.strings
 Score format
 No comment provided by engineer. */
@@ -1671,11 +1681,11 @@ No comment provided by engineer. */
 "Series Composition Assistance" = "Поміч із композицією серії";
 /* Set to Status.
 Example: Set as Completed */
-"Set as %@" = "Встановити як %@";
+"Set as %@" = "Позначити як %@";
 /* not a very important string. used for app intents */
-"Set progress" = "Встановити прогрес";
+"Set progress" = "Позначити поступ";
 /* not a very important string. used for app intents */
-"Sets a list entry progress to the specified number." = "Встановлює прогрес ведення каталогу до вказаного числа.";
+"Sets a list entry progress to the specified number." = "Встановлює поступ ведення каталогу до вказаного числа.";
 /* en.lproj/Localizable.strings
 Setting Design
 No comment provided by engineer. */
@@ -1697,15 +1707,15 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Show only airing soon anime that are in your list
 No comment provided by engineer. */
-"Show only airing soon anime that are in your list" = "Показувати тільки ті аніме, що вийдуть найближчим часом та додані до вашого каталогу";
+"Show only airing soon anime that are in your list" = "Показувати лише ті аніме, що вийдуть невдовзі та додані до мого каталогу";
 /* en.lproj/Localizable.strings
 Show spoiler
 No comment provided by engineer. */
 "Show spoiler" = "Показати спойлер";
 /* widget description */
-"Shows the animes with behind episodes in your list." = "Показує аніме з простроченими серіями з вашого каталогу.";
+"Shows the animes with behind episodes in your list." = "Зазначає аніме із непереглянутими епізодами з вашого каталогу.";
 /* widget description */
-"Shows the next airing animes in your list." = "Показує аніме з вашого каталогу, які вийдуть найближчим часом.";
+"Shows the next airing animes in your list." = "Зазначає аніме з вашого каталогу, які невдовзі вийдуть.";
 /* en.lproj/Localizable.strings
 Side Story
 No comment provided by engineer. */
@@ -1713,11 +1723,11 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Slice of Life
 No comment provided by engineer. */
-"Slice of Life" = "Буденність";
+"Slice of Life" = "Повсякденність";
 /* en.lproj/Localizable.strings
 Social
 No comment provided by engineer. */
-"Social" = "Соціальні мережі";
+"Social" = "Соцмережі";
 /* en.lproj/Localizable.strings
 Sort
 No comment provided by engineer. */
@@ -1745,11 +1755,11 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Sound Production
 No comment provided by engineer. */
-"Sound Production" = "Звукорежисура";
+"Sound Production" = "Звукопродюсування";
 /* en.lproj/Localizable.strings
 Sound Production Manager
 No comment provided by engineer. */
-"Sound Production Manager" = "Менеджер звукорежисури";
+"Sound Production Manager" = "Керівник звукопродюсування";
 /* en.lproj/Localizable.strings
 Sound Supervisor
 No comment provided by engineer. */
@@ -1757,7 +1767,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Source
 No comment provided by engineer. */
-"Source" = "Першоджерело";
+"Source" = "Першотвір";
 /* en.lproj/Localizable.strings
 South Korea
 No comment provided by engineer. */
@@ -1781,7 +1791,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Spin Off
 No comment provided by engineer. */
-"Spin Off" = "Спін-офф";
+"Spin Off" = "Спінофф";
 /* en.lproj/Localizable.strings
 Sports
 No comment provided by engineer. */
@@ -1793,8 +1803,8 @@ Spring */
 Staff
 No comment provided by engineer. */
 "Staff" = "Персонал";
-/* you can use (and) instead of (&) */
-"Staff & Character name language" = "Персонал & Мова імен персонажів";
+/* you can use "and" instead of "&amp;" */
+"Staff & Character name language" = "Мова імен персоналу та персонажів";
 /* en.lproj/Localizable.strings
 Standard
 No comment provided by engineer. */
@@ -1808,7 +1818,7 @@ Start date
 No comment provided by engineer. */
 "Start date" = "Дата початку";
 /* sort by date started */
-"Started" = "Почато";
+"Started" = "За початим";
 /* en.lproj/Localizable.strings
 Stats
 No comment provided by engineer. */
@@ -1844,7 +1854,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Streaming sites
 No comment provided by engineer. */
-"Streaming sites" = "Сторінки трансляцій";
+"Streaming sites" = "Сторінки стрімінгових сервісів";
 /* en.lproj/Localizable.strings
 Studios
 No comment provided by engineer. */
@@ -1853,6 +1863,8 @@ No comment provided by engineer. */
 Sub Character Design
 No comment provided by engineer. */
 "Sub Character Design" = "Дизайн другорядних персонажів";
+/* Notification type for data submission requests to AniList database */
+"Submission" = "Подання";
 /* en.lproj/Localizable.strings
 Summary
 No comment provided by engineer. */
@@ -1871,7 +1883,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Support the development of AniHyou!
 No comment provided by engineer. */
-"Support the development of AniHyou!" = "Підтримати розробку AniHyou!";
+"Support the development of AniHyou!" = "Підтримайте розробку AniHyou!";
 /* en.lproj/Localizable.strings
 Supporting
 No comment provided by engineer. */
@@ -1883,7 +1895,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Sync account with Apple Watch
 No comment provided by engineer. */
-"Sync account with Apple Watch" = "Синхронізація облікового запису з Apple Watch";
+"Sync account with Apple Watch" = "Синхронізувати акаунт із Apple Watch";
 /* en.lproj/Localizable.strings
 Synonyms
 No comment provided by engineer. */
@@ -1911,15 +1923,15 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Text Status
 No comment provided by engineer. */
-"Text Status" = "Статус тексту";
+"Text Status" = "Текстовий статус";
 /* en.lproj/Localizable.strings
 Thank you :)
 No comment provided by engineer. */
 "Thank you :)" = "Дякую :)";
 /* not a very important string. used for app intents */
-"The amount of episodes/chapters consumed by the user" = "Кількість серій/розділів, які  переглянув користувач";
+"The amount of episodes/chapters consumed by the user" = "Кількість переглянутих епізодів/розділів користувачем";
 /* not a very important string. used for app intents */
-"The id of the media the entry is of" = "Id носія, до якого належить запис";
+"The id of the media the entry is of" = "Id медіа, до якого належить запис";
 /* en.lproj/Localizable.strings
 Theme Song Arrangement
 No comment provided by engineer. */
@@ -1985,7 +1997,7 @@ Theme Song Performance (OP, ED)
 No comment provided by engineer. */
 "Theme Song Performance (OP, ED)" = "Виконавець тематичної пісні (OP, ED)";
 /* feel free to translate so it sounds better in your language */
-"This feature will be unlocked when you make a donation, even the smallest count!" = "Ця функція буде розблокована, коли ви зробите пожертву, навіть найменшу!";
+"This feature will be unlocked when you make a donation, even the smallest count!" = "Ця функція буде розблокована, щойно задонатите, навіть найменшу суму!";
 /* en.lproj/Localizable.strings
 Threads
 No comment provided by engineer. */
@@ -2009,17 +2021,17 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Title Logo Design Assistance
 No comment provided by engineer. */
-"Title Logo Design Assistance" = "Поміч з дизайном лого тайтлу";
+"Title Logo Design Assistance" = "Поміч з дизайном титульного лого";
 /* en.lproj/Localizable.strings
 Title count
 No comment provided by engineer. */
-"Title count" = "Кількість назв";
+"Title count" = "Кількість тайтлів";
 /* en.lproj/Localizable.strings
 Title language
 No comment provided by engineer. */
-"Title language" = "Мова назви";
+"Title language" = "Мова назв тайтлів";
 /* this is a stat. num of anime or manga in your list */
-"Titles Count" = "Кількість назв";
+"Titles Count" = "Кількість тайтлів";
 /* en.lproj/Localizable.strings
 To year
 No comment provided by engineer. */
@@ -2031,15 +2043,15 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Top 100 Anime
 No comment provided by engineer. */
-"Top 100 Anime" = "Топ 100 аніме";
+"Top 100 Anime" = "Найкраща сотня аніме";
 /* en.lproj/Localizable.strings
 Top 100 Manga
 No comment provided by engineer. */
-"Top 100 Manga" = "Топ 100 манґ";
+"Top 100 Manga" = "Найкраща сотня манґ";
 /* en.lproj/Localizable.strings
 Top Movies
 No comment provided by engineer. */
-"Top Movies" = "Найпопулярніші фільми";
+"Top Movies" = "Найкращі фільми";
 /* en.lproj/Localizable.strings
 Top Popular
 No comment provided by engineer. */
@@ -2047,11 +2059,11 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Total Anime
 No comment provided by engineer. */
-"Total Anime" = "Всього аніме";
+"Total Anime" = "Усього аніме";
 /* en.lproj/Localizable.strings
 Total Manga
 No comment provided by engineer. */
-"Total Manga" = "Всього манґ";
+"Total Manga" = "Усього манґ";
 /* en.lproj/Localizable.strings
 Touch-up Art
 No comment provided by engineer. */
@@ -2095,7 +2107,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Unit Director
 No comment provided by engineer. */
-"Unit Director" = "Директор відділу";
+"Unit Director" = "Одиничний режисер";
 /* en.lproj/Localizable.strings
 Unknown
 Localizable.strings
@@ -2110,11 +2122,11 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Upcoming Anime
 No comment provided by engineer. */
-"Upcoming Anime" = "Майбутні Аніме";
+"Upcoming Anime" = "Аніме, які незабаром вийдуть";
 /* en.lproj/Localizable.strings
 Upcoming Manga
 No comment provided by engineer. */
-"Upcoming Manga" = "Майбутня Манґа";
+"Upcoming Manga" = "Манґа, яка незабаром вийде";
 /* en.lproj/Localizable.strings
 Update interval
 No comment provided by engineer. */
@@ -2127,9 +2139,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "Користувачі";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "Вподобання користувачів";
 /* en.lproj/Localizable.strings
 Version %@
@@ -2142,7 +2152,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 VideoGame
 No comment provided by engineer. */
-"VideoGame" = "Відеоігри";
+"VideoGame" = "Відеогра";
 /* en.lproj/Localizable.strings
 Visual Coordinator
 No comment provided by engineer. */
@@ -2162,7 +2172,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Voice Actors
 No comment provided by engineer. */
-"Voice Actors" = "Актори озвучування";
+"Voice Actors" = "Актори озвучення";
 /* Volumes abbreviation */
 "Vol" = "Том";
 /* en.lproj/Localizable.strings
@@ -2170,13 +2180,13 @@ Volumes
 No comment provided by engineer. */
 "Volumes" = "Томи";
 /* num of volumes read */
-"Volumes Read" = "Прочитано розділів";
+"Volumes Read" = "Прочитано томів";
 /* en.lproj/Localizable.strings
 Watch Year
 No comment provided by engineer. */
-"Watch Year" = "Рік відстеження";
+"Watch Year" = "Рік перегляду";
 /* Eg: (User) Watched episode [25] of [Anime Title] */
-"Watched episode %1$@ of %2$@" = "Переглянута серія %1$@ з %2$@";
+"Watched episode %1$@ of %2$@" = "Переглядає %1$@ епізод «%2$@»";
 /* en.lproj/Localizable.strings
 Watching
 No comment provided by engineer. */
@@ -2188,18 +2198,18 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Web novel
 No comment provided by engineer. */
-"Web novel" = "Веб-роман";
+"Web novel" = "Веброман";
 /* en.lproj/Localizable.strings
 Weekday
 No comment provided by engineer. */
-"Weekday" = "Будні дні";
+"Weekday" = "Будні";
 /* en.lproj/Localizable.strings
 Winter */
 "Winter" = "Зима";
 /* en.lproj/Localizable.strings
 With any purchase you will gain access to exclusive app icons and custom accent colors!
 No comment provided by engineer. */
-"With any purchase you will gain access to exclusive app icons and custom accent colors!" = "Маючи будь яку покупку, ви отримаєте доступ до ексклюзивних значків додатків і користувацьких кольорів!";
+"With any purchase you will gain access to exclusive app icons and custom accent colors!" = "Зробивши будь-який платіж, ви отримаєте доступ до ексклюзивних піктограм застосунку, а також зможете застосовувати власні кольори!";
 /* en.lproj/Localizable.strings
 World Design
 No comment provided by engineer. */
@@ -2217,7 +2227,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 You may need to login again in your browser
 No comment provided by engineer. */
-"You may need to login again in your browser" = "Можливо, вам потрібно буде знову увійти у ваш браузер";
+"You may need to login again in your browser" = "Можливо, вам доведеться ще раз увійти у своєму браузері";
 /* please translate only the text inside the [].
 Eg: 1 episode behind */
-"^[%lld episode behind](inflect: true)" = "^[%lld серія позаду](inflect: true)";
+"^[%lld episode behind](inflect: true)" = "^[%lld нов. епізод.](inflect: true)";

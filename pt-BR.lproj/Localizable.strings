@@ -647,9 +647,7 @@ No comment provided by engineer. */
 Japanese
 No comment provided by engineer. */
 "Japanese" = "Japonês";
-/* en.lproj/Localizable.strings
-Last Added
-No comment provided by engineer. */
+/* sort option */
 "Last Added" = "Última Adição";
 /* sort by update date */
 "Last Updated" = "Última Atualização";
@@ -1141,7 +1139,7 @@ Spring */
 Staff
 No comment provided by engineer. */
 "Staff" = "Equipe";
-/* you can use (and) instead of (&) */
+/* you can use "and" instead of "&amp;" */
 "Staff & Character name language" = "Linguagem do nome da Equipe & Personagens";
 /* en.lproj/Localizable.strings
 Standard
@@ -1355,9 +1353,7 @@ No comment provided by engineer. */
 Users
 No comment provided by engineer. */
 "Users" = "Usuários";
-/* en.lproj/Localizable.strings
-Users likes
-No comment provided by engineer. */
+/* count of review likes */
 "Users likes" = "Curtidas de usuários";
 /* en.lproj/Localizable.strings
 Version %@
