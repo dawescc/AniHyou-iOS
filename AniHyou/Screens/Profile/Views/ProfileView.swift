@@ -182,11 +182,7 @@ struct ProfileView: View {
         ScrollView(.vertical) {
             VStack {
                 if let about = viewModel.userInfo?.about {
-                    if #available(iOS 26.0, *) {
-                        ExpandableWebView(about)
-                    } else {
-                        ExpandableRichText(about)
-                    }
+                    ExpandableRichText(about)
                 } else if viewModel.isLoading {
                     HorizontalProgressView()
                 }
