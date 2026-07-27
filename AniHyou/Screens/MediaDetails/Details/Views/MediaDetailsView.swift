@@ -100,6 +100,8 @@ struct MediaDetailsView: View {
                     // MARK: - Main stats
                     mainStats
                     
+                    genresRow
+                    
                     // MARK: - Synopsis
                     ExpandableTextView(
                         text: $attributedSynopsis,
@@ -171,6 +173,23 @@ struct MediaDetailsView: View {
         }//:HScrollView
         .padding(.top)
     }//:mainStats
+    
+    @ViewBuilder
+    var genresRow: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 8) {
+                ForEach(viewModel.genresFormatted ?? [], id: \.self) { genre in
+                    Text(genre)
+                        .padding(.horizontal)
+                        .padding(.vertical, 8)
+                        .tint(.primary)
+                        .background(.thickMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                }
+            }
+            .padding(.horizontal)
+            .padding(.top, 4)
+        }
+    }
     
     @ViewBuilder
     var moreInfo: some View {

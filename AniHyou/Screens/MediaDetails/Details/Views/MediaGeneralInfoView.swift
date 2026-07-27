@@ -9,6 +9,7 @@ import SwiftUI
 import Flow
 import AniListAPI
 
+// swiftlint disable:next type_body_length
 struct MediaGeneralInfoView: View {
 
     var viewModel: MediaDetailsViewModel
@@ -58,8 +59,6 @@ struct MediaGeneralInfoView: View {
             .font(.title3)
             .bold()
             .padding(.horizontal)
-        
-        HInfoView(name: "Genres", values: viewModel.genresFormatted, isExpandable: true)
         
         if let schedule = viewModel.mediaDetails?.nextAiringEpisode {
             let date = Date(timeIntervalSince1970: Double(schedule.airingAt))
