@@ -7,9 +7,12 @@
 
 import SwiftUI
 import RichText
+import WebKit
 
-struct ExpandableRichText: View {
+@available(iOS 26.0, *)
+struct ExpandableWebView: View {
 
+    @State private var page = WebPage()
     @State private var isTruncated = false
     @State private var isExpanded = false
     let fontSize: CGFloat = 16
@@ -40,8 +43,10 @@ struct ExpandableRichText: View {
 
     var body: some View {
         VStack(alignment: .trailing, spacing: 0) {
-            RichText(html: html)
-                .defaultStyle()
+            WebView(page)
+                .onAppear {
+                    page.load(html: html)
+                }
                 .frame(
                     maxWidth: .infinity,
                     maxHeight: isExpanded ? .greatestFiniteMagnitude : 32.0,
@@ -74,6 +79,7 @@ struct ExpandableRichText: View {
     }
 }
 
+@available(iOS 26.0, *)
 #Preview {
     ExpandableRichText("")
 }
