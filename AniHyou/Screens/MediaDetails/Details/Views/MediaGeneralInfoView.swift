@@ -60,6 +60,15 @@ struct MediaGeneralInfoView: View {
             .padding(.horizontal)
         
         HInfoView(name: "Genres", values: viewModel.genresFormatted, isExpandable: true)
+        
+        if let schedule = viewModel.mediaDetails?.nextAiringEpisode {
+            let date = Date(timeIntervalSince1970: Double(schedule.airingAt))
+            HInfoView(
+                name: "Airing",
+                value: date.formatted(date: .complete, time: .shortened)
+            )
+        }
+        
         if viewModel.isAnime {
             HInfoView(name: "Episodes", value: viewModel.mediaDetails?.episodes?.formatted())
         } else {
