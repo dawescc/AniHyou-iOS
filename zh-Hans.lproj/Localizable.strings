@@ -606,10 +606,6 @@ Design Works
 No comment provided by engineer. */
 "Design Works" = "设定";
 /* en.lproj/Localizable.strings
-Developers
-No comment provided by engineer. */
-"Developers" = "开发人员";
-/* en.lproj/Localizable.strings
 Digital Animation
 No comment provided by engineer. */
 "Digital Animation" = "数字动画";
@@ -1255,9 +1251,7 @@ No comment provided by engineer. */
 No reviews
 No comment provided by engineer. */
 "No reviews" = "没有评论";
-/* en.lproj/Localizable.strings
-Non-binary
-No comment provided by engineer. */
+/* gender */
 "Non-binary" = "不明";
 /* nothing selected */
 "None" = "无";

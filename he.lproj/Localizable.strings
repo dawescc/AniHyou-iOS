@@ -602,10 +602,6 @@ Design Works
 No comment provided by engineer. */
 "Design Works" = "עבודות עיצוב";
 /* en.lproj/Localizable.strings
-Developers
-No comment provided by engineer. */
-"Developers" = "מפתחים";
-/* en.lproj/Localizable.strings
 Digital Animation
 No comment provided by engineer. */
 "Digital Animation" = "אנימציה דיגיטלית";
@@ -1177,9 +1173,7 @@ No comment provided by engineer. */
 No reviews
 No comment provided by engineer. */
 "No reviews" = "אין ביקורות";
-/* en.lproj/Localizable.strings
-Non-binary
-No comment provided by engineer. */
+/* gender */
 "Non-binary" = "מגדר לא-בינארי";
 /* nothing selected */
 "None" = "ללא";

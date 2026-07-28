@@ -594,10 +594,6 @@ Design Works
 No comment provided by engineer. */
 "Design Works" = "Lucrări de aspect";
 /* en.lproj/Localizable.strings
-Developers
-No comment provided by engineer. */
-"Developers" = "Dezvoltatori";
-/* en.lproj/Localizable.strings
 Digital Animation
 No comment provided by engineer. */
 "Digital Animation" = "Animație digitală";
@@ -1243,9 +1239,7 @@ No comment provided by engineer. */
 No reviews
 No comment provided by engineer. */
 "No reviews" = "Nu există recenzii";
-/* en.lproj/Localizable.strings
-Non-binary
-No comment provided by engineer. */
+/* gender */
 "Non-binary" = "Non-binar";
 /* nothing selected */
 "None" = "Niciuna";

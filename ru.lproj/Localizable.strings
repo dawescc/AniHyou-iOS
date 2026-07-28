@@ -610,10 +610,6 @@ Design Works
 No comment provided by engineer. */
 "Design Works" = "Проектные работы";
 /* en.lproj/Localizable.strings
-Developers
-No comment provided by engineer. */
-"Developers" = "Разработчики";
-/* en.lproj/Localizable.strings
 Digital Animation
 No comment provided by engineer. */
 "Digital Animation" = "Цифровая анимация";
@@ -1263,9 +1259,7 @@ No comment provided by engineer. */
 No reviews
 No comment provided by engineer. */
 "No reviews" = "Нет отзывов";
-/* en.lproj/Localizable.strings
-Non-binary
-No comment provided by engineer. */
+/* gender */
 "Non-binary" = "Небинарный";
 /* nothing selected */
 "None" = "Ничего";

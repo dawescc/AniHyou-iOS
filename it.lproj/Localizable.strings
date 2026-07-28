@@ -539,6 +539,10 @@ Content
 No comment provided by engineer. */
 "Content" = "Contenuto";
 /* en.lproj/Localizable.strings
+Contributors
+No comment provided by engineer. */
+"Contributors" = "Contributori";
+/* en.lproj/Localizable.strings
 Costume Design
 No comment provided by engineer. */
 "Costume Design" = "Design costumi";
@@ -605,10 +609,6 @@ No comment provided by engineer. */
 Design Works
 No comment provided by engineer. */
 "Design Works" = "Opere di design";
-/* en.lproj/Localizable.strings
-Developers
-No comment provided by engineer. */
-"Developers" = "Sviluppatori";
 /* en.lproj/Localizable.strings
 Digital Animation
 No comment provided by engineer. */
@@ -764,6 +764,10 @@ No comment provided by engineer. */
 /* stats */
 "Episodes Watched" = "Episodi Guardati";
 /* en.lproj/Localizable.strings
+Error
+No comment provided by engineer. */
+"Error" = "Errore";
+/* en.lproj/Localizable.strings
 Executive Producer
 No comment provided by engineer. */
 "Executive Producer" = "Produttore esecutivo";
@@ -906,6 +910,10 @@ No comment provided by engineer. */
 Hide from status lists
 No comment provided by engineer. */
 "Hide from status lists" = "Nascondi dalle liste di stato";
+/* en.lproj/Localizable.strings
+Hide scores
+No comment provided by engineer. */
+"Hide scores" = "Nascondi punteggi";
 /* en.lproj/Localizable.strings
 Hide spoiler
 No comment provided by engineer. */
@@ -1191,9 +1199,7 @@ No comment provided by engineer. */
 No reviews
 No comment provided by engineer. */
 "No reviews" = "Nessuna recensione";
-/* en.lproj/Localizable.strings
-Non-binary
-No comment provided by engineer. */
+/* gender */
 "Non-binary" = "Non-binario";
 /* nothing selected */
 "None" = "Vuoto";

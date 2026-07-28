@@ -594,10 +594,6 @@ Design Works
 No comment provided by engineer. */
 "Design Works" = "ผลงานออกแบบ";
 /* en.lproj/Localizable.strings
-Developers
-No comment provided by engineer. */
-"Developers" = "นักพัฒนา";
-/* en.lproj/Localizable.strings
 Digital Animation
 No comment provided by engineer. */
 "Digital Animation" = "แอนิเมชั่นดิจิทัล";
@@ -1240,9 +1236,7 @@ No comment provided by engineer. */
 No reviews
 No comment provided by engineer. */
 "No reviews" = "ไม่มีรีวิว";
-/* en.lproj/Localizable.strings
-Non-binary
-No comment provided by engineer. */
+/* gender */
 "Non-binary" = "ไม่ระบุเพศ";
 /* nothing selected */
 "None" = "ไม่มี";

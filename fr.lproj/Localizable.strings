@@ -598,10 +598,6 @@ Design Works
 No comment provided by engineer. */
 "Design Works" = "Travaux de conception";
 /* en.lproj/Localizable.strings
-Developers
-No comment provided by engineer. */
-"Developers" = "Développeurs";
-/* en.lproj/Localizable.strings
 Digital Animation
 No comment provided by engineer. */
 "Digital Animation" = "Animation numérique";
@@ -1247,9 +1243,7 @@ No comment provided by engineer. */
 No reviews
 No comment provided by engineer. */
 "No reviews" = "Aucun avis";
-/* en.lproj/Localizable.strings
-Non-binary
-No comment provided by engineer. */
+/* gender */
 "Non-binary" = "Non-binaire";
 /* nothing selected */
 "None" = "Aucun";

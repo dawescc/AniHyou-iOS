@@ -610,10 +610,6 @@ Design Works
 No comment provided by engineer. */
 "Design Works" = "Tasarım Çalışmaları";
 /* en.lproj/Localizable.strings
-Developers
-No comment provided by engineer. */
-"Developers" = "Geliştiriciler";
-/* en.lproj/Localizable.strings
 Digital Animation
 No comment provided by engineer. */
 "Digital Animation" = "Dijital Animasyon";
@@ -914,6 +910,10 @@ No comment provided by engineer. */
 Hide from status lists
 No comment provided by engineer. */
 "Hide from status lists" = "Durum listelerinden gizle";
+/* en.lproj/Localizable.strings
+Hide scores
+No comment provided by engineer. */
+"Hide scores" = "Puanları gizle";
 /* en.lproj/Localizable.strings
 Hide spoiler
 No comment provided by engineer. */
@@ -1263,9 +1263,7 @@ No comment provided by engineer. */
 No reviews
 No comment provided by engineer. */
 "No reviews" = "Değerlendirme yok";
-/* en.lproj/Localizable.strings
-Non-binary
-No comment provided by engineer. */
+/* gender */
 "Non-binary" = "Non-binary";
 /* nothing selected */
 "None" = "Hiçbiri";

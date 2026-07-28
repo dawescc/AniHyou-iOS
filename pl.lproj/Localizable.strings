@@ -306,10 +306,6 @@ Descending
 No comment provided by engineer. */
 "Descending" = "Malejąco";
 /* en.lproj/Localizable.strings
-Developers
-No comment provided by engineer. */
-"Developers" = "Deweloperzy";
-/* en.lproj/Localizable.strings
 Discord server
 No comment provided by engineer. */
 "Discord server" = "Serwer Discord";
@@ -695,9 +691,7 @@ No comment provided by engineer. */
 No reviews
 No comment provided by engineer. */
 "No reviews" = "Brak recenzji";
-/* en.lproj/Localizable.strings
-Non-binary
-No comment provided by engineer. */
+/* gender */
 "Non-binary" = "Niebinarny/a";
 /* nothing selected */
 "None" = "Brak";

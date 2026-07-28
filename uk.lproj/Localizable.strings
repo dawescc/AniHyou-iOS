@@ -543,6 +543,10 @@ Content
 No comment provided by engineer. */
 "Content" = "Уміст";
 /* en.lproj/Localizable.strings
+Contributors
+No comment provided by engineer. */
+"Contributors" = "Співавтори";
+/* en.lproj/Localizable.strings
 Costume Design
 No comment provided by engineer. */
 "Costume Design" = "Дизайн убрань";
@@ -609,10 +613,6 @@ No comment provided by engineer. */
 Design Works
 No comment provided by engineer. */
 "Design Works" = "Робота з дизайном";
-/* en.lproj/Localizable.strings
-Developers
-No comment provided by engineer. */
-"Developers" = "Розробники";
 /* en.lproj/Localizable.strings
 Digital Animation
 No comment provided by engineer. */
@@ -768,6 +768,10 @@ No comment provided by engineer. */
 /* stats */
 "Episodes Watched" = "Переглянуто епізодів";
 /* en.lproj/Localizable.strings
+Error
+No comment provided by engineer. */
+"Error" = "Помилка";
+/* en.lproj/Localizable.strings
 Executive Producer
 No comment provided by engineer. */
 "Executive Producer" = "Виконавчий продюсер";
@@ -803,7 +807,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Female
 No comment provided by engineer. */
-"Female" = "Жіночий";
+"Female" = "Жіноча";
 /* en.lproj/Localizable.strings
 Filter
 No comment provided by engineer. */
@@ -815,7 +819,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Finished
 No comment provided by engineer. */
-"Finished" = "Завершено";
+"Finished" = "За завершеним";
 /* en.lproj/Localizable.strings
 Finishing
 No comment provided by engineer. */
@@ -879,7 +883,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Gender
 No comment provided by engineer. */
-"Gender" = "Стать";
+"Gender" = "Ґендер";
 /* general information about the anime/manga */
 "General" = "Загальне";
 /* en.lproj/Localizable.strings
@@ -914,6 +918,10 @@ No comment provided by engineer. */
 Hide from status lists
 No comment provided by engineer. */
 "Hide from status lists" = "Приховати з каталогів статусу";
+/* en.lproj/Localizable.strings
+Hide scores
+No comment provided by engineer. */
+"Hide scores" = "Приховати оцінки";
 /* en.lproj/Localizable.strings
 Hide spoiler
 No comment provided by engineer. */
@@ -1096,7 +1104,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Male
 No comment provided by engineer. */
-"Male" = "Чоловічий";
+"Male" = "Чоловіча";
 /* en.lproj/Localizable.strings
 Manga
 No comment provided by engineer. */
@@ -1263,10 +1271,8 @@ No comment provided by engineer. */
 No reviews
 No comment provided by engineer. */
 "No reviews" = "Немає відгуків";
-/* en.lproj/Localizable.strings
-Non-binary
-No comment provided by engineer. */
-"Non-binary" = "Небінарна";
+/* gender */
+"Non-binary" = "Небінарний";
 /* nothing selected */
 "None" = "Немає";
 /* en.lproj/Localizable.strings

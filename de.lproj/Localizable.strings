@@ -1079,9 +1079,7 @@ No comment provided by engineer. */
 No reviews
 No comment provided by engineer. */
 "No reviews" = "Keine Rezensionen";
-/* en.lproj/Localizable.strings
-Non-binary
-No comment provided by engineer. */
+/* gender */
 "Non-binary" = "Divers";
 /* nothing selected */
 "None" = "Keine";

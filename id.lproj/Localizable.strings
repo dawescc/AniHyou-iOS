@@ -598,10 +598,6 @@ Design Works
 No comment provided by engineer. */
 "Design Works" = "Karya Desain";
 /* en.lproj/Localizable.strings
-Developers
-No comment provided by engineer. */
-"Developers" = "Pengembang";
-/* en.lproj/Localizable.strings
 Digital Animation
 No comment provided by engineer. */
 "Digital Animation" = "Animasi Digital";
@@ -1251,9 +1247,7 @@ No comment provided by engineer. */
 No reviews
 No comment provided by engineer. */
 "No reviews" = "Tidak ada ulasan";
-/* en.lproj/Localizable.strings
-Non-binary
-No comment provided by engineer. */
+/* gender */
 "Non-binary" = "Non-biner";
 /* nothing selected */
 "None" = "Kosong";
