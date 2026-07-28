@@ -14,13 +14,13 @@ struct ListHeader<Content: View>: View {
     @ViewBuilder
     let destination: () -> Content
     
-    init(_ title: String, destination: @escaping () -> Content) {
+    init(title: String, destination: @escaping () -> Content) {
         self.title = title
         self.titleLocalized = nil
         self.destination = destination
     }
     
-    init(_ key: LocalizedStringKey, destination: @escaping () -> Content) {
+    init(key: LocalizedStringKey, destination: @escaping () -> Content) {
         self.title = nil
         self.titleLocalized = key
         self.destination = destination
@@ -51,6 +51,6 @@ struct ListHeader<Content: View>: View {
 
 #Preview {
     NavigationStack {
-        ListHeader("Airing Next", destination: { Text("") })
+        ListHeader(key: "Airing Next", destination: { Text("") })
     }
 }

@@ -67,7 +67,7 @@ struct CurrentView: View {
         let rowsCount: CGFloat = items.count == 1 ? 1 : 2
         let rows = rowsCount == 1 ? oneGirdRow : twoGridRows
         
-        ListHeader(type.title) {
+        ListHeader(key: type.title) {
             ExpandedCurrentListView(
                 type: type,
                 items: items,

@@ -273,7 +273,7 @@ struct DiscoverView: View {
     var airingNext: some View {
         @AppStorage(AIRING_ON_MY_LIST_KEY) var airingOnMyList = false
 
-        ListHeader("Airing Next", destination: { CalendarAnimeView() })
+        ListHeader(key: "Airing Next", destination: { CalendarAnimeView() })
         
         ZStack {
             if viewModel.airingAnimes.count == 0 && viewModel.airingOnMyList.count == 0 {
@@ -352,7 +352,7 @@ struct DiscoverView: View {
         media: [SeasonalAnimeQuery.Data.Page.Medium]
     ) -> some View {
         let seasonName = String.LocalizationValue(stringLiteral: season.season.localizedStringKey)
-        ListHeader("\(String(localized: seasonName)) \(season.year.stringValue)") {
+        ListHeader(title: "\(String(localized: seasonName)) \(season.year.stringValue)") {
             AnimeSeasonListView(initSeason: season.season, initYear: season.year)
         }
         ZStack {
@@ -394,7 +394,7 @@ struct DiscoverView: View {
         media: [MediaSortedQuery.Data.Page.Medium],
         headerDestination: @escaping () -> some View
     ) -> some View {
-        ListHeader(title, destination: headerDestination)
+        ListHeader(key: title, destination: headerDestination)
         
         ZStack {
             if media.count == 0 {

@@ -179,7 +179,7 @@ struct MediaDetailsView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
                 ForEach(viewModel.genresFormatted ?? [], id: \.self) { genre in
-                    Text(genre)
+                    Text(LocalizedStringKey(stringLiteral: genre))
                         .padding(.horizontal)
                         .padding(.vertical, 8)
                         .tint(.primary)
