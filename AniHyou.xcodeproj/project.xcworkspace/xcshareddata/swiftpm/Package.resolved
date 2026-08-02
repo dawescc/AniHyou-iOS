@@ -1,13 +1,13 @@
 {
-  "originHash" : "1085283984f5efc45e88a0f60440ed7b0851c78988697d636ce8ce0e1ab9912d",
+  "originHash" : "4a955aa19f308ad25cee6cdd178824da1970d8bb95261d67421e3c8c5c45e8f5",
   "pins" : [
     {
       "identity" : "apollo-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apollographql/apollo-ios",
       "state" : {
-        "revision" : "5a8d18cc239dd3c4b31c9e13e671dbcef5e4072a",
-        "version" : "2.2.0"
+        "revision" : "a6668545666c48b25ddb67c1329048633f45168b",
+        "version" : "2.3.0"
       }
     },
     {
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-concurrency-extras",
       "state" : {
-        "revision" : "a90e2e40a7a840a853dd29e57cbef5dbb72c9d5b",
-        "version" : "1.4.0"
+        "revision" : "5fa253428866f2360c3754e88537f700ed2656b5",
+        "version" : "1.4.1"
       }
     },
     {
