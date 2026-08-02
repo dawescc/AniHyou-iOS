@@ -21,6 +21,10 @@ struct AiringMediaHorizontalItemView: View {
     var status: MediaListStatus?
     var blurCover = false
     
+    var scoreColor: Color {
+        ScoreFormat.point100.color(score: meanScore)
+    }
+    
     @AppStorage(HIDE_SCORES) private var hideScores = false
 
     var body: some View {
@@ -64,13 +68,11 @@ struct AiringMediaHorizontalItemView: View {
                 if let meanScore, !hideScores {
                     HStack(alignment: .bottom, spacing: 4) {
                         Image(systemName: "star.fill")
-                            .font(.footnote)
-                            .foregroundStyle(.gray)
                         Text("\(meanScore)%")
-                            .font(.footnote)
-                            .foregroundStyle(.gray)
                     }
                     .padding(.vertical, 1)
+                    .font(.footnote)
+                    .foregroundStyle(scoreColor)
                 }
             }
         }//:HStack
