@@ -144,6 +144,15 @@ struct DiscoverView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 NavigationLink(
+                    destination: CalendarAnimeView()
+                ) {
+                    Chip(title: "Calendar") {
+                        Image(systemName: "calendar")
+                            .foregroundStyle(.red)
+                    }
+                }
+                
+                NavigationLink(
                     destination: MediaChartListView(
                         title: "Top 100 Anime",
                         type: .anime,
