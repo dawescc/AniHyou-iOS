@@ -31,4 +31,6 @@ nonisolated public enum MediaRelation: String, EnumType {
   case compilation = "COMPILATION"
   /// Version 2 only.
   case contains = "CONTAINS"
+  /// Version 3 only. The media is set in the same universe as another media
+  case sameUniverse = "SAME_UNIVERSE"
 }

@@ -6,7 +6,7 @@
 
 nonisolated public struct MediaRelated: AniListAPI.SelectionSet, Fragment {
   public static var fragmentDefinition: StaticString {
-    #"fragment MediaRelated on MediaEdge { __typename relationType(version: 2) node { __typename id title { __typename userPreferred } type format coverImage { __typename large } mediaListEntry { __typename status } isAdult } }"#
+    #"fragment MediaRelated on MediaEdge { __typename relationType(version: 3) node { __typename id title { __typename userPreferred } type format coverImage { __typename large } mediaListEntry { __typename status } isAdult } }"#
   }
 
   @_spi(Unsafe) public let __data: DataDict
@@ -15,7 +15,7 @@ nonisolated public struct MediaRelated: AniListAPI.SelectionSet, Fragment {
   @_spi(Execution) public static var __parentType: any ApolloAPI.ParentType { AniListAPI.Objects.MediaEdge }
   @_spi(Execution) public static var __selections: [ApolloAPI.Selection] { [
     .field("__typename", String.self),
-    .field("relationType", GraphQLEnum<AniListAPI.MediaRelation>?.self, arguments: ["version": 2]),
+    .field("relationType", GraphQLEnum<AniListAPI.MediaRelation>?.self, arguments: ["version": 3]),
     .field("node", Node?.self),
   ] }
   @_spi(Execution) public static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [

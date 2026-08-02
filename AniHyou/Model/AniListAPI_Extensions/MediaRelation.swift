@@ -38,6 +38,8 @@ extension MediaRelation {
             "Compilation"
         case .contains:
             "Contains"
+        case .sameUniverse:
+            "Same universe"
         }
     }
 }

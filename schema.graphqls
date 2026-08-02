@@ -264,6 +264,12 @@ type Query {
     """Filter by the source type of the media (max 10,000 items)"""
     source_in: [MediaSource]
 
+    """Filter by the media's country of origin (max 10,000 items)"""
+    countryOfOrigin_in: [CountryCode]
+
+    """Filter by the media's country of origin (max 10,000 items)"""
+    countryOfOrigin_not_in: [CountryCode]
+
     """The order the results will be returned in"""
     sort: [MediaSort]
   ): Media
@@ -1138,6 +1144,12 @@ type Page {
     """Filter by the source type of the media (max 10,000 items)"""
     source_in: [MediaSource]
 
+    """Filter by the media's country of origin (max 10,000 items)"""
+    countryOfOrigin_in: [CountryCode]
+
+    """Filter by the media's country of origin (max 10,000 items)"""
+    countryOfOrigin_not_in: [CountryCode]
+
     """The order the results will be returned in"""
     sort: [MediaSort]
   ): [Media]
@@ -1687,6 +1699,8 @@ type User {
 
   """If the user is blocked by the authenticated user"""
   isBlocked: Boolean
+
+  """List of active bans. Mod-only"""
   bans: Json
 
   """The user's general options"""
@@ -2063,7 +2077,7 @@ type MediaEdge {
 
   """The type of relation to the parent model"""
   relationType(
-    """Provide 2 to use new version 2 of relation enum"""
+    """Provide 3 to use new version 3 of relation enum"""
     version: Int
   ): MediaRelation
 
@@ -3541,6 +3555,9 @@ enum MediaRelation {
 
   """Version 2 only."""
   CONTAINS
+
+  """Version 3 only. The media is set in the same universe as another media"""
+  SAME_UNIVERSE
 }
 
 type UserStatisticTypes {
@@ -3763,7 +3780,9 @@ type UserStats {
   favouredFormats: [FormatStats]
 }
 
-"""A user's activity history stats."""
+"""
+A user's activity history stats for the previous 6 months. Refreshes only periodically
+"""
 type UserActivityHistory {
   """The day the activity took place (Unix timestamp)"""
   date: Int
@@ -5018,7 +5037,7 @@ type Mutation {
     """Profile highlight color"""
     profileColor: String
 
-    """Profile highlight color"""
+    """Profile highlight color (Max: 24)"""
     donatorBadge: String
 
     """Notification options"""
@@ -5028,7 +5047,7 @@ type Mutation {
     timezone: String
 
     """
-    Minutes between activity for them to be merged together. 0 is Never, Above 2 weeks (20160 mins) is Always.
+    Minutes between activity for them to be merged together. 0 is Never, Above 2 weeks (20160 mins) is Always. (Min: 0)
     """
     activityMergeTime: Int
 
@@ -5057,28 +5076,32 @@ type Mutation {
     """The watching/reading status"""
     status: MediaListStatus
 
-    """The score of the media in the user's chosen scoring method"""
+    """
+    The score of the media in the user's chosen scoring method (Min: 0, Max: 100)
+    """
     score: Float
 
-    """The score of the media in 100 point"""
+    """The score of the media in 100 point (Min: 0, Max: 100)"""
     scoreRaw: Int
 
-    """The amount of episodes/chapters consumed by the user"""
+    """The amount of episodes/chapters consumed by the user (Min: 0)"""
     progress: Int
 
-    """The amount of volumes read by the user"""
+    """The amount of volumes read by the user (Min: 0)"""
     progressVolumes: Int
 
-    """The amount of times the user has rewatched/read the media"""
+    """
+    The amount of times the user has rewatched/read the media (Min: 0, Max: 1000)
+    """
     repeat: Int
 
-    """Priority of planning"""
+    """Priority of planning (Min: 0, Max: 255)"""
     priority: Int
 
     """If the entry should only be visible to authenticated user"""
     private: Boolean
 
-    """Text notes"""
+    """Text notes (Min: 0, Max: 6000)"""
     notes: String
 
     """If the entry shown be hidden from non-custom lists"""
@@ -5087,7 +5110,7 @@ type Mutation {
     """Array of custom list names which should be enabled for this entry"""
     customLists: [String]
 
-    """Array of advanced scores"""
+    """Array of advanced scores (Min: 0, Max: 100)"""
     advancedScores: [Float]
 
     """When the entry was started by the user"""
@@ -5102,34 +5125,38 @@ type Mutation {
     """The watching/reading status"""
     status: MediaListStatus
 
-    """The score of the media in the user's chosen scoring method"""
+    """
+    The score of the media in the user's chosen scoring method (Min: 0, Max: 100)
+    """
     score: Float
 
-    """The score of the media in 100 point"""
+    """The score of the media in 100 point (Min: 0, Max: 100)"""
     scoreRaw: Int
 
-    """The amount of episodes/chapters consumed by the user"""
+    """The amount of episodes/chapters consumed by the user (Min: 0)"""
     progress: Int
 
-    """The amount of volumes read by the user"""
+    """The amount of volumes read by the user (Min: 0)"""
     progressVolumes: Int
 
-    """The amount of times the user has rewatched/read the media"""
+    """
+    The amount of times the user has rewatched/read the media (Min: 0, Max: 1000)
+    """
     repeat: Int
 
-    """Priority of planning"""
+    """Priority of planning (Min: 0, Max: 255)"""
     priority: Int
 
     """If the entry should only be visible to authenticated user"""
     private: Boolean
 
-    """Text notes"""
+    """Text notes (Min: 0, Max: 6000)"""
     notes: String
 
     """If the entry shown be hidden from non-custom lists"""
     hiddenFromStatusLists: Boolean
 
-    """Array of advanced scores"""
+    """Array of advanced scores (Min: 0, Max: 100)"""
     advancedScores: [Float]
 
     """When the entry was started by the user"""
@@ -5162,7 +5189,7 @@ type Mutation {
     """The activity's id, required for updating"""
     id: Int
 
-    """The activity text"""
+    """The activity text (Min: 5, Max: 10000)"""
     text: String
 
     """If the activity should be locked. (Mod Only)"""
@@ -5174,7 +5201,7 @@ type Mutation {
     """The activity id, required for updating"""
     id: Int
 
-    """The activity message text"""
+    """The activity message text (Min: 2, Max: 10000)"""
     message: String
 
     """The id of the user the message is being sent to"""
@@ -5231,7 +5258,7 @@ type Mutation {
     """The id of the parent activity being replied to"""
     activityId: Int
 
-    """The reply text"""
+    """The reply text (Min: 2, Max: 8000)"""
     text: String
 
     """If the reply should be sent from the Moderator account (Mod Only)"""
@@ -5332,13 +5359,13 @@ type Mutation {
     """The id of the media the review is of"""
     mediaId: Int
 
-    """The main review text. Min:2200 characters"""
+    """The main review text (Min: 2600)"""
     body: String
 
-    """A short summary/preview of the review. Min:20, Max:120 characters"""
+    """A short summary/preview of the review (Min: 20, Max: 120)"""
     summary: String
 
-    """A short summary/preview of the review. Min:20, Max:120 characters"""
+    """The score of the review (Min: 0, Max: 100)"""
     score: Int
 
     """If the review should only be visible to its creator"""
@@ -5377,10 +5404,10 @@ type Mutation {
     """The thread id, required for updating"""
     id: Int
 
-    """The title of the thread"""
+    """The title of the thread (Min: 6, Max: 120)"""
     title: String
 
-    """The main text body of the thread"""
+    """The main text body of the thread (Max: 30000)"""
     body: String
 
     """Forum categories the thread should be within"""
@@ -5422,7 +5449,7 @@ type Mutation {
     """The id of thread comment to reply to"""
     parentCommentId: Int
 
-    """The comment markdown text"""
+    """The comment markdown text (Min: 1, Max: 12000)"""
     comment: String
 
     """If the comment tree should be locked. (Mod Only)"""
@@ -5805,6 +5832,12 @@ type InternalPage {
 
     """Filter by the source type of the media (max 10,000 items)"""
     source_in: [MediaSource]
+
+    """Filter by the media's country of origin (max 10,000 items)"""
+    countryOfOrigin_in: [CountryCode]
+
+    """Filter by the media's country of origin (max 10,000 items)"""
+    countryOfOrigin_not_in: [CountryCode]
 
     """The order the results will be returned in"""
     sort: [MediaSort]
