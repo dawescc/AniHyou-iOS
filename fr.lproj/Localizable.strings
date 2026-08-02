@@ -191,8 +191,7 @@ Animation Supervisor
 No comment provided by engineer. */
 "Animation Supervisor" = "Superviseur d\'animation";
 /* en.lproj/Localizable.strings
-Anime
-No comment provided by engineer. */
+Anime */
 "Anime" = "Animé";
 /* anime with unwatched episodes */
 "Anime Behind" = "Épisodes non vus";
@@ -1078,8 +1077,7 @@ Male
 No comment provided by engineer. */
 "Male" = "Homme";
 /* en.lproj/Localizable.strings
-Manga
-No comment provided by engineer. */
+Manga */
 "Manga" = "Manga";
 /* en.lproj/Localizable.strings
 Manga List

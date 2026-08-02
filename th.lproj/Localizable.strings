@@ -187,8 +187,7 @@ Animation Supervisor
 No comment provided by engineer. */
 "Animation Supervisor" = "หัวหน้างานแอนิเมชั่น";
 /* en.lproj/Localizable.strings
-Anime
-No comment provided by engineer. */
+Anime */
 "Anime" = "อนิเมะ";
 /* anime with unwatched episodes */
 "Anime Behind" = "อนิเมะที่ตามดู";
@@ -1071,8 +1070,7 @@ Male
 No comment provided by engineer. */
 "Male" = "ผู้ชาย";
 /* en.lproj/Localizable.strings
-Manga
-No comment provided by engineer. */
+Manga */
 "Manga" = "มังงะ";
 /* en.lproj/Localizable.strings
 Manga List

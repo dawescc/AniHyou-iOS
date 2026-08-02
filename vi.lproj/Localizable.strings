@@ -147,8 +147,7 @@ Animation Producer
 No comment provided by engineer. */
 "Animation Producer" = "Sản xuất hoạt ảnh";
 /* en.lproj/Localizable.strings
-Anime
-No comment provided by engineer. */
+Anime */
 "Anime" = "Anime";
 /* anime with unwatched episodes */
 "Anime Behind" = "Anime chưa xem";
@@ -552,8 +551,7 @@ Male
 No comment provided by engineer. */
 "Male" = "Nam";
 /* en.lproj/Localizable.strings
-Manga
-No comment provided by engineer. */
+Manga */
 "Manga" = "Manga";
 /* en.lproj/Localizable.strings
 Manga List

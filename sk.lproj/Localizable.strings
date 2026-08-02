@@ -21,8 +21,7 @@ No comment provided by engineer. */
 /* for this one use the masculine form when applied. */
 "All" = "Všetko";
 /* en.lproj/Localizable.strings
-Anime
-No comment provided by engineer. */
+Anime */
 "Anime" = "Anime";
 /* en.lproj/Localizable.strings
 Background
@@ -160,8 +159,7 @@ Main
 No comment provided by engineer. */
 "Main" = "Hlavné";
 /* en.lproj/Localizable.strings
-Manga
-No comment provided by engineer. */
+Manga */
 "Manga" = "Manga";
 /* normalized score.
 You can translate it simply as (Score) */

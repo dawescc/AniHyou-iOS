@@ -201,8 +201,7 @@ Animation Supervisor
 No comment provided by engineer. */
 "Animation Supervisor" = "Animasyon Denetmeni";
 /* en.lproj/Localizable.strings
-Anime
-No comment provided by engineer. */
+Anime */
 "Anime" = "Anime";
 /* anime with unwatched episodes */
 "Anime Behind" = "Bekleyen Anime";
@@ -543,6 +542,10 @@ Content
 No comment provided by engineer. */
 "Content" = "İçerik";
 /* en.lproj/Localizable.strings
+Contributors
+No comment provided by engineer. */
+"Contributors" = "Katkıda Bulunanlar";
+/* en.lproj/Localizable.strings
 Costume Design
 No comment provided by engineer. */
 "Costume Design" = "Kostüm Tasarımı";
@@ -763,6 +766,10 @@ No comment provided by engineer. */
 "Episodes" = "Bölümler";
 /* stats */
 "Episodes Watched" = "İzlenen Bölümler";
+/* en.lproj/Localizable.strings
+Error
+No comment provided by engineer. */
+"Error" = "Hata";
 /* en.lproj/Localizable.strings
 Executive Producer
 No comment provided by engineer. */
@@ -1098,8 +1105,7 @@ Male
 No comment provided by engineer. */
 "Male" = "Erkek";
 /* en.lproj/Localizable.strings
-Manga
-No comment provided by engineer. */
+Manga */
 "Manga" = "Manga";
 /* en.lproj/Localizable.strings
 Manga List
@@ -1621,6 +1627,10 @@ No comment provided by engineer. */
 Romance
 No comment provided by engineer. */
 "Romance" = "Romantizm";
+/* en.lproj/Localizable.strings
+Same universe
+No comment provided by engineer. */
+"Same universe" = "Aynı evren";
 /* en.lproj/Localizable.strings
 Save
 No comment provided by engineer. */

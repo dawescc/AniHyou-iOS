@@ -34,6 +34,10 @@ A&R Producer
 No comment provided by engineer. */
 "A&R Producer" = "A&R Producent";
 /* en.lproj/Localizable.strings
+ADR Director
+No comment provided by engineer. */
+"ADR Director" = "Reżyser ADR";
+/* en.lproj/Localizable.strings
 Accent color
 No comment provided by engineer. */
 "Accent color" = "Kolor akcentu";
@@ -115,8 +119,7 @@ Animation
 No comment provided by engineer. */
 "Animation" = "Animacja";
 /* en.lproj/Localizable.strings
-Anime
-No comment provided by engineer. */
+Anime */
 "Anime" = "Anime";
 /* anime with unwatched episodes */
 "Anime Behind" = "Zaległe Anime";
@@ -594,8 +597,7 @@ Male
 No comment provided by engineer. */
 "Male" = "Mężczyzna";
 /* en.lproj/Localizable.strings
-Manga
-No comment provided by engineer. */
+Manga */
 "Manga" = "Manga";
 /* en.lproj/Localizable.strings
 Manga List
@@ -921,6 +923,10 @@ No comment provided by engineer. */
 Romance
 No comment provided by engineer. */
 "Romance" = "Romans";
+/* en.lproj/Localizable.strings
+Same universe
+No comment provided by engineer. */
+"Same universe" = "To samo uniwersum";
 /* en.lproj/Localizable.strings
 Save
 No comment provided by engineer. */

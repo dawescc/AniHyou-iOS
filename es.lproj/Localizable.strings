@@ -201,8 +201,7 @@ Animation Supervisor
 No comment provided by engineer. */
 "Animation Supervisor" = "Supervisor de Animación";
 /* en.lproj/Localizable.strings
-Anime
-No comment provided by engineer. */
+Anime */
 "Anime" = "Anime";
 /* anime with unwatched episodes */
 "Anime Behind" = "Anime Atrasado";
@@ -1108,8 +1107,7 @@ Male
 No comment provided by engineer. */
 "Male" = "Masculino";
 /* en.lproj/Localizable.strings
-Manga
-No comment provided by engineer. */
+Manga */
 "Manga" = "Manga";
 /* en.lproj/Localizable.strings
 Manga List
@@ -1631,6 +1629,10 @@ No comment provided by engineer. */
 Romance
 No comment provided by engineer. */
 "Romance" = "Romance";
+/* en.lproj/Localizable.strings
+Same universe
+No comment provided by engineer. */
+"Same universe" = "Mismo universo";
 /* en.lproj/Localizable.strings
 Save
 No comment provided by engineer. */
@@ -2236,6 +2238,10 @@ No comment provided by engineer. */
 You may need to login again in your browser
 No comment provided by engineer. */
 "You may need to login again in your browser" = "Es posible que tengas que volver a iniciar sesión en tu navegador";
+/* Translate only the "chapter" text */
+"^[%lld chapter](inflect: true)" = "^[%lld capítulo](inflect: true)";
 /* please translate only the text inside the [].
 Eg: 1 episode behind */
 "^[%lld episode behind](inflect: true)" = "^[%lld episodio atrasado](inflect: true)";
+/* Translate only the "episode" text */
+"^[%lld episode](inflect: true)" = "^[%lld episodio](inflect: true)";

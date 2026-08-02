@@ -151,8 +151,7 @@ Animation Supervisor
 No comment provided by engineer. */
 "Animation Supervisor" = "مشرف الرسوم المتحركة";
 /* en.lproj/Localizable.strings
-Anime
-No comment provided by engineer. */
+Anime */
 "Anime" = "الأنمي";
 /* anime with unwatched episodes */
 "Anime Behind" = "أنمي في الخلف";
@@ -562,8 +561,7 @@ Main
 No comment provided by engineer. */
 "Main" = "رئيسية";
 /* en.lproj/Localizable.strings
-Manga
-No comment provided by engineer. */
+Manga */
 "Manga" = "المانجا";
 /* en.lproj/Localizable.strings
 Manga List
