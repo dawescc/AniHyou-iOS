@@ -8,7 +8,7 @@ nonisolated public struct SearchMediaQuery: GraphQLQuery {
   public static let operationName: String = "SearchMedia"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query SearchMedia($page: Int, $perPage: Int, $search: String, $type: MediaType, $sort: [MediaSort], $genre_in: [String], $genre_not_in: [String], $tag_in: [String], $tag_not_in: [String], $format_in: [MediaFormat], $status_in: [MediaStatus], $season: MediaSeason, $startDateGreater: FuzzyDateInt, $startDateLesser: FuzzyDateInt, $onList: Boolean, $isLicensed: Boolean, $isAdult: Boolean, $country: CountryCode, $source_in: [MediaSource]) { Page(page: $page, perPage: $perPage) { __typename media( search: $search type: $type sort: $sort genre_in: $genre_in genre_not_in: $genre_not_in tag_in: $tag_in tag_not_in: $tag_not_in format_in: $format_in status_in: $status_in season: $season startDate_greater: $startDateGreater startDate_lesser: $startDateLesser onList: $onList isLicensed: $isLicensed isAdult: $isAdult countryOfOrigin: $country source_in: $source_in ) { __typename ...BasicMediaDetails meanScore format mediaListEntry { __typename ...BasicMediaListEntry } startDate { __typename year } nextAiringEpisode { __typename ...AiringEpisode } } pageInfo { __typename ...CommonPage } } }"#,
+      #"query SearchMedia($page: Int, $perPage: Int, $search: String, $type: MediaType, $sort: [MediaSort], $genre_in: [String], $genre_not_in: [String], $tag_in: [String], $tag_not_in: [String], $format_in: [MediaFormat], $status_in: [MediaStatus], $season: MediaSeason, $startDateGreater: FuzzyDateInt, $startDateLesser: FuzzyDateInt, $onList: Boolean, $isLicensed: Boolean, $isAdult: Boolean, $country: CountryCode, $source_in: [MediaSource]) { Page(page: $page, perPage: $perPage) { __typename media( search: $search type: $type sort: $sort genre_in: $genre_in genre_not_in: $genre_not_in tag_in: $tag_in tag_not_in: $tag_not_in format_in: $format_in status_in: $status_in season: $season startDate_greater: $startDateGreater startDate_lesser: $startDateLesser onList: $onList isLicensed: $isLicensed isAdult: $isAdult countryOfOrigin: $country source_in: $source_in ) { __typename ...BasicMediaDetails meanScore format mediaListEntry { __typename ...BasicMediaListEntry } startDate { __typename year } status genres episodes chapters duration nextAiringEpisode { __typename ...AiringEpisode } } pageInfo { __typename ...CommonPage } } }"#,
       fragments: [AiringEpisode.self, BasicMediaDetails.self, BasicMediaListEntry.self, CommonPage.self, FuzzyDateFragment.self]
     ))
 
@@ -166,6 +166,11 @@ nonisolated public struct SearchMediaQuery: GraphQLQuery {
           .field("format", GraphQLEnum<AniListAPI.MediaFormat>?.self),
           .field("mediaListEntry", MediaListEntry?.self),
           .field("startDate", StartDate?.self),
+          .field("status", GraphQLEnum<AniListAPI.MediaStatus>?.self),
+          .field("genres", [String?]?.self),
+          .field("episodes", Int?.self),
+          .field("chapters", Int?.self),
+          .field("duration", Int?.self),
           .field("nextAiringEpisode", NextAiringEpisode?.self),
           .fragment(BasicMediaDetails.self),
         ] }
@@ -182,16 +187,22 @@ nonisolated public struct SearchMediaQuery: GraphQLQuery {
         public var mediaListEntry: MediaListEntry? { __data["mediaListEntry"] }
         /// The first official release date of the media
         public var startDate: StartDate? { __data["startDate"] }
+        /// The current releasing status of the media
+        public var status: GraphQLEnum<AniListAPI.MediaStatus>? { __data["status"] }
+        /// The genres of the media
+        public var genres: [String?]? { __data["genres"] }
+        /// The amount of episodes the anime has when complete
+        public var episodes: Int? { __data["episodes"] }
+        /// The amount of chapters the manga has when complete
+        public var chapters: Int? { __data["chapters"] }
+        /// The general length of each anime episode in minutes
+        public var duration: Int? { __data["duration"] }
         /// The media's next episode airing schedule
         public var nextAiringEpisode: NextAiringEpisode? { __data["nextAiringEpisode"] }
         /// The id of the media
         public var id: Int { __data["id"] }
         /// The official titles of the media in various languages
         public var title: Title? { __data["title"] }
-        /// The amount of episodes the anime has when complete
-        public var episodes: Int? { __data["episodes"] }
-        /// The amount of chapters the manga has when complete
-        public var chapters: Int? { __data["chapters"] }
         /// The amount of volumes the manga has when complete
         public var volumes: Int? { __data["volumes"] }
         /// The type of the media; anime or manga

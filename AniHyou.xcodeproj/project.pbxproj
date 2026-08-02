@@ -287,6 +287,7 @@
 		48EE80FD2920ECF900344DA5 /* GlobalAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE80FC2920ECF900344DA5 /* GlobalAppState.swift */; };
 		48EE81342969DDC00074482F /* CalendarAnimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE81332969DDC00074482F /* CalendarAnimeView.swift */; };
 		48EE81362969DE1C0074482F /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE81352969DE1C0074482F /* CalendarViewModel.swift */; };
+		48EF3A9C301F930D003DC77C /* MediaItemHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EF3A9B301F930D003DC77C /* MediaItemHorizontal.swift */; };
 		48EFCDD729FFAD200096BF6E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EFCDD629FFAD200096BF6E /* WidgetKit.framework */; };
 		48EFCDD929FFAD200096BF6E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EFCDD829FFAD200096BF6E /* SwiftUI.framework */; };
 		48EFCDDC29FFAD200096BF6E /* AniHyouWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EFCDDB29FFAD200096BF6E /* AniHyouWidgets.swift */; };
@@ -337,7 +338,6 @@
 		48FC9479286852A300C87F56 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC9478286852A300C87F56 /* ExploreView.swift */; };
 		48FC947F2868C0BD00C87F56 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC947E2868C0BD00C87F56 /* ChartViewModel.swift */; };
 		48FC94812868C0F400C87F56 /* MediaChartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC94802868C0F400C87F56 /* MediaChartListView.swift */; };
-		48FC94832868C6DB00C87F56 /* ChartListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC94822868C6DB00C87F56 /* ChartListItemView.swift */; };
 		48FFC8BC2E10969900831B8E /* AniHyou.icon in Resources */ = {isa = PBXBuildFile; fileRef = 48FFC8BA2E10969900831B8E /* AniHyou.icon */; };
 		84734AE62A7DF658000BD9E6 /* MediaListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84734AE52A7DF658000BD9E6 /* MediaListRepository.swift */; };
 /* End PBXBuildFile section */
@@ -717,6 +717,7 @@
 		48EE80FC2920ECF900344DA5 /* GlobalAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAppState.swift; sourceTree = "<group>"; };
 		48EE81332969DDC00074482F /* CalendarAnimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAnimeView.swift; sourceTree = "<group>"; };
 		48EE81352969DE1C0074482F /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		48EF3A9B301F930D003DC77C /* MediaItemHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemHorizontal.swift; sourceTree = "<group>"; };
 		48EFCDD529FFAD200096BF6E /* AniHyou WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AniHyou WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48EFCDD629FFAD200096BF6E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		48EFCDD829FFAD200096BF6E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -765,7 +766,6 @@
 		48FC947C2868C09400C87F56 /* MediaChart.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = MediaChart.graphql; sourceTree = "<group>"; };
 		48FC947E2868C0BD00C87F56 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		48FC94802868C0F400C87F56 /* MediaChartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaChartListView.swift; sourceTree = "<group>"; };
-		48FC94822868C6DB00C87F56 /* ChartListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListItemView.swift; sourceTree = "<group>"; };
 		48FFC8BA2E10969900831B8E /* AniHyou.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AniHyou.icon; sourceTree = "<group>"; };
 		84734AE52A7DF658000BD9E6 /* MediaListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1133,7 +1133,6 @@
 			isa = PBXGroup;
 			children = (
 				48FC94802868C0F400C87F56 /* MediaChartListView.swift */,
-				48FC94822868C6DB00C87F56 /* ChartListItemView.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -1553,6 +1552,7 @@
 				48C6F9E12A0BBEFF0084ED8E /* VideoThumbnailView.swift */,
 				489BA4142A52740500B2445E /* AiringMediaHorizontalItemView.swift */,
 				486354EA2B73437300A5DBB7 /* AiringText.swift */,
+				48EF3A9B301F930D003DC77C /* MediaItemHorizontal.swift */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -2335,7 +2335,6 @@
 				48A1A8F32A39861C00ACC6FF /* KeychainUtils.swift in Sources */,
 				48294CDE2AB936D9005E7CD2 /* SetProgressIntent.swift in Sources */,
 				486354EB2B73437300A5DBB7 /* AiringText.swift in Sources */,
-				48FC94832868C6DB00C87F56 /* ChartListItemView.swift in Sources */,
 				48643F452853C54800D7C328 /* ProfileViewModel.swift in Sources */,
 				48218AEE2BC0878D00A03421 /* MediaSort.swift in Sources */,
 				4851578B28A4060C007923A6 /* ThreadCommentItemView.swift in Sources */,
@@ -2478,6 +2477,7 @@
 				48B7AC112BB4A1EA0047998F /* GenresStatsView.swift in Sources */,
 				48B7AC332BB80F9C0047998F /* NotificationsManager.swift in Sources */,
 				486379702C5D5CBB003E779D /* AuthErrorInterceptor.swift in Sources */,
+				48EF3A9C301F930D003DC77C /* MediaItemHorizontal.swift in Sources */,
 				481AD4DE2851CE73001779EE /* AniHyouApp.swift in Sources */,
 				481AD4FC2851F131001779EE /* HListItemWithSubtitleView.swift in Sources */,
 				48B7AC172BB56DEF0047998F /* TagsStatsView.swift in Sources */,

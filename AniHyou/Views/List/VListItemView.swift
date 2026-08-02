@@ -20,6 +20,10 @@ struct VListItemView: View {
     var status: MediaListStatus?
     var blurCover: Bool = false
     
+    var scoreColor: Color {
+        ScoreFormat.point100.color(score: meanScore)
+    }
+    
     @AppStorage(HIDE_SCORES) private var hideScores = false
 
     var body: some View {
@@ -55,6 +59,7 @@ struct VListItemView: View {
                         Text("\(meanScore)%")
                     }
                     .padding(.bottom, 1)
+                    .foregroundStyle(scoreColor)
                 }
                 if let nextEpisode, let airingAt {
                     let time = Date(timeIntervalSince1970: Double(airingAt))

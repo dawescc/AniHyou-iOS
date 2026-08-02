@@ -53,14 +53,19 @@ struct SearchView: View {
                         "Unknown"
                     }
                     NavigationLink(destination: MediaDetailsView(mediaId: item.id)) {
-                        HListItemWithSubtitleView(
-                            title: item.title?.userPreferred,
-                            twoSubtitleTexts: (
-                                item.format?.value?.localizedName,
-                                "\(startYear)"
-                            ),
-                            imageUrl: item.coverImage?.large,
-                            status: item.mediaListEntry?.status?.value,
+                        MediaItemHorizontal(
+                            coverImage: item.coverImage?.large,
+                            listStatus: item.mediaListEntry?.status?.value,
+                            position: nil,
+                            title: item.title?.userPreferred ?? "",
+                            mediaFormat: item.format?.value,
+                            year: item.startDate?.year,
+                            mediaStatus: item.status?.value,
+                            meanScore: item.meanScore,
+                            episodes: item.episodes,
+                            chapters: item.chapters,
+                            duration: item.duration,
+                            genres: item.genres,
                             blurCover: blurAdultMedia && item.isAdult == true
                         )
                         .mediaContextMenu(

@@ -8,7 +8,7 @@ nonisolated public struct MediaChartQuery: GraphQLQuery {
   public static let operationName: String = "MediaChart"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query MediaChart($page: Int, $perPage: Int, $sort: [MediaSort], $type: MediaType, $status: MediaStatus, $format: MediaFormat) { Page(page: $page, perPage: $perPage) { __typename media(sort: $sort, type: $type, status: $status, format: $format) { __typename id title { __typename userPreferred } format startDate { __typename year } coverImage { __typename large } mediaListEntry { __typename status } isAdult } pageInfo { __typename ...CommonPage } } }"#,
+      #"query MediaChart($page: Int, $perPage: Int, $sort: [MediaSort], $type: MediaType, $status: MediaStatus, $format: MediaFormat) { Page(page: $page, perPage: $perPage) { __typename media(sort: $sort, type: $type, status: $status, format: $format) { __typename id title { __typename userPreferred } type format startDate { __typename year } coverImage { __typename large } meanScore status genres episodes chapters duration mediaListEntry { __typename status } isAdult } pageInfo { __typename ...CommonPage } } }"#,
       fragments: [CommonPage.self]
     ))
 
@@ -99,9 +99,16 @@ nonisolated public struct MediaChartQuery: GraphQLQuery {
           .field("__typename", String.self),
           .field("id", Int.self),
           .field("title", Title?.self),
+          .field("type", GraphQLEnum<AniListAPI.MediaType>?.self),
           .field("format", GraphQLEnum<AniListAPI.MediaFormat>?.self),
           .field("startDate", StartDate?.self),
           .field("coverImage", CoverImage?.self),
+          .field("meanScore", Int?.self),
+          .field("status", GraphQLEnum<AniListAPI.MediaStatus>?.self),
+          .field("genres", [String?]?.self),
+          .field("episodes", Int?.self),
+          .field("chapters", Int?.self),
+          .field("duration", Int?.self),
           .field("mediaListEntry", MediaListEntry?.self),
           .field("isAdult", Bool?.self),
         ] }
@@ -113,12 +120,26 @@ nonisolated public struct MediaChartQuery: GraphQLQuery {
         public var id: Int { __data["id"] }
         /// The official titles of the media in various languages
         public var title: Title? { __data["title"] }
+        /// The type of the media; anime or manga
+        public var type: GraphQLEnum<AniListAPI.MediaType>? { __data["type"] }
         /// The format the media was released in
         public var format: GraphQLEnum<AniListAPI.MediaFormat>? { __data["format"] }
         /// The first official release date of the media
         public var startDate: StartDate? { __data["startDate"] }
         /// The cover images of the media
         public var coverImage: CoverImage? { __data["coverImage"] }
+        /// Mean score of all the user's scores of the media
+        public var meanScore: Int? { __data["meanScore"] }
+        /// The current releasing status of the media
+        public var status: GraphQLEnum<AniListAPI.MediaStatus>? { __data["status"] }
+        /// The genres of the media
+        public var genres: [String?]? { __data["genres"] }
+        /// The amount of episodes the anime has when complete
+        public var episodes: Int? { __data["episodes"] }
+        /// The amount of chapters the manga has when complete
+        public var chapters: Int? { __data["chapters"] }
+        /// The general length of each anime episode in minutes
+        public var duration: Int? { __data["duration"] }
         /// The authenticated user's media list entry for the media
         public var mediaListEntry: MediaListEntry? { __data["mediaListEntry"] }
         /// If the media is intended only for 18+ adult audiences
