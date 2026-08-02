@@ -1,0 +1,105 @@
+{
+  "fill" : {
+    "automatic-gradient" : "extended-gray:1.00000,1.00000"
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "hidden" : false,
+          "image-name" : "AniHyou_frg.svg",
+          "name" : "AniHyou_frg",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.42
+      }
+    },
+    {
+      "blend-mode" : "plus-lighter",
+      "blur-material" : null,
+      "hidden" : false,
+      "layers" : [
+        {
+          "glass" : false,
+          "hidden" : false,
+          "image-name" : "Image.png",
+          "name" : "Sparkles.png",
+          "position" : {
+            "scale" : 2.22,
+            "translation-in-points" : [
+              3.4255000000000564,
+              3.125
+            ]
+          }
+        }
+      ],
+      "lighting" : "combined",
+      "name" : "Sparkles",
+      "opacity" : 0.14,
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : false,
+        "value" : 0.5
+      }
+    },
+    {
+      "blur-material" : null,
+      "layers" : [
+        {
+          "glass" : false,
+          "hidden" : false,
+          "image-name" : "Image 3.png",
+          "name" : "Rainbow.png",
+          "opacity" : 1,
+          "position" : {
+            "scale" : 1.53,
+            "translation-in-points" : [
+              0,
+              1.4835294117647209
+            ]
+          }
+        }
+      ],
+      "name" : "Raindbow",
+      "opacity" : 1,
+      "position" : {
+        "scale" : 1.7,
+        "translation-in-points" : [
+          0,
+          0
+        ]
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : false,
+        "value" : 1
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
