@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "AniHyou-Rainbow.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

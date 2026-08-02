@@ -301,6 +301,7 @@
 		48EFCDFD29FFE8EB0096BF6E /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 48EFCDFC29FFE8EB0096BF6E /* KeychainSwift */; };
 		48EFCE0229FFF3590096BF6E /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481AD501285207B1001779EE /* DateUtils.swift */; };
 		48EFCE0429FFF50C0096BF6E /* AnimeSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480F8824294262F3004773CC /* AnimeSeason.swift */; };
+		48F13556301FEA89000852C1 /* AniHyou-Rainbow.icon in Resources */ = {isa = PBXBuildFile; fileRef = 48F13555301FEA89000852C1 /* AniHyou-Rainbow.icon */; };
 		48F278E4296ECED8000827F7 /* MediaTagItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F278E3296ECED8000827F7 /* MediaTagItemView.swift */; };
 		48F2790D296EFE77000827F7 /* AniHyouShouApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2790C296EFE77000827F7 /* AniHyouShouApp.swift */; };
 		48F2790F296EFE77000827F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F2790E296EFE77000827F7 /* ContentView.swift */; };
@@ -728,6 +729,7 @@
 		48EFCDEF29FFB3320096BF6E /* UserCurrentAnimeList.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UserCurrentAnimeList.graphql; sourceTree = "<group>"; };
 		48EFCDFE29FFED0D0096BF6E /* AniHyou WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AniHyou WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		48EFCDFF29FFED440096BF6E /* AniHyou.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AniHyou.entitlements; sourceTree = "<group>"; };
+		48F13555301FEA89000852C1 /* AniHyou-Rainbow.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "AniHyou-Rainbow.icon"; sourceTree = "<group>"; };
 		48F278E3296ECED8000827F7 /* MediaTagItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTagItemView.swift; sourceTree = "<group>"; };
 		48F2790A296EFE77000827F7 /* AniHyou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniHyou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F2790C296EFE77000827F7 /* AniHyouShouApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniHyouShouApp.swift; sourceTree = "<group>"; };
@@ -1771,6 +1773,7 @@
 				48F3E84E300B848B00DE2881 /* AniHyou-Pink.icon */,
 				48F3E84F300B848B00DE2881 /* AniHyou-Purple.icon */,
 				48F3E850300B848B00DE2881 /* AniHyou-Red.icon */,
+				48F13555301FEA89000852C1 /* AniHyou-Rainbow.icon */,
 			);
 			path = AppIcons;
 			sourceTree = "<group>";
@@ -2257,6 +2260,7 @@
 				48F3E84B300B83B400DE2881 /* AniHyou-Gray.icon in Resources */,
 				48FFC8BC2E10969900831B8E /* AniHyou.icon in Resources */,
 				48218B002BC57B9300A03421 /* StudioMedia.graphql in Resources */,
+				48F13556301FEA89000852C1 /* AniHyou-Rainbow.icon in Resources */,
 			);
 		};
 		48218B0D2BD1157800A03421 /* Resources */ = {

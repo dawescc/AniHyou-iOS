@@ -28,38 +28,6 @@
       }
     },
     {
-      "blend-mode" : "plus-lighter",
-      "blur-material" : null,
-      "hidden" : false,
-      "layers" : [
-        {
-          "glass" : false,
-          "hidden" : false,
-          "image-name" : "Image.png",
-          "name" : "Sparkles.png",
-          "position" : {
-            "scale" : 2.22,
-            "translation-in-points" : [
-              3.4255000000000564,
-              3.125
-            ]
-          }
-        }
-      ],
-      "lighting" : "combined",
-      "name" : "Sparkles",
-      "opacity" : 0.14,
-      "shadow" : {
-        "kind" : "neutral",
-        "opacity" : 0
-      },
-      "specular" : true,
-      "translucency" : {
-        "enabled" : false,
-        "value" : 0.5
-      }
-    },
-    {
       "blur-material" : null,
       "layers" : [
         {
@@ -77,10 +45,10 @@
           }
         }
       ],
-      "name" : "Raindbow",
+      "name" : "Rainbow",
       "opacity" : 1,
       "position" : {
-        "scale" : 1.7,
+        "scale" : 1.75,
         "translation-in-points" : [
           0,
           0

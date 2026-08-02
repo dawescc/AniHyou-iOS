@@ -12,7 +12,8 @@ struct AppIconSelector: View {
     let iconSize: CGFloat = 70
     private let appIcons = [
         "AniHyou-Default", "AniHyou-Green", "AniHyou-Red",
-        "AniHyou-Purple", "AniHyou-Pink", "AniHyou-Orange", "AniHyou-Gray"
+        "AniHyou-Purple", "AniHyou-Pink", "AniHyou-Orange", "AniHyou-Gray",
+        "AniHyou-Rainbow"
     ]
     @AppStorage(APP_ICON_KEY) private var selectedAppIcon = "AniHyou-Default"
     @AppStorage(HAS_DONATED_KEY, store: UserDefaults(suiteName: ANIHYOU_GROUP)) private var hasDonated = false
