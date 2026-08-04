@@ -43,6 +43,7 @@ import AniListAPI
             titleLanguage = options.titleLanguage?.value ?? .romaji
             staffNameLanguage = options.staffNameLanguage?.value ?? .romaji
             scoreFormat = userOptions.mediaListOptions?.scoreFormat?.value ?? .point10
+            airingNotifications = userOptions.options?.airingNotifications ?? false
             areOptionsFetched = true
         } else {
             areOptionsFetched = false
