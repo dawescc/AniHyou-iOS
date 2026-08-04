@@ -46,14 +46,7 @@ import AniListAPI
         String(format: "%.0f", scoreMax)
     }
 
-    var scoreStep: Double {
-        switch scoreFormat {
-        case .point100, .point10, .point5, .point3:
-            1
-        case .point10Decimal:
-            0.5
-        }
-    }
+    let scoreStep: Double = 1
 
     var isUpdateSuccess = false
 
