@@ -9,7 +9,7 @@ import Foundation
 import AniListAPI
 
 struct ReviewRepository {
-    
+
     static func getReviewDetails(reviewId: Int32) async -> CommonReviewDetails? {
         do {
             let result = try await Network.shared.apollo.fetch(
@@ -21,7 +21,20 @@ struct ReviewRepository {
             return nil
         }
     }
-    
+
+    static func getUserReview(mediaId: Int32, userId: Int32) async -> UserMediaReviewQuery.Data.Page.Review? {
+        do {
+            let result = try await Network.shared.apollo.fetch(
+                query: UserMediaReviewQuery(mediaId: .some(mediaId), userId: .some(userId)),
+                cachePolicy: .networkOnly
+            )
+            return result.data?.page?.reviews?.first ?? nil
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+
     // swiftlint:disable:next function_parameter_count
     static func saveReview(
         id: Int32?,
