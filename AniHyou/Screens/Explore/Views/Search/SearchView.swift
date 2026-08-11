@@ -47,11 +47,6 @@ struct SearchView: View {
                 }
 
                 ForEach(viewModel.searchedMedia, id: \.id) { item in
-                    let startYear = if let year = item.startDate?.year {
-                        String(year)
-                    } else {
-                        "Unknown"
-                    }
                     NavigationLink(destination: MediaDetailsView(mediaId: item.id)) {
                         MediaItemHorizontal(
                             coverImage: item.coverImage?.large,
