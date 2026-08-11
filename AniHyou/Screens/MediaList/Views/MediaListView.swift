@@ -115,7 +115,7 @@ struct MediaListView: View {
         } else if let listName = viewModel.selectedListName {
             return listName
         } else {
-            return "All"
+            return String(localized: "All")
         }
     }
     
