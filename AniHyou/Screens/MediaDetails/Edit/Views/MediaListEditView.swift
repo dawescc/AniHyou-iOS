@@ -35,6 +35,7 @@ struct MediaListEditView: View {
     @State private var isPrivate = false
     @State private var isHiddenFromStatusLists = false
     @State private var notes = ""
+    @State private var showWriteReview = false
     @State private var advancedScores: [String: Double] = [:]
     @State private var customLists: [String: Bool] = [:]
 
@@ -90,6 +91,9 @@ struct MediaListEditView: View {
                 Section {
                     TextField("Notes", text: $notes, axis: .vertical)
                         .lineLimit(5)
+                    Button("Write a Review") {
+                        showWriteReview = true
+                    }
                 }
                 
                 if advancedScoringEnabled == true {
@@ -116,6 +120,11 @@ struct MediaListEditView: View {
                 toolbarContent
             }//:Toolbar
         }//:NavigationStack
+        .sheet(isPresented: $showWriteReview) {
+            if let id = mediaDetails?.id {
+                WriteReviewView(mediaId: id)
+            }
+        }
         .onAppear {
             setValues()
         }

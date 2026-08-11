@@ -22,6 +22,33 @@ struct ReviewRepository {
         }
     }
     
+    // swiftlint:disable:next function_parameter_count
+    static func saveReview(
+        id: Int32?,
+        mediaId: Int32,
+        body: String,
+        summary: String,
+        score: Int32,
+        isPrivate: Bool
+    ) async -> Bool {
+        do {
+            let result = try await Network.shared.apollo.perform(
+                mutation: SaveReviewMutation(
+                    id: id.map { .some($0) } ?? .none,
+                    mediaId: mediaId,
+                    body: body,
+                    summary: summary,
+                    score: score,
+                    private: .some(isPrivate)
+                )
+            )
+            return result.data?.saveReview != nil
+        } catch {
+            print(error)
+            return false
+        }
+    }
+
     static func rateReview(
         reviewId: Int32,
         rating: ReviewRating
