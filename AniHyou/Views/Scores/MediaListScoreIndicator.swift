@@ -11,6 +11,7 @@ import AniListAPI
 struct MediaListScoreIndicator: View {
 
     let score: Double
+    var showTotal: Bool = false
     @Environment(\.scoreFormat) private var format: ScoreFormat
     @AppStorage(HIDE_SCORES) private var hideScores = false
     var color: Color {
@@ -23,24 +24,34 @@ struct MediaListScoreIndicator: View {
         } else {
             switch format {
             case .point100, .point10, .point5:
-                HStack(alignment: .center) {
+                HStack(alignment: .center, spacing: 0) {
                     if score == 0 {
                         Text(UNKNOWN_CHAR)
                     } else {
                         Text(String(Int(score)))
                     }
+                    if showTotal {
+                        Text("/\(format.maxValue)")
+                            .foregroundStyle(.secondary)
+                    }
                     Image(systemName: "star.fill")
+                        .padding(.leading, 4)
                 }
                 .foregroundStyle(color)
                 .font(.footnote)
             case .point10Decimal:
-                HStack(alignment: .center) {
+                HStack(alignment: .center, spacing: 0) {
                     if score == 0 {
                         Text(UNKNOWN_CHAR)
                     } else {
                         Text(score.formatted())
                     }
+                    if showTotal {
+                        Text("/\(format.maxValue)")
+                            .foregroundStyle(.secondary)
+                    }
                     Image(systemName: "star.fill")
+                        .padding(.leading, 4)
                 }
                 .foregroundStyle(color)
                 .font(.footnote)

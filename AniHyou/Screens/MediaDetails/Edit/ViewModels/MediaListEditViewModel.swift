@@ -30,16 +30,7 @@ import AniListAPI
     }
 
     var scoreMax: Double {
-        switch scoreFormat {
-        case .point100:
-            100
-        case .point10, .point10Decimal:
-            10
-        case .point5:
-            5
-        case .point3:
-            3
-        }
+        Double(scoreFormat.maxValue)
     }
 
     var scoreHint: String {

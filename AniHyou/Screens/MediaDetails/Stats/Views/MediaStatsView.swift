@@ -92,7 +92,7 @@ struct MediaStatsView: View {
                         Spacer()
                         if let score = entry.score, score > 0,
                            let scoreFormat = entry.user?.mediaListOptions?.scoreFormat?.value {
-                            MediaListScoreIndicator(score: score)
+                            MediaListScoreIndicator(score: score, showTotal: true)
                                 .environment(\.scoreFormat, scoreFormat)
                         }
                         if let status = entry.status?.value {

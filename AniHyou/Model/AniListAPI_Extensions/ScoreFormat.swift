@@ -78,6 +78,19 @@ extension ScoreFormat {
     var canUseAdvancedScoring: Bool {
         self == .point100 || self == .point10Decimal
     }
+    
+    var maxValue: Int {
+        switch self {
+        case .point100:
+            100
+        case .point10, .point10Decimal:
+            10
+        case .point5:
+            5
+        case .point3:
+            3
+        }
+    }
 }
 
 private struct ScoreFormatKey: EnvironmentKey {
