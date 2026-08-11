@@ -62,6 +62,18 @@ struct ReviewRepository {
         }
     }
 
+    static func deleteReview(id: Int32) async -> Bool {
+        do {
+            let result = try await Network.shared.apollo.perform(
+                mutation: DeleteReviewMutation(id: .some(id))
+            )
+            return result.data?.deleteReview?.deleted == true
+        } catch {
+            print(error)
+            return false
+        }
+    }
+
     static func rateReview(
         reviewId: Int32,
         rating: ReviewRating

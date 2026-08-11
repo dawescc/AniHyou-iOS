@@ -11,6 +11,7 @@ import Foundation
     var isSaving = false
     var saveError = false
     var savedSuccessfully = false
+    var deletedSuccessfully = false
 
     var summary = ""
     var body = ""
@@ -19,6 +20,12 @@ import Foundation
 
     var canSave: Bool {
         body.count >= 2600 && summary.count >= 20 && summary.count <= 120 && score > 0
+    }
+
+    func delete(id: Int) async {
+        isSaving = true
+        deletedSuccessfully = await ReviewRepository.deleteReview(id: Int32(id))
+        isSaving = false
     }
 
     func save(id: Int?, mediaId: Int) async {

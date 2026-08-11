@@ -4,13 +4,16 @@
 //
 
 import SwiftUI
+import AniListAPI
 
 struct WriteReviewView: View {
     @Environment(\.dismiss) private var dismiss
 
     let mediaId: Int
+    var existingReview: UserMediaReviewQuery.Data.Page.Review?
 
     @State private var viewModel = WriteReviewViewModel()
+    @State private var showDeleteDialog = false
 
     var body: some View {
         NavigationStack {
@@ -49,8 +52,21 @@ struct WriteReviewView: View {
                 Section {
                     Toggle("Private", isOn: $viewModel.isPrivate)
                 }
+
+                if let id = existingReview?.id {
+                    Button("Delete Review", role: .destructive) {
+                        showDeleteDialog = true
+                    }
+                    .confirmationDialog("Delete this review?", isPresented: $showDeleteDialog) {
+                        Button("Delete", role: .destructive) {
+                            Task { await viewModel.delete(id: id) }
+                        }
+                    } message: {
+                        Text("Delete this review?")
+                    }
+                }
             }
-            .navigationTitle("Write Review")
+            .navigationTitle(existingReview == nil ? "Write Review" : "Edit Review")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -61,7 +77,7 @@ struct WriteReviewView: View {
                         ProgressView()
                     } else {
                         Button("Save") {
-                            Task { await viewModel.save(id: nil, mediaId: mediaId) }
+                            Task { await viewModel.save(id: existingReview?.id, mediaId: mediaId) }
                         }
                         .disabled(!viewModel.canSave)
                     }
@@ -72,6 +88,17 @@ struct WriteReviewView: View {
             }
             .onChange(of: viewModel.savedSuccessfully) {
                 if viewModel.savedSuccessfully { dismiss() }
+            }
+            .onChange(of: viewModel.deletedSuccessfully) {
+                if viewModel.deletedSuccessfully { dismiss() }
+            }
+            .onAppear {
+                if let review = existingReview {
+                    viewModel.summary = review.summary ?? ""
+                    viewModel.body = review.body ?? ""
+                    viewModel.score = review.score ?? 0
+                    viewModel.isPrivate = review.private ?? false
+                }
             }
         }
     }

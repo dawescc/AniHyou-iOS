@@ -12,6 +12,15 @@ import AniListAPI
 @Observable class MediaListEditViewModel {
 
     var entry: BasicMediaListEntry?
+    var existingReview: UserMediaReviewQuery.Data.Page.Review?
+
+    func fetchExistingReview(mediaId: Int) async {
+        let userId = LoginRepository.authUserId()
+        existingReview = await ReviewRepository.getUserReview(
+            mediaId: Int32(mediaId),
+            userId: Int32(userId)
+        )
+    }
 
     var isLoading = false
 

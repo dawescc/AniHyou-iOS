@@ -91,7 +91,7 @@ struct MediaListEditView: View {
                 Section {
                     TextField("Notes", text: $notes, axis: .vertical)
                         .lineLimit(5)
-                    Button("Write a Review") {
+                    Button(viewModel.existingReview == nil ? "Write a Review" : "Edit Review") {
                         showWriteReview = true
                     }
                 }
@@ -122,11 +122,19 @@ struct MediaListEditView: View {
         }//:NavigationStack
         .sheet(isPresented: $showWriteReview) {
             if let id = mediaDetails?.id {
-                WriteReviewView(mediaId: id)
+                WriteReviewView(mediaId: id, existingReview: viewModel.existingReview)
+            }
+        }
+        .onChange(of: showWriteReview) {
+            if !showWriteReview, let id = mediaDetails?.id {
+                Task { await viewModel.fetchExistingReview(mediaId: id) }
             }
         }
         .onAppear {
             setValues()
+            if let id = mediaDetails?.id {
+                Task { await viewModel.fetchExistingReview(mediaId: id) }
+            }
         }
         .onChange(of: viewModel.isUpdateSuccess) {
             if viewModel.isUpdateSuccess, let entry = viewModel.entry {
