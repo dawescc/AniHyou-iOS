@@ -21,12 +21,19 @@ struct WriteReviewView: View {
             Form {
                 Section {
                     TextField("Summary", text: $viewModel.summary, axis: .vertical)
-                        .lineLimit(2...4)
+                        .lineLimit(1...4)
                 } header: {
                     Text("Summary")
                 } footer: {
-                    Text("\(viewModel.summary.count)/\(WriteReviewViewModel.maxSummaryLength), min \(WriteReviewViewModel.minSummaryLength)")
-                        .foregroundStyle(.secondary)
+                    HStack {
+                        Text("\(viewModel.summary.count)/\(WriteReviewViewModel.maxSummaryLength)")
+                            .foregroundStyle(.secondary)
+                        if viewModel.summary.count < WriteReviewViewModel.minSummaryLength {
+                            let requiredCount = WriteReviewViewModel.minSummaryLength - viewModel.summary.count
+                            Text("\(requiredCount) more characters required")
+                                .foregroundStyle(.secondary)
+                        }
+                    }
                 }
 
                 Section {
