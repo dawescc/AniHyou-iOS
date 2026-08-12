@@ -37,8 +37,6 @@ import AniListAPI
         String(format: "%.0f", scoreMax)
     }
 
-    let scoreStep: Double = 1
-
     var isUpdateSuccess = false
 
     // swiftlint:disable:next function_parameter_count

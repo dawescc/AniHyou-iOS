@@ -21,6 +21,7 @@ struct MediaListEditView: View {
     @State private var showDeleteDialog = false
     
     @AppStorage(ADVANCED_SCORING_ENABLED_KEY) private var advancedScoringEnabled: Bool?
+    @AppStorage(SCORE_STEPS) private var scoreSteps: Double = 1
 
     @State private var status: MediaListStatus = .planning
     @State private var progress: Int?
@@ -42,6 +43,7 @@ struct MediaListEditView: View {
     private let decimalFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 1
         return formatter
     }()
 
@@ -165,18 +167,18 @@ struct MediaListEditView: View {
                         onIncrement: {
                             if (viewModel.score ?? 0) < viewModel.scoreMax {
                                 if viewModel.score == nil {
-                                    viewModel.score = viewModel.scoreStep
+                                    viewModel.score = scoreSteps
                                 } else {
-                                    viewModel.score! += viewModel.scoreStep
+                                    viewModel.score! += scoreSteps
                                 }
                             }
                         },
                         onDecrement: {
                             if viewModel.score != nil && viewModel.score! > 0 {
-                                if (viewModel.score! - viewModel.scoreStep) <= 0 {
+                                if (viewModel.score! - scoreSteps) <= 0 {
                                     viewModel.score = nil
                                 } else {
-                                    viewModel.score! -= viewModel.scoreStep
+                                    viewModel.score! -= scoreSteps
                                 }
                             }
                         }
@@ -377,7 +379,7 @@ struct MediaListEditView: View {
                     Stepper("/\(viewModel.scoreHint)",
                             value: value,
                             in: 0...viewModel.scoreMax,
-                            step: viewModel.scoreStep
+                            step: scoreSteps
                     )
                 }
             } header: {

@@ -13,6 +13,20 @@ struct AccountSettingsView: View {
     @Bindable var viewModel: SettingsViewModel
     @State private var showChangesAlert = false
     @State private var showWebView = false
+    @AppStorage(SCORE_STEPS) private var scoreSteps: Double = 1
+    
+    private let decimalFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 1
+        return formatter
+    }()
+    
+    private let intFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .none
+        return formatter
+    }()
     
     var body: some View {
         Group {
@@ -51,6 +65,9 @@ struct AccountSettingsView: View {
                                 scoreFormat: viewModel.scoreFormat
                             )
                             showChangesAlert = true
+                        }
+                        if viewModel.scoreFormat == .point10Decimal || viewModel.scoreFormat == .point100 {
+                            scoreStepsSettings
                         }
                     } header: {
                         Text("Content")
@@ -97,6 +114,36 @@ struct AccountSettingsView: View {
         .fullScreenCover(isPresented: $showWebView) {
             SafariWebView(url: URL(string: "https://anilist.co/settings/account")!)
                 .ignoresSafeArea()
+        }
+    }
+    
+    private var scoreStepsSettings: some View {
+        HStack {
+            let formatter = if viewModel.scoreFormat == .point10Decimal {
+                decimalFormatter
+            } else {
+                intFormatter
+            }
+            TextField("0", value: $scoreSteps, formatter: formatter)
+                .keyboardType(.numberPad)
+                .textFieldStyle(.roundedBorder)
+                .frame(width: 65)
+                .onChange(of: scoreSteps) {
+                    if scoreSteps > Double(viewModel.scoreFormat.maxValue) {
+                        scoreSteps = Double(viewModel.scoreFormat.maxValue)
+                    } else if viewModel.scoreFormat == .point100 {
+                        if Int(exactly: scoreSteps) == nil {
+                            // point 100 doesn't accept decimals
+                            scoreSteps = Double(Int(scoreSteps))
+                        }
+                    }
+                }
+            Stepper(
+                "Score steps",
+                value: $scoreSteps,
+                in: 1...Double(viewModel.scoreFormat.maxValue),
+                step: 1
+            )
         }
     }
 }
