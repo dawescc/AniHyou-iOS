@@ -10,7 +10,7 @@ struct WriteReviewView: View {
     @Environment(\.dismiss) private var dismiss
 
     let mediaId: Int
-    var existingReview: UserMediaReviewQuery.Data.Page.Review?
+    var existingReview: UserMediaReviewQuery.Data.Review?
 
     @State private var viewModel = WriteReviewViewModel()
     @State private var showDeleteDialog = false

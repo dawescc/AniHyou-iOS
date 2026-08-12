@@ -22,13 +22,13 @@ struct ReviewRepository {
         }
     }
 
-    static func getUserReview(mediaId: Int32, userId: Int32) async -> UserMediaReviewQuery.Data.Page.Review? {
+    static func getUserReview(mediaId: Int32, userId: Int32) async -> UserMediaReviewQuery.Data.Review? {
         do {
             let result = try await Network.shared.apollo.fetch(
                 query: UserMediaReviewQuery(mediaId: .some(mediaId), userId: .some(userId)),
                 cachePolicy: .networkOnly
             )
-            return result.data?.page?.reviews?.first ?? nil
+            return result.data?.review
         } catch {
             print(error)
             return nil
