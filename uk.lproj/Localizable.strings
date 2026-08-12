@@ -818,7 +818,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Finished
 No comment provided by engineer. */
-"Finished" = "За завершеним";
+"Finished" = "Завершене";
 /* en.lproj/Localizable.strings
 Finishing
 No comment provided by engineer. */
@@ -1393,7 +1393,7 @@ No comment provided by engineer. */
 "Parent" = "Джерело";
 /* en.lproj/Localizable.strings
 Paused */
-"Paused" = "Призупинені";
+"Paused" = "Відкладені";
 /* (User) Paused [Anime/Manga Title] */
 "Paused %@" = "Відкладає «%@»";
 /* en.lproj/Localizable.strings
@@ -1577,7 +1577,7 @@ Releasing
 No comment provided by engineer. */
 "Releasing" = "Випускається";
 /* sort by repeat count */
-"Repeat" = "За повторами";
+"Repeat" = "Повторюване";
 /* en.lproj/Localizable.strings
 Repeat Count
 No comment provided by engineer. */
@@ -1627,6 +1627,10 @@ No comment provided by engineer. */
 Romance
 No comment provided by engineer. */
 "Romance" = "Романтика";
+/* en.lproj/Localizable.strings
+Same universe
+No comment provided by engineer. */
+"Same universe" = "Спільний всесвіт";
 /* en.lproj/Localizable.strings
 Save
 No comment provided by engineer. */
@@ -1711,7 +1715,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Show only airing soon anime that are in your list
 No comment provided by engineer. */
-"Show only airing soon anime that are in your list" = "Показувати лише ті аніме, що вийдуть невдовзі та додані до мого каталогу";
+"Show only airing soon anime that are in your list" = "Показує лише ті аніме, що вийдуть невдовзі та додані до мого каталогу";
 /* en.lproj/Localizable.strings
 Show spoiler
 No comment provided by engineer. */
@@ -1822,7 +1826,7 @@ Start date
 No comment provided by engineer. */
 "Start date" = "Дата початку";
 /* sort by date started */
-"Started" = "За початим";
+"Started" = "Почате";
 /* en.lproj/Localizable.strings
 Stats
 No comment provided by engineer. */
@@ -2232,6 +2236,10 @@ No comment provided by engineer. */
 You may need to login again in your browser
 No comment provided by engineer. */
 "You may need to login again in your browser" = "Можливо, вам доведеться ще раз увійти у своєму браузері";
+/* Translate only the "chapter" text */
+"^[%lld chapter](inflect: true)" = "^[%lld розділ](inflect: true)";
 /* please translate only the text inside the [].
 Eg: 1 episode behind */
 "^[%lld episode behind](inflect: true)" = "^[%lld нов. епізод.](inflect: true)";
+/* Translate only the "episode" text */
+"^[%lld episode](inflect: true)" = "^[%lld епізод](inflect: true)";

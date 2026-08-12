@@ -2,10 +2,16 @@
 %lld chapters
 No comment provided by engineer. */
 "%lld chapters" = "%lld capítulos";
+/* Character (text) count. Appears when writing a review */
+"%lld characters" = "%lld caracteres";
 /* en.lproj/Localizable.strings
 %lld episodes
 No comment provided by engineer. */
 "%lld episodes" = "%lld episodios";
+/* Character (text) required count. Appears when writing a review.
+
+Example: "45 more characters required" */
+"%lld more characters required" = "Se necesitan %lld caracteres más";
 /* num of volumes.
 Eg: 23 volumes */
 "%lld volumes" = "%lld volúmenes";
@@ -598,10 +604,16 @@ No comment provided by engineer. */
 Delete
 No comment provided by engineer. */
 "Delete" = "Eliminar";
+/* Delete published Anime/Manga Review */
+"Delete Review" = "Borrar Reseña";
 /* en.lproj/Localizable.strings
 Delete this entry?
 No comment provided by engineer. */
 "Delete this entry?" = "¿Eliminar esta entrada?";
+/* en.lproj/Localizable.strings
+Delete this review?
+No comment provided by engineer. */
+"Delete this review?" = "¿Eliminar esta reseña?";
 /* en.lproj/Localizable.strings
 Descending
 No comment provided by engineer. */
@@ -706,6 +718,10 @@ No comment provided by engineer. */
 Edit
 No comment provided by engineer. */
 "Edit" = "Editar";
+/* en.lproj/Localizable.strings
+Edit Review
+No comment provided by engineer. */
+"Edit Review" = "Editar Reseña";
 /* en.lproj/Localizable.strings
 Editing
 No comment provided by engineer. */
@@ -1599,6 +1615,10 @@ Restore purchases
 No comment provided by engineer. */
 "Restore purchases" = "Restaurar compras";
 /* en.lproj/Localizable.strings
+Review
+No comment provided by engineer. */
+"Review" = "Reseña";
+/* en.lproj/Localizable.strings
 Review and Threads
 No comment provided by engineer. */
 "Review and Threads" = "Reseñas y Discusiones";
@@ -1653,6 +1673,8 @@ No comment provided by engineer. */
 Score format
 No comment provided by engineer. */
 "Score format" = "Formato de puntuación";
+/* label for setting number of increments when editing a score using +/- buttons */
+"Score steps" = "Pasos para la puntuación";
 /* en.lproj/Localizable.strings
 Script
 No comment provided by engineer. */
@@ -2224,6 +2246,14 @@ No comment provided by engineer. */
 World Design
 No comment provided by engineer. */
 "World Design" = "Diseño de Mundo";
+/* en.lproj/Localizable.strings
+Write Review
+No comment provided by engineer. */
+"Write Review" = "Escribir Reseña";
+/* en.lproj/Localizable.strings
+Write a Review
+No comment provided by engineer. */
+"Write a Review" = "Escribe una Reseña";
 /* en.lproj/Localizable.strings
 Year
 No comment provided by engineer. */

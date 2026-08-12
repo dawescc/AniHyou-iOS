@@ -161,7 +161,7 @@ No comment provided by engineer. */
 "Airing Anime" = "Anime in onda";
 /* en.lproj/Localizable.strings
 Airing Next */
-"Airing Next" = "In onda prossimamente";
+"Airing Next" = "In onda";
 /* en.lproj/Localizable.strings
 Airing anime notifications
 No comment provided by engineer. */
@@ -171,7 +171,7 @@ Airing on my list
 No comment provided by engineer. */
 "Airing on my list" = "In arrivo nella mia lista";
 /* for this one use the masculine form when applied. */
-"All" = "Tutto";
+"All" = "Tutti";
 /* en.lproj/Localizable.strings
 Alternative
 No comment provided by engineer. */
@@ -949,7 +949,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 In-Betweens Check
 No comment provided by engineer. */
-"In-Betweens Check" = "Controllo intermezzi";
+"In-Betweens Check" = "Controlli intermedi";
 /* en.lproj/Localizable.strings
 In-Betweens Manager
 No comment provided by engineer. */
@@ -1504,6 +1504,10 @@ Romance
 No comment provided by engineer. */
 "Romance" = "Romantico";
 /* en.lproj/Localizable.strings
+Same universe
+No comment provided by engineer. */
+"Same universe" = "Stesso universo";
+/* en.lproj/Localizable.strings
 Save
 No comment provided by engineer. */
 "Save" = "Salva";
@@ -1571,7 +1575,7 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Show only airing soon anime that are in your list
 No comment provided by engineer. */
-"Show only airing soon anime that are in your list" = "Mostra solo gli anime in onda prossimamente che sono nel tuo elenco";
+"Show only airing soon anime that are in your list" = "Mostra solo gli anime in onda che sono nel tuo elenco";
 /* en.lproj/Localizable.strings
 Show spoiler
 No comment provided by engineer. */
@@ -1960,6 +1964,10 @@ No comment provided by engineer. */
 You may need to login again in your browser
 No comment provided by engineer. */
 "You may need to login again in your browser" = "Potrebbe essere necessario effettuare nuovamente il login nel browser";
+/* Translate only the "chapter" text */
+"^[%lld chapter](inflect: true)" = "^[%lld capitolo](inflect: true)";
 /* please translate only the text inside the [].
 Eg: 1 episode behind */
 "^[%lld episode behind](inflect: true)" = "^[%lld episodi indietro](inflect: true)";
+/* Translate only the "episode" text */
+"^[%lld episode](inflect: true)" = "^[%lld episodio](inflect: true)";

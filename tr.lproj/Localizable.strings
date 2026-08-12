@@ -2236,6 +2236,10 @@ No comment provided by engineer. */
 You may need to login again in your browser
 No comment provided by engineer. */
 "You may need to login again in your browser" = "Tarayıcınızdan tekrar oturum açmanız gerekebilir";
+/* Translate only the "chapter" text */
+"^[%lld chapter](inflect: true)" = "^[%lld bölüm](inflect: true)";
 /* please translate only the text inside the [].
 Eg: 1 episode behind */
 "^[%lld episode behind](inflect: true)" = "^[%lld bölüm izlenecek](inflect: true)";
+/* Translate only the "episode" text */
+"^[%lld episode](inflect: true)" = "^[%lld bölüm](inflect: true)";
