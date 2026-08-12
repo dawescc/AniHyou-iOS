@@ -43,10 +43,18 @@ struct WriteReviewView: View {
                     }
                 }
 
-                Section("Score (1–100)") {
-                    Stepper("\(viewModel.score)",
+                Section("Score") {
+                    HStack {
+                        TextField("0", value: $viewModel.score, formatter: NumberFormatter())
+                            .keyboardType(.numberPad)
+                            .textFieldStyle(.roundedBorder)
+                            .frame(width: 65)
+                        Stepper(
+                            "/100",
                             value: $viewModel.score,
-                            in: 0...100)
+                            in: 0...100
+                        )
+                    }
                 }
 
                 Section {
