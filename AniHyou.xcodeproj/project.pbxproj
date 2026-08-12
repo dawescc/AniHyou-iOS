@@ -540,6 +540,9 @@
 		486ED20C285DDC2F002D29E1 /* MediaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewModel.swift; sourceTree = "<group>"; };
 		486ED20E285DDE03002D29E1 /* ViewerId.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ViewerId.graphql; sourceTree = "<group>"; };
 		486ED213285E3261002D29E1 /* MediaDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailsView.swift; sourceTree = "<group>"; };
+		487179EF302CD2D500F9A8C9 /* DeleteReview.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = DeleteReview.graphql; sourceTree = "<group>"; };
+		487179F0302CD2DF00F9A8C9 /* SaveReview.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = SaveReview.graphql; sourceTree = "<group>"; };
+		487179F1302CD2DF00F9A8C9 /* UserMediaReview.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UserMediaReview.graphql; sourceTree = "<group>"; };
 		4873757E2BDCF36500A1424F /* MediaListIds.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = MediaListIds.graphql; sourceTree = "<group>"; };
 		48748FE02E796E4A00F3E174 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		48748FE42E7983DC00F3E174 /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
@@ -1451,6 +1454,9 @@
 			children = (
 				48B7ABEC2BB4159A0047998F /* RateReview.graphql */,
 				484A6D61287480CC0044C34A /* ReviewDetails.graphql */,
+				487179EF302CD2D500F9A8C9 /* DeleteReview.graphql */,
+				487179F0302CD2DF00F9A8C9 /* SaveReview.graphql */,
+				487179F1302CD2DF00F9A8C9 /* UserMediaReview.graphql */,
 			);
 			path = Review;
 			sourceTree = "<group>";
