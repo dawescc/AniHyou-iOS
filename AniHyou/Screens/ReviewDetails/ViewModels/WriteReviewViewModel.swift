@@ -31,18 +31,18 @@ import Foundation
 
     func delete(id: Int) async {
         isSaving = true
-        deletedSuccessfully = await ReviewRepository.deleteReview(id: Int32(id))
+        deletedSuccessfully = await ReviewRepository.deleteReview(id: id.toInt32())
         isSaving = false
     }
 
     func save(id: Int?, mediaId: Int) async {
         isSaving = true
         let success = await ReviewRepository.saveReview(
-            id: id.map { Int32($0) },
-            mediaId: Int32(mediaId),
+            id: id.map { $0.toInt32() },
+            mediaId: mediaId.toInt32(),
             body: body,
             summary: summary,
-            score: Int32(score),
+            score: score.toInt32(),
             isPrivate: isPrivate
         )
         isSaving = false

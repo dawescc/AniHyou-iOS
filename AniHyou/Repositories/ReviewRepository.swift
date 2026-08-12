@@ -47,7 +47,7 @@ struct ReviewRepository {
         do {
             let result = try await Network.shared.apollo.perform(
                 mutation: SaveReviewMutation(
-                    id: id.map { .some($0) } ?? .none,
+                    id: someIfNotNil(id),
                     mediaId: mediaId,
                     body: body,
                     summary: summary,

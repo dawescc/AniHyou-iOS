@@ -17,8 +17,8 @@ import AniListAPI
     func fetchExistingReview(mediaId: Int) async {
         let userId = LoginRepository.authUserId()
         existingReview = await ReviewRepository.getUserReview(
-            mediaId: Int32(mediaId),
-            userId: Int32(userId)
+            mediaId: mediaId.toInt32(),
+            userId: userId.toInt32()
         )
     }
 
