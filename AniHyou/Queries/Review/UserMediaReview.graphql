@@ -1,0 +1,9 @@
+query UserMediaReview($mediaId: Int, $userId: Int) {
+  Review(mediaId: $mediaId, userId: $userId) {
+    id
+    summary
+    body(asHtml: false)
+    score
+    private
+  }
+}
