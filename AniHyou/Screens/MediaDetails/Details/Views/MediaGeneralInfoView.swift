@@ -9,7 +9,7 @@ import SwiftUI
 import Flow
 import AniListAPI
 
-// swiftlint disable:next type_body_length
+// swiftlint:disable:next type_body_length
 struct MediaGeneralInfoView: View {
 
     var viewModel: MediaDetailsViewModel
