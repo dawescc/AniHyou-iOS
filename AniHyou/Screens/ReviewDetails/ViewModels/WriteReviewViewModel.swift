@@ -18,8 +18,15 @@ import Foundation
     var score = 0
     var isPrivate = false
 
+    static let minBodyLength = 2600
+    static let minSummaryLength = 20
+    static let maxSummaryLength = 120
+
     var canSave: Bool {
-        body.count >= 2600 && summary.count >= 20 && summary.count <= 120 && score > 0
+        body.count >= Self.minBodyLength
+            && summary.count >= Self.minSummaryLength
+            && summary.count <= Self.maxSummaryLength
+            && score > 0
     }
 
     func delete(id: Int) async {

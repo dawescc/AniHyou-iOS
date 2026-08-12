@@ -14,6 +14,7 @@ struct WriteReviewView: View {
 
     @State private var viewModel = WriteReviewViewModel()
     @State private var showDeleteDialog = false
+    private let textFieldWidth: CGFloat = 65
 
     var body: some View {
         NavigationStack {
@@ -24,7 +25,7 @@ struct WriteReviewView: View {
                 } header: {
                     Text("Summary")
                 } footer: {
-                    Text("\(viewModel.summary.count)/120, min 20")
+                    Text("\(viewModel.summary.count)/\(WriteReviewViewModel.maxSummaryLength), min \(WriteReviewViewModel.minSummaryLength)")
                         .foregroundStyle(.secondary)
                 }
 
@@ -34,8 +35,8 @@ struct WriteReviewView: View {
                 } header: {
                     Text("Review")
                 } footer: {
-                    if viewModel.body.count < 2600 {
-                        Text("\(2600 - viewModel.body.count) more characters required")
+                    if viewModel.body.count < WriteReviewViewModel.minBodyLength {
+                        Text("\(WriteReviewViewModel.minBodyLength - viewModel.body.count) more characters required")
                             .foregroundStyle(.secondary)
                     } else {
                         Text("\(viewModel.body.count) characters")
@@ -48,7 +49,7 @@ struct WriteReviewView: View {
                         TextField("0", value: $viewModel.score, formatter: NumberFormatter())
                             .keyboardType(.numberPad)
                             .textFieldStyle(.roundedBorder)
-                            .frame(width: 65)
+                            .frame(width: textFieldWidth)
                         Stepper(
                             "/100",
                             value: $viewModel.score,
