@@ -129,8 +129,13 @@ struct AccountSettingsView: View {
             } else {
                 intFormatter
             }
+            let keyboardType: UIKeyboardType = if viewModel.scoreFormat == .point10Decimal {
+                .decimalPad
+            } else {
+                .numberPad
+            }
             TextField("0", value: $scoreSteps, formatter: formatter)
-                .keyboardType(.numberPad)
+                .keyboardType(keyboardType)
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 65)
                 .onChange(of: scoreSteps) {
