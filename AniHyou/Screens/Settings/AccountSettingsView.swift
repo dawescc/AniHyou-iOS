@@ -55,6 +55,21 @@ struct AccountSettingsView: View {
                             )
                             showChangesAlert = true
                         }
+                    } header: {
+                        Text("Content")
+                    }
+                    .alert(
+                        "",
+                        isPresented: $showChangesAlert,
+                        actions: {
+                            Button("Close", role: .cancel) {}
+                        },
+                        message: {
+                            Text("Changes will take effect on app restart")
+                        }
+                    )
+                    
+                    Section {
                         Picker("Score format", selection: $viewModel.scoreFormat) {
                             ForEach(ScoreFormat.allCases, id: \.self) { format in
                                 Text(format.localizedName).tag(format)
@@ -70,18 +85,8 @@ struct AccountSettingsView: View {
                             scoreStepsSettings
                         }
                     } header: {
-                        Text("Content")
+                        Text("Score")
                     }
-                    .alert(
-                        "",
-                        isPresented: $showChangesAlert,
-                        actions: {
-                            Button("Close", role: .cancel) {}
-                        },
-                        message: {
-                            Text("Changes will take effect on app restart")
-                        }
-                    )
                     
                     Section {
                         Toggle("Airing anime notifications", isOn: $viewModel.airingNotifications)
