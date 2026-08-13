@@ -12,8 +12,8 @@ struct PublishActivityView: View {
     @Environment(\.dismiss) private var dismiss
     
     @State var viewModel = PublishActivityViewModel()
-    var activityId: Int32?
-    var id: Int32?
+    var activityId: Int?
+    var id: Int?
     @State var text = ""
     
     var body: some View {

@@ -12,18 +12,20 @@ import AniListAPI
 struct ActivityReplyItemView: View {
     
     let reply: ActivityReplyFragment
-    @State var isLiked: Bool
-    @State var likeCount: Int
+    @State private var isLiked: Bool
+    @State private var likeCount: Int
+    let isMine: Bool
     
-    init(reply: ActivityReplyFragment) {
+    init(reply: ActivityReplyFragment, isMine: Bool) {
         self.reply = reply
         self.isLiked = reply.isLiked == true
         self.likeCount = reply.likeCount
+        self.isMine = isMine
     }
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
+            HStack(alignment: .center) {
                 NavigationLink(destination: ProfileView(userId: reply.userId ?? 0)) {
                     HStack(alignment: .center) {
                         CircleImageView(imageUrl: reply.user?.avatar?.medium, size: 24)
@@ -41,6 +43,21 @@ struct ActivityReplyItemView: View {
                     .font(.footnote)
                     .foregroundStyle(.gray)
                     .padding(.bottom, 1)
+                
+                if isMine {
+                    Menu("", systemImage: "ellipsis") {
+                        Button("Delete", systemImage: "trash", role: .destructive) {
+                            Task {
+                                if let deleted = await ActivityRepository.deleteActivityReply(id: Int32(reply.id)) {
+                                    if deleted {
+                                        NotificationCenter.default.post(name: "updatedActivityReply", object: nil)
+                                    }
+                                }
+                            }
+                        }
+                        .tint(nil)
+                    }
+                }
             }//:HStack
             
             InlineText(markdown: reply.text?.formatMarkdown() ?? "Loading")

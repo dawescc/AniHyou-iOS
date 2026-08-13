@@ -22,6 +22,7 @@ import AniListAPI
     func getDetails(activityId: Int) async {
         isLoading = true
         if let result = await ActivityRepository.getActivityDetails(activityId: Int32(activityId)) {
+            self.replies.removeAll()
             if let details = result.asListActivity {
                 listActivity = details.fragments.listActivityFragment
                 if let replies = details.replies?.compactMap({ $0?.fragments.activityReplyFragment }) {

@@ -14,18 +14,22 @@ import AniListAPI
     var isLoading = false
     var wasPublished = false
     
-    func publishActivity(id: Int32?, text: String) async {
+    func publishActivity(id: Int?, text: String) async {
         isLoading = true
-        if let result = await ActivityRepository.updateTextActivity(id: id, text: text) {
+        if let result = await ActivityRepository.updateTextActivity(id: id?.toInt32(), text: text) {
             NotificationCenter.default.post(name: "updatedActivity", object: result)
             wasPublished = true
         }
         isLoading = false
     }
     
-    func publishActivityReply(activityId: Int32, id: Int32?, text: String) async {
+    func publishActivityReply(activityId: Int, id: Int?, text: String) async {
         isLoading = true
-        if let result = await ActivityRepository.updateActivityReply(activityId: activityId, id: id, text: text) {
+        if let result = await ActivityRepository.updateActivityReply(
+            activityId: activityId.toInt32(),
+            id: id?.toInt32(),
+            text: text
+        ) {
             NotificationCenter.default.post(name: "updatedActivityReply", object: result)
             wasPublished = true
         }

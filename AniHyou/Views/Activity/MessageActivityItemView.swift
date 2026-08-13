@@ -39,7 +39,9 @@ struct MessageActivityItemView: View {
                             Menu("", systemImage: "ellipsis") {
                                 Button("Delete", systemImage: "trash", role: .destructive) {
                                     Task {
-                                        if let deleted = await ActivityRepository.deleteActivity(id: Int32(activity.id)) {
+                                        if let deleted = await ActivityRepository.deleteActivity(
+                                            id: Int32(activity.id)
+                                        ) {
                                             if deleted {
                                                 NotificationCenter.default.post(name: "updatedActivity", object: nil)
                                             }
