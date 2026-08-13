@@ -23,13 +23,13 @@ struct MultiSelectionSheet<Data: Hashable, RowContent: View>: View {
             List(values, id: \.self, selection: selectedValues, rowContent: rowContent)
                 .environment(\.editMode, .constant(.active))
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItem(placement: .topBarLeading) {
                         Button("Clear", role: .destructive) {
                             selectedValues.wrappedValue.removeAll()
                         }
                         .tint(.red)
                     }
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItem(placement: .topBarTrailing) {
                         if #available(iOS 26, *) {
                             Button(
                                 action: {

@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import AniListAPI
 
 struct ActivityFeedView: View {
     
     @Bindable var viewModel: ActivityFeedViewModel
     @AppStorage(BLUR_ADULT_MEDIA) private var blurAdultMedia = true
+    @State private var showingPublishActivity = false
     
     var body: some View {
         VStack {
@@ -63,15 +65,35 @@ struct ActivityFeedView: View {
                         }
                     }
                 } label: {
-                    Image(systemName: "line.3.horizontal.decrease.circle")
+                    Image(systemName: "line.3.horizontal.decrease")
+                }
+                .tint(nil)
+            }
+            if #available(iOS 26.0, *) {
+                ToolbarSpacer(placement: .automatic)
+            }
+            
+            ToolbarItem {
+                Button(action: { showingPublishActivity = true }) {
+                    Label("Publish", systemImage: "square.and.pencil")
                 }
                 .tint(nil)
             }
         }
-        .onAppear {
-            Task {
-                await viewModel.refresh()
+        .task {
+            await viewModel.refresh()
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(for: "updatedActivity")
+        ) { notification in
+            if notification.object is TextActivityFragment {
+                Task {
+                    await viewModel.refresh()
+                }
             }
+        }
+        .sheet(isPresented: $showingPublishActivity) {
+            PublishActivityView()
         }
     }
 }

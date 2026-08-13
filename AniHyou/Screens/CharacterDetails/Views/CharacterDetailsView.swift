@@ -38,7 +38,7 @@ struct CharacterDetailsView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .topBarTrailing) {
                 if let character = viewModel.character {
                     Button(action: {
                         Task {

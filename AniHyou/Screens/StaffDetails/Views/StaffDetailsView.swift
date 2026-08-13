@@ -40,7 +40,7 @@ struct StaffDetailsView: View {
         }//:VScrollView
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .topBarTrailing) {
                 if let staff = viewModel.staff {
                     Button(action: {
                         Task {

@@ -139,6 +139,10 @@
 		486ED214285E3261002D29E1 /* MediaDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486ED213285E3261002D29E1 /* MediaDetailsView.swift */; };
 		48748FE12E796E5000F3E174 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48748FE02E796E4A00F3E174 /* SearchView.swift */; };
 		48748FE52E7983DF00F3E174 /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48748FE42E7983DC00F3E174 /* Chip.swift */; };
+		48790A50302DAE6B006179E9 /* PublishActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A4F302DAE6B006179E9 /* PublishActivityView.swift */; };
+		48790A52302DAF6A006179E9 /* PublishActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A51302DAF63006179E9 /* PublishActivityViewModel.swift */; };
+		48790A54302DB24E006179E9 /* MarkdownEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A53302DB24E006179E9 /* MarkdownEditor.swift */; };
+		48790A57302DB2EA006179E9 /* MarkdownFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A56302DB2E6006179E9 /* MarkdownFormat.swift */; };
 		48801D212C3BEDC5000BEA3A /* CurrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D202C3BEDC5000BEA3A /* CurrentView.swift */; };
 		48801D232C3BF093000BEA3A /* CurrentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D222C3BF08B000BEA3A /* CurrentViewModel.swift */; };
 		48801D252C3BF397000BEA3A /* CurrentListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D242C3BF397000BEA3A /* CurrentListItemView.swift */; };
@@ -546,6 +550,12 @@
 		4873757E2BDCF36500A1424F /* MediaListIds.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = MediaListIds.graphql; sourceTree = "<group>"; };
 		48748FE02E796E4A00F3E174 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		48748FE42E7983DC00F3E174 /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
+		48790A4F302DAE6B006179E9 /* PublishActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishActivityView.swift; sourceTree = "<group>"; };
+		48790A51302DAF63006179E9 /* PublishActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishActivityViewModel.swift; sourceTree = "<group>"; };
+		48790A53302DB24E006179E9 /* MarkdownEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownEditor.swift; sourceTree = "<group>"; };
+		48790A56302DB2E6006179E9 /* MarkdownFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownFormat.swift; sourceTree = "<group>"; };
+		48790A58302DE66E006179E9 /* UpdateActivityReply.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdateActivityReply.graphql; sourceTree = "<group>"; };
+		48790A59302DE66E006179E9 /* UpdateTextActivity.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdateTextActivity.graphql; sourceTree = "<group>"; };
 		487F4BE22B282ED90002237C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		487F4BE32B282ED90002237C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		48801D202C3BEDC5000BEA3A /* CurrentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentView.swift; sourceTree = "<group>"; };
@@ -1002,6 +1012,7 @@
 				48CA07AA28703B530048854E /* Media */,
 				4820F6B22ADE9F9900A4F465 /* Activity */,
 				48C816DC2E9A60B3002BC128 /* List */,
+				48790A55302DB2DA006179E9 /* Markdown */,
 				48FC9473286656F600C87F56 /* HInfoView.swift */,
 				4832B02D285F38DC00E79D27 /* TopBannerView.swift */,
 				48B7ABF22BB445080047998F /* StretchyHeader.swift */,
@@ -1213,6 +1224,15 @@
 			path = Discover;
 			sourceTree = "<group>";
 		};
+		48790A55302DB2DA006179E9 /* Markdown */ = {
+			isa = PBXGroup;
+			children = (
+				48790A56302DB2E6006179E9 /* MarkdownFormat.swift */,
+				48790A53302DB24E006179E9 /* MarkdownEditor.swift */,
+			);
+			path = Markdown;
+			sourceTree = "<group>";
+		};
 		488763D42977F6FA00402934 /* Stats */ = {
 			isa = PBXGroup;
 			children = (
@@ -1310,6 +1330,7 @@
 			children = (
 				48AAE4082ADFA344003413B0 /* ActivityDetailsView.swift */,
 				48AAE40D2ADFA6D5003413B0 /* ActivityReplyItemView.swift */,
+				48790A4F302DAE6B006179E9 /* PublishActivityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1318,6 +1339,7 @@
 			isa = PBXGroup;
 			children = (
 				48AAE40A2ADFA44B003413B0 /* ActivityDetailsViewModel.swift */,
+				48790A51302DAF63006179E9 /* PublishActivityViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1382,6 +1404,8 @@
 			children = (
 				48AAE40C2ADFA4BE003413B0 /* ActivityDetails.graphql */,
 				4820F6B12ADE97FF00A4F465 /* ActivityFeed.graphql */,
+				48790A58302DE66E006179E9 /* UpdateActivityReply.graphql */,
+				48790A59302DE66E006179E9 /* UpdateTextActivity.graphql */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -2359,6 +2383,7 @@
 				48748FE52E7983DF00F3E174 /* Chip.swift in Sources */,
 				48575D872A3EACEE00F8AD22 /* NotificationTypeGrouped.swift in Sources */,
 				4820F6AF2ADE97A200A4F465 /* ActivityFeedViewModel.swift in Sources */,
+				48790A50302DAE6B006179E9 /* PublishActivityView.swift in Sources */,
 				48DD40492994EA9200FED7BF /* GenericNotification.swift in Sources */,
 				488C267E285380D90005EE15 /* ProfileView.swift in Sources */,
 				48D3B966297AC55F0064E829 /* MediaListItemCompactView.swift in Sources */,
@@ -2388,9 +2413,11 @@
 				4837455D2964192000E81CA3 /* StudioDetailsView.swift in Sources */,
 				48438E082A67AB2D0042BCD9 /* AppIconSelector.swift in Sources */,
 				4892DDEE2A2DE0B8009AFB63 /* DiscoverMediaListView.swift in Sources */,
+				48790A52302DAF6A006179E9 /* PublishActivityViewModel.swift in Sources */,
 				48DBAF8529B082EA00A75167 /* OverviewStatsViewModel.swift in Sources */,
 				48575D892A3EBD2200F8AD22 /* ToolbarIconButton.swift in Sources */,
 				48F7641428ACEC6000C82D75 /* UserActivityViewModel.swift in Sources */,
+				48790A57302DB2EA006179E9 /* MarkdownFormat.swift in Sources */,
 				48F7641828ACF31800C82D75 /* UserFavoritesViewModel.swift in Sources */,
 				481E2D67288C008200D91A54 /* NotificationsView.swift in Sources */,
 				48F7641628ACECA900C82D75 /* UserActivityView.swift in Sources */,
@@ -2401,6 +2428,7 @@
 				48BB54F72A5E8EE60061D4C7 /* MediaContextMenuView.swift in Sources */,
 				481AD50728522D74001779EE /* VListItemView.swift in Sources */,
 				48AF5398289E7743006D40B6 /* ThreadDetailsViewModel.swift in Sources */,
+				48790A54302DB24E006179E9 /* MarkdownEditor.swift in Sources */,
 				4820F6AB2ADE96FF00A4F465 /* ActivityFeedView.swift in Sources */,
 				480D76A529AB6A9800B56DE1 /* UserSocialViewModel.swift in Sources */,
 				4869A5D73010AF2600DE5C86 /* HtmlUtils.swift in Sources */,

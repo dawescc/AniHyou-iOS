@@ -36,9 +36,42 @@ struct ActivityRepository {
     static func getActivityDetails(activityId: Int32) async -> ActivityDetailsQuery.Data.Activity? {
         do {
             let result = try await Network.shared.apollo.fetch(
-                query: ActivityDetailsQuery(activityId: .some(activityId))
+                query: ActivityDetailsQuery(activityId: .some(activityId)),
+                cachePolicy: .networkFirst
             )
             return result.data?.activity
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+    
+    static func updateTextActivity(id: Int32? = nil, text: String) async -> TextActivityFragment? {
+        do {
+            let result = try await Network.shared.apollo.perform(
+                mutation: UpdateTextActivityMutation(id: someIfNotNil(id), text: .some(text))
+            )
+            return result.data?.saveTextActivity?.fragments.textActivityFragment
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+    
+    static func updateActivityReply(
+        activityId: Int32,
+        id: Int32? = nil,
+        text: String
+    ) async -> ActivityReplyFragment? {
+        do {
+            let result = try await Network.shared.apollo.perform(
+                mutation: UpdateActivityReplyMutation(
+                    activityId: .some(activityId),
+                    id: someIfNotNil(id),
+                    text: .some(text)
+                )
+            )
+            return result.data?.saveActivityReply?.fragments.activityReplyFragment
         } catch {
             print(error)
             return nil

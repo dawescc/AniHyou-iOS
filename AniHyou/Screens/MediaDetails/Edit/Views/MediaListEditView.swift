@@ -329,7 +329,7 @@ struct MediaListEditView: View {
     
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
-        ToolbarItem(placement: .navigationBarLeading) {
+        ToolbarItem(placement: .topBarLeading) {
             if #available(iOS 26, *) {
                 Button(action: { dismiss() }) {
                     Label("Cancel", systemImage: "xmark")
@@ -342,7 +342,7 @@ struct MediaListEditView: View {
             }
         }
 
-        ToolbarItem(placement: .navigationBarTrailing) {
+        ToolbarItem(placement: .topBarTrailing) {
             if viewModel.isLoading {
                 ProgressView()
             } else {

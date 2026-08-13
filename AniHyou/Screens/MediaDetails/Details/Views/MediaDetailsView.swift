@@ -37,13 +37,13 @@ struct MediaDetailsView: View {
         .navigationBarBackButtonHidden(!isiOS26)
         .toolbar {
             if #unavailable(iOS 26) {
-                ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItem(placement: .topBarLeading) {
                     ToolbarBackButton(scrolled: hasScrolled) {
                         dismiss()
                     }
                 }
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .topBarTrailing) {
                 if let details = viewModel.mediaDetails {
                     if #available(iOS 26, *) {
                         Button(action: {

@@ -46,6 +46,20 @@ struct ActivityDetailsView: View {
         .task {
             await viewModel.getDetails(activityId: activityId)
         }
+        .onReceive(
+            NotificationCenter.default.publisher(for: "updatedActivity")
+        ) { _ in
+            Task {
+                await viewModel.getDetails(activityId: activityId)
+            }
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(for: "updatedActivityReply")
+        ) { _ in
+            Task {
+                await viewModel.getDetails(activityId: activityId)
+            }
+        }
     }
 }
 

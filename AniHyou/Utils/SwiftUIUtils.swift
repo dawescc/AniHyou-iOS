@@ -66,6 +66,15 @@ extension View {
     }
     
     @ViewBuilder
+    func buttonStyleGlassCompat() -> some View {
+        if #available(iOS 26, *) {
+            self.buttonStyle(.glass)
+        } else {
+            self.buttonStyle(.borderless)
+        }
+    }
+    
+    @ViewBuilder
     func pinnedViewBackground(hasScrolled: Bool) -> some View {
         if #available(iOS 26, *) {
             self

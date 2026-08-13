@@ -85,7 +85,7 @@ struct WriteReviewView: View {
             .navigationTitle(existingReview == nil ? "Write Review" : "Edit Review")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItem(placement: .topBarLeading) {
                     if #available(iOS 26, *) {
                         Button(action: { dismiss() }) {
                             Label("Cancel", systemImage: "xmark")
@@ -95,7 +95,7 @@ struct WriteReviewView: View {
                         Button("Cancel") { dismiss() }
                     }
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .topBarTrailing) {
                     if viewModel.isSaving {
                         ProgressView()
                     } else {
