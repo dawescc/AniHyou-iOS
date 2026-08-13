@@ -86,16 +86,33 @@ struct WriteReviewView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel") { dismiss() }
+                    if #available(iOS 26, *) {
+                        Button(action: { dismiss() }) {
+                            Label("Cancel", systemImage: "xmark")
+                        }
+                        .tint(nil)
+                    } else {
+                        Button("Cancel") { dismiss() }
+                    }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     if viewModel.isSaving {
                         ProgressView()
                     } else {
-                        Button("Save") {
+                        let action: () -> Void = {
                             Task { await viewModel.save(id: existingReview?.id, mediaId: mediaId) }
                         }
-                        .disabled(!viewModel.canSave)
+                        if #available(iOS 26, *) {
+                            Button(action: action) {
+                                Label("Save", systemImage: "checkmark")
+                            }
+                            .buttonStyle(.borderedProminent)
+                            .disabled(!viewModel.canSave)
+                        } else {
+                            Button("Save", action: action)
+                                .disabled(!viewModel.canSave)
+                                .font(.bold(.body)())
+                        }
                     }
                 }
             }
