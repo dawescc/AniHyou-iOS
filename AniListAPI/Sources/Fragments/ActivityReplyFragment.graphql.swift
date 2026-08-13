@@ -6,7 +6,7 @@
 
 nonisolated public struct ActivityReplyFragment: AniListAPI.SelectionSet, Fragment, Identifiable {
   public static var fragmentDefinition: StaticString {
-    #"fragment ActivityReplyFragment on ActivityReply { __typename id createdAt isLiked likeCount text userId user { __typename name avatar { __typename medium } } }"#
+    #"fragment ActivityReplyFragment on ActivityReply { __typename id activityId createdAt isLiked likeCount text userId user { __typename name avatar { __typename medium } } }"#
   }
 
   @_spi(Unsafe) public let __data: DataDict
@@ -16,6 +16,7 @@ nonisolated public struct ActivityReplyFragment: AniListAPI.SelectionSet, Fragme
   @_spi(Execution) public static var __selections: [ApolloAPI.Selection] { [
     .field("__typename", String.self),
     .field("id", Int.self),
+    .field("activityId", Int?.self),
     .field("createdAt", Int.self),
     .field("isLiked", Bool?.self),
     .field("likeCount", Int.self),
@@ -29,6 +30,8 @@ nonisolated public struct ActivityReplyFragment: AniListAPI.SelectionSet, Fragme
 
   /// The id of the reply
   public var id: Int { __data["id"] }
+  /// The id of the parent activity
+  public var activityId: Int? { __data["activityId"] }
   /// The time the reply was created at
   public var createdAt: Int { __data["createdAt"] }
   /// If the currently authenticated user liked the reply

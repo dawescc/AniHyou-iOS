@@ -123,6 +123,8 @@ nonisolated public struct ActivityDetailsQuery: GraphQLQuery {
 
           /// The id of the reply
           public var id: Int { __data["id"] }
+          /// The id of the parent activity
+          public var activityId: Int? { __data["activityId"] }
           /// The time the reply was created at
           public var createdAt: Int { __data["createdAt"] }
           /// If the currently authenticated user liked the reply
@@ -221,6 +223,8 @@ nonisolated public struct ActivityDetailsQuery: GraphQLQuery {
 
           /// The id of the reply
           public var id: Int { __data["id"] }
+          /// The id of the parent activity
+          public var activityId: Int? { __data["activityId"] }
           /// The time the reply was created at
           public var createdAt: Int { __data["createdAt"] }
           /// If the currently authenticated user liked the reply
@@ -317,6 +321,8 @@ nonisolated public struct ActivityDetailsQuery: GraphQLQuery {
 
           /// The id of the reply
           public var id: Int { __data["id"] }
+          /// The id of the parent activity
+          public var activityId: Int? { __data["activityId"] }
           /// The time the reply was created at
           public var createdAt: Int { __data["createdAt"] }
           /// If the currently authenticated user liked the reply

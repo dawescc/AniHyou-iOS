@@ -23,6 +23,7 @@ query ActivityDetails($activityId: Int) {
 
 fragment ActivityReplyFragment on ActivityReply {
     id
+    activityId
     createdAt
     isLiked
     likeCount

@@ -14,6 +14,7 @@ struct TextActivityItemView: View {
     let activity: TextActivityFragment
     @State private var isLiked: Bool
     @State private var likeCount: Int
+    @State private var showingEditSheet = false
     let isMine: Bool
     
     init(activity: TextActivityFragment, isMine: Bool) {
@@ -46,6 +47,9 @@ struct TextActivityItemView: View {
                 
                 if isMine {
                     Menu("", systemImage: "ellipsis") {
+                        Button("Edit", systemImage: "pencil") {
+                            showingEditSheet = true
+                        }
                         Button("Delete", systemImage: "trash", role: .destructive) {
                             Task {
                                 if let deleted = await ActivityRepository.deleteActivity(id: Int32(activity.id)) {
@@ -55,8 +59,8 @@ struct TextActivityItemView: View {
                                 }
                             }
                         }
-                        .tint(nil)
                     }
+                    .tint(nil)
                 }
             }//:HStack
             
@@ -97,6 +101,9 @@ struct TextActivityItemView: View {
         }//:VStack
         .padding(.horizontal)
         .padding(.vertical, 1)
+        .sheet(isPresented: $showingEditSheet) {
+            PublishActivityView(id: activity.id, text: activity.text ?? "")
+        }
     }
 }
 
