@@ -556,6 +556,7 @@
 		48790A56302DB2E6006179E9 /* MarkdownFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownFormat.swift; sourceTree = "<group>"; };
 		48790A58302DE66E006179E9 /* UpdateActivityReply.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdateActivityReply.graphql; sourceTree = "<group>"; };
 		48790A59302DE66E006179E9 /* UpdateTextActivity.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdateTextActivity.graphql; sourceTree = "<group>"; };
+		48790A5A302E12B9006179E9 /* DeleteActivity.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = DeleteActivity.graphql; sourceTree = "<group>"; };
 		487F4BE22B282ED90002237C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		487F4BE32B282ED90002237C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		48801D202C3BEDC5000BEA3A /* CurrentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentView.swift; sourceTree = "<group>"; };
@@ -1406,6 +1407,7 @@
 				4820F6B12ADE97FF00A4F465 /* ActivityFeed.graphql */,
 				48790A58302DE66E006179E9 /* UpdateActivityReply.graphql */,
 				48790A59302DE66E006179E9 /* UpdateTextActivity.graphql */,
+				48790A5A302E12B9006179E9 /* DeleteActivity.graphql */,
 			);
 			path = Activity;
 			sourceTree = "<group>";

@@ -12,13 +12,15 @@ import AniListAPI
 struct MessageActivityItemView: View {
     
     let activity: MessageActivityFragment
-    @State var isLiked: Bool
-    @State var likeCount: Int
+    @State private var isLiked: Bool
+    @State private var likeCount: Int
+    let isMine: Bool
     
-    init(activity: MessageActivityFragment) {
+    init(activity: MessageActivityFragment, isMine: Bool) {
         self.activity = activity
         self.isLiked = activity.isLiked == true
         self.likeCount = activity.likeCount
+        self.isMine = isMine
     }
     
     var body: some View {
@@ -32,6 +34,21 @@ struct MessageActivityItemView: View {
                             .bold()
                             .font(.subheadline)
                             .padding(.bottom, 1)
+                        
+                        if isMine {
+                            Menu("", systemImage: "ellipsis") {
+                                Button("Delete", systemImage: "trash", role: .destructive) {
+                                    Task {
+                                        if let deleted = await ActivityRepository.deleteActivity(id: Int32(activity.id)) {
+                                            if deleted {
+                                                NotificationCenter.default.post(name: "updatedActivity", object: nil)
+                                            }
+                                        }
+                                    }
+                                }
+                                .tint(nil)
+                            }
+                        }
                     }
                 }
                 .foregroundStyle(.primary)

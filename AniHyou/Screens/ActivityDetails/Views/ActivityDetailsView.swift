@@ -12,6 +12,7 @@ struct ActivityDetailsView: View {
     
     @State private var viewModel = ActivityDetailsViewModel()
     @AppStorage(BLUR_ADULT_MEDIA) private var blurAdultMedia = true
+    @AppStorage(USER_ID_KEY, store: .init(suiteName: ANIHYOU_GROUP)) private var userId = 0
     
     let activityId: Int
     
@@ -22,12 +23,19 @@ struct ActivityDetailsView: View {
                     if let listActivity = viewModel.listActivity {
                         ListActivityItemView(
                             activity: listActivity,
-                            blurCover: blurAdultMedia && listActivity.media?.isAdult == true
+                            blurCover: blurAdultMedia && listActivity.media?.isAdult == true,
+                            isMine: listActivity.userId == userId
                         )
                     } else if let textActivity = viewModel.textActivity {
-                        TextActivityItemView(activity: textActivity)
+                        TextActivityItemView(
+                            activity: textActivity,
+                            isMine: textActivity.userId == userId
+                        )
                     } else if let messageActivity = viewModel.messageActivity {
-                        MessageActivityItemView(activity: messageActivity)
+                        MessageActivityItemView(
+                            activity: messageActivity,
+                            isMine: messageActivity.messengerId == userId
+                        )
                     }
                 }
                 .padding(.top)

@@ -11,15 +11,17 @@ import AniListAPI
 struct ListActivityItemView: View {
 
     let activity: ListActivityFragment
-    @State var isLiked: Bool
-    @State var likeCount: Int
-    var blurCover: Bool
+    @State private var isLiked: Bool
+    @State private var likeCount: Int
+    let blurCover: Bool
+    let isMine: Bool
     
-    init(activity: ListActivityFragment, blurCover: Bool) {
+    init(activity: ListActivityFragment, blurCover: Bool, isMine: Bool) {
         self.activity = activity
         self.isLiked = activity.isLiked == true
         self.likeCount = activity.likeCount
         self.blurCover = blurCover
+        self.isMine = isMine
     }
 
     var body: some View {
@@ -37,7 +39,7 @@ struct ListActivityItemView: View {
             .buttonStyle(.plain)
             .padding(.trailing)
             VStack(alignment: .leading) {
-                HStack {
+                HStack(alignment: .center) {
                     NavigationLink(destination: ProfileView(userId: activity.userId ?? 0)) {
                         HStack(alignment: .center) {
                             CircleImageView(imageUrl: activity.user?.avatar?.medium, size: 24)
@@ -55,6 +57,21 @@ struct ListActivityItemView: View {
                         .font(.footnote)
                         .foregroundStyle(.gray)
                         .padding(.bottom, 1)
+                    
+                    if isMine {
+                        Menu("", systemImage: "ellipsis") {
+                            Button("Delete", systemImage: "trash", role: .destructive) {
+                                Task {
+                                    if let deleted = await ActivityRepository.deleteActivity(id: Int32(activity.id)) {
+                                        if deleted {
+                                            NotificationCenter.default.post(name: "updatedActivity", object: nil)
+                                        }
+                                    }
+                                }
+                            }
+                            .tint(nil)
+                        }
+                    }
                 }//:HStack
                 
                 Text(activity.text)

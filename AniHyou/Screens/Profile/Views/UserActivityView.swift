@@ -40,21 +40,39 @@ struct UserActivityView: View {
             if let listActivity = item.asListActivity?.fragments.listActivityFragment {
                 ListActivityItemView(
                     activity: listActivity,
-                    blurCover: blurAdultMedia && listActivity.media?.isAdult == true
+                    blurCover: blurAdultMedia && listActivity.media?.isAdult == true,
+                    isMine: listActivity.userId == userId
                 )
                 Divider()
             } else if let textActivity = item.asTextActivity?.fragments.textActivityFragment {
-                TextActivityItemView(activity: textActivity)
+                TextActivityItemView(
+                    activity: textActivity,
+                    isMine: textActivity.userId == userId
+                )
                 Divider()
             } else if let messageActivity = item.asMessageActivity?.fragments.messageActivityFragment {
-                MessageActivityItemView(activity: messageActivity)
+                MessageActivityItemView(
+                    activity: messageActivity,
+                    isMine: messageActivity.messengerId == userId
+                )
                 Divider()
+            }
+        }
+        .task {
+            viewModel.userId = userId
+            await viewModel.getUserActivity()
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(for: "updatedActivity")
+        ) { _ in
+            Task {
+                await viewModel.refresh()
             }
         }
         if viewModel.hasNextPage {
             HorizontalProgressView()
                 .task {
-                    await viewModel.getUserActivity(userId: userId)
+                    await viewModel.getUserActivity()
                 }
         }
     }

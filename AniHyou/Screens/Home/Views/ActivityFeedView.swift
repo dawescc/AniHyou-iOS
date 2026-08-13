@@ -12,18 +12,23 @@ struct ActivityFeedView: View {
     
     @Bindable var viewModel: ActivityFeedViewModel
     @AppStorage(BLUR_ADULT_MEDIA) private var blurAdultMedia = true
+    @AppStorage(USER_ID_KEY, store: .init(suiteName: ANIHYOU_GROUP)) private var userId = 0
     @State private var showingPublishActivity = false
     
     var body: some View {
         VStack {
             ForEach(viewModel.activities, id: \.self) {
                 if let textActivity = $0.asTextActivity?.fragments.textActivityFragment {
-                    TextActivityItemView(activity: textActivity)
+                    TextActivityItemView(
+                        activity: textActivity,
+                        isMine: textActivity.userId == userId
+                    )
                     Divider()
                 } else if let listActivity = $0.asListActivity?.fragments.listActivityFragment {
                     ListActivityItemView(
                         activity: listActivity,
-                        blurCover: blurAdultMedia && listActivity.media?.isAdult == true
+                        blurCover: blurAdultMedia && listActivity.media?.isAdult == true,
+                        isMine: listActivity.userId == userId
                     )
                     Divider()
                 }
@@ -81,15 +86,15 @@ struct ActivityFeedView: View {
             }
         }
         .task {
-            await viewModel.refresh()
+            if viewModel.activities.isEmpty {
+                await viewModel.refresh()
+            }
         }
         .onReceive(
             NotificationCenter.default.publisher(for: "updatedActivity")
-        ) { notification in
-            if notification.object is TextActivityFragment {
-                Task {
-                    await viewModel.refresh()
-                }
+        ) { _ in
+            Task {
+                await viewModel.refresh()
             }
         }
         .sheet(isPresented: $showingPublishActivity) {

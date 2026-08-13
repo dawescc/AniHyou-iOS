@@ -77,4 +77,14 @@ struct ActivityRepository {
             return nil
         }
     }
+    
+    static func deleteActivity(id: Int32) async -> Bool? {
+        do {
+            let result = try await Network.shared.apollo.perform(mutation: DeleteActivityMutation(id: .some(id)))
+            return result.data?.deleteActivity?.deleted
+        } catch {
+            print(error)
+            return nil
+        }
+    }
 }

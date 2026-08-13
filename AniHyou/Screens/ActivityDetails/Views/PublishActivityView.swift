@@ -22,6 +22,8 @@ struct PublishActivityView: View {
                 .toolbar {
                     toolbarContent
                 }
+                .navigationTitle("Write something…")
+                .navigationBarTitleDisplayMode(.inline)
         }
         .onChange(of: viewModel.wasPublished) {
             if viewModel.wasPublished { dismiss() }
