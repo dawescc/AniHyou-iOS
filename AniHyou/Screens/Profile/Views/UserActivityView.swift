@@ -36,6 +36,22 @@ struct UserActivityView: View {
             .padding()
             .navigationBarTitleDisplayMode(.inline)
         }
+        
+        // for some reason the task/onAppear is not triggered if put in the ForEach block,
+        // so this weird workaround is needed.
+        Text("")
+            .task {
+                viewModel.userId = userId
+                await viewModel.getUserActivity()
+            }
+            .onReceive(
+                NotificationCenter.default.publisher(for: "updatedActivity")
+            ) { _ in
+                Task {
+                    await viewModel.refresh()
+                }
+            }
+        
         ForEach(viewModel.activities, id: \.id) { item in
             if let listActivity = item.asListActivity?.fragments.listActivityFragment {
                 ListActivityItemView(
@@ -56,17 +72,6 @@ struct UserActivityView: View {
                     isMine: messageActivity.messengerId == userId
                 )
                 Divider()
-            }
-        }
-        .task {
-            viewModel.userId = userId
-            await viewModel.getUserActivity()
-        }
-        .onReceive(
-            NotificationCenter.default.publisher(for: "updatedActivity")
-        ) { _ in
-            Task {
-                await viewModel.refresh()
             }
         }
         if viewModel.hasNextPage {
