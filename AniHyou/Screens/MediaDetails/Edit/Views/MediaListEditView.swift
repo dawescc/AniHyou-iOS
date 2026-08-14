@@ -39,6 +39,7 @@ struct MediaListEditView: View {
     @State private var showWriteReview = false
     @State private var advancedScores: [String: Double] = [:]
     @State private var customLists: [String: Bool] = [:]
+    @State private var priority = 0
 
     private let textFieldWidth: CGFloat = 65
     private let decimalFormatter: NumberFormatter = {
@@ -83,6 +84,10 @@ struct MediaListEditView: View {
                     NavigationLink("Custom lists") {
                         MediaCustomListsView(customLists: $customLists)
                     }
+                }
+                
+                Section("Priority") {
+                    Stepper(priority.priorityName, value: $priority, in: 0...2)
                 }
 
                 Section {
@@ -361,7 +366,8 @@ struct MediaListEditView: View {
                             isPrivate: isPrivate,
                             isHiddenFromStatusLists: isHiddenFromStatusLists,
                             customLists: customLists,
-                            notes: notes
+                            notes: notes,
+                            priority: priority
                         )
                     }
                 }
@@ -463,6 +469,7 @@ struct MediaListEditView: View {
                 self.customLists[name] = false
             }
         }
+        self.priority = self.mediaList?.priority ?? 0
     }
 }
 

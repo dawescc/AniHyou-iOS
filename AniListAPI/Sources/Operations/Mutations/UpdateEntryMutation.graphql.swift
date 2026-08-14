@@ -8,7 +8,7 @@ nonisolated public struct UpdateEntryMutation: GraphQLMutation {
   public static let operationName: String = "UpdateEntry"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"mutation UpdateEntry($mediaId: Int, $status: MediaListStatus, $score: Float, $progress: Int, $progressVolumes: Int, $startedAt: FuzzyDateInput, $completedAt: FuzzyDateInput, $repeat: Int, $private: Boolean, $hiddenFromStatusLists: Boolean, $notes: String, $customLists: [String], $advancedScores: [Float]) { SaveMediaListEntry( mediaId: $mediaId status: $status score: $score progress: $progress progressVolumes: $progressVolumes startedAt: $startedAt completedAt: $completedAt repeat: $repeat private: $private hiddenFromStatusLists: $hiddenFromStatusLists notes: $notes customLists: $customLists advancedScores: $advancedScores ) { __typename ...BasicMediaListEntry mediaId } }"#,
+      #"mutation UpdateEntry($mediaId: Int, $status: MediaListStatus, $score: Float, $progress: Int, $progressVolumes: Int, $startedAt: FuzzyDateInput, $completedAt: FuzzyDateInput, $repeat: Int, $private: Boolean, $hiddenFromStatusLists: Boolean, $notes: String, $customLists: [String], $advancedScores: [Float], $priority: Int) { SaveMediaListEntry( mediaId: $mediaId status: $status score: $score progress: $progress progressVolumes: $progressVolumes startedAt: $startedAt completedAt: $completedAt repeat: $repeat private: $private hiddenFromStatusLists: $hiddenFromStatusLists notes: $notes customLists: $customLists advancedScores: $advancedScores priority: $priority ) { __typename ...BasicMediaListEntry mediaId } }"#,
       fragments: [BasicMediaListEntry.self, FuzzyDateFragment.self]
     ))
 
@@ -25,6 +25,7 @@ nonisolated public struct UpdateEntryMutation: GraphQLMutation {
   public var notes: GraphQLNullable<String>
   public var customLists: GraphQLNullable<[String?]>
   public var advancedScores: GraphQLNullable<[Double?]>
+  public var priority: GraphQLNullable<Int32>
 
   public init(
     mediaId: GraphQLNullable<Int32>,
@@ -39,7 +40,8 @@ nonisolated public struct UpdateEntryMutation: GraphQLMutation {
     hiddenFromStatusLists: GraphQLNullable<Bool>,
     notes: GraphQLNullable<String>,
     customLists: GraphQLNullable<[String?]>,
-    advancedScores: GraphQLNullable<[Double?]>
+    advancedScores: GraphQLNullable<[Double?]>,
+    priority: GraphQLNullable<Int32>
   ) {
     self.mediaId = mediaId
     self.status = status
@@ -54,6 +56,7 @@ nonisolated public struct UpdateEntryMutation: GraphQLMutation {
     self.notes = notes
     self.customLists = customLists
     self.advancedScores = advancedScores
+    self.priority = priority
   }
 
   @_spi(Unsafe) public var __variables: Variables? { [
@@ -69,7 +72,8 @@ nonisolated public struct UpdateEntryMutation: GraphQLMutation {
     "hiddenFromStatusLists": hiddenFromStatusLists,
     "notes": notes,
     "customLists": customLists,
-    "advancedScores": advancedScores
+    "advancedScores": advancedScores,
+    "priority": priority
   ] }
 
   nonisolated public struct Data: AniListAPI.SelectionSet {
@@ -91,7 +95,8 @@ nonisolated public struct UpdateEntryMutation: GraphQLMutation {
         "hiddenFromStatusLists": .variable("hiddenFromStatusLists"),
         "notes": .variable("notes"),
         "customLists": .variable("customLists"),
-        "advancedScores": .variable("advancedScores")
+        "advancedScores": .variable("advancedScores"),
+        "priority": .variable("priority")
       ]),
     ] }
     @_spi(Execution) public static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
@@ -139,6 +144,8 @@ nonisolated public struct UpdateEntryMutation: GraphQLMutation {
       public var `private`: Bool? { __data["private"] }
       /// If the entry shown be hidden from non-custom lists
       public var hiddenFromStatusLists: Bool? { __data["hiddenFromStatusLists"] }
+      /// Priority of planning
+      public var priority: Int? { __data["priority"] }
       /// When the entry was started by the user
       public var startedAt: StartedAt? { __data["startedAt"] }
       /// When the entry was completed by the user

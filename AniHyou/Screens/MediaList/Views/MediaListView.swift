@@ -33,6 +33,7 @@ struct MediaListView: View {
     @AppStorage(LIST_SORT_ORDER) private var sortAscending = false
     @AppStorage(LIST_STYLE_KEY) private var listItemsStyle = 0
     @AppStorage(INCREMENT_LONG_SWIPE_DIRECTION_KEY) private var incrementLongSwipeDirection: LongSwipeDirection = .right
+    @AppStorage(SHOW_LOW_PRIORITY) private var showLowPriority = false
 
     var body: some View {
         List {
@@ -194,21 +195,24 @@ struct MediaListView: View {
                     details: details,
                     entry: entry,
                     schedule: schedule,
-                    showStatus: showStatus
+                    showStatus: showStatus,
+                    showLowPriority: showLowPriority
                 )
             case 2:
                 MediaListItemCompactView(
                     details: details,
                     entry: entry,
                     schedule: schedule,
-                    showStatus: showStatus
+                    showStatus: showStatus,
+                    showLowPriority: showLowPriority
                 )
             default:
                 MediaListItemStandardView(
                     details: details,
                     entry: entry,
                     schedule: schedule,
-                    showStatus: showStatus
+                    showStatus: showStatus,
+                    showLowPriority: showLowPriority
                 )
             }
         }

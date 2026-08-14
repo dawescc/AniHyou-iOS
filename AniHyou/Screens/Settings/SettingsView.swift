@@ -68,6 +68,7 @@ struct SettingsView: View {
     @AppStorage(NOTIFICATIONS_FETCH_REPEAT_KEY) private var notificationsFetchHours = 6
     @AppStorage(BLUR_ADULT_MEDIA) private var blurAdultMedia = true
     @AppStorage(HIDE_SCORES) private var hideScores = false
+    @AppStorage(SHOW_LOW_PRIORITY) private var showLowPriority = false
     @State private var showDonationAlert = false
     @State private var navigateToDonations = false
 
@@ -88,6 +89,7 @@ struct SettingsView: View {
             Section {
                 Toggle("Blur adult media", isOn: $blurAdultMedia)
                 Toggle("Hide scores", isOn: $hideScores)
+                Toggle("Show low priority", isOn: $showLowPriority)
                 Toggle("Airing on my list", isOn: $airingOnMyList)
             } header: {
                 Text("Content")
@@ -95,7 +97,7 @@ struct SettingsView: View {
                 Text("Show only airing soon anime that are in your list")
             }
             
-            Section {
+            Section("Notifications") {
                 Toggle("Push notifications", isOn: $notificationsEnabled)
                 Picker("Update interval", selection: $notificationsFetchHours) {
                     Text("1h").tag(1)
@@ -126,12 +128,10 @@ struct SettingsView: View {
                 }
             }
 
-            Section {
+            Section("App Icon") {
                 AppIconSelector(
                     onNotDonated: { showDonationAlert = true }
                 )
-            } header: {
-                Text("App Icon")
             }
 
             information
@@ -171,7 +171,7 @@ struct SettingsView: View {
     
     @ViewBuilder
     var displayOptions: some View {
-        Section {
+        Section("Display") {
             Picker("List style", selection: $listStyle) {
                 Text("Standard").tag(0)
                 Text("Compact").tag(2)
@@ -214,8 +214,6 @@ struct SettingsView: View {
                     Text(tab.localizedName).tag(tab.rawValue)
                 }
             }
-        } header: {
-            Text("Display")
         }
     }
     

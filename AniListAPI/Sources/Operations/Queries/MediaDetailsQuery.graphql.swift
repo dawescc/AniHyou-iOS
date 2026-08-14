@@ -385,6 +385,8 @@ nonisolated public struct MediaDetailsQuery: GraphQLQuery {
         public var `private`: Bool? { __data["private"] }
         /// If the entry shown be hidden from non-custom lists
         public var hiddenFromStatusLists: Bool? { __data["hiddenFromStatusLists"] }
+        /// Priority of planning
+        public var priority: Int? { __data["priority"] }
         /// Text notes
         public var notes: String? { __data["notes"] }
         /// Map of booleans for which custom lists the entry are in

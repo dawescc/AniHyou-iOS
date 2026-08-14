@@ -35,6 +35,7 @@ fragment BasicMediaListEntry on MediaList
   repeat
   private
   hiddenFromStatusLists
+  priority
   startedAt {
     ...FuzzyDateFragment
   }

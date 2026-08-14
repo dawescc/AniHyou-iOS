@@ -6,7 +6,7 @@
 
 nonisolated public struct BasicMediaListEntry: AniListAPI.MutableSelectionSet, Fragment {
   public static var fragmentDefinition: StaticString {
-    #"fragment BasicMediaListEntry on MediaList { __typename id mediaId progress progressVolumes status score advancedScores repeat private hiddenFromStatusLists startedAt { __typename ...FuzzyDateFragment } completedAt { __typename ...FuzzyDateFragment } notes customLists }"#
+    #"fragment BasicMediaListEntry on MediaList { __typename id mediaId progress progressVolumes status score advancedScores repeat private hiddenFromStatusLists priority startedAt { __typename ...FuzzyDateFragment } completedAt { __typename ...FuzzyDateFragment } notes customLists }"#
   }
 
   @_spi(Unsafe) public var __data: DataDict
@@ -25,6 +25,7 @@ nonisolated public struct BasicMediaListEntry: AniListAPI.MutableSelectionSet, F
     .field("repeat", Int?.self),
     .field("private", Bool?.self),
     .field("hiddenFromStatusLists", Bool?.self),
+    .field("priority", Int?.self),
     .field("startedAt", StartedAt?.self),
     .field("completedAt", CompletedAt?.self),
     .field("notes", String?.self),
@@ -84,6 +85,11 @@ nonisolated public struct BasicMediaListEntry: AniListAPI.MutableSelectionSet, F
     get { __data["hiddenFromStatusLists"] }
     set { __data["hiddenFromStatusLists"] = newValue }
   }
+  /// Priority of planning
+  public var priority: Int? {
+    get { __data["priority"] }
+    set { __data["priority"] = newValue }
+  }
   /// When the entry was started by the user
   public var startedAt: StartedAt? {
     get { __data["startedAt"] }
@@ -116,6 +122,7 @@ nonisolated public struct BasicMediaListEntry: AniListAPI.MutableSelectionSet, F
     `repeat` _repeat: Int? = nil,
     `private` _private: Bool? = nil,
     hiddenFromStatusLists: Bool? = nil,
+    priority: Int? = nil,
     startedAt: StartedAt? = nil,
     completedAt: CompletedAt? = nil,
     notes: String? = nil,
@@ -133,6 +140,7 @@ nonisolated public struct BasicMediaListEntry: AniListAPI.MutableSelectionSet, F
       "repeat": _repeat,
       "private": _private,
       "hiddenFromStatusLists": hiddenFromStatusLists,
+      "priority": priority,
       "startedAt": startedAt._fieldData,
       "completedAt": completedAt._fieldData,
       "notes": notes,

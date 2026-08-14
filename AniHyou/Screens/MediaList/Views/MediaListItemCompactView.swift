@@ -17,6 +17,7 @@ struct MediaListItemCompactView: View {
     let entry: BasicMediaListEntry?
     let schedule: AiringEpisode?
     var showStatus: Bool = false
+    let showLowPriority: Bool
 
     var body: some View {
         HStack(spacing: 10) {
@@ -68,6 +69,10 @@ struct MediaListItemCompactView: View {
                         Image(systemName: "note.text")
                             .foregroundStyle(.gray)
                     }
+                    if let priority = entry?.priority, priority > 0 || showLowPriority {
+                        Image(systemName: priority.priorityIcon)
+                            .foregroundStyle(priority.priorityColor)
+                    }
                     if let score = entry?.score, score > 0 {
                         MediaListScoreIndicator(score: score)
                     }
@@ -82,7 +87,12 @@ struct MediaListItemCompactView: View {
     NavigationStack {
         List(0...4, id: \.self) { _ in
             NavigationLink(destination: {}, label: {
-                MediaListItemCompactView(details: nil, entry: nil, schedule: nil)
+                MediaListItemCompactView(
+                    details: nil,
+                    entry: nil,
+                    schedule: nil,
+                    showLowPriority: true
+                )
             })
         }
     }

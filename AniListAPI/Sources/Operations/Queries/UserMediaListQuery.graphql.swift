@@ -126,6 +126,8 @@ nonisolated public struct UserMediaListQuery: GraphQLQuery {
         public var `private`: Bool? { __data["private"] }
         /// If the entry shown be hidden from non-custom lists
         public var hiddenFromStatusLists: Bool? { __data["hiddenFromStatusLists"] }
+        /// Priority of planning
+        public var priority: Int? { __data["priority"] }
         /// When the entry was started by the user
         public var startedAt: StartedAt? { __data["startedAt"] }
         /// When the entry was completed by the user

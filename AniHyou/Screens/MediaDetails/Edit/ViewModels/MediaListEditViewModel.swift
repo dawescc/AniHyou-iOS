@@ -62,7 +62,8 @@ import AniListAPI
         isPrivate: Bool?,
         isHiddenFromStatusLists: Bool?,
         customLists: [String: Bool],
-        notes: String?
+        notes: String?,
+        priority: Int
     ) async {
         isLoading = true
         
@@ -80,7 +81,8 @@ import AniListAPI
             isPrivate: isPrivate,
             isHiddenFromStatusLists: isHiddenFromStatusLists,
             customLists: customLists.isEmpty ? nil : customLists,
-            notes: notes
+            notes: notes,
+            priority: priority
         ) {
             if shouldUpdateWidget(newEntry: updatedEntry) {
                 MediaListRepository.reloadWidgets()

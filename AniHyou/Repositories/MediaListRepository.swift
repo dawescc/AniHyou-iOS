@@ -136,7 +136,8 @@ struct MediaListRepository {
                     hiddenFromStatusLists: nil,
                     notes: nil,
                     customLists: nil,
-                    advancedScores: nil
+                    advancedScores: nil,
+                    priority: nil
                 )
             )
             if let entryId = result.data?.saveMediaListEntry?.id {
@@ -184,7 +185,8 @@ struct MediaListRepository {
         isPrivate: Bool? = nil,
         isHiddenFromStatusLists: Bool? = nil,
         customLists: [String: Bool]? = nil,
-        notes: String? = nil
+        notes: String? = nil,
+        priority: Int? = nil
     ) async -> BasicMediaListEntry? {
         let setStatus: MediaListStatus? = if status != oldEntry?.status?.value {
             status
@@ -234,6 +236,8 @@ struct MediaListRepository {
         
         let setNotes: String? = if notes != oldEntry?.notes { notes } else { nil }
         
+        let setPriority: Int32? = if priority != oldEntry?.priority { priority?.toInt32() } else { nil }
+        
         var setAdvancedScores: [Double]?
         // this is required because in Swift there's no equivalent to LinkedHashMap...
         // and AniList API expects a float array ordered
@@ -261,7 +265,8 @@ struct MediaListRepository {
                     hiddenFromStatusLists: someIfNotNil(setIsHiddenFromStatusLists),
                     notes: someIfNotNil(setNotes),
                     customLists: someIfNotNil(setCustomLists),
-                    advancedScores: someIfNotNil(setAdvancedScores)
+                    advancedScores: someIfNotNil(setAdvancedScores),
+                    priority: someIfNotNil(setPriority)
                 )
             )
             if let data = result.data?.saveMediaListEntry {

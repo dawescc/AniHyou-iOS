@@ -11,7 +11,8 @@ mutation UpdateEntry(
     $hiddenFromStatusLists: Boolean,
     $notes: String,
     $customLists: [String],
-    $advancedScores: [Float]
+    $advancedScores: [Float],
+    $priority: Int
 ) {
   SaveMediaListEntry(
         mediaId: $mediaId,
@@ -26,7 +27,8 @@ mutation UpdateEntry(
         hiddenFromStatusLists: $hiddenFromStatusLists,
         notes: $notes,
         customLists: $customLists,
-        advancedScores: $advancedScores
+        advancedScores: $advancedScores,
+        priority: $priority
     ) {
         ...BasicMediaListEntry
         mediaId

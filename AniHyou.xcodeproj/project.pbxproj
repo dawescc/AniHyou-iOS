@@ -143,6 +143,7 @@
 		48790A52302DAF6A006179E9 /* PublishActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A51302DAF63006179E9 /* PublishActivityViewModel.swift */; };
 		48790A54302DB24E006179E9 /* MarkdownEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A53302DB24E006179E9 /* MarkdownEditor.swift */; };
 		48790A57302DB2EA006179E9 /* MarkdownFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A56302DB2E6006179E9 /* MarkdownFormat.swift */; };
+		48790A76302F18C7006179E9 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A75302F18C5006179E9 /* Priority.swift */; };
 		48801D212C3BEDC5000BEA3A /* CurrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D202C3BEDC5000BEA3A /* CurrentView.swift */; };
 		48801D232C3BF093000BEA3A /* CurrentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D222C3BF08B000BEA3A /* CurrentViewModel.swift */; };
 		48801D252C3BF397000BEA3A /* CurrentListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D242C3BF397000BEA3A /* CurrentListItemView.swift */; };
@@ -558,6 +559,7 @@
 		48790A59302DE66E006179E9 /* UpdateTextActivity.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdateTextActivity.graphql; sourceTree = "<group>"; };
 		48790A5A302E12B9006179E9 /* DeleteActivity.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = DeleteActivity.graphql; sourceTree = "<group>"; };
 		48790A5B302E2934006179E9 /* DeleteActivityReply.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = DeleteActivityReply.graphql; sourceTree = "<group>"; };
+		48790A75302F18C5006179E9 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 		487F4BE22B282ED90002237C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		487F4BE32B282ED90002237C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		48801D202C3BEDC5000BEA3A /* CurrentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentView.swift; sourceTree = "<group>"; };
@@ -1719,6 +1721,7 @@
 				4820F6B52ADEAF1100A4F465 /* ListActivity.swift */,
 				48B7ABE32BB322450047998F /* ThreadComment.swift */,
 				484D22842AEE5F4000A20FE6 /* CountryOfOrigin.swift */,
+				48790A75302F18C5006179E9 /* Priority.swift */,
 			);
 			path = AniListAPI_Extensions;
 			sourceTree = "<group>";
@@ -2484,6 +2487,7 @@
 				48650F0C2860CBF40064C70A /* MediaListEditView.swift in Sources */,
 				48B7AC1D2BB57C970047998F /* StaffStatsView.swift in Sources */,
 				48AAE40B2ADFA44B003413B0 /* ActivityDetailsViewModel.swift in Sources */,
+				48790A76302F18C7006179E9 /* Priority.swift in Sources */,
 				488C26832853881F0005EE15 /* LoginViewModel.swift in Sources */,
 				488C268C28539E240005EE15 /* TokenAddingInterceptor.swift in Sources */,
 				48AAEEA22A29E08800FC0887 /* StaffInfoType.swift in Sources */,
