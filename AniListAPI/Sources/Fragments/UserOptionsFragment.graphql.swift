@@ -6,7 +6,7 @@
 
 nonisolated public struct UserOptionsFragment: AniListAPI.SelectionSet, Fragment, Identifiable {
   public static var fragmentDefinition: StaticString {
-    #"fragment UserOptionsFragment on User { __typename id options { __typename displayAdultContent profileColor staffNameLanguage titleLanguage airingNotifications } mediaListOptions { __typename scoreFormat animeList { __typename advancedScoringEnabled advancedScoring customLists } mangaList { __typename advancedScoringEnabled advancedScoring customLists } } }"#
+    #"fragment UserOptionsFragment on User { __typename id options { __typename displayAdultContent profileColor staffNameLanguage titleLanguage airingNotifications } mediaListOptions { __typename scoreFormat animeList { __typename advancedScoringEnabled advancedScoring customLists sectionOrder } mangaList { __typename advancedScoringEnabled advancedScoring customLists sectionOrder } } }"#
   }
 
   @_spi(Unsafe) public let __data: DataDict
@@ -100,6 +100,7 @@ nonisolated public struct UserOptionsFragment: AniListAPI.SelectionSet, Fragment
         .field("advancedScoringEnabled", Bool?.self),
         .field("advancedScoring", [String?]?.self),
         .field("customLists", [String?]?.self),
+        .field("sectionOrder", [String?]?.self),
       ] }
       @_spi(Execution) public static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
         UserOptionsFragment.MediaListOptions.AnimeList.self
@@ -111,6 +112,8 @@ nonisolated public struct UserOptionsFragment: AniListAPI.SelectionSet, Fragment
       public var advancedScoring: [String?]? { __data["advancedScoring"] }
       /// The names of the user's custom lists
       public var customLists: [String?]? { __data["customLists"] }
+      /// The order each list should be displayed in
+      public var sectionOrder: [String?]? { __data["sectionOrder"] }
     }
 
     /// MediaListOptions.MangaList
@@ -126,6 +129,7 @@ nonisolated public struct UserOptionsFragment: AniListAPI.SelectionSet, Fragment
         .field("advancedScoringEnabled", Bool?.self),
         .field("advancedScoring", [String?]?.self),
         .field("customLists", [String?]?.self),
+        .field("sectionOrder", [String?]?.self),
       ] }
       @_spi(Execution) public static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
         UserOptionsFragment.MediaListOptions.MangaList.self
@@ -137,6 +141,8 @@ nonisolated public struct UserOptionsFragment: AniListAPI.SelectionSet, Fragment
       public var advancedScoring: [String?]? { __data["advancedScoring"] }
       /// The names of the user's custom lists
       public var customLists: [String?]? { __data["customLists"] }
+      /// The order each list should be displayed in
+      public var sectionOrder: [String?]? { __data["sectionOrder"] }
     }
   }
 }

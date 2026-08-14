@@ -14,7 +14,7 @@ import AniListAPI
 
     var userId: Int = LoginRepository.authUserId()
     var isMyList: Bool = true
-    private var lists: [String: [CommonMediaListEntry]] = [:]
+    var lists: [String: [CommonMediaListEntry]] = [:]
     var listNames: [String] = []
     var mediaList = [CommonMediaListEntry]()
     var selectedDetails: BasicMediaDetails?
@@ -72,9 +72,7 @@ import AniListAPI
                     
                     // follow user section order set in settings
                     if isMyList {
-                        if let sectionOrder = UserDefaults.standard.stringArray(forKey: mediaType.customListsKey) {
-                            listNames = sectionOrder
-                        }
+                        fillMyListNames()
                     }
                 }
             }
@@ -168,5 +166,25 @@ import AniListAPI
     func getRandomEntryId() {
         randomId = mediaList.randomElement()?.mediaId
         showingRandomEntry = randomId != nil
+    }
+    
+    private func fillMyListNames() {
+        if let sectionOrder = UserDefaults.standard.stringArray(forKey: mediaType.sectionOrderKey) {
+            // for some reason if the user is using the default order,
+            // custom lists aren't included in `sectionOrder`
+            let customLists = UserDefaults.standard.stringArray(forKey: mediaType.customListsKey)
+            if customLists == nil || customLists?.isEmpty == true {
+                listNames = sectionOrder
+            } else {
+                if let customLists = customLists, sectionOrder.contains(customLists) {
+                    listNames = sectionOrder
+                } else {
+                    listNames = sectionOrder
+                    customLists?.forEach {
+                        if !listNames.contains($0) { listNames.append($0) }
+                    }
+                }
+            }
+        }
     }
 }

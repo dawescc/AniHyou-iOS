@@ -20,15 +20,20 @@ struct MediaListStatusView: View {
     var body: some View {
         NavigationSplitView {
             List(selection: $selection) {
-                Label("All", systemImage: "list.bullet.circle").tag("All")
+                let allCount = viewModel.lists.values.reduce(0) { $0 + $1.count }
+                Label(String(localized: "All") + " (\(allCount))", systemImage: "list.bullet.circle")
+                    .tag("All")
                 ForEach(viewModel.listNames, id: \.self) { name in
-                    if let status = name.asMediaListStatus() {
-                        Label(
-                            name.localizedListStatus(mediaType: mediaType),
-                            systemImage: status.systemImage
-                        )
-                    } else {
-                        Label(name, systemImage: "list.bullet")
+                    let totalCount = viewModel.lists[name]?.count ?? 0
+                    if totalCount > 0 {
+                        if let status = name.asMediaListStatus() {
+                            Label(
+                                name.localizedListStatus(mediaType: mediaType) + " (\(totalCount))",
+                                systemImage: status.systemImage
+                            )
+                        } else {
+                            Label(name + " (\(totalCount))", systemImage: "list.bullet")
+                        }
                     }
                 }
             }

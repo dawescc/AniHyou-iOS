@@ -19,11 +19,13 @@ fragment UserOptionsFragment on User {
             advancedScoringEnabled
             advancedScoring
             customLists
+            sectionOrder
         }
         mangaList {
             advancedScoringEnabled
             advancedScoring
             customLists
+            sectionOrder
         }
     }
 }

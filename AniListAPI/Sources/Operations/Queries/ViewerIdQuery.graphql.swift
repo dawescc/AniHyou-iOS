@@ -8,7 +8,7 @@ nonisolated public struct ViewerIdQuery: GraphQLQuery {
   public static let operationName: String = "ViewerId"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query ViewerId { Viewer { __typename id options { __typename profileColor staffNameLanguage titleLanguage } mediaListOptions { __typename scoreFormat animeList { __typename advancedScoring advancedScoringEnabled customLists } mangaList { __typename customLists } } } }"#
+      #"query ViewerId { Viewer { __typename id options { __typename profileColor staffNameLanguage titleLanguage } mediaListOptions { __typename scoreFormat animeList { __typename advancedScoring advancedScoringEnabled customLists sectionOrder } mangaList { __typename customLists sectionOrder } } } }"#
     ))
 
   public init() {}
@@ -117,6 +117,7 @@ nonisolated public struct ViewerIdQuery: GraphQLQuery {
             .field("advancedScoring", [String?]?.self),
             .field("advancedScoringEnabled", Bool?.self),
             .field("customLists", [String?]?.self),
+            .field("sectionOrder", [String?]?.self),
           ] }
           @_spi(Execution) public static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
             ViewerIdQuery.Data.Viewer.MediaListOptions.AnimeList.self
@@ -128,6 +129,8 @@ nonisolated public struct ViewerIdQuery: GraphQLQuery {
           public var advancedScoringEnabled: Bool? { __data["advancedScoringEnabled"] }
           /// The names of the user's custom lists
           public var customLists: [String?]? { __data["customLists"] }
+          /// The order each list should be displayed in
+          public var sectionOrder: [String?]? { __data["sectionOrder"] }
         }
 
         /// Viewer.MediaListOptions.MangaList
@@ -141,6 +144,7 @@ nonisolated public struct ViewerIdQuery: GraphQLQuery {
           @_spi(Execution) public static var __selections: [ApolloAPI.Selection] { [
             .field("__typename", String.self),
             .field("customLists", [String?]?.self),
+            .field("sectionOrder", [String?]?.self),
           ] }
           @_spi(Execution) public static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
             ViewerIdQuery.Data.Viewer.MediaListOptions.MangaList.self
@@ -148,6 +152,8 @@ nonisolated public struct ViewerIdQuery: GraphQLQuery {
 
           /// The names of the user's custom lists
           public var customLists: [String?]? { __data["customLists"] }
+          /// The order each list should be displayed in
+          public var sectionOrder: [String?]? { __data["sectionOrder"] }
         }
       }
     }

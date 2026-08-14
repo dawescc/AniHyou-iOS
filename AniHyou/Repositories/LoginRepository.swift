@@ -94,8 +94,16 @@ struct LoginRepository {
                     forKey: ANIME_CUSTOM_LISTS_KEY
                 )
                 UserDefaults.standard.setValue(
+                    viewer.mediaListOptions?.animeList?.sectionOrder?.compactMap { $0 } ?? [],
+                    forKey: ANIME_SECTION_ORDER
+                )
+                UserDefaults.standard.setValue(
                     viewer.mediaListOptions?.mangaList?.customLists?.compactMap { $0 } ?? [],
                     forKey: MANGA_CUSTOM_LISTS_KEY
+                )
+                UserDefaults.standard.setValue(
+                    viewer.mediaListOptions?.mangaList?.sectionOrder?.compactMap { $0 } ?? [],
+                    forKey: MANGA_SECTION_ORDER
                 )
             }
         } catch {

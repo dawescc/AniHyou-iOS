@@ -36,6 +36,15 @@ extension MediaType {
         }
     }
     
+    var sectionOrderKey: String {
+        switch self {
+        case .anime:
+            ANIME_SECTION_ORDER
+        case .manga:
+            MANGA_SECTION_ORDER
+        }
+    }
+    
     var listStatusKey: String {
         switch self {
         case .anime:
