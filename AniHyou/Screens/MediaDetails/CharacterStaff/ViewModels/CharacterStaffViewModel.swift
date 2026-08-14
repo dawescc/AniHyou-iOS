@@ -21,7 +21,12 @@ import AniListAPI
             mediaCharactersAndStaff = result
             if let character = result.characters?.edges?.first??.fragments.mediaCharacter {
                 if let languages = character.voiceActors?.compactMap({ $0?.languageV2 }) {
-                    availableLanguages = languages
+                    availableLanguages.removeAll()
+                    languages.forEach { lang in
+                        if !availableLanguages.contains(lang) {
+                            availableLanguages.append(lang)
+                        }
+                    }
                     if let firstLanguage = languages.first {
                         selectedLanguage = firstLanguage
                     }
