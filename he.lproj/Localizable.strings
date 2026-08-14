@@ -125,6 +125,10 @@ No comment provided by engineer. */
 Adaptation
 No comment provided by engineer. */
 "Adaptation" = "אדפטציה";
+/* en.lproj/Localizable.strings
+Add
+No comment provided by engineer. */
+"Add" = "הוסף";
 /* if the translation is too long, translate just (Add) */
 "Add to List" = "הוסף לרשימה";
 /* en.lproj/Localizable.strings
@@ -825,9 +829,7 @@ No comment provided by engineer. */
 Following
 No comment provided by engineer. */
 "Following" = "במעקב";
-/* en.lproj/Localizable.strings
-Follows
-No comment provided by engineer. */
+/* notification type filter */
 "Follows" = "עוקב";
 /* en.lproj/Localizable.strings
 Follows you
@@ -948,10 +950,6 @@ No comment provided by engineer. */
 Japan
 No comment provided by engineer. */
 "Japan" = "יפן";
-/* en.lproj/Localizable.strings
-Japanese
-No comment provided by engineer. */
-"Japanese" = "יפני";
 /* en.lproj/Localizable.strings
 Last used
 No comment provided by engineer. */

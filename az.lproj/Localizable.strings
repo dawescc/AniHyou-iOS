@@ -51,6 +51,10 @@ No comment provided by engineer. */
 Adaptation
 No comment provided by engineer. */
 "Adaptation" = "Uyğunlaşma";
+/* en.lproj/Localizable.strings
+Add
+No comment provided by engineer. */
+"Add" = "Əlavə et";
 /* if the translation is too long, translate just (Add) */
 "Add to List" = "Əlavə et";
 /* en.lproj/Localizable.strings
@@ -145,6 +149,10 @@ Blood type
 No comment provided by engineer. */
 "Blood type" = "Qan qrupu";
 /* en.lproj/Localizable.strings
+Bold
+No comment provided by engineer. */
+"Bold" = "Qalın";
+/* en.lproj/Localizable.strings
 Calendar
 No comment provided by engineer. */
 "Calendar" = "Təqvim";
@@ -156,6 +164,10 @@ No comment provided by engineer. */
 Cancelled
 No comment provided by engineer. */
 "Cancelled" = "Ləvğ edilib";
+/* en.lproj/Localizable.strings
+Centered
+No comment provided by engineer. */
+"Centered" = "Mərkəzlənmiş";
 /* chapter abbreviation */
 "Ch" = "Fs";
 /* en.lproj/Localizable.strings
@@ -204,6 +216,10 @@ No comment provided by engineer. */
 Close
 No comment provided by engineer. */
 "Close" = "Bağla";
+/* en.lproj/Localizable.strings
+Code
+No comment provided by engineer. */
+"Code" = "Kod";
 /* en.lproj/Localizable.strings
 Comedy
 No comment provided by engineer. */
@@ -400,9 +416,7 @@ No comment provided by engineer. */
 Following
 No comment provided by engineer. */
 "Following" = "İzləyir";
-/* en.lproj/Localizable.strings
-Follows
-No comment provided by engineer. */
+/* notification type filter */
 "Follows" = "İzlə";
 /* en.lproj/Localizable.strings
 Follows you
@@ -447,6 +461,10 @@ Global
 No comment provided by engineer. */
 "Global" = "Qlobal";
 /* en.lproj/Localizable.strings
+Heading
+No comment provided by engineer. */
+"Heading" = "Başlıq";
+/* en.lproj/Localizable.strings
 Hentai
 No comment provided by engineer. */
 "Hentai" = "Hentai";
@@ -480,6 +498,10 @@ Hours Watched
 No comment provided by engineer. */
 "Hours Watched" = "Baxılan saat";
 /* en.lproj/Localizable.strings
+Image
+No comment provided by engineer. */
+"Image" = "Təsvir";
+/* en.lproj/Localizable.strings
 Increment Episode / Chapter
 No comment provided by engineer. */
 "Increment Episode / Chapter" = "Artırılan bölüm / fəsil";
@@ -492,13 +514,17 @@ Information
 No comment provided by engineer. */
 "Information" = "Məlumat";
 /* en.lproj/Localizable.strings
+Italic
+No comment provided by engineer. */
+"Italic" = "Kursiv";
+/* en.lproj/Localizable.strings
 Japan
 No comment provided by engineer. */
 "Japan" = "Yaponiya";
 /* en.lproj/Localizable.strings
-Japanese
+Language
 No comment provided by engineer. */
-"Japanese" = "Yapon dili";
+"Language" = "Dil";
 /* sort option */
 "Last Added" = "Son əlavə edilən";
 /* sort by update date */
@@ -509,6 +535,14 @@ No comment provided by engineer. */
 Light novel
 No comment provided by engineer. */
 "Light novel" = "Yüngül roman";
+/* en.lproj/Localizable.strings
+Link
+No comment provided by engineer. */
+"Link" = "Link";
+/* en.lproj/Localizable.strings
+List
+No comment provided by engineer. */
+"List" = "Siyahı";
 /* en.lproj/Localizable.strings
 List Progress
 No comment provided by engineer. */
@@ -685,6 +719,10 @@ No comment provided by engineer. */
 /* sort order */
 "Order" = "Sıralama";
 /* en.lproj/Localizable.strings
+Ordered list
+No comment provided by engineer. */
+"Ordered list" = "Sıralı siyahı";
+/* en.lproj/Localizable.strings
 Original
 No comment provided by engineer. */
 "Original" = "Orijinal";
@@ -702,6 +740,10 @@ No comment provided by engineer. */
 Parent
 No comment provided by engineer. */
 "Parent" = "Əlaqə";
+/* en.lproj/Localizable.strings
+Paste your link here
+No comment provided by engineer. */
+"Paste your link here" = "Linki buraya yapışdırın";
 /* en.lproj/Localizable.strings
 Paused */
 "Paused" = "Yarıda saxladığım";
@@ -763,6 +805,10 @@ Psychological
 No comment provided by engineer. */
 "Psychological" = "Psixoloji";
 /* en.lproj/Localizable.strings
+Publish
+No comment provided by engineer. */
+"Publish" = "Yayımla";
+/* en.lproj/Localizable.strings
 Publishing
 No comment provided by engineer. */
 "Publishing" = "Yayımlanan";
@@ -775,6 +821,10 @@ No comment provided by engineer. */
 "Push notifications" = "Ani Bildirişlər";
 /* widget description */
 "Quick access to your anime or manga list." = "Anime və ya Manqa list\'nə qısayol.";
+/* en.lproj/Localizable.strings
+Quote
+No comment provided by engineer. */
+"Quote" = "Sitat";
 /* en.lproj/Localizable.strings
 Rankings
 No comment provided by engineer. */
@@ -820,6 +870,10 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Repeating */
 "Repeating" = "Təkrar baxdığım";
+/* en.lproj/Localizable.strings
+Reply
+No comment provided by engineer. */
+"Reply" = "Cavabla";
 /* en.lproj/Localizable.strings
 Restore purchases
 No comment provided by engineer. */
@@ -950,6 +1004,10 @@ No comment provided by engineer. */
 Spin Off
 No comment provided by engineer. */
 "Spin Off" = "Fırlanma";
+/* en.lproj/Localizable.strings
+Spoiler
+No comment provided by engineer. */
+"Spoiler" = "Spoyler";
 /* en.lproj/Localizable.strings
 Sports
 No comment provided by engineer. */
@@ -1152,6 +1210,10 @@ Localizable.strings
   Created by Axel Lopez on 13/10/2023. */
 "Unknown" = "Bilinməyən";
 /* en.lproj/Localizable.strings
+Unordered list
+No comment provided by engineer. */
+"Unordered list" = "Sırasız siyahı";
+/* en.lproj/Localizable.strings
 Upcoming
 No comment provided by engineer. */
 "Upcoming" = "Gözlənilən";
@@ -1181,6 +1243,10 @@ No comment provided by engineer. */
 Version %@
 No comment provided by engineer. */
 "Version %@" = "Versiya %@";
+/* en.lproj/Localizable.strings
+Video
+No comment provided by engineer. */
+"Video" = "Video";
 /* en.lproj/Localizable.strings
 VideoGame
 No comment provided by engineer. */
@@ -1224,6 +1290,10 @@ Winter */
 With any purchase you will gain access to exclusive app icons and custom accent colors!
 No comment provided by engineer. */
 "With any purchase you will gain access to exclusive app icons and custom accent colors!" = "Ödəniş ilə siz ekskluziv tətbiq ikonları və özəl aksent rənglərinə sahib ola bilərsiniz!";
+/* en.lproj/Localizable.strings
+Write something…
+No comment provided by engineer. */
+"Write something…" = "Nəsə yazın…";
 /* en.lproj/Localizable.strings
 Year
 No comment provided by engineer. */

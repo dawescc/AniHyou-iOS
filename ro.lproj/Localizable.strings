@@ -115,6 +115,10 @@ No comment provided by engineer. */
 Adaptation
 No comment provided by engineer. */
 "Adaptation" = "Adaptare";
+/* en.lproj/Localizable.strings
+Add
+No comment provided by engineer. */
+"Add" = "Adăugați";
 /* if the translation is too long, translate just (Add) */
 "Add to List" = "Adăugați";
 /* en.lproj/Localizable.strings
@@ -325,6 +329,10 @@ Blood type
 No comment provided by engineer. */
 "Blood type" = "Grupa sanguină";
 /* en.lproj/Localizable.strings
+Bold
+No comment provided by engineer. */
+"Bold" = "Îndrăzneț";
+/* en.lproj/Localizable.strings
 CG Animation
 No comment provided by engineer. */
 "CG Animation" = "Animație CG";
@@ -384,6 +392,10 @@ No comment provided by engineer. */
 Cancelled
 No comment provided by engineer. */
 "Cancelled" = "Anulat";
+/* en.lproj/Localizable.strings
+Centered
+No comment provided by engineer. */
+"Centered" = "Centrat";
 /* chapter abbreviation */
 "Ch" = "Cap.";
 /* en.lproj/Localizable.strings
@@ -472,6 +484,10 @@ No comment provided by engineer. */
 Co-Producer
 No comment provided by engineer. */
 "Co-Producer" = "Co-producător";
+/* en.lproj/Localizable.strings
+Code
+No comment provided by engineer. */
+"Code" = "Cod";
 /* en.lproj/Localizable.strings
 Color Coordination
 No comment provided by engineer. */
@@ -827,9 +843,7 @@ No comment provided by engineer. */
 Following
 No comment provided by engineer. */
 "Following" = "Urmărit";
-/* en.lproj/Localizable.strings
-Follows
-No comment provided by engineer. */
+/* notification type filter */
 "Follows" = "Urmăriri";
 /* en.lproj/Localizable.strings
 Follows you
@@ -874,6 +888,10 @@ HD Editing
 No comment provided by engineer. */
 "HD Editing" = "Editare HD";
 /* en.lproj/Localizable.strings
+Heading
+No comment provided by engineer. */
+"Heading" = "Titlu";
+/* en.lproj/Localizable.strings
 Hentai
 No comment provided by engineer. */
 "Hentai" = "Hentai";
@@ -914,6 +932,10 @@ No comment provided by engineer. */
 Illustration
 No comment provided by engineer. */
 "Illustration" = "Ilustrație";
+/* en.lproj/Localizable.strings
+Image
+No comment provided by engineer. */
+"Image" = "Imagine";
 /* en.lproj/Localizable.strings
 In-Between Animation
 No comment provided by engineer. */
@@ -959,13 +981,13 @@ Insert Song Performance
 No comment provided by engineer. */
 "Insert Song Performance" = "Inserare interpretare melodie";
 /* en.lproj/Localizable.strings
+Italic
+No comment provided by engineer. */
+"Italic" = "Italic";
+/* en.lproj/Localizable.strings
 Japan
 No comment provided by engineer. */
 "Japan" = "Japonia";
-/* en.lproj/Localizable.strings
-Japanese
-No comment provided by engineer. */
-"Japanese" = "Japonez";
 /* en.lproj/Localizable.strings
 Key Animation
 No comment provided by engineer. */
@@ -978,6 +1000,10 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "Asistență pentru animație cheie";
+/* en.lproj/Localizable.strings
+Language
+No comment provided by engineer. */
+"Language" = "Limba";
 /* sort option */
 "Last Added" = "Ultimele adăugate";
 /* sort by update date */
@@ -1020,6 +1046,14 @@ No comment provided by engineer. */
 Line Producer
 No comment provided by engineer. */
 "Line Producer" = "Producător de linie";
+/* en.lproj/Localizable.strings
+Link
+No comment provided by engineer. */
+"Link" = "Link";
+/* en.lproj/Localizable.strings
+List
+No comment provided by engineer. */
+"List" = "Listă";
 /* en.lproj/Localizable.strings
 List Progress
 No comment provided by engineer. */
@@ -1314,6 +1348,10 @@ No comment provided by engineer. */
 /* sort order */
 "Order" = "Comandă";
 /* en.lproj/Localizable.strings
+Ordered list
+No comment provided by engineer. */
+"Ordered list" = "Listă ordonată";
+/* en.lproj/Localizable.strings
 Original
 No comment provided by engineer. */
 "Original" = "Original";
@@ -1359,6 +1397,10 @@ No comment provided by engineer. */
 Parent
 No comment provided by engineer. */
 "Parent" = "Părinte";
+/* en.lproj/Localizable.strings
+Paste your link here
+No comment provided by engineer. */
+"Paste your link here" = "Lipiți linkul aici";
 /* en.lproj/Localizable.strings
 Paused */
 "Paused" = "Pauză";
@@ -1476,6 +1518,10 @@ Psychological
 No comment provided by engineer. */
 "Psychological" = "Psihologic";
 /* en.lproj/Localizable.strings
+Publish
+No comment provided by engineer. */
+"Publish" = "Publicați";
+/* en.lproj/Localizable.strings
 Publishing
 No comment provided by engineer. */
 "Publishing" = "Publicare";
@@ -1488,6 +1534,10 @@ No comment provided by engineer. */
 "Push notifications" = "Notificări push";
 /* widget description */
 "Quick access to your anime or manga list." = "Acces rapid la lista ta de anime sau manga.";
+/* en.lproj/Localizable.strings
+Quote
+No comment provided by engineer. */
+"Quote" = "Citat";
 /* en.lproj/Localizable.strings
 Random
 No comment provided by engineer. */
@@ -1553,6 +1603,10 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Repeating */
 "Repeating" = "Repetare";
+/* en.lproj/Localizable.strings
+Reply
+No comment provided by engineer. */
+"Reply" = "Răspunde";
 /* Reread [Kimetsu no Yaiba] */
 "Reread %@" = "Recitiți %@";
 /* (User) Reread chapter [1 - 27] of [Kimetsu no Yaiba] */
@@ -1764,6 +1818,10 @@ No comment provided by engineer. */
 Spin Off
 No comment provided by engineer. */
 "Spin Off" = "Spin Off";
+/* en.lproj/Localizable.strings
+Spoiler
+No comment provided by engineer. */
+"Spoiler" = "Spoiler";
 /* en.lproj/Localizable.strings
 Sports
 No comment provided by engineer. */
@@ -2082,6 +2140,10 @@ Localizable.strings
   Created by Axel Lopez on 13/10/2023. */
 "Unknown" = "Necunoscut";
 /* en.lproj/Localizable.strings
+Unordered list
+No comment provided by engineer. */
+"Unordered list" = "Listă neordonată";
+/* en.lproj/Localizable.strings
 Upcoming
 No comment provided by engineer. */
 "Upcoming" = "În curând";
@@ -2111,6 +2173,10 @@ No comment provided by engineer. */
 Version %@
 No comment provided by engineer. */
 "Version %@" = "Versiune %@";
+/* en.lproj/Localizable.strings
+Video
+No comment provided by engineer. */
+"Video" = "Video";
 /* en.lproj/Localizable.strings
 Video Editing
 No comment provided by engineer. */
@@ -2180,6 +2246,10 @@ No comment provided by engineer. */
 World Design
 No comment provided by engineer. */
 "World Design" = "Design mondial";
+/* en.lproj/Localizable.strings
+Write something…
+No comment provided by engineer. */
+"Write something…" = "Scrie ceva…";
 /* en.lproj/Localizable.strings
 Year
 No comment provided by engineer. */

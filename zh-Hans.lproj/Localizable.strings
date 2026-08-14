@@ -125,6 +125,10 @@ No comment provided by engineer. */
 Adaptation
 No comment provided by engineer. */
 "Adaptation" = "改编";
+/* en.lproj/Localizable.strings
+Add
+No comment provided by engineer. */
+"Add" = "添加";
 /* if the translation is too long, translate just (Add) */
 "Add to List" = "添加至列表";
 /* en.lproj/Localizable.strings
@@ -337,6 +341,10 @@ No comment provided by engineer. */
 /* Hide poster covers for adult anime/manga */
 "Blur adult media" = "模糊成人内容";
 /* en.lproj/Localizable.strings
+Bold
+No comment provided by engineer. */
+"Bold" = "粗体";
+/* en.lproj/Localizable.strings
 CG Animation
 No comment provided by engineer. */
 "CG Animation" = "CG动画";
@@ -396,6 +404,10 @@ No comment provided by engineer. */
 Cancelled
 No comment provided by engineer. */
 "Cancelled" = "已取消";
+/* en.lproj/Localizable.strings
+Centered
+No comment provided by engineer. */
+"Centered" = "居中";
 /* chapter abbreviation */
 "Ch" = "章";
 /* en.lproj/Localizable.strings
@@ -484,6 +496,10 @@ No comment provided by engineer. */
 Co-Producer
 No comment provided by engineer. */
 "Co-Producer" = "联合制作人";
+/* en.lproj/Localizable.strings
+Code
+No comment provided by engineer. */
+"Code" = "代码";
 /* en.lproj/Localizable.strings
 Color Coordination
 No comment provided by engineer. */
@@ -839,9 +855,7 @@ No comment provided by engineer. */
 Following
 No comment provided by engineer. */
 "Following" = "正在关注";
-/* en.lproj/Localizable.strings
-Follows
-No comment provided by engineer. */
+/* notification type filter */
 "Follows" = "关注";
 /* en.lproj/Localizable.strings
 Follows you
@@ -886,6 +900,10 @@ HD Editing
 No comment provided by engineer. */
 "HD Editing" = "高清编辑";
 /* en.lproj/Localizable.strings
+Heading
+No comment provided by engineer. */
+"Heading" = "标题";
+/* en.lproj/Localizable.strings
 Hentai
 No comment provided by engineer. */
 "Hentai" = "变态";
@@ -902,9 +920,17 @@ Hide from status lists
 No comment provided by engineer. */
 "Hide from status lists" = "从状态列表中隐藏";
 /* en.lproj/Localizable.strings
+Hide scores
+No comment provided by engineer. */
+"Hide scores" = "隐藏评分";
+/* en.lproj/Localizable.strings
 Hide spoiler
 No comment provided by engineer. */
 "Hide spoiler" = "隐藏黑幕";
+/* en.lproj/Localizable.strings
+High
+No comment provided by engineer. */
+"High" = "高";
 /* ranking.
 Eg: #1 Highest rated 2023 */
 "Highest rated" = "最高评价";
@@ -926,6 +952,10 @@ No comment provided by engineer. */
 Illustration
 No comment provided by engineer. */
 "Illustration" = "插图";
+/* en.lproj/Localizable.strings
+Image
+No comment provided by engineer. */
+"Image" = "图片";
 /* en.lproj/Localizable.strings
 In-Between Animation
 No comment provided by engineer. */
@@ -971,13 +1001,13 @@ Insert Song Performance
 No comment provided by engineer. */
 "Insert Song Performance" = "插曲演唱";
 /* en.lproj/Localizable.strings
+Italic
+No comment provided by engineer. */
+"Italic" = "斜体";
+/* en.lproj/Localizable.strings
 Japan
 No comment provided by engineer. */
 "Japan" = "日本";
-/* en.lproj/Localizable.strings
-Japanese
-No comment provided by engineer. */
-"Japanese" = "日语";
 /* en.lproj/Localizable.strings
 Key Animation
 No comment provided by engineer. */
@@ -990,6 +1020,10 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "关键动画协助";
+/* en.lproj/Localizable.strings
+Language
+No comment provided by engineer. */
+"Language" = "语言";
 /* sort option */
 "Last Added" = "最近添加";
 /* sort by update date */
@@ -1033,6 +1067,14 @@ Line Producer
 No comment provided by engineer. */
 "Line Producer" = "线制作人";
 /* en.lproj/Localizable.strings
+Link
+No comment provided by engineer. */
+"Link" = "链接";
+/* en.lproj/Localizable.strings
+List
+No comment provided by engineer. */
+"List" = "列表";
+/* en.lproj/Localizable.strings
 List Progress
 No comment provided by engineer. */
 "List Progress" = "清单进度";
@@ -1068,6 +1110,10 @@ No comment provided by engineer. */
 "Login" = "登录";
 /* or (Swipe Direction) for short */
 "Long Swipe Direction" = "长滑方向";
+/* en.lproj/Localizable.strings
+Low
+No comment provided by engineer. */
+"Low" = "低";
 /* en.lproj/Localizable.strings
 Mahou Shoujo
 No comment provided by engineer. */
@@ -1124,6 +1170,10 @@ No comment provided by engineer. */
 "Media List" = "媒体列表";
 /* Anime or Manga */
 "Media Type" = "媒体类型";
+/* en.lproj/Localizable.strings
+Medium
+No comment provided by engineer. */
+"Medium" = "中";
 /* en.lproj/Localizable.strings
 Minimal
 No comment provided by engineer. */
@@ -1326,6 +1376,10 @@ No comment provided by engineer. */
 /* sort order */
 "Order" = "顺序";
 /* en.lproj/Localizable.strings
+Ordered list
+No comment provided by engineer. */
+"Ordered list" = "有序列表";
+/* en.lproj/Localizable.strings
 Original
 No comment provided by engineer. */
 "Original" = "原始";
@@ -1371,6 +1425,10 @@ No comment provided by engineer. */
 Parent
 No comment provided by engineer. */
 "Parent" = "前传";
+/* en.lproj/Localizable.strings
+Paste your link here
+No comment provided by engineer. */
+"Paste your link here" = "在此粘贴您的链接";
 /* en.lproj/Localizable.strings
 Paused */
 "Paused" = "已暂停";
@@ -1488,6 +1546,10 @@ Psychological
 No comment provided by engineer. */
 "Psychological" = "心理";
 /* en.lproj/Localizable.strings
+Publish
+No comment provided by engineer. */
+"Publish" = "发布";
+/* en.lproj/Localizable.strings
 Publishing
 No comment provided by engineer. */
 "Publishing" = "正在连载";
@@ -1500,6 +1562,10 @@ No comment provided by engineer. */
 "Push notifications" = "推送通知";
 /* widget description */
 "Quick access to your anime or manga list." = "快速访问您的动画或漫画列表。";
+/* en.lproj/Localizable.strings
+Quote
+No comment provided by engineer. */
+"Quote" = "引用";
 /* en.lproj/Localizable.strings
 Random
 No comment provided by engineer. */
@@ -1565,6 +1631,10 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Repeating */
 "Repeating" = "重复中";
+/* en.lproj/Localizable.strings
+Reply
+No comment provided by engineer. */
+"Reply" = "回复";
 /* Reread [Kimetsu no Yaiba] */
 "Reread %@" = "重读了《%@》";
 /* (User) Reread chapter [1 - 27] of [Kimetsu no Yaiba] */
@@ -1607,6 +1677,10 @@ No comment provided by engineer. */
 Romance
 No comment provided by engineer. */
 "Romance" = "浪漫";
+/* en.lproj/Localizable.strings
+Same universe
+No comment provided by engineer. */
+"Same universe" = "同一世界观";
 /* en.lproj/Localizable.strings
 Save
 No comment provided by engineer. */
@@ -1684,6 +1758,10 @@ No comment provided by engineer. */
 "Share" = "分享";
 /* Show less text */
 "Show less" = "隐藏内容";
+/* en.lproj/Localizable.strings
+Show low priority
+No comment provided by engineer. */
+"Show low priority" = "显示低优先级";
 /* en.lproj/Localizable.strings
 Show more
 No comment provided by engineer. */
@@ -1776,6 +1854,10 @@ No comment provided by engineer. */
 Spin Off
 No comment provided by engineer. */
 "Spin Off" = "衍生";
+/* en.lproj/Localizable.strings
+Spoiler
+No comment provided by engineer. */
+"Spoiler" = "剧透";
 /* en.lproj/Localizable.strings
 Sports
 No comment provided by engineer. */
@@ -2096,6 +2178,10 @@ Localizable.strings
   Created by Axel Lopez on 13/10/2023. */
 "Unknown" = "未知";
 /* en.lproj/Localizable.strings
+Unordered list
+No comment provided by engineer. */
+"Unordered list" = "无序列表";
+/* en.lproj/Localizable.strings
 Upcoming
 No comment provided by engineer. */
 "Upcoming" = "即将发布";
@@ -2125,6 +2211,10 @@ No comment provided by engineer. */
 Version %@
 No comment provided by engineer. */
 "Version %@" = "版本号：%@";
+/* en.lproj/Localizable.strings
+Video
+No comment provided by engineer. */
+"Video" = "视频";
 /* en.lproj/Localizable.strings
 Video Editing
 No comment provided by engineer. */
@@ -2194,6 +2284,10 @@ No comment provided by engineer. */
 World Design
 No comment provided by engineer. */
 "World Design" = "世界观设计";
+/* en.lproj/Localizable.strings
+Write something…
+No comment provided by engineer. */
+"Write something…" = "写点什么…";
 /* en.lproj/Localizable.strings
 Year
 No comment provided by engineer. */

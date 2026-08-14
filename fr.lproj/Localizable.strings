@@ -119,6 +119,10 @@ No comment provided by engineer. */
 Adaptation
 No comment provided by engineer. */
 "Adaptation" = "Adaptation";
+/* en.lproj/Localizable.strings
+Add
+No comment provided by engineer. */
+"Add" = "Ajouter";
 /* if the translation is too long, translate just (Add) */
 "Add to List" = "Ajouter";
 /* en.lproj/Localizable.strings
@@ -328,6 +332,12 @@ No comment provided by engineer. */
 Blood type
 No comment provided by engineer. */
 "Blood type" = "Groupe sanguin";
+/* Hide poster covers for adult anime/manga */
+"Blur adult media" = "Flouter le contenu pour adultes";
+/* en.lproj/Localizable.strings
+Bold
+No comment provided by engineer. */
+"Bold" = "Gras";
 /* en.lproj/Localizable.strings
 CG Animation
 No comment provided by engineer. */
@@ -388,6 +398,10 @@ No comment provided by engineer. */
 Cancelled
 No comment provided by engineer. */
 "Cancelled" = "Annulé";
+/* en.lproj/Localizable.strings
+Centered
+No comment provided by engineer. */
+"Centered" = "Centré";
 /* chapter abbreviation */
 "Ch" = "Chp";
 /* en.lproj/Localizable.strings
@@ -477,6 +491,10 @@ Co-Producer
 No comment provided by engineer. */
 "Co-Producer" = "Co-producteur";
 /* en.lproj/Localizable.strings
+Code
+No comment provided by engineer. */
+"Code" = "Code";
+/* en.lproj/Localizable.strings
 Color Coordination
 No comment provided by engineer. */
 "Color Coordination" = "Coordination des couleurs";
@@ -529,6 +547,10 @@ No comment provided by engineer. */
 Content
 No comment provided by engineer. */
 "Content" = "Contenu";
+/* en.lproj/Localizable.strings
+Contributors
+No comment provided by engineer. */
+"Contributors" = "Contributeurs";
 /* en.lproj/Localizable.strings
 Costume Design
 No comment provided by engineer. */
@@ -831,9 +853,7 @@ No comment provided by engineer. */
 Following
 No comment provided by engineer. */
 "Following" = "Suivi";
-/* en.lproj/Localizable.strings
-Follows
-No comment provided by engineer. */
+/* notification type filter */
 "Follows" = "Suivis";
 /* en.lproj/Localizable.strings
 Follows you
@@ -878,6 +898,10 @@ HD Editing
 No comment provided by engineer. */
 "HD Editing" = "Montage HD";
 /* en.lproj/Localizable.strings
+Heading
+No comment provided by engineer. */
+"Heading" = "Titre";
+/* en.lproj/Localizable.strings
 Hentai
 No comment provided by engineer. */
 "Hentai" = "Hentai";
@@ -897,6 +921,10 @@ No comment provided by engineer. */
 Hide spoiler
 No comment provided by engineer. */
 "Hide spoiler" = "Masquer les spoilers";
+/* en.lproj/Localizable.strings
+High
+No comment provided by engineer. */
+"High" = "Élevée";
 /* ranking.
 Eg: #1 Highest rated 2023 */
 "Highest rated" = "Mieux noté";
@@ -918,6 +946,10 @@ No comment provided by engineer. */
 Illustration
 No comment provided by engineer. */
 "Illustration" = "Illustration";
+/* en.lproj/Localizable.strings
+Image
+No comment provided by engineer. */
+"Image" = "Image";
 /* en.lproj/Localizable.strings
 In-Between Animation
 No comment provided by engineer. */
@@ -963,13 +995,13 @@ Insert Song Performance
 No comment provided by engineer. */
 "Insert Song Performance" = "Interprétation de la chanson d\'insertion";
 /* en.lproj/Localizable.strings
+Italic
+No comment provided by engineer. */
+"Italic" = "Italique";
+/* en.lproj/Localizable.strings
 Japan
 No comment provided by engineer. */
 "Japan" = "Japon";
-/* en.lproj/Localizable.strings
-Japanese
-No comment provided by engineer. */
-"Japanese" = "Japonais";
 /* en.lproj/Localizable.strings
 Key Animation
 No comment provided by engineer. */
@@ -982,6 +1014,10 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "Assistance à l\'animation clé";
+/* en.lproj/Localizable.strings
+Language
+No comment provided by engineer. */
+"Language" = "Langage";
 /* sort option */
 "Last Added" = "Derniers ajoutés";
 /* sort by update date */
@@ -1025,6 +1061,14 @@ Line Producer
 No comment provided by engineer. */
 "Line Producer" = "Producteur exécutif (chargé de production)";
 /* en.lproj/Localizable.strings
+Link
+No comment provided by engineer. */
+"Link" = "Lien";
+/* en.lproj/Localizable.strings
+List
+No comment provided by engineer. */
+"List" = "Liste";
+/* en.lproj/Localizable.strings
 List Progress
 No comment provided by engineer. */
 "List Progress" = "Progression";
@@ -1060,6 +1104,10 @@ No comment provided by engineer. */
 "Login" = "Se connecter";
 /* or (Swipe Direction) for short */
 "Long Swipe Direction" = "Sens de balayage long";
+/* en.lproj/Localizable.strings
+Low
+No comment provided by engineer. */
+"Low" = "Bas";
 /* en.lproj/Localizable.strings
 Mahou Shoujo
 No comment provided by engineer. */
@@ -1116,6 +1164,10 @@ No comment provided by engineer. */
 "Media List" = "Liste des médias";
 /* Anime or Manga */
 "Media Type" = "Type de média";
+/* en.lproj/Localizable.strings
+Medium
+No comment provided by engineer. */
+"Medium" = "Moyenne";
 /* en.lproj/Localizable.strings
 Minimal
 No comment provided by engineer. */
@@ -1318,6 +1370,10 @@ No comment provided by engineer. */
 /* sort order */
 "Order" = "Ordre";
 /* en.lproj/Localizable.strings
+Ordered list
+No comment provided by engineer. */
+"Ordered list" = "Liste ordonnée";
+/* en.lproj/Localizable.strings
 Original
 No comment provided by engineer. */
 "Original" = "Original";
@@ -1363,6 +1419,10 @@ No comment provided by engineer. */
 Parent
 No comment provided by engineer. */
 "Parent" = "Parent";
+/* en.lproj/Localizable.strings
+Paste your link here
+No comment provided by engineer. */
+"Paste your link here" = "Collez votre lien ici";
 /* en.lproj/Localizable.strings
 Paused */
 "Paused" = "En pause";
@@ -1480,6 +1540,10 @@ Psychological
 No comment provided by engineer. */
 "Psychological" = "Psychologique";
 /* en.lproj/Localizable.strings
+Publish
+No comment provided by engineer. */
+"Publish" = "Publier";
+/* en.lproj/Localizable.strings
 Publishing
 No comment provided by engineer. */
 "Publishing" = "Publication en cours";
@@ -1492,6 +1556,10 @@ No comment provided by engineer. */
 "Push notifications" = "Notifications push";
 /* widget description */
 "Quick access to your anime or manga list." = "Accès rapide à votre liste d\'animés ou de mangas.";
+/* en.lproj/Localizable.strings
+Quote
+No comment provided by engineer. */
+"Quote" = "Citation";
 /* en.lproj/Localizable.strings
 Random
 No comment provided by engineer. */
@@ -1557,6 +1625,10 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Repeating */
 "Repeating" = "Répété";
+/* en.lproj/Localizable.strings
+Reply
+No comment provided by engineer. */
+"Reply" = "Répondre";
 /* Reread [Kimetsu no Yaiba] */
 "Reread %@" = "A relu %@";
 /* (User) Reread chapter [1 - 27] of [Kimetsu no Yaiba] */
@@ -1769,6 +1841,10 @@ Spin Off
 No comment provided by engineer. */
 "Spin Off" = "Spin Off";
 /* en.lproj/Localizable.strings
+Spoiler
+No comment provided by engineer. */
+"Spoiler" = "Spoiler";
+/* en.lproj/Localizable.strings
 Sports
 No comment provided by engineer. */
 "Sports" = "Sports";
@@ -1839,6 +1915,8 @@ No comment provided by engineer. */
 Sub Character Design
 No comment provided by engineer. */
 "Sub Character Design" = "Conception des personnages secondaires";
+/* Notification type for data submission requests to AniList database */
+"Submission" = "Soumettre";
 /* en.lproj/Localizable.strings
 Summary
 No comment provided by engineer. */
@@ -2086,6 +2164,10 @@ Localizable.strings
   Created by Axel Lopez on 13/10/2023. */
 "Unknown" = "Inconnue";
 /* en.lproj/Localizable.strings
+Unordered list
+No comment provided by engineer. */
+"Unordered list" = "Liste non ordonnée";
+/* en.lproj/Localizable.strings
 Upcoming
 No comment provided by engineer. */
 "Upcoming" = "À venir";
@@ -2115,6 +2197,10 @@ No comment provided by engineer. */
 Version %@
 No comment provided by engineer. */
 "Version %@" = "Version %@";
+/* en.lproj/Localizable.strings
+Video
+No comment provided by engineer. */
+"Video" = "Vidéo";
 /* en.lproj/Localizable.strings
 Video Editing
 No comment provided by engineer. */
@@ -2184,6 +2270,10 @@ No comment provided by engineer. */
 World Design
 No comment provided by engineer. */
 "World Design" = "Conception du monde";
+/* en.lproj/Localizable.strings
+Write something…
+No comment provided by engineer. */
+"Write something…" = "Écrivez quelque chose…";
 /* en.lproj/Localizable.strings
 Year
 No comment provided by engineer. */

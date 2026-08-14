@@ -2,10 +2,16 @@
 %lld chapters
 No comment provided by engineer. */
 "%lld chapters" = "%lld розд";
+/* Character (text) count. Appears when writing a review */
+"%lld characters" = "%lld символів";
 /* en.lproj/Localizable.strings
 %lld episodes
 No comment provided by engineer. */
 "%lld episodes" = "%lld епізод.";
+/* Character (text) required count. Appears when writing a review.
+
+Example: "45 more characters required" */
+"%lld more characters required" = "Лишилось ввести символів: %lld";
 /* num of volumes.
 Eg: 23 volumes */
 "%lld volumes" = "%lld том.";
@@ -129,6 +135,10 @@ No comment provided by engineer. */
 Adaptation
 No comment provided by engineer. */
 "Adaptation" = "Адаптація";
+/* en.lproj/Localizable.strings
+Add
+No comment provided by engineer. */
+"Add" = "Додати";
 /* if the translation is too long, translate just (Add) */
 "Add to List" = "Додати";
 /* en.lproj/Localizable.strings
@@ -341,6 +351,10 @@ No comment provided by engineer. */
 /* Hide poster covers for adult anime/manga */
 "Blur adult media" = "Розмиття вмісту для дорослих";
 /* en.lproj/Localizable.strings
+Bold
+No comment provided by engineer. */
+"Bold" = "Жирний";
+/* en.lproj/Localizable.strings
 CG Animation
 No comment provided by engineer. */
 "CG Animation" = "CG-анімація";
@@ -400,6 +414,10 @@ No comment provided by engineer. */
 Cancelled
 No comment provided by engineer. */
 "Cancelled" = "Скасовано";
+/* en.lproj/Localizable.strings
+Centered
+No comment provided by engineer. */
+"Centered" = "По центру";
 /* chapter abbreviation */
 "Ch" = "Розд.";
 /* en.lproj/Localizable.strings
@@ -488,6 +506,10 @@ No comment provided by engineer. */
 Co-Producer
 No comment provided by engineer. */
 "Co-Producer" = "Співпродюсер";
+/* en.lproj/Localizable.strings
+Code
+No comment provided by engineer. */
+"Code" = "Код";
 /* en.lproj/Localizable.strings
 Color Coordination
 No comment provided by engineer. */
@@ -596,10 +618,16 @@ No comment provided by engineer. */
 Delete
 No comment provided by engineer. */
 "Delete" = "Видалити";
+/* Delete published Anime/Manga Review */
+"Delete Review" = "Видалити відгук";
 /* en.lproj/Localizable.strings
 Delete this entry?
 No comment provided by engineer. */
 "Delete this entry?" = "Видалити цей запис?";
+/* en.lproj/Localizable.strings
+Delete this review?
+No comment provided by engineer. */
+"Delete this review?" = "Видалити цей відгук?";
 /* en.lproj/Localizable.strings
 Descending
 No comment provided by engineer. */
@@ -704,6 +732,10 @@ No comment provided by engineer. */
 Edit
 No comment provided by engineer. */
 "Edit" = "Змінити";
+/* en.lproj/Localizable.strings
+Edit Review
+No comment provided by engineer. */
+"Edit Review" = "Редагувати відгук";
 /* en.lproj/Localizable.strings
 Editing
 No comment provided by engineer. */
@@ -851,10 +883,8 @@ No comment provided by engineer. */
 Following
 No comment provided by engineer. */
 "Following" = "Підписки";
-/* en.lproj/Localizable.strings
-Follows
-No comment provided by engineer. */
-"Follows" = "Підписатися";
+/* notification type filter */
+"Follows" = "Підписки";
 /* en.lproj/Localizable.strings
 Follows you
 No comment provided by engineer. */
@@ -896,11 +926,15 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Global
 No comment provided by engineer. */
-"Global" = "Загально";
+"Global" = "Глобальний";
 /* en.lproj/Localizable.strings
 HD Editing
 No comment provided by engineer. */
 "HD Editing" = "HD-редагування";
+/* en.lproj/Localizable.strings
+Heading
+No comment provided by engineer. */
+"Heading" = "Заголовок";
 /* en.lproj/Localizable.strings
 Hentai
 No comment provided by engineer. */
@@ -925,6 +959,10 @@ No comment provided by engineer. */
 Hide spoiler
 No comment provided by engineer. */
 "Hide spoiler" = "Приховати спойлер";
+/* en.lproj/Localizable.strings
+High
+No comment provided by engineer. */
+"High" = "Високий";
 /* ranking.
 Eg: #1 Highest rated 2023 */
 "Highest rated" = "Рейтингові";
@@ -946,6 +984,10 @@ No comment provided by engineer. */
 Illustration
 No comment provided by engineer. */
 "Illustration" = "Ілюстрації";
+/* en.lproj/Localizable.strings
+Image
+No comment provided by engineer. */
+"Image" = "Зображення";
 /* en.lproj/Localizable.strings
 In-Between Animation
 No comment provided by engineer. */
@@ -991,13 +1033,13 @@ Insert Song Performance
 No comment provided by engineer. */
 "Insert Song Performance" = "Виконання вставної пісні";
 /* en.lproj/Localizable.strings
+Italic
+No comment provided by engineer. */
+"Italic" = "Курсив";
+/* en.lproj/Localizable.strings
 Japan
 No comment provided by engineer. */
 "Japan" = "Японія";
-/* en.lproj/Localizable.strings
-Japanese
-No comment provided by engineer. */
-"Japanese" = "Японська";
 /* en.lproj/Localizable.strings
 Key Animation
 No comment provided by engineer. */
@@ -1010,6 +1052,10 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "Поміч із ключовою анімацією";
+/* en.lproj/Localizable.strings
+Language
+No comment provided by engineer. */
+"Language" = "Мова";
 /* sort option */
 "Last Added" = "Нещодавно додане";
 /* sort by update date */
@@ -1053,6 +1099,14 @@ Line Producer
 No comment provided by engineer. */
 "Line Producer" = "Лінійний продюсер";
 /* en.lproj/Localizable.strings
+Link
+No comment provided by engineer. */
+"Link" = "Посилання";
+/* en.lproj/Localizable.strings
+List
+No comment provided by engineer. */
+"List" = "Каталог";
+/* en.lproj/Localizable.strings
 List Progress
 No comment provided by engineer. */
 "List Progress" = "Прогрес у каталозі";
@@ -1088,6 +1142,10 @@ No comment provided by engineer. */
 "Login" = "Увійти";
 /* or (Swipe Direction) for short */
 "Long Swipe Direction" = "Напрямок довгого маху";
+/* en.lproj/Localizable.strings
+Low
+No comment provided by engineer. */
+"Low" = "Низький";
 /* en.lproj/Localizable.strings
 Mahou Shoujo
 No comment provided by engineer. */
@@ -1144,6 +1202,10 @@ No comment provided by engineer. */
 "Media List" = "Список медіа";
 /* Anime or Manga */
 "Media Type" = "Тип медіа";
+/* en.lproj/Localizable.strings
+Medium
+No comment provided by engineer. */
+"Medium" = "Середній";
 /* en.lproj/Localizable.strings
 Minimal
 No comment provided by engineer. */
@@ -1346,6 +1408,10 @@ No comment provided by engineer. */
 /* sort order */
 "Order" = "Порядок";
 /* en.lproj/Localizable.strings
+Ordered list
+No comment provided by engineer. */
+"Ordered list" = "Упорядкований каталог";
+/* en.lproj/Localizable.strings
 Original
 No comment provided by engineer. */
 "Original" = "Оригінальне";
@@ -1391,6 +1457,10 @@ No comment provided by engineer. */
 Parent
 No comment provided by engineer. */
 "Parent" = "Джерело";
+/* en.lproj/Localizable.strings
+Paste your link here
+No comment provided by engineer. */
+"Paste your link here" = "Вставте ваше посилання тут";
 /* en.lproj/Localizable.strings
 Paused */
 "Paused" = "Відкладені";
@@ -1508,6 +1578,10 @@ Psychological
 No comment provided by engineer. */
 "Psychological" = "Психологічне";
 /* en.lproj/Localizable.strings
+Publish
+No comment provided by engineer. */
+"Publish" = "Опублікувати";
+/* en.lproj/Localizable.strings
 Publishing
 No comment provided by engineer. */
 "Publishing" = "Публікується";
@@ -1520,6 +1594,10 @@ No comment provided by engineer. */
 "Push notifications" = "Push-сповіщення";
 /* widget description */
 "Quick access to your anime or manga list." = "Швидкий доступ до вашого каталогу аніме або манґи.";
+/* en.lproj/Localizable.strings
+Quote
+No comment provided by engineer. */
+"Quote" = "Цитата";
 /* en.lproj/Localizable.strings
 Random
 No comment provided by engineer. */
@@ -1585,6 +1663,10 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Repeating */
 "Repeating" = "Повторюю";
+/* en.lproj/Localizable.strings
+Reply
+No comment provided by engineer. */
+"Reply" = "Відповісти";
 /* Reread [Kimetsu no Yaiba] */
 "Reread %@" = "Перечитує «%@»";
 /* (User) Reread chapter [1 - 27] of [Kimetsu no Yaiba] */
@@ -1596,6 +1678,10 @@ Rereading */
 Restore purchases
 No comment provided by engineer. */
 "Restore purchases" = "Відновити покупки";
+/* en.lproj/Localizable.strings
+Review
+No comment provided by engineer. */
+"Review" = "Відгук";
 /* en.lproj/Localizable.strings
 Review and Threads
 No comment provided by engineer. */
@@ -1651,6 +1737,8 @@ No comment provided by engineer. */
 Score format
 No comment provided by engineer. */
 "Score format" = "Формат оцінки";
+/* label for setting number of increments when editing a score using +/- buttons */
+"Score steps" = "Кроки зміни";
 /* en.lproj/Localizable.strings
 Script
 No comment provided by engineer. */
@@ -1708,6 +1796,10 @@ No comment provided by engineer. */
 "Share" = "Поділитися";
 /* Show less text */
 "Show less" = "Показати менше";
+/* en.lproj/Localizable.strings
+Show low priority
+No comment provided by engineer. */
+"Show low priority" = "Показувати низький пріоритет";
 /* en.lproj/Localizable.strings
 Show more
 No comment provided by engineer. */
@@ -1801,6 +1893,10 @@ Spin Off
 No comment provided by engineer. */
 "Spin Off" = "Спінофф";
 /* en.lproj/Localizable.strings
+Spoiler
+No comment provided by engineer. */
+"Spoiler" = "Спойлер";
+/* en.lproj/Localizable.strings
 Sports
 No comment provided by engineer. */
 "Sports" = "Спорт";
@@ -1863,6 +1959,8 @@ No comment provided by engineer. */
 Streaming sites
 No comment provided by engineer. */
 "Streaming sites" = "Сторінки стрімінгових сервісів";
+/* text style option button. A text style that puts a horizontal line right through the middle of words */
+"Strikethough" = "Закреслення";
 /* en.lproj/Localizable.strings
 Studios
 No comment provided by engineer. */
@@ -2108,6 +2206,8 @@ No comment provided by engineer. */
 Trending Manga
 No comment provided by engineer. */
 "Trending Manga" = "Популярна манґа";
+/* text style option button */
+"Underline" = "Підкреслення";
 /* en.lproj/Localizable.strings
 Unfollow
 No comment provided by engineer. */
@@ -2123,6 +2223,10 @@ Localizable.strings
 
   Created by Axel Lopez on 13/10/2023. */
 "Unknown" = "Невідомо";
+/* en.lproj/Localizable.strings
+Unordered list
+No comment provided by engineer. */
+"Unordered list" = "Невпорядкований каталог";
 /* en.lproj/Localizable.strings
 Upcoming
 No comment provided by engineer. */
@@ -2153,6 +2257,10 @@ No comment provided by engineer. */
 Version %@
 No comment provided by engineer. */
 "Version %@" = "Версія %@";
+/* en.lproj/Localizable.strings
+Video
+No comment provided by engineer. */
+"Video" = "Відео";
 /* en.lproj/Localizable.strings
 Video Editing
 No comment provided by engineer. */
@@ -2222,6 +2330,18 @@ No comment provided by engineer. */
 World Design
 No comment provided by engineer. */
 "World Design" = "Дизайн світу";
+/* en.lproj/Localizable.strings
+Write Review
+No comment provided by engineer. */
+"Write Review" = "Ваш відгук";
+/* en.lproj/Localizable.strings
+Write a Review
+No comment provided by engineer. */
+"Write a Review" = "Написати відгук";
+/* en.lproj/Localizable.strings
+Write something…
+No comment provided by engineer. */
+"Write something…" = "Напишіть щось…";
 /* en.lproj/Localizable.strings
 Year
 No comment provided by engineer. */

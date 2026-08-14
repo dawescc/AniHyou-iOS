@@ -11,6 +11,10 @@ Adaptation
 No comment provided by engineer. */
 "Adaptation" = "Adaptação";
 /* en.lproj/Localizable.strings
+Add
+No comment provided by engineer. */
+"Add" = "Adicionar";
+/* en.lproj/Localizable.strings
 Adventure
 No comment provided by engineer. */
 "Adventure" = "Aventura";
@@ -66,6 +70,10 @@ Completed */
 Content
 No comment provided by engineer. */
 "Content" = "Conteúdo";
+/* en.lproj/Localizable.strings
+Contributors
+No comment provided by engineer. */
+"Contributors" = "Contribuintes";
 /* en.lproj/Localizable.strings
 Default
 No comment provided by engineer. */
@@ -128,6 +136,10 @@ No comment provided by engineer. */
 Hentai
 No comment provided by engineer. */
 "Hentai" = "Hentai";
+/* en.lproj/Localizable.strings
+High
+No comment provided by engineer. */
+"High" = "Alto";
 /* as short as possible */
 "Home" = "Início";
 /* en.lproj/Localizable.strings
@@ -135,9 +147,13 @@ Horror
 No comment provided by engineer. */
 "Horror" = "Terror";
 /* en.lproj/Localizable.strings
-Japanese
+Image
 No comment provided by engineer. */
-"Japanese" = "Japonês";
+"Image" = "Imagem";
+/* en.lproj/Localizable.strings
+Language
+No comment provided by engineer. */
+"Language" = "Língua";
 /* en.lproj/Localizable.strings
 Last used
 No comment provided by engineer. */
@@ -154,6 +170,10 @@ No comment provided by engineer. */
 Login
 No comment provided by engineer. */
 "Login" = "Iniciar Sessão";
+/* en.lproj/Localizable.strings
+Low
+No comment provided by engineer. */
+"Low" = "Baixo";
 /* en.lproj/Localizable.strings
 Mahou Shoujo
 No comment provided by engineer. */
@@ -172,6 +192,10 @@ You can translate it simply as (Score) */
 Mecha
 No comment provided by engineer. */
 "Mecha" = "Robô";
+/* en.lproj/Localizable.strings
+Medium
+No comment provided by engineer. */
+"Medium" = "Médio";
 /* en.lproj/Localizable.strings
 Minimal
 No comment provided by engineer. */

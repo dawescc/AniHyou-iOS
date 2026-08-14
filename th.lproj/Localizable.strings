@@ -115,6 +115,10 @@ No comment provided by engineer. */
 Adaptation
 No comment provided by engineer. */
 "Adaptation" = "ดัดแปลง";
+/* en.lproj/Localizable.strings
+Add
+No comment provided by engineer. */
+"Add" = "เพิ่ม";
 /* if the translation is too long, translate just (Add) */
 "Add to List" = "เพิ่มรายการ";
 /* en.lproj/Localizable.strings
@@ -325,6 +329,10 @@ Blood type
 No comment provided by engineer. */
 "Blood type" = "กรุ๊ปเลือด";
 /* en.lproj/Localizable.strings
+Bold
+No comment provided by engineer. */
+"Bold" = "ตัวหนา";
+/* en.lproj/Localizable.strings
 CG Animation
 No comment provided by engineer. */
 "CG Animation" = "แอนิเมชัน CG";
@@ -384,6 +392,10 @@ No comment provided by engineer. */
 Cancelled
 No comment provided by engineer. */
 "Cancelled" = "ยกเลิก";
+/* en.lproj/Localizable.strings
+Centered
+No comment provided by engineer. */
+"Centered" = "จัดกึ่งกลาง";
 /* chapter abbreviation */
 "Ch" = "ตอน";
 /* en.lproj/Localizable.strings
@@ -472,6 +484,10 @@ No comment provided by engineer. */
 Co-Producer
 No comment provided by engineer. */
 "Co-Producer" = "ผู้ร่วมอำนวยการสร้าง";
+/* en.lproj/Localizable.strings
+Code
+No comment provided by engineer. */
+"Code" = "รหัส";
 /* en.lproj/Localizable.strings
 Color Coordination
 No comment provided by engineer. */
@@ -824,9 +840,7 @@ No comment provided by engineer. */
 Following
 No comment provided by engineer. */
 "Following" = "กำลังติดตาม";
-/* en.lproj/Localizable.strings
-Follows
-No comment provided by engineer. */
+/* notification type filter */
 "Follows" = "ติดตาม";
 /* en.lproj/Localizable.strings
 Follows you
@@ -871,6 +885,10 @@ HD Editing
 No comment provided by engineer. */
 "HD Editing" = "การตัดต่อ HD";
 /* en.lproj/Localizable.strings
+Heading
+No comment provided by engineer. */
+"Heading" = "หัวเรื่อง";
+/* en.lproj/Localizable.strings
 Hentai
 No comment provided by engineer. */
 "Hentai" = "เฮนไต";
@@ -911,6 +929,10 @@ No comment provided by engineer. */
 Illustration
 No comment provided by engineer. */
 "Illustration" = "ภาพประกอบ";
+/* en.lproj/Localizable.strings
+Image
+No comment provided by engineer. */
+"Image" = "รูปภาพ";
 /* en.lproj/Localizable.strings
 In-Between Animation
 No comment provided by engineer. */
@@ -956,13 +978,13 @@ Insert Song Performance
 No comment provided by engineer. */
 "Insert Song Performance" = "แสดงเพลงแทรก";
 /* en.lproj/Localizable.strings
+Italic
+No comment provided by engineer. */
+"Italic" = "ตัวเอียง";
+/* en.lproj/Localizable.strings
 Japan
 No comment provided by engineer. */
 "Japan" = "ญี่ปุ่น";
-/* en.lproj/Localizable.strings
-Japanese
-No comment provided by engineer. */
-"Japanese" = "ภาษาญี่ปุ่น";
 /* en.lproj/Localizable.strings
 Key Animation
 No comment provided by engineer. */
@@ -975,6 +997,10 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "ผู้ช่วยแอนิเมชันหลัก";
+/* en.lproj/Localizable.strings
+Language
+No comment provided by engineer. */
+"Language" = "ภาษา";
 /* sort option */
 "Last Added" = "เพิ่มล่าสุด";
 /* sort by update date */
@@ -1017,6 +1043,14 @@ No comment provided by engineer. */
 Line Producer
 No comment provided by engineer. */
 "Line Producer" = "โปรดิวเซอร์สายงานผลิต";
+/* en.lproj/Localizable.strings
+Link
+No comment provided by engineer. */
+"Link" = "ลิงก์";
+/* en.lproj/Localizable.strings
+List
+No comment provided by engineer. */
+"List" = "รายการ";
 /* en.lproj/Localizable.strings
 List Progress
 No comment provided by engineer. */
@@ -1309,6 +1343,10 @@ No comment provided by engineer. */
 /* sort order */
 "Order" = "ลำดับ";
 /* en.lproj/Localizable.strings
+Ordered list
+No comment provided by engineer. */
+"Ordered list" = "รายการที่เรียงลำดับ";
+/* en.lproj/Localizable.strings
 Original
 No comment provided by engineer. */
 "Original" = "ต้นฉบับ";
@@ -1354,6 +1392,10 @@ No comment provided by engineer. */
 Parent
 No comment provided by engineer. */
 "Parent" = "ภาคหลัก";
+/* en.lproj/Localizable.strings
+Paste your link here
+No comment provided by engineer. */
+"Paste your link here" = "วางลิงค์ที่นี่";
 /* en.lproj/Localizable.strings
 Paused */
 "Paused" = "หยุดพัก";
@@ -1463,6 +1505,10 @@ Psychological
 No comment provided by engineer. */
 "Psychological" = "จิตวิทยา";
 /* en.lproj/Localizable.strings
+Publish
+No comment provided by engineer. */
+"Publish" = "เผยแพร่";
+/* en.lproj/Localizable.strings
 Publishing
 No comment provided by engineer. */
 "Publishing" = "กำลังเผยแพร่";
@@ -1470,6 +1516,10 @@ No comment provided by engineer. */
 Push notifications
 No comment provided by engineer. */
 "Push notifications" = "การแจ้งเตือนแบบพุช";
+/* en.lproj/Localizable.strings
+Quote
+No comment provided by engineer. */
+"Quote" = "อ้างอิง";
 /* en.lproj/Localizable.strings
 Random
 No comment provided by engineer. */
@@ -1529,6 +1579,10 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Repeating */
 "Repeating" = "กำลังดูซ้ำ";
+/* en.lproj/Localizable.strings
+Reply
+No comment provided by engineer. */
+"Reply" = "ตอบกลับ";
 /* Reread [Kimetsu no Yaiba] */
 "Reread %@" = "อ่านซ้ำเรื่อง %@";
 /* (User) Reread chapter [1 - 27] of [Kimetsu no Yaiba] */
@@ -1738,6 +1792,10 @@ No comment provided by engineer. */
 Spin Off
 No comment provided by engineer. */
 "Spin Off" = "ภาคแยก";
+/* en.lproj/Localizable.strings
+Spoiler
+No comment provided by engineer. */
+"Spoiler" = "สปอยเลอร์";
 /* en.lproj/Localizable.strings
 Sports
 No comment provided by engineer. */
@@ -2052,6 +2110,10 @@ Localizable.strings
   Created by Axel Lopez on 13/10/2023. */
 "Unknown" = "Unknown";
 /* en.lproj/Localizable.strings
+Unordered list
+No comment provided by engineer. */
+"Unordered list" = "รายการที่ไม่ได้เรียงลำดับ";
+/* en.lproj/Localizable.strings
 Upcoming
 No comment provided by engineer. */
 "Upcoming" = "เร็ว ๆ นี้";
@@ -2081,6 +2143,10 @@ No comment provided by engineer. */
 Version %@
 No comment provided by engineer. */
 "Version %@" = "เวอร์ชั่น %@";
+/* en.lproj/Localizable.strings
+Video
+No comment provided by engineer. */
+"Video" = "วิดีโอ";
 /* en.lproj/Localizable.strings
 Video Editing
 No comment provided by engineer. */
@@ -2150,6 +2216,10 @@ No comment provided by engineer. */
 World Design
 No comment provided by engineer. */
 "World Design" = "World Design";
+/* en.lproj/Localizable.strings
+Write something…
+No comment provided by engineer. */
+"Write something…" = "พิมพ์ข้อความ";
 /* en.lproj/Localizable.strings
 Year
 No comment provided by engineer. */

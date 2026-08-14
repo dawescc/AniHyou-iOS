@@ -129,6 +129,10 @@ No comment provided by engineer. */
 Adaptation
 No comment provided by engineer. */
 "Adaptation" = "Uyarlama";
+/* en.lproj/Localizable.strings
+Add
+No comment provided by engineer. */
+"Add" = "Ekle";
 /* if the translation is too long, translate just (Add) */
 "Add to List" = "Listeye Ekle";
 /* en.lproj/Localizable.strings
@@ -341,6 +345,10 @@ No comment provided by engineer. */
 /* Hide poster covers for adult anime/manga */
 "Blur adult media" = "Yetişkin içeriği bulanıklaştır";
 /* en.lproj/Localizable.strings
+Bold
+No comment provided by engineer. */
+"Bold" = "Kalın";
+/* en.lproj/Localizable.strings
 CG Animation
 No comment provided by engineer. */
 "CG Animation" = "CG Animasyon";
@@ -400,6 +408,10 @@ No comment provided by engineer. */
 Cancelled
 No comment provided by engineer. */
 "Cancelled" = "İptal edildi";
+/* en.lproj/Localizable.strings
+Centered
+No comment provided by engineer. */
+"Centered" = "Ortada";
 /* chapter abbreviation */
 "Ch" = "Blm";
 /* en.lproj/Localizable.strings
@@ -488,6 +500,10 @@ No comment provided by engineer. */
 Co-Producer
 No comment provided by engineer. */
 "Co-Producer" = "Ortak Yapımcı";
+/* en.lproj/Localizable.strings
+Code
+No comment provided by engineer. */
+"Code" = "Kod";
 /* en.lproj/Localizable.strings
 Color Coordination
 No comment provided by engineer. */
@@ -851,9 +867,7 @@ No comment provided by engineer. */
 Following
 No comment provided by engineer. */
 "Following" = "Takip Edilen";
-/* en.lproj/Localizable.strings
-Follows
-No comment provided by engineer. */
+/* notification type filter */
 "Follows" = "Takip edilenler";
 /* en.lproj/Localizable.strings
 Follows you
@@ -902,6 +916,10 @@ HD Editing
 No comment provided by engineer. */
 "HD Editing" = "HD Kurgu";
 /* en.lproj/Localizable.strings
+Heading
+No comment provided by engineer. */
+"Heading" = "Başlık";
+/* en.lproj/Localizable.strings
 Hentai
 No comment provided by engineer. */
 "Hentai" = "Hentai";
@@ -925,6 +943,10 @@ No comment provided by engineer. */
 Hide spoiler
 No comment provided by engineer. */
 "Hide spoiler" = "Spoiler\'ı Gizle";
+/* en.lproj/Localizable.strings
+High
+No comment provided by engineer. */
+"High" = "Yüksek";
 /* ranking.
 Eg: #1 Highest rated 2023 */
 "Highest rated" = "En yüksek puanlı";
@@ -946,6 +968,10 @@ No comment provided by engineer. */
 Illustration
 No comment provided by engineer. */
 "Illustration" = "İllüstrasyon";
+/* en.lproj/Localizable.strings
+Image
+No comment provided by engineer. */
+"Image" = "Görsel";
 /* en.lproj/Localizable.strings
 In-Between Animation
 No comment provided by engineer. */
@@ -991,13 +1017,13 @@ Insert Song Performance
 No comment provided by engineer. */
 "Insert Song Performance" = "Şarkı Performansı Ekleme";
 /* en.lproj/Localizable.strings
+Italic
+No comment provided by engineer. */
+"Italic" = "Eğik";
+/* en.lproj/Localizable.strings
 Japan
 No comment provided by engineer. */
 "Japan" = "Japonya";
-/* en.lproj/Localizable.strings
-Japanese
-No comment provided by engineer. */
-"Japanese" = "Japonca";
 /* en.lproj/Localizable.strings
 Key Animation
 No comment provided by engineer. */
@@ -1010,6 +1036,10 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "Anahtar Animasyon Asistanı";
+/* en.lproj/Localizable.strings
+Language
+No comment provided by engineer. */
+"Language" = "Dil";
 /* sort option */
 "Last Added" = "Son Eklenen";
 /* sort by update date */
@@ -1053,6 +1083,14 @@ Line Producer
 No comment provided by engineer. */
 "Line Producer" = "Uygulayıcı Yapımcı";
 /* en.lproj/Localizable.strings
+Link
+No comment provided by engineer. */
+"Link" = "Bağlantı";
+/* en.lproj/Localizable.strings
+List
+No comment provided by engineer. */
+"List" = "Liste";
+/* en.lproj/Localizable.strings
 List Progress
 No comment provided by engineer. */
 "List Progress" = "Listele";
@@ -1088,6 +1126,10 @@ No comment provided by engineer. */
 "Login" = "Oturum aç";
 /* or (Swipe Direction) for short */
 "Long Swipe Direction" = "Uzun Kaydırma Yönü";
+/* en.lproj/Localizable.strings
+Low
+No comment provided by engineer. */
+"Low" = "Düşük";
 /* en.lproj/Localizable.strings
 Mahou Shoujo
 No comment provided by engineer. */
@@ -1144,6 +1186,10 @@ No comment provided by engineer. */
 "Media List" = "Medya listesi";
 /* Anime or Manga */
 "Media Type" = "Medya Türü";
+/* en.lproj/Localizable.strings
+Medium
+No comment provided by engineer. */
+"Medium" = "Normal";
 /* en.lproj/Localizable.strings
 Minimal
 No comment provided by engineer. */
@@ -1346,6 +1392,10 @@ No comment provided by engineer. */
 /* sort order */
 "Order" = "Sıralama";
 /* en.lproj/Localizable.strings
+Ordered list
+No comment provided by engineer. */
+"Ordered list" = "Sıralı Liste";
+/* en.lproj/Localizable.strings
 Original
 No comment provided by engineer. */
 "Original" = "Orijinal";
@@ -1391,6 +1441,10 @@ No comment provided by engineer. */
 Parent
 No comment provided by engineer. */
 "Parent" = "Kaynak";
+/* en.lproj/Localizable.strings
+Paste your link here
+No comment provided by engineer. */
+"Paste your link here" = "Bağlantıyı buraya yapıştır";
 /* en.lproj/Localizable.strings
 Paused */
 "Paused" = "Bekletilen";
@@ -1508,6 +1562,10 @@ Psychological
 No comment provided by engineer. */
 "Psychological" = "Psikolojik";
 /* en.lproj/Localizable.strings
+Publish
+No comment provided by engineer. */
+"Publish" = "Yayınla";
+/* en.lproj/Localizable.strings
 Publishing
 No comment provided by engineer. */
 "Publishing" = "Yayınlanıyor";
@@ -1520,6 +1578,10 @@ No comment provided by engineer. */
 "Push notifications" = "Anlık bildirimler";
 /* widget description */
 "Quick access to your anime or manga list." = "Anime ve manga listeniz için hızlı erişim.";
+/* en.lproj/Localizable.strings
+Quote
+No comment provided by engineer. */
+"Quote" = "Alıntı";
 /* en.lproj/Localizable.strings
 Random
 No comment provided by engineer. */
@@ -1585,6 +1647,10 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Repeating */
 "Repeating" = "Tekrarlanan";
+/* en.lproj/Localizable.strings
+Reply
+No comment provided by engineer. */
+"Reply" = "Yanıtla";
 /* Reread [Kimetsu no Yaiba] */
 "Reread %@" = "Tekrar okuma %@";
 /* (User) Reread chapter [1 - 27] of [Kimetsu no Yaiba] */
@@ -1709,6 +1775,10 @@ No comment provided by engineer. */
 /* Show less text */
 "Show less" = "Daha az göster";
 /* en.lproj/Localizable.strings
+Show low priority
+No comment provided by engineer. */
+"Show low priority" = "Düşük önceliği göster";
+/* en.lproj/Localizable.strings
 Show more
 No comment provided by engineer. */
 "Show more" = "Daha fazlası";
@@ -1800,6 +1870,10 @@ No comment provided by engineer. */
 Spin Off
 No comment provided by engineer. */
 "Spin Off" = "Uyarlama";
+/* en.lproj/Localizable.strings
+Spoiler
+No comment provided by engineer. */
+"Spoiler" = "Spoiler";
 /* en.lproj/Localizable.strings
 Sports
 No comment provided by engineer. */
@@ -2124,6 +2198,10 @@ Localizable.strings
   Created by Axel Lopez on 13/10/2023. */
 "Unknown" = "Bilinmiyor";
 /* en.lproj/Localizable.strings
+Unordered list
+No comment provided by engineer. */
+"Unordered list" = "Sırasız Liste";
+/* en.lproj/Localizable.strings
 Upcoming
 No comment provided by engineer. */
 "Upcoming" = "Yakında";
@@ -2153,6 +2231,10 @@ No comment provided by engineer. */
 Version %@
 No comment provided by engineer. */
 "Version %@" = "Sürüm %@";
+/* en.lproj/Localizable.strings
+Video
+No comment provided by engineer. */
+"Video" = "Video";
 /* en.lproj/Localizable.strings
 Video Editing
 No comment provided by engineer. */
@@ -2222,6 +2304,14 @@ No comment provided by engineer. */
 World Design
 No comment provided by engineer. */
 "World Design" = "Dünya Tasarımı";
+/* en.lproj/Localizable.strings
+Write a Review
+No comment provided by engineer. */
+"Write a Review" = "Bir değerlendirme yazın";
+/* en.lproj/Localizable.strings
+Write something…
+No comment provided by engineer. */
+"Write something…" = "Bir şeyler yaz…";
 /* en.lproj/Localizable.strings
 Year
 No comment provided by engineer. */

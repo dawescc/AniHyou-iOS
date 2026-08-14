@@ -129,6 +129,10 @@ No comment provided by engineer. */
 Adaptation
 No comment provided by engineer. */
 "Adaptation" = "Адаптация";
+/* en.lproj/Localizable.strings
+Add
+No comment provided by engineer. */
+"Add" = "Добавить";
 /* if the translation is too long, translate just (Add) */
 "Add to List" = "Добавить в список";
 /* en.lproj/Localizable.strings
@@ -341,6 +345,10 @@ No comment provided by engineer. */
 /* Hide poster covers for adult anime/manga */
 "Blur adult media" = "Скрыть материалы 18+";
 /* en.lproj/Localizable.strings
+Bold
+No comment provided by engineer. */
+"Bold" = "Жирный";
+/* en.lproj/Localizable.strings
 CG Animation
 No comment provided by engineer. */
 "CG Animation" = "CG-анимация";
@@ -400,6 +408,10 @@ No comment provided by engineer. */
 Cancelled
 No comment provided by engineer. */
 "Cancelled" = "Отменено";
+/* en.lproj/Localizable.strings
+Centered
+No comment provided by engineer. */
+"Centered" = "По центру";
 /* chapter abbreviation */
 "Ch" = "Гл";
 /* en.lproj/Localizable.strings
@@ -489,6 +501,10 @@ Co-Producer
 No comment provided by engineer. */
 "Co-Producer" = "Сопродюсер";
 /* en.lproj/Localizable.strings
+Code
+No comment provided by engineer. */
+"Code" = "Код";
+/* en.lproj/Localizable.strings
 Color Coordination
 No comment provided by engineer. */
 "Color Coordination" = "Координация цветов";
@@ -541,6 +557,10 @@ No comment provided by engineer. */
 Content
 No comment provided by engineer. */
 "Content" = "Контент";
+/* en.lproj/Localizable.strings
+Contributors
+No comment provided by engineer. */
+"Contributors" = "Вкладчики";
 /* en.lproj/Localizable.strings
 Costume Design
 No comment provided by engineer. */
@@ -843,9 +863,7 @@ No comment provided by engineer. */
 Following
 No comment provided by engineer. */
 "Following" = "Подписки";
-/* en.lproj/Localizable.strings
-Follows
-No comment provided by engineer. */
+/* notification type filter */
 "Follows" = "Подписки";
 /* en.lproj/Localizable.strings
 Follows you
@@ -894,6 +912,10 @@ HD Editing
 No comment provided by engineer. */
 "HD Editing" = "HD Редактирование";
 /* en.lproj/Localizable.strings
+Heading
+No comment provided by engineer. */
+"Heading" = "Заголовок";
+/* en.lproj/Localizable.strings
 Hentai
 No comment provided by engineer. */
 "Hentai" = "Хэнтай";
@@ -910,9 +932,17 @@ Hide from status lists
 No comment provided by engineer. */
 "Hide from status lists" = "Скрыть из списка статусов";
 /* en.lproj/Localizable.strings
+Hide scores
+No comment provided by engineer. */
+"Hide scores" = "Скрыть оценки";
+/* en.lproj/Localizable.strings
 Hide spoiler
 No comment provided by engineer. */
 "Hide spoiler" = "Скрыть спойлер";
+/* en.lproj/Localizable.strings
+High
+No comment provided by engineer. */
+"High" = "Высокая";
 /* ranking.
 Eg: #1 Highest rated 2023 */
 "Highest rated" = "С наивысшим рейтингом";
@@ -934,6 +964,10 @@ No comment provided by engineer. */
 Illustration
 No comment provided by engineer. */
 "Illustration" = "Иллюстрация";
+/* en.lproj/Localizable.strings
+Image
+No comment provided by engineer. */
+"Image" = "Изображение";
 /* en.lproj/Localizable.strings
 In-Between Animation
 No comment provided by engineer. */
@@ -979,13 +1013,13 @@ Insert Song Performance
 No comment provided by engineer. */
 "Insert Song Performance" = "Исполнение вставной песни";
 /* en.lproj/Localizable.strings
+Italic
+No comment provided by engineer. */
+"Italic" = "Курсив";
+/* en.lproj/Localizable.strings
 Japan
 No comment provided by engineer. */
 "Japan" = "Япония";
-/* en.lproj/Localizable.strings
-Japanese
-No comment provided by engineer. */
-"Japanese" = "Японский";
 /* en.lproj/Localizable.strings
 Key Animation
 No comment provided by engineer. */
@@ -998,6 +1032,10 @@ No comment provided by engineer. */
 Key Animation Assistance
 No comment provided by engineer. */
 "Key Animation Assistance" = "Помощь в создании ключевых анимаций";
+/* en.lproj/Localizable.strings
+Language
+No comment provided by engineer. */
+"Language" = "Язык";
 /* sort option */
 "Last Added" = "Недавно добавлено";
 /* sort by update date */
@@ -1041,6 +1079,14 @@ Line Producer
 No comment provided by engineer. */
 "Line Producer" = "Линейный продюсер";
 /* en.lproj/Localizable.strings
+Link
+No comment provided by engineer. */
+"Link" = "Ссылка";
+/* en.lproj/Localizable.strings
+List
+No comment provided by engineer. */
+"List" = "Список";
+/* en.lproj/Localizable.strings
 List Progress
 No comment provided by engineer. */
 "List Progress" = "Прогресс списка";
@@ -1076,6 +1122,10 @@ No comment provided by engineer. */
 "Login" = "Вход";
 /* or (Swipe Direction) for short */
 "Long Swipe Direction" = "Длинное направление свайпа";
+/* en.lproj/Localizable.strings
+Low
+No comment provided by engineer. */
+"Low" = "Низкий";
 /* en.lproj/Localizable.strings
 Mahou Shoujo
 No comment provided by engineer. */
@@ -1132,6 +1182,10 @@ No comment provided by engineer. */
 "Media List" = "Список медиа";
 /* Anime or Manga */
 "Media Type" = "Тип медиа";
+/* en.lproj/Localizable.strings
+Medium
+No comment provided by engineer. */
+"Medium" = "Средний";
 /* en.lproj/Localizable.strings
 Minimal
 No comment provided by engineer. */
@@ -1334,6 +1388,10 @@ No comment provided by engineer. */
 /* sort order */
 "Order" = "Порядок";
 /* en.lproj/Localizable.strings
+Ordered list
+No comment provided by engineer. */
+"Ordered list" = "Упорядоченный список";
+/* en.lproj/Localizable.strings
 Original
 No comment provided by engineer. */
 "Original" = "Первоисточник";
@@ -1379,6 +1437,10 @@ No comment provided by engineer. */
 Parent
 No comment provided by engineer. */
 "Parent" = "Родитель";
+/* en.lproj/Localizable.strings
+Paste your link here
+No comment provided by engineer. */
+"Paste your link here" = "Вставьте вашу ссылку сюда";
 /* en.lproj/Localizable.strings
 Paused */
 "Paused" = "Пауза";
@@ -1496,6 +1558,10 @@ Psychological
 No comment provided by engineer. */
 "Psychological" = "Психологическое";
 /* en.lproj/Localizable.strings
+Publish
+No comment provided by engineer. */
+"Publish" = "Опубликовать";
+/* en.lproj/Localizable.strings
 Publishing
 No comment provided by engineer. */
 "Publishing" = "Издается";
@@ -1508,6 +1574,10 @@ No comment provided by engineer. */
 "Push notifications" = "Push-уведомления";
 /* widget description */
 "Quick access to your anime or manga list." = "Быстрый доступ к вашим аниме или списку манг.";
+/* en.lproj/Localizable.strings
+Quote
+No comment provided by engineer. */
+"Quote" = "Цитата";
 /* en.lproj/Localizable.strings
 Random
 No comment provided by engineer. */
@@ -1573,6 +1643,10 @@ No comment provided by engineer. */
 /* en.lproj/Localizable.strings
 Repeating */
 "Repeating" = "Повторяется";
+/* en.lproj/Localizable.strings
+Reply
+No comment provided by engineer. */
+"Reply" = "Ответить";
 /* Reread [Kimetsu no Yaiba] */
 "Reread %@" = "Перечитать %@";
 /* (User) Reread chapter [1 - 27] of [Kimetsu no Yaiba] */
@@ -1784,6 +1858,10 @@ No comment provided by engineer. */
 Spin Off
 No comment provided by engineer. */
 "Spin Off" = "Спин-офф";
+/* en.lproj/Localizable.strings
+Spoiler
+No comment provided by engineer. */
+"Spoiler" = "Спойлер";
 /* en.lproj/Localizable.strings
 Sports
 No comment provided by engineer. */
@@ -2108,6 +2186,10 @@ Localizable.strings
   Created by Axel Lopez on 13/10/2023. */
 "Unknown" = "Неизвестно";
 /* en.lproj/Localizable.strings
+Unordered list
+No comment provided by engineer. */
+"Unordered list" = "Неупорядоченный список";
+/* en.lproj/Localizable.strings
 Upcoming
 No comment provided by engineer. */
 "Upcoming" = "Предстоящие";
@@ -2137,6 +2219,10 @@ No comment provided by engineer. */
 Version %@
 No comment provided by engineer. */
 "Version %@" = "Версия %@";
+/* en.lproj/Localizable.strings
+Video
+No comment provided by engineer. */
+"Video" = "Видео";
 /* en.lproj/Localizable.strings
 Video Editing
 No comment provided by engineer. */
@@ -2206,6 +2292,10 @@ No comment provided by engineer. */
 World Design
 No comment provided by engineer. */
 "World Design" = "Дизайн мира";
+/* en.lproj/Localizable.strings
+Write something…
+No comment provided by engineer. */
+"Write something…" = "Напишите что-то…";
 /* en.lproj/Localizable.strings
 Year
 No comment provided by engineer. */

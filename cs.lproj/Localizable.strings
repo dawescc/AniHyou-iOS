@@ -99,6 +99,10 @@ No comment provided by engineer. */
 Adaptation
 No comment provided by engineer. */
 "Adaptation" = "Adaptace";
+/* en.lproj/Localizable.strings
+Add
+No comment provided by engineer. */
+"Add" = "Přidat";
 /* if the translation is too long, translate just (Add) */
 "Add to List" = "Přidat";
 /* en.lproj/Localizable.strings
@@ -335,6 +339,10 @@ Content
 No comment provided by engineer. */
 "Content" = "Obsah";
 /* en.lproj/Localizable.strings
+Contributors
+No comment provided by engineer. */
+"Contributors" = "K vývoji přispěli";
+/* en.lproj/Localizable.strings
 Costume Design
 No comment provided by engineer. */
 "Costume Design" = "Návrh kostýmů";
@@ -519,6 +527,10 @@ No comment provided by engineer. */
 Hide spoiler
 No comment provided by engineer. */
 "Hide spoiler" = "Skrýt spoilery";
+/* en.lproj/Localizable.strings
+High
+No comment provided by engineer. */
+"High" = "Vysoká";
 /* ranking.
 Eg: #1 Highest rated 2023 */
 "Highest rated" = "Nejlépe hodnocené";
@@ -540,6 +552,10 @@ No comment provided by engineer. */
 Illustration
 No comment provided by engineer. */
 "Illustration" = "Ilustrace";
+/* en.lproj/Localizable.strings
+Image
+No comment provided by engineer. */
+"Image" = "Image";
 /* en.lproj/Localizable.strings
 In-Between Animation
 No comment provided by engineer. */
@@ -573,9 +589,9 @@ Insert Song Arrangement
 No comment provided by engineer. */
 "Insert Song Arrangement" = "Vložit aranžmá písně";
 /* en.lproj/Localizable.strings
-Japanese
+Language
 No comment provided by engineer. */
-"Japanese" = "Japonština";
+"Language" = "Jazyk";
 /* en.lproj/Localizable.strings
 Last used
 No comment provided by engineer. */
@@ -601,6 +617,10 @@ Login
 No comment provided by engineer. */
 "Login" = "Přihlášení";
 /* en.lproj/Localizable.strings
+Low
+No comment provided by engineer. */
+"Low" = "Nízká";
+/* en.lproj/Localizable.strings
 Mahou Shoujo
 No comment provided by engineer. */
 "Mahou Shoujo" = "Mahou Shoujo";
@@ -622,6 +642,10 @@ No comment provided by engineer. */
 Mecha
 No comment provided by engineer. */
 "Mecha" = "Mecha";
+/* en.lproj/Localizable.strings
+Medium
+No comment provided by engineer. */
+"Medium" = "Střední";
 /* en.lproj/Localizable.strings
 Minimal
 No comment provided by engineer. */

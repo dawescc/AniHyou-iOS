@@ -455,9 +455,7 @@ No comment provided by engineer. */
 Following
 No comment provided by engineer. */
 "Following" = "Đang theo dõi";
-/* en.lproj/Localizable.strings
-Follows
-No comment provided by engineer. */
+/* notification type filter */
 "Follows" = "Theo dõi";
 /* en.lproj/Localizable.strings
 Follows you
@@ -534,10 +532,6 @@ No comment provided by engineer. */
 Japan
 No comment provided by engineer. */
 "Japan" = "Nhật Bản";
-/* en.lproj/Localizable.strings
-Japanese
-No comment provided by engineer. */
-"Japanese" = "Tiếng Nhật";
 /* en.lproj/Localizable.strings
 Mahou Shoujo
 No comment provided by engineer. */

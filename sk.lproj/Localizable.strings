@@ -11,6 +11,10 @@ Adaptation
 No comment provided by engineer. */
 "Adaptation" = "Adaptácia";
 /* en.lproj/Localizable.strings
+Add
+No comment provided by engineer. */
+"Add" = "Pridať";
+/* en.lproj/Localizable.strings
 Adventure
 No comment provided by engineer. */
 "Adventure" = "Dobrodružný";
@@ -66,6 +70,10 @@ Completed */
 Content
 No comment provided by engineer. */
 "Content" = "Obsah";
+/* en.lproj/Localizable.strings
+Contributors
+No comment provided by engineer. */
+"Contributors" = "Prispievatelia";
 /* en.lproj/Localizable.strings
 Default
 No comment provided by engineer. */
@@ -124,6 +132,10 @@ No comment provided by engineer. */
 Hentai
 No comment provided by engineer. */
 "Hentai" = "Hentai";
+/* en.lproj/Localizable.strings
+High
+No comment provided by engineer. */
+"High" = "Vysoká";
 /* as short as possible */
 "Home" = "Domov";
 /* en.lproj/Localizable.strings
@@ -131,9 +143,9 @@ Horror
 No comment provided by engineer. */
 "Horror" = "Horor";
 /* en.lproj/Localizable.strings
-Japanese
+Language
 No comment provided by engineer. */
-"Japanese" = "Japončina";
+"Language" = "Jazyk";
 /* en.lproj/Localizable.strings
 Last used
 No comment provided by engineer. */
@@ -150,6 +162,10 @@ No comment provided by engineer. */
 Login
 No comment provided by engineer. */
 "Login" = "Prihlásenie";
+/* en.lproj/Localizable.strings
+Low
+No comment provided by engineer. */
+"Low" = "Nízka";
 /* en.lproj/Localizable.strings
 Mahou Shoujo
 No comment provided by engineer. */
@@ -168,6 +184,10 @@ You can translate it simply as (Score) */
 Mecha
 No comment provided by engineer. */
 "Mecha" = "Mecha";
+/* en.lproj/Localizable.strings
+Medium
+No comment provided by engineer. */
+"Medium" = "Stredné";
 /* en.lproj/Localizable.strings
 Minimal
 No comment provided by engineer. */
