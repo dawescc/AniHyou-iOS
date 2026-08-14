@@ -1,11 +1,11 @@
 query MediaCharactersAndStaff($mediaId: Int) {
   Media(id: $mediaId) {
-    characters(page: 1, perPage: 25, sort: [RELEVANCE, ROLE, FAVOURITES_DESC]) {
+    characters(page: 1, perPage: 50, sort: [RELEVANCE, ROLE, FAVOURITES_DESC]) {
       edges {
         ...MediaCharacter
       }
     }
-    staff(page: 1, perPage: 25, sort: [RELEVANCE, ROLE]) {
+    staff(page: 1, perPage: 50, sort: [RELEVANCE, ROLE]) {
       edges {
         ...MediaStaff
       }
@@ -25,7 +25,7 @@ fragment MediaCharacter on CharacterEdge {
       medium
     }
   }
-  voiceActors(language: JAPANESE) {
+  voiceActors {
     id
     name {
       userPreferred
@@ -33,6 +33,7 @@ fragment MediaCharacter on CharacterEdge {
     image {
       medium
     }
+    languageV2
   }
 }
 

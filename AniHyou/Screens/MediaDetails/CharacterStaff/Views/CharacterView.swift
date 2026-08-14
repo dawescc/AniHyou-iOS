@@ -13,6 +13,7 @@ private let imageSize: CGFloat = 70
 struct CharacterView: View {
 
     let character: MediaCharacter?
+    let selectedLanguage: String
 
     var body: some View {
         HStack {
@@ -35,20 +36,23 @@ struct CharacterView: View {
 
             Spacer()
 
-            if character?.voiceActors?.isEmpty == false {
-                NavigationLink(destination: StaffDetailsView(staffId: character!.voiceActors![0]!.id)) {
+            if let voiceActors = character?.voiceActors,
+               let voiceActor = voiceActors.first(where: { $0?.languageV2 == selectedLanguage }),
+               let voiceActor = voiceActor
+            {
+                NavigationLink(destination: StaffDetailsView(staffId: voiceActor.id)) {
                     HStack {
                         VStack(alignment: .trailing) {
-                            Text(character?.voiceActors![0]!.name?.userPreferred ?? "")
+                            Text(voiceActor.name?.userPreferred ?? "")
                                 .font(.footnote)
                                 .multilineTextAlignment(.trailing)
                                 .lineLimit(3)
                                 .foregroundStyle(.primary)
-                            Text("Japanese")
+                            Text(selectedLanguage)
                                 .font(.footnote)
                                 .foregroundStyle(.gray)
                         }
-                        CircleImageView(imageUrl: character?.voiceActors![0]!.image?.medium, size: imageSize)
+                        CircleImageView(imageUrl: voiceActor.image?.medium, size: imageSize)
                     }//:HStack
                 }
                 .buttonStyle(.plain)
@@ -59,6 +63,6 @@ struct CharacterView: View {
 }
 
 #Preview {
-    CharacterView(character: nil)
+    CharacterView(character: nil, selectedLanguage: "Japanese")
         .padding()
 }

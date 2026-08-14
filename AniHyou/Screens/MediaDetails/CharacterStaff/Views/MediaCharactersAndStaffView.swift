@@ -27,10 +27,18 @@ struct MediaCharactersAndStaffView: View {
 
                 staffHScrollView
 
-                Text("Characters")
-                    .font(.title3)
-                    .bold()
-                    .padding(.leading)
+                HStack {
+                    Text("Characters")
+                        .font(.title3)
+                        .bold()
+                        .padding(.leading)
+                    Spacer()
+                    Picker("Language", selection: $viewModel.selectedLanguage) {
+                        ForEach(viewModel.availableLanguages, id: \.self) { language in
+                            Text(language)
+                        }
+                    }
+                }
 
                 charactersVScrollView
 
@@ -65,8 +73,11 @@ struct MediaCharactersAndStaffView: View {
         LazyVStack {
             ForEach(viewModel.mediaCharactersAndStaff?.characters?.edges ?? [], id: \.?.node?.id) {
                 if let character = $0 {
-                    CharacterView(character: character.fragments.mediaCharacter)
-                        .padding(.bottom)
+                    CharacterView(
+                        character: character.fragments.mediaCharacter,
+                        selectedLanguage: viewModel.selectedLanguage
+                    )
+                    .padding(.bottom)
                 }
             }
         }//:VStack

@@ -8,7 +8,7 @@ nonisolated public struct MediaCharactersAndStaffQuery: GraphQLQuery {
   public static let operationName: String = "MediaCharactersAndStaff"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query MediaCharactersAndStaff($mediaId: Int) { Media(id: $mediaId) { __typename characters(page: 1, perPage: 25, sort: [RELEVANCE, ROLE, FAVOURITES_DESC]) { __typename edges { __typename ...MediaCharacter } } staff(page: 1, perPage: 25, sort: [RELEVANCE, ROLE]) { __typename edges { __typename ...MediaStaff } } } }"#,
+      #"query MediaCharactersAndStaff($mediaId: Int) { Media(id: $mediaId) { __typename characters(page: 1, perPage: 50, sort: [RELEVANCE, ROLE, FAVOURITES_DESC]) { __typename edges { __typename ...MediaCharacter } } staff(page: 1, perPage: 50, sort: [RELEVANCE, ROLE]) { __typename edges { __typename ...MediaStaff } } } }"#,
       fragments: [MediaCharacter.self, MediaStaff.self]
     ))
 
@@ -47,12 +47,12 @@ nonisolated public struct MediaCharactersAndStaffQuery: GraphQLQuery {
         .field("__typename", String.self),
         .field("characters", Characters?.self, arguments: [
           "page": 1,
-          "perPage": 25,
+          "perPage": 50,
           "sort": ["RELEVANCE", "ROLE", "FAVOURITES_DESC"]
         ]),
         .field("staff", Staff?.self, arguments: [
           "page": 1,
-          "perPage": 25,
+          "perPage": 50,
           "sort": ["RELEVANCE", "ROLE"]
         ]),
       ] }

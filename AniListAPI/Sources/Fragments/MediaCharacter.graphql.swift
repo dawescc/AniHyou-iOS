@@ -6,7 +6,7 @@
 
 nonisolated public struct MediaCharacter: AniListAPI.SelectionSet, Fragment {
   public static var fragmentDefinition: StaticString {
-    #"fragment MediaCharacter on CharacterEdge { __typename id role node { __typename id name { __typename userPreferred } image { __typename medium } } voiceActors(language: JAPANESE) { __typename id name { __typename userPreferred } image { __typename medium } } }"#
+    #"fragment MediaCharacter on CharacterEdge { __typename id role node { __typename id name { __typename userPreferred } image { __typename medium } } voiceActors { __typename id name { __typename userPreferred } image { __typename medium } languageV2 } }"#
   }
 
   @_spi(Unsafe) public let __data: DataDict
@@ -18,7 +18,7 @@ nonisolated public struct MediaCharacter: AniListAPI.SelectionSet, Fragment {
     .field("id", Int?.self),
     .field("role", GraphQLEnum<AniListAPI.CharacterRole>?.self),
     .field("node", Node?.self),
-    .field("voiceActors", [VoiceActor?]?.self, arguments: ["language": "JAPANESE"]),
+    .field("voiceActors", [VoiceActor?]?.self),
   ] }
   @_spi(Execution) public static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
     MediaCharacter.self
@@ -111,6 +111,7 @@ nonisolated public struct MediaCharacter: AniListAPI.SelectionSet, Fragment {
       .field("id", Int.self),
       .field("name", Name?.self),
       .field("image", Image?.self),
+      .field("languageV2", String?.self),
     ] }
     @_spi(Execution) public static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
       MediaCharacter.VoiceActor.self
@@ -122,6 +123,8 @@ nonisolated public struct MediaCharacter: AniListAPI.SelectionSet, Fragment {
     public var name: Name? { __data["name"] }
     /// The staff images
     public var image: Image? { __data["image"] }
+    /// The primary language of the staff member. Current values: Japanese, English, Korean, Italian, Spanish, Portuguese, French, German, Hebrew, Hungarian, Chinese, Arabic, Filipino, Catalan, Finnish, Turkish, Dutch, Swedish, Thai, Tagalog, Malaysian, Indonesian, Vietnamese, Nepali, Hindi, Urdu
+    public var languageV2: String? { __data["languageV2"] }
 
     /// VoiceActor.Name
     ///
