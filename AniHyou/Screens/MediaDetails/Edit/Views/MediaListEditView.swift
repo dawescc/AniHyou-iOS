@@ -51,7 +51,7 @@ struct MediaListEditView: View {
 
     var body: some View {
         NavigationStack {
-            Form(content: {
+            Form {
                 Picker("Status", selection: $status) {
                     ForEach(MediaListStatus.allCases, id: \.self) { status in
                         Label(status.localizedName, systemImage: status.systemImage)
@@ -121,11 +121,12 @@ struct MediaListEditView: View {
                 }
                 .disabled(mediaList == nil)
 
-            })//:Form
+            }//:Form
+            .navigationTitle("Edit")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 toolbarContent
-            }//:Toolbar
+            }
         }//:NavigationStack
         .sheet(isPresented: $showWriteReview) {
             if let id = mediaDetails?.id {
@@ -334,7 +335,7 @@ struct MediaListEditView: View {
     
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
-        ToolbarItem(placement: .topBarLeading) {
+        ToolbarItem(placement: .cancellationAction) {
             if #available(iOS 26, *) {
                 Button(action: { dismiss() }) {
                     Label("Cancel", systemImage: "xmark")
@@ -347,7 +348,7 @@ struct MediaListEditView: View {
             }
         }
 
-        ToolbarItem(placement: .topBarTrailing) {
+        ToolbarItem(placement: .confirmationAction) {
             if viewModel.isLoading {
                 ProgressView()
             } else {

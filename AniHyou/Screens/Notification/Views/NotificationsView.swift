@@ -70,7 +70,7 @@ struct NotificationsView: View {
                         .tint(nil)
                     }
                 } else {
-                    ToolbarItem {
+                    ToolbarItem(placement: .primaryAction) {
                         Button("Done") {
                             dismiss()
                         }

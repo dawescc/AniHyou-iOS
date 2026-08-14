@@ -32,7 +32,7 @@ struct PublishActivityView: View {
     
     @ToolbarContentBuilder
     var toolbarContent: some ToolbarContent {
-        ToolbarItem(placement: .topBarLeading) {
+        ToolbarItem(placement: .cancellationAction) {
             if #available(iOS 26, *) {
                 Button(action: { dismiss() }) {
                     Label("Cancel", systemImage: "xmark")
@@ -44,7 +44,7 @@ struct PublishActivityView: View {
                 }
             }
         }
-        ToolbarItem(placement: .topBarTrailing) {
+        ToolbarItem(placement: .confirmationAction) {
             if viewModel.isLoading {
                 ProgressView()
             } else {
