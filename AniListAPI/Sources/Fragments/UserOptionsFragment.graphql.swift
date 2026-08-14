@@ -6,7 +6,7 @@
 
 nonisolated public struct UserOptionsFragment: AniListAPI.SelectionSet, Fragment, Identifiable {
   public static var fragmentDefinition: StaticString {
-    #"fragment UserOptionsFragment on User { __typename id options { __typename displayAdultContent profileColor staffNameLanguage titleLanguage airingNotifications } mediaListOptions { __typename scoreFormat animeList { __typename advancedScoringEnabled advancedScoring } mangaList { __typename advancedScoringEnabled advancedScoring } } }"#
+    #"fragment UserOptionsFragment on User { __typename id options { __typename displayAdultContent profileColor staffNameLanguage titleLanguage airingNotifications } mediaListOptions { __typename scoreFormat animeList { __typename advancedScoringEnabled advancedScoring customLists } mangaList { __typename advancedScoringEnabled advancedScoring customLists } } }"#
   }
 
   @_spi(Unsafe) public let __data: DataDict
@@ -99,6 +99,7 @@ nonisolated public struct UserOptionsFragment: AniListAPI.SelectionSet, Fragment
         .field("__typename", String.self),
         .field("advancedScoringEnabled", Bool?.self),
         .field("advancedScoring", [String?]?.self),
+        .field("customLists", [String?]?.self),
       ] }
       @_spi(Execution) public static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
         UserOptionsFragment.MediaListOptions.AnimeList.self
@@ -108,6 +109,8 @@ nonisolated public struct UserOptionsFragment: AniListAPI.SelectionSet, Fragment
       public var advancedScoringEnabled: Bool? { __data["advancedScoringEnabled"] }
       /// The names of the user's advanced scoring sections
       public var advancedScoring: [String?]? { __data["advancedScoring"] }
+      /// The names of the user's custom lists
+      public var customLists: [String?]? { __data["customLists"] }
     }
 
     /// MediaListOptions.MangaList
@@ -122,6 +125,7 @@ nonisolated public struct UserOptionsFragment: AniListAPI.SelectionSet, Fragment
         .field("__typename", String.self),
         .field("advancedScoringEnabled", Bool?.self),
         .field("advancedScoring", [String?]?.self),
+        .field("customLists", [String?]?.self),
       ] }
       @_spi(Execution) public static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
         UserOptionsFragment.MediaListOptions.MangaList.self
@@ -131,6 +135,8 @@ nonisolated public struct UserOptionsFragment: AniListAPI.SelectionSet, Fragment
       public var advancedScoringEnabled: Bool? { __data["advancedScoringEnabled"] }
       /// The names of the user's advanced scoring sections
       public var advancedScoring: [String?]? { __data["advancedScoring"] }
+      /// The names of the user's custom lists
+      public var customLists: [String?]? { __data["customLists"] }
     }
   }
 }

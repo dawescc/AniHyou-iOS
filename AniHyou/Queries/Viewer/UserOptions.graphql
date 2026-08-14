@@ -18,10 +18,12 @@ fragment UserOptionsFragment on User {
         animeList {
             advancedScoringEnabled
             advancedScoring
+            customLists
         }
         mangaList {
             advancedScoringEnabled
             advancedScoring
+            customLists
         }
     }
 }

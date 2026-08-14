@@ -76,62 +76,16 @@ struct SettingsView: View {
         Form {
             displayOptions
 
-            Section {
-                Picker("Long Swipe Direction", selection: $incrementLongSwipeDirection) {
-                    ForEach(LongSwipeDirection.allCases, id: \.self) { direction in
-                        Text(direction.localizedName).tag(direction)
-                    }
-                }
-            } footer: {
-                Text("Increment Episode / Chapter")
-            }
+            listOptions
             
-            Section {
-                Toggle("Blur adult media", isOn: $blurAdultMedia)
-                Toggle("Hide scores", isOn: $hideScores)
-                Toggle("Show low priority", isOn: $showLowPriority)
-                Toggle("Airing on my list", isOn: $airingOnMyList)
-            } header: {
-                Text("Content")
-            } footer: {
-                Text("Show only airing soon anime that are in your list")
-            }
+            contentOptions
             
-            Section("Notifications") {
-                Toggle("Push notifications", isOn: $notificationsEnabled)
-                Picker("Update interval", selection: $notificationsFetchHours) {
-                    Text("1h").tag(1)
-                    Text("3h").tag(3)
-                    Text("6h").tag(6)
-                    Text("12h").tag(12)
-                    Text("24h").tag(24)
-                }
-            }
+            notificationOptions
 
-            // log in session
-            Section {
-                NavigationLink("Account settings", destination: AccountSettingsView(viewModel: viewModel))
-                if WCSession.default.isWatchAppInstalled {
-                    Button("Sync account with Apple Watch") {
-                        viewModel.syncAccountWithAppleWatch()
-                    }
-                }
-                Button("Log out", role: .destructive) {
-                    showLogOutDialog = true
-                }
-                .confirmationDialog("Are you sure you want to log out?", isPresented: $showLogOutDialog) {
-                    Button("Log out", role: .destructive) {
-                        viewModel.logOut()
-                    }
-                } message: {
-                    Text("Are you sure you want to log out?")
-                }
-            }
+            accountOptions
 
             Section("App Icon") {
-                AppIconSelector(
-                    onNotDonated: { showDonationAlert = true }
-                )
+                AppIconSelector(onNotDonated: { showDonationAlert = true })
             }
 
             information
@@ -172,11 +126,6 @@ struct SettingsView: View {
     @ViewBuilder
     var displayOptions: some View {
         Section("Display") {
-            Picker("List style", selection: $listStyle) {
-                Text("Standard").tag(0)
-                Text("Compact").tag(2)
-                Text("Minimal").tag(1)
-            }
             Picker("Accent color", selection: $accentColorMode) {
                 ForEach(AccentColorMode.allCases, id: \.self) { mode in
                     Text(mode.localizedName).tag(mode)
@@ -213,6 +162,75 @@ struct SettingsView: View {
                 ForEach(MainTab.allCases) { tab in
                     Text(tab.localizedName).tag(tab.rawValue)
                 }
+            }
+        }
+    }
+    
+    var listOptions: some View {
+        Section {
+            Picker("List style", selection: $listStyle) {
+                Text("Standard").tag(0)
+                Text("Compact").tag(2)
+                Text("Minimal").tag(1)
+            }
+            NavigationLink("Custom lists") {
+                EditCustomListsView()
+            }
+            Picker("Long Swipe Direction", selection: $incrementLongSwipeDirection) {
+                ForEach(LongSwipeDirection.allCases, id: \.self) { direction in
+                    Text(direction.localizedName).tag(direction)
+                }
+            }
+        } header: {
+            Text("List")
+        } footer: {
+            Text("Increment Episode / Chapter")
+        }
+    }
+    
+    var contentOptions: some View {
+        Section {
+            Toggle("Blur adult media", isOn: $blurAdultMedia)
+            Toggle("Hide scores", isOn: $hideScores)
+            Toggle("Show low priority", isOn: $showLowPriority)
+            Toggle("Airing on my list", isOn: $airingOnMyList)
+        } header: {
+            Text("Content")
+        } footer: {
+            Text("Show only airing soon anime that are in your list")
+        }
+    }
+    
+    var notificationOptions: some View {
+        Section("Notifications") {
+            Toggle("Push notifications", isOn: $notificationsEnabled)
+            Picker("Update interval", selection: $notificationsFetchHours) {
+                Text("1h").tag(1)
+                Text("3h").tag(3)
+                Text("6h").tag(6)
+                Text("12h").tag(12)
+                Text("24h").tag(24)
+            }
+        }
+    }
+    
+    var accountOptions: some View {
+        Section {
+            NavigationLink("Account settings", destination: AccountSettingsView(viewModel: viewModel))
+            if WCSession.default.isWatchAppInstalled {
+                Button("Sync account with Apple Watch") {
+                    viewModel.syncAccountWithAppleWatch()
+                }
+            }
+            Button("Log out", role: .destructive) {
+                showLogOutDialog = true
+            }
+            .confirmationDialog("Are you sure you want to log out?", isPresented: $showLogOutDialog) {
+                Button("Log out", role: .destructive) {
+                    viewModel.logOut()
+                }
+            } message: {
+                Text("Are you sure you want to log out?")
             }
         }
     }

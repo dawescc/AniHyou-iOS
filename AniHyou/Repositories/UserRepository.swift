@@ -26,7 +26,9 @@ struct UserRepository {
         staffNameLanguage: UserStaffNameLanguage? = nil,
         scoreFormat: ScoreFormat? = nil,
         airingNotifications: Bool? = nil,
-    ) async -> Bool {
+        animeListOptions: MediaListOptionsInput? = nil,
+        mangaListOptions: MediaListOptionsInput? = nil
+    ) async -> UserOptionsFragment? {
         do {
             let result = try await Network.shared.apollo.perform(
                 mutation: UpdateUserMutation(
@@ -35,15 +37,25 @@ struct UserRepository {
                     staffNameLanguage: someIfNotNil(staffNameLanguage),
                     scoreFormat: someIfNotNil(scoreFormat),
                     airingNotifications: someIfNotNil(airingNotifications),
-                    animeListOptions: .none,
-                    mangaListOptions: .none
+                    animeListOptions: someIfNotNil(animeListOptions),
+                    mangaListOptions: someIfNotNil(mangaListOptions)
                 )
             )
-            return result.data != nil
+            return result.data?.updateUser?.fragments.userOptionsFragment
         } catch {
             print(error)
-            return false
+            return nil
         }
+    }
+    
+    static func updateCustomLists(
+        animeLists: [String]? = nil,
+        mangaLists: [String]? = nil
+    ) async -> UserOptionsFragment? {
+        return await updateUserOptions(
+            animeListOptions: animeLists.map { MediaListOptionsInput(customLists: .some($0)) },
+            mangaListOptions: mangaLists.map { MediaListOptionsInput(customLists: .some($0)) }
+        )
     }
 
     // MARK: - User Search

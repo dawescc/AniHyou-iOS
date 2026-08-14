@@ -144,6 +144,8 @@
 		48790A54302DB24E006179E9 /* MarkdownEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A53302DB24E006179E9 /* MarkdownEditor.swift */; };
 		48790A57302DB2EA006179E9 /* MarkdownFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A56302DB2E6006179E9 /* MarkdownFormat.swift */; };
 		48790A76302F18C7006179E9 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A75302F18C5006179E9 /* Priority.swift */; };
+		48790A82302F6DB1006179E9 /* EditCustomListsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A81302F6DAD006179E9 /* EditCustomListsViewModel.swift */; };
+		48790A85302F6F19006179E9 /* EditCustomListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48790A84302F6F19006179E9 /* EditCustomListsView.swift */; };
 		48801D212C3BEDC5000BEA3A /* CurrentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D202C3BEDC5000BEA3A /* CurrentView.swift */; };
 		48801D232C3BF093000BEA3A /* CurrentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D222C3BF08B000BEA3A /* CurrentViewModel.swift */; };
 		48801D252C3BF397000BEA3A /* CurrentListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48801D242C3BF397000BEA3A /* CurrentListItemView.swift */; };
@@ -560,6 +562,8 @@
 		48790A5A302E12B9006179E9 /* DeleteActivity.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = DeleteActivity.graphql; sourceTree = "<group>"; };
 		48790A5B302E2934006179E9 /* DeleteActivityReply.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = DeleteActivityReply.graphql; sourceTree = "<group>"; };
 		48790A75302F18C5006179E9 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
+		48790A81302F6DAD006179E9 /* EditCustomListsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCustomListsViewModel.swift; sourceTree = "<group>"; };
+		48790A84302F6F19006179E9 /* EditCustomListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCustomListsView.swift; sourceTree = "<group>"; };
 		487F4BE22B282ED90002237C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		487F4BE32B282ED90002237C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		48801D202C3BEDC5000BEA3A /* CurrentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentView.swift; sourceTree = "<group>"; };
@@ -891,12 +895,8 @@
 		4809995C288B295F005AE427 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				4809995D288B2977005AE427 /* SettingsView.swift */,
-				4809995F288B29A9005AE427 /* SettingsViewModel.swift */,
-				48438E072A67AB2D0042BCD9 /* AppIconSelector.swift */,
-				48C501592ADA340F00E4243D /* TranslationCredits.swift */,
-				48824804300FB5DC00023331 /* ContributorsCredits.swift */,
-				48BB9E222ADBC08D00970D01 /* AccountSettingsView.swift */,
+				48790A7F302F6BC7006179E9 /* Views */,
+				48790A80302F6BCD006179E9 /* ViewModels */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1235,6 +1235,28 @@
 				48790A53302DB24E006179E9 /* MarkdownEditor.swift */,
 			);
 			path = Markdown;
+			sourceTree = "<group>";
+		};
+		48790A7F302F6BC7006179E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4809995D288B2977005AE427 /* SettingsView.swift */,
+				48790A84302F6F19006179E9 /* EditCustomListsView.swift */,
+				48BB9E222ADBC08D00970D01 /* AccountSettingsView.swift */,
+				48438E072A67AB2D0042BCD9 /* AppIconSelector.swift */,
+				48C501592ADA340F00E4243D /* TranslationCredits.swift */,
+				48824804300FB5DC00023331 /* ContributorsCredits.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48790A80302F6BCD006179E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4809995F288B29A9005AE427 /* SettingsViewModel.swift */,
+				48790A81302F6DAD006179E9 /* EditCustomListsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		488763D42977F6FA00402934 /* Stats */ = {
@@ -2519,6 +2541,7 @@
 				481AD502285207B1001779EE /* DateUtils.swift in Sources */,
 				48BCA59929672334005D3405 /* Genre.swift in Sources */,
 				4837455F2964192F00E81CA3 /* StudioDetailsViewModel.swift in Sources */,
+				48790A85302F6F19006179E9 /* EditCustomListsView.swift in Sources */,
 				48EE81362969DE1C0074482F /* CalendarViewModel.swift in Sources */,
 				48C816E42E9AC11E002BC128 /* ExpandedCurrentListView.swift in Sources */,
 				48DD404E2994FF6500FED7BF /* NotificationItemView.swift in Sources */,
@@ -2560,6 +2583,7 @@
 				48E58E462A85BA2600EF0CA2 /* UserOptions.swift in Sources */,
 				4820F6A42ADE8BB600A4F465 /* DiscoverView.swift in Sources */,
 				48218AF42BC5287000A03421 /* CharacterRepository.swift in Sources */,
+				48790A82302F6DB1006179E9 /* EditCustomListsViewModel.swift in Sources */,
 				488C267928537B5F0005EE15 /* StringUtils.swift in Sources */,
 				48E58E3A2A85B5F700EF0CA2 /* MediaSource.swift in Sources */,
 				48C816DE2E9A618E002BC128 /* ListHeader.swift in Sources */,
