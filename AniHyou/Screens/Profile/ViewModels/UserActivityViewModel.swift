@@ -13,12 +13,15 @@ import AniListAPI
 
     var userId: Int?
     var currentPage: Int32 = 1
-    var hasNextPage = false
+    var hasNextPage = true
+    var isLoading = false
 
     var activities = [UserActivityQuery.Data.Page.Activity]()
 
     func getUserActivity() async {
-        guard let userId else { return }
+        guard let userId, !isLoading, hasNextPage else { return }
+        isLoading = true
+        defer { isLoading = false }
         if let result = await UserRepository.getUserActivity(userId: Int32(userId), page: currentPage) {
             activities.append(contentsOf: result.data)
             currentPage = result.page

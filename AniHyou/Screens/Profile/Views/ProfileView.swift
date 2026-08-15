@@ -77,19 +77,18 @@ struct ProfileView: View {
 
     var content: some View {
         ScrollViewWithOffset(onScroll: { hasScrolled = $0.y < 0 }) {
-            TopBannerView(
-                imageUrl: viewModel.userInfo?.bannerImage,
-                placeholderHexColor: viewModel.userInfo?.options?.profileColor?.profileHexColor,
-                height: bannerHeight
-            )
-            .ignoresSafeArea(edges: .top)
-            
-            mainProfileInfo
-                .padding(.top, -50)
-            
-            profileBio
-            
             LazyVStack(alignment: .leading, pinnedViews: [.sectionHeaders]) {
+                TopBannerView(
+                    imageUrl: viewModel.userInfo?.bannerImage,
+                    placeholderHexColor: viewModel.userInfo?.options?.profileColor?.profileHexColor,
+                    height: bannerHeight
+                )
+                .ignoresSafeArea(edges: .top)
+                
+                mainProfileInfo
+                    .padding(.top, -50)
+                
+                profileBio
                     
                 otherProfileInfo
             }//:LazyVStack
@@ -195,17 +194,15 @@ struct ProfileView: View {
     var otherProfileInfo: some View {
         if let userInfo = viewModel.userInfo {
             Section {
-                VStack(alignment: .leading) {
-                    switch infoType {
-                    case .activity:
-                        UserActivityView(userId: userInfo.id, isMyProfile: isMyProfile)
-                    case .stats:
-                        UserStatsHostView(userId: userInfo.id)
-                    case .favorites:
-                        UserFavoritesView(userId: userInfo.id)
-                    case .social:
-                        UserSocialView(userId: userInfo.id)
-                    }
+                switch infoType {
+                case .activity:
+                    UserActivityView(userId: userInfo.id, isMyProfile: isMyProfile)
+                case .stats:
+                    UserStatsHostView(userId: userInfo.id)
+                case .favorites:
+                    UserFavoritesView(userId: userInfo.id)
+                case .social:
+                    UserSocialView(userId: userInfo.id)
                 }
             } header: {
                 VStack(spacing: 0) {
