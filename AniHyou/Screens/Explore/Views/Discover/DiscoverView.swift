@@ -12,6 +12,7 @@ import AniListAPI
 struct DiscoverView: View {
     
     @State private var viewModel = DiscoverViewModel()
+    @AppStorage(AIRING_ON_MY_LIST_KEY) private var airingOnMyList = false
     @AppStorage(BLUR_ADULT_MEDIA) private var blurAdultMedia = true
 
     var body: some View {
@@ -35,6 +36,13 @@ struct DiscoverView: View {
                     .padding(.bottom)
                 
                 airingNext
+                    .task {
+                        if airingOnMyList {
+                            await viewModel.getAiringOnMyList()
+                        } else {
+                            await viewModel.getAiringAnimes()
+                        }
+                    }
                 
                 mediaSeason(
                     season: viewModel.nowAnimeSeason,
@@ -280,8 +288,6 @@ struct DiscoverView: View {
 
     @ViewBuilder
     var airingNext: some View {
-        @AppStorage(AIRING_ON_MY_LIST_KEY) var airingOnMyList = false
-
         ListHeader(key: "Airing Next", destination: { CalendarAnimeView() })
         
         ZStack {
@@ -344,13 +350,6 @@ struct DiscoverView: View {
             }//:HScrollView
             .scrollTargetBehavior(.viewAligned(limitBehavior: .always))
             .frame(height: 145)
-            .task {
-                if airingOnMyList {
-                    await viewModel.getAiringOnMyList()
-                } else {
-                    await viewModel.getAiringAnimes()
-                }
-            }
         }//:ZStack
         Divider()
     }
