@@ -15,6 +15,7 @@ struct HomeView: View {
     @State private var activityViewModel = ActivityFeedViewModel()
     @State private var currentViewModel = CurrentViewModel()
     @State private var showNotificationsSheet = false
+    @State private var showingPublishActivity = false
     @State private var mediaId = 0
     @State private var showingMediaDetails = false
     @State private var hasScrolled = false
@@ -67,6 +68,9 @@ struct HomeView: View {
             }
             .toolbar {
                 toolbarContent
+                if currentTab == .activity {
+                    activityToolbarContent
+                }
             }
             .refreshable {
                 if currentTab == .activity {
@@ -74,6 +78,9 @@ struct HomeView: View {
                 } else if currentTab == .current && isLoggedIn {
                     await currentViewModel.fetchLists(refresh: true)
                 }
+            }
+            .sheet(isPresented: $showingPublishActivity) {
+                PublishActivityView()
             }
             .addOnOpenMediaUrl($showingMediaDetails, $mediaId)
         }
@@ -96,6 +103,50 @@ struct HomeView: View {
                     "Notifications",
                     systemImage: viewModel.unreadNotificationsCount > 0 ? "bell.badge" : "bell"
                 )
+            }
+            .tint(nil)
+        }
+    }
+    
+    @ToolbarContentBuilder
+    var activityToolbarContent: some ToolbarContent {
+        ToolbarItem {
+            Menu {
+                Menu("Activity type") {
+                    Picker("Activity type", selection: $activityViewModel.type) {
+                        ForEach(ActivityFeedType.allCases, id: \.self) { type in
+                            Text(type.lozalizedName).tag(type)
+                        }
+                    }
+                    .onChange(of: activityViewModel.type) {
+                        Task {
+                            await activityViewModel.refresh()
+                        }
+                    }
+                }
+                Menu("Feed type") {
+                    Picker("Feed type", selection: $activityViewModel.isFollowing) {
+                        Text("Following").tag(true)
+                        Text("Global").tag(false)
+                    }
+                    .onChange(of: activityViewModel.isFollowing) {
+                        Task {
+                            await activityViewModel.refresh()
+                        }
+                    }
+                }
+            } label: {
+                Image(systemName: "line.3.horizontal.decrease")
+            }
+            .tint(nil)
+        }
+        if #available(iOS 26.0, *) {
+            ToolbarSpacer(placement: .automatic)
+        }
+        
+        ToolbarItem {
+            Button(action: { showingPublishActivity = true }) {
+                Label("Publish", systemImage: "square.and.pencil")
             }
             .tint(nil)
         }
