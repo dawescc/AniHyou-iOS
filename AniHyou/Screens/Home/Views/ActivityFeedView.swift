@@ -16,23 +16,23 @@ struct ActivityFeedView: View {
     @State private var showingPublishActivity = false
     
     var body: some View {
-        VStack {
-            ForEach(viewModel.activities, id: \.self) {
-                if let textActivity = $0.asTextActivity?.fragments.textActivityFragment {
-                    TextActivityItemView(
-                        activity: textActivity,
-                        isMine: textActivity.userId == userId
-                    )
-                    Divider()
-                } else if let listActivity = $0.asListActivity?.fragments.listActivityFragment {
-                    ListActivityItemView(
-                        activity: listActivity,
-                        blurCover: blurAdultMedia && listActivity.media?.isAdult == true,
-                        isMine: listActivity.userId == userId
-                    )
-                    Divider()
-                }
+        ForEach(viewModel.activities, id: \.self) {
+            if let textActivity = $0.asTextActivity?.fragments.textActivityFragment {
+                TextActivityItemView(
+                    activity: textActivity,
+                    isMine: textActivity.userId == userId
+                )
+                Divider()
+            } else if let listActivity = $0.asListActivity?.fragments.listActivityFragment {
+                ListActivityItemView(
+                    activity: listActivity,
+                    blurCover: blurAdultMedia && listActivity.media?.isAdult == true,
+                    isMine: listActivity.userId == userId
+                )
+                Divider()
             }
+        }
+        VStack {
             if viewModel.hasNextPage || viewModel.isLoading {
                 HorizontalProgressView()
                     .padding()

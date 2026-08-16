@@ -12,8 +12,12 @@ import SwiftUI
 @Observable class HomeViewModel {
     
     var unreadNotificationsCount = 0
+    var isLoadingNotifications = false
     
     func getUnreadNotificationsCount() async {
+        guard !isLoadingNotifications else { return }
+        isLoadingNotifications = true
+        defer { isLoadingNotifications = false }
         unreadNotificationsCount = await UserRepository.getUnreadNotificationsCount() ?? 0
     }
 }
