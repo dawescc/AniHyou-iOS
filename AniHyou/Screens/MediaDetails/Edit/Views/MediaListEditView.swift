@@ -98,7 +98,7 @@ struct MediaListEditView: View {
                 Section {
                     TextField("Notes", text: $notes, axis: .vertical)
                         .lineLimit(5)
-                    Button(viewModel.existingReview == nil ? "Write a Review" : "Edit Review") {
+                    Button("Write a Review") {
                         showWriteReview = true
                     }
                 }

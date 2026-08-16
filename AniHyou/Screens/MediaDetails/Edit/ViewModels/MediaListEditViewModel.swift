@@ -12,7 +12,6 @@ import AniListAPI
 @Observable class MediaListEditViewModel {
 
     var entry: BasicMediaListEntry?
-    var existingReview: UserMediaReviewQuery.Data.Review?
 
     var isLoading = false
 
