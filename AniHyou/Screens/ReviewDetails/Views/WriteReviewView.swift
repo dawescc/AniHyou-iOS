@@ -10,7 +10,6 @@ struct WriteReviewView: View {
     @Environment(\.dismiss) private var dismiss
 
     let mediaId: Int
-    var existingReview: UserMediaReviewQuery.Data.Review?
 
     @State private var viewModel = WriteReviewViewModel()
     @State private var showDeleteDialog = false
@@ -69,7 +68,7 @@ struct WriteReviewView: View {
                     Toggle("Private", isOn: $viewModel.isPrivate)
                 }
 
-                if let id = existingReview?.id {
+                if let id = viewModel.existingReview?.id {
                     Button("Delete Review", role: .destructive) {
                         showDeleteDialog = true
                     }
@@ -82,7 +81,7 @@ struct WriteReviewView: View {
                     }
                 }
             }
-            .navigationTitle(existingReview == nil ? "Write Review" : "Edit Review")
+            .navigationTitle(viewModel.existingReview == nil ? "Write Review" : "Edit Review")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -96,11 +95,11 @@ struct WriteReviewView: View {
                     }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    if viewModel.isSaving {
+                    if viewModel.isLoading {
                         ProgressView()
                     } else {
                         let action: () -> Void = {
-                            Task { await viewModel.save(id: existingReview?.id, mediaId: mediaId) }
+                            Task { await viewModel.save(mediaId: mediaId) }
                         }
                         if #available(iOS 26, *) {
                             Button(action: action) {
@@ -125,13 +124,8 @@ struct WriteReviewView: View {
             .onChange(of: viewModel.deletedSuccessfully) {
                 if viewModel.deletedSuccessfully { dismiss() }
             }
-            .onAppear {
-                if let review = existingReview {
-                    viewModel.summary = review.summary ?? ""
-                    viewModel.body = review.body ?? ""
-                    viewModel.score = review.score ?? 0
-                    viewModel.isPrivate = review.private ?? false
-                }
+            .task {
+                await viewModel.fetchExistingReview(mediaId: mediaId)
             }
         }
     }

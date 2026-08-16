@@ -4,11 +4,14 @@
 //
 
 import Foundation
+import AniListAPI
 
 @MainActor
 @Observable class WriteReviewViewModel {
 
-    var isSaving = false
+    var existingReview: UserMediaReviewQuery.Data.Review?
+    
+    var isLoading = false
     var saveError = false
     var savedSuccessfully = false
     var deletedSuccessfully = false
@@ -28,24 +31,40 @@ import Foundation
             && summary.count <= Self.maxSummaryLength
             && score > 0
     }
-
-    func delete(id: Int) async {
-        isSaving = true
-        deletedSuccessfully = await ReviewRepository.deleteReview(id: id.toInt32())
-        isSaving = false
+    
+    func fetchExistingReview(mediaId: Int) async {
+        isLoading = true
+        let userId = LoginRepository.authUserId()
+        if let result = await ReviewRepository.getUserReview(
+            mediaId: mediaId.toInt32(),
+            userId: userId.toInt32()
+        ) {
+            existingReview = result
+            summary = result.summary ?? ""
+            body = result.body ?? ""
+            score = result.score ?? 0
+            isPrivate = result.private ?? false
+        }
+        isLoading = false
     }
 
-    func save(id: Int?, mediaId: Int) async {
-        isSaving = true
+    func delete(id: Int) async {
+        isLoading = true
+        deletedSuccessfully = await ReviewRepository.deleteReview(id: id.toInt32())
+        isLoading = false
+    }
+
+    func save(mediaId: Int) async {
+        isLoading = true
         let success = await ReviewRepository.saveReview(
-            id: id.map { $0.toInt32() },
+            id: existingReview?.id.toInt32(),
             mediaId: mediaId.toInt32(),
             body: body,
             summary: summary,
             score: score.toInt32(),
             isPrivate: isPrivate
         )
-        isSaving = false
+        isLoading = false
         if success {
             savedSuccessfully = true
         } else {
