@@ -40,46 +40,54 @@ struct MediaDetailsMainInfo: View {
                     .padding(.bottom, 1)
                     .textSelection(.enabled)
 
-                Text(viewModel.mediaDetails?.format?.value?.localizedName ?? "Unknown")
-                    .font(.subheadline)
-                    .foregroundStyle(.gray)
-
-                Spacer()
-
-                HStack {
-                    // MARK: Status button
-                    Button {
-                        if isLoggedIn {
-                            showingEditSheet = true
-                        } else {
-                            showingNotLoggedAlert = true
+                VStack(alignment: .leading, spacing: 8) {
+                    if let mediaFormat = viewModel.mediaDetails?.format?.value {
+                        Label(mediaFormat.localizedName, systemImage: mediaFormat.systemImage)
+                    } else {
+                        Text("Unknown")
+                    }
+                    
+                    durationTextView
+                    
+                    if let mediaStatus = viewModel.mediaDetails?.status?.value,
+                       let mediaType = viewModel.mediaDetails?.type?.value {
+                        Label(mediaStatus.localizedName, systemImage: mediaType.statusSystemImage)
+                    }
+                }
+                .font(.subheadline)
+                .foregroundStyle(.gray)
+                
+                Button {
+                    if isLoggedIn {
+                        showingEditSheet = true
+                    } else {
+                        showingNotLoggedAlert = true
+                    }
+                } label: {
+                    if let status = viewModel.listEntry?.status?.value {
+                        Label(status.localizedName, systemImage: status.systemImage)
+                    } else {
+                        Label("Add to List", systemImage: "plus")
+                    }
+                }
+                .font(.system(size: 17, weight: .bold))
+                .buttonStyleGlassProminentCompat()
+                .padding(.top, 4)
+                .alert("Please login to use this feature", isPresented: $showingNotLoggedAlert) {
+                    Button("OK", role: .cancel) { }
+                }
+                .sheet(isPresented: $showingEditSheet) {
+                    MediaListEditView(
+                        mediaDetails: viewModel.mediaDetails!.fragments.basicMediaDetails,
+                        mediaList: viewModel.listEntry,
+                        onSave: { updatedEntry in
+                            await viewModel.onEntryUpdated(updatedEntry: updatedEntry)
+                        },
+                        onDelete: {
+                            await viewModel.onEntryDeleted()
                         }
-                    } label: {
-                        if viewModel.isNewEntry {
-                            Label("Add to List", systemImage: "plus")
-                                .font(.system(size: 17, weight: .bold))
-                                .textCase(.uppercase)
-                        } else {
-                            Label(viewModel.listEntry?.status?.value?.localizedName ?? "",
-                                  systemImage: "square.and.pencil"
-                            )
-                            .font(.system(size: 17, weight: .bold))
-                            .textCase(.uppercase)
-                        }
-                    }//:Button
-                    .buttonStyleGlassProminentCompat()
-                    .alert("Please login to use this feature", isPresented: $showingNotLoggedAlert) {
-                        Button("OK", role: .cancel) { }
-                    }
-                    if isPhone {
-                        Spacer()
-                    }
-                    ShareLink(item: viewModel.mediaShareLink ?? "") {
-                        Label("Share", systemImage: "square.and.arrow.up")
-                    }
-                    .padding(.horizontal)
-                    .labelStyle(.iconOnly)
-                }//:HStack
+                    )
+                }
             }//:VStack
             .padding(.leading, 12)
             .padding(.trailing, 8)
@@ -89,17 +97,31 @@ struct MediaDetailsMainInfo: View {
         .sheet(isPresented: $showingCoverSheet) {
             FullCoverView(imageUrl: viewModel.mediaDetails?.coverImage?.extraLarge)
         }
-        .sheet(isPresented: $showingEditSheet) {
-            MediaListEditView(
-                mediaDetails: viewModel.mediaDetails!.fragments.basicMediaDetails,
-                mediaList: viewModel.listEntry,
-                onSave: { updatedEntry in
-                    await viewModel.onEntryUpdated(updatedEntry: updatedEntry)
-                },
-                onDelete: {
-                    await viewModel.onEntryDeleted()
-                }
-            )
+    }
+    
+    @ViewBuilder
+    var durationTextView: some View {
+        if viewModel.mediaDetails?.type?.value == .manga {
+            if viewModel.mediaDetails?.format?.value == .novel,
+                let volumes = viewModel.mediaDetails?.volumes {
+                Label("^[\(volumes) volume](inflect: true)", systemImage: "bookmark")
+            } else if let chapters = viewModel.mediaDetails?.chapters {
+                Label("^[\(chapters) chapter](inflect: true)", systemImage: "bookmark")
+            } else {
+                Text("Unknown")
+            }
+        } else if let episodes = viewModel.mediaDetails?.episodes {
+            if let duration = viewModel.mediaDetails?.duration, episodes <= 1 {
+                let durationText = TimeInterval(duration * 60)
+                    .formatted(units: [.hour, .minute], unitsStyle: .abbreviated)
+                Label(durationText ?? "Unknown", systemImage: "timer")
+            } else if episodes > 0 {
+                Label("^[\(episodes) episode](inflect: true)", systemImage: "timer")
+            } else {
+                Text("Unknown")
+            }
+        } else {
+            Text("Unknown")
         }
     }
 }

@@ -72,4 +72,29 @@ extension MediaFormat {
             Color("Score70")
         }
     }
+    
+    var systemImage: String {
+        switch self {
+        case .tv:
+            "tv"
+        case .tvShort:
+            "tv.circle"
+        case .movie:
+            "film"
+        case .special:
+            "play.diamond"
+        case .ova:
+            "play.square"
+        case .ona:
+            "play.square"
+        case .music:
+            "music.note"
+        case .manga:
+            "book"
+        case .novel:
+            "book.pages"
+        case .oneShot:
+            "book.circle"
+        }
+    }
 }

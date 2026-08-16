@@ -73,6 +73,12 @@ struct MediaDetailsView: View {
                     }
                 }
             }
+            ToolbarItem(placement: .topBarTrailing) {
+                ShareLink(item: viewModel.mediaShareLink ?? "") {
+                    Label("Share", systemImage: "square.and.arrow.up")
+                }
+                .tint(nil)
+            }
         }
         .onChange(of: viewModel.mediaDetails) {
             DispatchQueue.main.async {

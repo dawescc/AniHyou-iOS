@@ -68,13 +68,15 @@ struct MediaGeneralInfoView: View {
             )
         }
         
-        if viewModel.isAnime {
-            HInfoView(name: "Episodes", value: viewModel.mediaDetails?.episodes?.formatted())
-        } else {
+        if viewModel.mediaDetails?.format?.value == .novel {
             HInfoView(name: "Chapters", value: viewModel.mediaDetails?.chapters?.formatted())
+        } else if !viewModel.isAnime {
             HInfoView(name: "Volumes", value: viewModel.mediaDetails?.volumes?.formatted())
         }
-        if let duration = viewModel.mediaDetails?.duration {
+
+        if let episodes = viewModel.mediaDetails?.episodes, episodes <= 1 {
+            HInfoView(name: "Episodes", value: episodes.formatted())
+        } else if let duration = viewModel.mediaDetails?.duration {
             let seconds = TimeInterval(duration * 60)
             HInfoView(name: "Duration", value: seconds.formatted(units: [.hour, .minute], unitsStyle: .abbreviated))
         }

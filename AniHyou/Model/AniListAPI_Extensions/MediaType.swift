@@ -17,6 +17,15 @@ extension MediaType {
             "Manga"
         }
     }
+    
+    var statusSystemImage: String {
+        switch self {
+        case .anime:
+            "antenna.radiowaves.left.and.right"
+        case .manga:
+            "pencil.line"
+        }
+    }
 
     var mediaUrl: String {
         switch self {
