@@ -26,7 +26,7 @@ struct CalendarAnimeView: View {
                             }
                         }
                         .pickerStyle(.segmented)
-                        .padding()
+                        .padding(3)
                         .pinnedViewBackground(hasScrolled: hasScrolled)
                         if #unavailable(iOS 26) {
                             Divider()
