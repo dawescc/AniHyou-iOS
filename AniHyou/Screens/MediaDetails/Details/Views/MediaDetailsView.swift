@@ -18,68 +18,30 @@ struct MediaDetailsView: View {
     @State private var attributedSynopsis = NSAttributedString(string: "Loading")
 
     @Environment(\.dismiss) private var dismiss
+    @AppStorage(LOGGED_IN_KEY) private var isLoggedIn: Bool = false
     @AppStorage(HIDE_SCORES) private var hideScores = false
     @State private var hiddenScores: Bool = true
     @State private var hasScrolled = false
+    @State private var showingEditSheet = false
+    @State private var showingNotLoggedAlert = false
 
     var body: some View {
-        Group {
+        ZStack(alignment: .bottomTrailing) {
             if viewModel.mediaDetails != nil {
                 detailsView
+                
+                statusFab
+                    .padding()
             } else {
                 ProgressView()
                     .task {
                         await viewModel.getMediaDetails(mediaId: mediaId)
                     }
             }
-        }//:Group
+        }
         .navigationBarTitleDisplayMode(.inline) // fixes banner shuttering
         .navigationBarBackButtonHidden(!isiOS26)
-        .toolbar {
-            if #unavailable(iOS 26) {
-                ToolbarItem(placement: .topBarLeading) {
-                    ToolbarBackButton(scrolled: hasScrolled) {
-                        dismiss()
-                    }
-                }
-            }
-            ToolbarItem(placement: .topBarTrailing) {
-                if let details = viewModel.mediaDetails {
-                    if #available(iOS 26, *) {
-                        Button(action: {
-                            Task {
-                                await viewModel.toggleFavorite()
-                            }
-                        }) {
-                            let icon = if details.isFavourite {
-                                "heart.fill"
-                            } else {
-                                "heart"
-                            }
-                            Image(systemName: icon)
-                        }
-                        .tint(nil)
-                    } else {
-                        ToolbarIconButton(
-                            systemImage: "heart",
-                            inverted: details.isFavourite,
-                            scrolled: hasScrolled
-                        ) {
-                            Task {
-                                await viewModel.toggleFavorite()
-                            }
-                        }
-                        .font(.system(size: 24))
-                    }
-                }
-            }
-            ToolbarItem(placement: .topBarTrailing) {
-                ShareLink(item: viewModel.mediaShareLink ?? "") {
-                    Label("Share", systemImage: "square.and.arrow.up")
-                }
-                .tint(nil)
-            }
-        }
+        .toolbar { toolbarContent }
         .onChange(of: viewModel.mediaDetails) {
             DispatchQueue.main.async {
                 attributedSynopsis = viewModel.mediaDetails?.description?.htmlToAttributedString()
@@ -177,7 +139,7 @@ struct MediaDetailsView: View {
             }//:VStack
             .padding(.leading)
         }//:HScrollView
-        .padding(.top)
+        .padding(.top, 4)
     }//:mainStats
     
     @ViewBuilder
@@ -224,6 +186,88 @@ struct MediaDetailsView: View {
         }//:ZStack
         .frame(minHeight: 200)
     }//:moreInfo
+    
+    @ViewBuilder
+    var statusFab: some View {
+        Button {
+            if isLoggedIn {
+                showingEditSheet = true
+            } else {
+                showingNotLoggedAlert = true
+            }
+        } label: {
+            if let status = viewModel.listEntry?.status?.value {
+                Label(status.localizedName, systemImage: status.systemImage)
+            } else {
+                Label("Add to List", systemImage: "plus")
+            }
+        }
+        .controlSize(.large)
+        .font(.system(size: 17, weight: .bold))
+        .buttonStyleGlassProminentCompat()
+        .alert("Please login to use this feature", isPresented: $showingNotLoggedAlert) {
+            Button("OK", role: .cancel) { }
+        }
+        .sheet(isPresented: $showingEditSheet) {
+            MediaListEditView(
+                mediaDetails: viewModel.mediaDetails!.fragments.basicMediaDetails,
+                mediaList: viewModel.listEntry,
+                onSave: { updatedEntry in
+                    await viewModel.onEntryUpdated(updatedEntry: updatedEntry)
+                },
+                onDelete: {
+                    await viewModel.onEntryDeleted()
+                }
+            )
+        }
+    }
+    
+    @ToolbarContentBuilder
+    var toolbarContent: some ToolbarContent {
+        if #unavailable(iOS 26) {
+            ToolbarItem(placement: .topBarLeading) {
+                ToolbarBackButton(scrolled: hasScrolled) {
+                    dismiss()
+                }
+            }
+        }
+        ToolbarItem(placement: .topBarTrailing) {
+            if let details = viewModel.mediaDetails {
+                if #available(iOS 26, *) {
+                    Button(action: {
+                        Task {
+                            await viewModel.toggleFavorite()
+                        }
+                    }) {
+                        let icon = if details.isFavourite {
+                            "heart.fill"
+                        } else {
+                            "heart"
+                        }
+                        Image(systemName: icon)
+                    }
+                    .tint(nil)
+                } else {
+                    ToolbarIconButton(
+                        systemImage: "heart",
+                        inverted: details.isFavourite,
+                        scrolled: hasScrolled
+                    ) {
+                        Task {
+                            await viewModel.toggleFavorite()
+                        }
+                    }
+                    .font(.system(size: 24))
+                }
+            }
+        }
+        ToolbarItem(placement: .topBarTrailing) {
+            ShareLink(item: viewModel.mediaShareLink ?? "") {
+                Label("Share", systemImage: "square.and.arrow.up")
+            }
+            .tint(nil)
+        }
+    }
 }
 
 #Preview {

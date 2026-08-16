@@ -14,11 +14,9 @@ struct MediaDetailsMainInfo: View {
 
     let mediaId: Int
     var viewModel: MediaDetailsViewModel
-    @State private var showingEditSheet = false
+    
     @State private var showingCoverSheet = false
-    @State private var showingNotLoggedAlert = false
     @State private var showingPlayPopover = false
-    @AppStorage(LOGGED_IN_KEY) private var isLoggedIn: Bool = false
 
     var body: some View {
         HStack(alignment: .top) {
@@ -57,37 +55,6 @@ struct MediaDetailsMainInfo: View {
                 .font(.subheadline)
                 .foregroundStyle(.gray)
                 
-                Button {
-                    if isLoggedIn {
-                        showingEditSheet = true
-                    } else {
-                        showingNotLoggedAlert = true
-                    }
-                } label: {
-                    if let status = viewModel.listEntry?.status?.value {
-                        Label(status.localizedName, systemImage: status.systemImage)
-                    } else {
-                        Label("Add to List", systemImage: "plus")
-                    }
-                }
-                .font(.system(size: 17, weight: .bold))
-                .buttonStyleGlassProminentCompat()
-                .padding(.top, 4)
-                .alert("Please login to use this feature", isPresented: $showingNotLoggedAlert) {
-                    Button("OK", role: .cancel) { }
-                }
-                .sheet(isPresented: $showingEditSheet) {
-                    MediaListEditView(
-                        mediaDetails: viewModel.mediaDetails!.fragments.basicMediaDetails,
-                        mediaList: viewModel.listEntry,
-                        onSave: { updatedEntry in
-                            await viewModel.onEntryUpdated(updatedEntry: updatedEntry)
-                        },
-                        onDelete: {
-                            await viewModel.onEntryDeleted()
-                        }
-                    )
-                }
             }//:VStack
             .padding(.leading, 12)
             .padding(.trailing, 8)
