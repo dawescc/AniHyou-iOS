@@ -81,7 +81,7 @@ struct MediaDetailsView: View {
                     // MARK: - More info
                     moreInfo
                 }//:VStack
-                .padding(.bottom)
+                .padding(.bottom, 70)
             }//:VScrollView
             .ignoresSafeArea(edges: .top)
         }

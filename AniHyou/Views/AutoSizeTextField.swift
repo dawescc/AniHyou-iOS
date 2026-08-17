@@ -12,7 +12,7 @@ struct AutoSizeTextField<V>: View {
     @Binding var value: V
     let placeholder: String
     let trailingText: LocalizedStringKey
-    let minWidth: CGFloat = 0
+    let minWidth: CGFloat = 8
     let formatter: Formatter
     
     @State private var frame = CGRect.zero
@@ -39,7 +39,9 @@ struct AutoSizeTextField<V>: View {
         GeometryReader { (geometry) -> Color in
             let rect = geometry.frame(in: space)
             DispatchQueue.main.async {
-                binding.wrappedValue = rect
+                withAnimation {
+                    binding.wrappedValue = rect
+                }
             }
             return .clear
         }
