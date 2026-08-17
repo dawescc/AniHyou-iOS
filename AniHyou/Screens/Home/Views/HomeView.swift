@@ -58,8 +58,7 @@ struct HomeView: View {
                             .pickerStyle(.segmented)
                             .padding(3)
                             .pinnedViewBackground(hasScrolled: hasScrolled)
-                            .padding(.horizontal)
-                            if #unavailable(iOS 26) {
+                            if #unavailable(iOS 26), hasScrolled {
                                 Divider()
                             }
                         }

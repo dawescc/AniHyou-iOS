@@ -262,10 +262,20 @@ struct MediaDetailsView: View {
             }
         }
         ToolbarItem(placement: .topBarTrailing) {
-            ShareLink(item: viewModel.mediaShareLink ?? "") {
-                Label("Share", systemImage: "square.and.arrow.up")
+            if #available(iOS 26, *) {
+                ShareLink(item: viewModel.mediaShareLink ?? "") {
+                    Label("Share", systemImage: "square.and.arrow.up")
+                }
+                .tint(nil)
+            } else {
+                ShareLink(item: viewModel.mediaShareLink ?? "") {
+                    Image(systemName: "square.and.arrow.up.circle.fill")
+                }
+                .symbolRenderingMode(.palette)
+                .toolbarIconButtonForegroundStyle(scrolled: hasScrolled)
+                .environment(\.colorScheme, .dark)
+                .font(.system(size: 24))
             }
-            .tint(nil)
         }
     }
 }

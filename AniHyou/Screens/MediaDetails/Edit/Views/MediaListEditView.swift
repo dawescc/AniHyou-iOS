@@ -63,6 +63,7 @@ struct MediaListEditView: View {
                     Image(systemName: status.systemImage)
                         .foregroundStyle(.secondary)
                 }
+                .foregroundStyle(.primary)
                 .onChange(of: status) {
                     if status == .completed {
                         progress = mediaDetails?.maxEpOrCh ?? progress
@@ -104,6 +105,7 @@ struct MediaListEditView: View {
                             Image(systemName: "list.bullet")
                                 .foregroundStyle(.secondary)
                         }
+                        .foregroundStyle(.primary)
                     }
                 }
                 
@@ -114,6 +116,7 @@ struct MediaListEditView: View {
                         Image(systemName: "exclamationmark")
                             .foregroundStyle(.secondary)
                     }
+                    .foregroundStyle(.primary)
                 }
 
                 Section {
@@ -123,12 +126,14 @@ struct MediaListEditView: View {
                         Image(systemName: isHiddenFromStatusLists ? "eye.slash" : "eye")
                             .foregroundStyle(.secondary)
                     }
+                    .foregroundStyle(.primary)
                     Label {
                         Toggle("Private", isOn: $isPrivate)
                     } icon: {
                         Image(systemName: isPrivate ? "lock" : "lock.open")
                             .foregroundStyle(.secondary)
                     }
+                    .foregroundStyle(.primary)
                 }
 
                 Section {
@@ -139,6 +144,7 @@ struct MediaListEditView: View {
                         Image(systemName: "text.justify.left")
                             .foregroundStyle(.secondary)
                     }
+                    .foregroundStyle(.primary)
                     Button("Write a Review", systemImage: "pencil") {
                         showWriteReview = true
                     }
@@ -247,6 +253,7 @@ struct MediaListEditView: View {
                     Image(systemName: "star")
                         .foregroundStyle(.secondary)
                 }
+                .foregroundStyle(.primary)
             }
         }
     }
@@ -293,6 +300,7 @@ struct MediaListEditView: View {
                 Image(systemName: mediaDetails?.type == .anime ? "play.rectangle.on.rectangle" : "book.pages")
                     .foregroundStyle(.secondary)
             }
+            .foregroundStyle(.primary)
             .onChange(of: progress) {
                 if status == .planning || mediaList == nil {
                     onUpdatedFromPlanning()
@@ -343,6 +351,7 @@ struct MediaListEditView: View {
                     Image(systemName: "bookmark")
                         .foregroundStyle(.secondary)
                 }
+                .foregroundStyle(.primary)
                 .onChange(of: progressVolumes) {
                     if status == .planning || mediaList == nil {
                         onUpdatedFromPlanning()
@@ -388,6 +397,7 @@ struct MediaListEditView: View {
                 Image(systemName: "repeat")
                     .foregroundStyle(.secondary)
             }
+            .foregroundStyle(.primary)
         }
     }
     
@@ -464,6 +474,7 @@ struct MediaListEditView: View {
                     )
                     .keyboardType(.decimalPad)
                 }
+                .foregroundStyle(.primary)
             }
         }
     }

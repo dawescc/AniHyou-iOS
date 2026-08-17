@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-fileprivate extension View {
+extension View {
     @ViewBuilder
-    func toolbarIconButtonForegroundStyle(scrolled: Bool, inverted: Bool) -> some View {
+    func toolbarIconButtonForegroundStyle(scrolled: Bool, inverted: Bool = false) -> some View {
         if scrolled {
             if inverted {
                 self.foregroundStyle(.white, .tint)
             } else {
-                self.foregroundStyle(.tint, .ultraThinMaterial)
+                self.foregroundStyle(.tint, .clear)
             }
         } else {
             if inverted {

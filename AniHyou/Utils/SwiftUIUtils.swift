@@ -79,8 +79,10 @@ extension View {
         if #available(iOS 26, *) {
             self
                 .glassEffectCompat(isEnabled: hasScrolled)
+                .padding(.horizontal)
         } else {
             self
+                .padding(.horizontal)
                 .background(hasScrolled ? Material.bar.opacity(1.0) : Material.ultraThin.opacity(0.0))
         }
     }
