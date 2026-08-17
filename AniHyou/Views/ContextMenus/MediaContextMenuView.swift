@@ -75,24 +75,24 @@ struct MediaContextMenuView: View {
                         
                         Text(details.format?.value?.localizedName ?? "Unknown")
                             .font(.subheadline)
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.secondary)
                         
                         if let episodes = details.episodes {
                             Text("\(episodes) episodes")
                                 .font(.subheadline)
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.secondary)
                         }
                         
                         if let chapters = details.chapters {
                             Text("\(chapters) chapters")
                                 .font(.subheadline)
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.secondary)
                         }
                         
                         if let volumes = details.volumes {
                             Text("\(volumes) volumes")
                                 .font(.subheadline)
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.secondary)
                         }
                         
                         if let schedule = details.nextAiringEpisode {

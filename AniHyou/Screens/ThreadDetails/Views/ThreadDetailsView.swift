@@ -41,7 +41,7 @@ struct ThreadDetailsView: View {
                         let createdAt = Date(timeIntervalSince1970: Double(thread.createdAt))
                         Text(createdAt, style: .relative)
                             .font(.footnote)
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.secondary)
                             .padding(.leading)
                         
                         InlineText(markdown: thread.body?.formatMarkdown() ?? "")

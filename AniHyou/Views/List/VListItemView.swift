@@ -70,7 +70,7 @@ struct VListItemView: View {
                 }
             }
             .font(.footnote)
-            .foregroundStyle(.gray)
+            .foregroundStyle(.secondary)
         }
         .frame(minHeight: VListItemView.coverHeight + 54, alignment: .top)
     }

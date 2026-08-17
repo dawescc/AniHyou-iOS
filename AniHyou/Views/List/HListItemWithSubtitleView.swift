@@ -63,7 +63,7 @@ struct HListItemWithSubtitleView: View {
                     }
                 }
                 .font(.subheadline)
-                .foregroundStyle(.gray)
+                .foregroundStyle(.secondary)
                 .lineLimit(2)
                 .multilineTextAlignment(.leading)
                 if let meanScore {
@@ -75,11 +75,11 @@ struct HListItemWithSubtitleView: View {
                 if let subtitle2 {
                     Text(subtitle2)
                         .font(.footnote)
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.secondary)
                 } else if let subtitle2Text {
                     subtitle2Text
                         .font(.footnote)
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.secondary)
                 }
             }//:VStack
         }//:HStack

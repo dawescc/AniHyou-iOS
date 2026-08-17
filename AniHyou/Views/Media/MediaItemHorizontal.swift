@@ -48,7 +48,7 @@ struct MediaItemHorizontal: View {
                 Text(position.stringValue)
                     .font(.title3)
                     .bold()
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
                     .padding(.leading, 8)
                     .padding(.trailing, 8)
             } else {
@@ -89,7 +89,7 @@ struct MediaItemHorizontal: View {
             Text(mediaStatus?.localizedName ?? "")
         }
         .font(.subheadline)
-        .foregroundStyle(.gray)
+        .foregroundStyle(.secondary)
         .lineLimit(1)
         .multilineTextAlignment(.leading)
     }
@@ -120,7 +120,7 @@ struct MediaItemHorizontal: View {
             }
         }
         .font(.footnote)
-        .foregroundStyle(.gray)
+        .foregroundStyle(.secondary)
     }
     
     @ViewBuilder
@@ -129,7 +129,7 @@ struct MediaItemHorizontal: View {
             genres.joined(separator: ", ")
                 .maxLines(1)
                 .font(.footnote)
-                .foregroundStyle(.gray)
+                .foregroundStyle(.secondary)
         }
     }
 }

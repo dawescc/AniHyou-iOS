@@ -80,7 +80,7 @@ struct CharacterDetailsView: View {
                 }
                 .font(.subheadline)
                 .multilineTextAlignment(.center)
-                .foregroundStyle(.gray)
+                .foregroundStyle(.secondary)
 
                 HStack {
                     VStack(alignment: .leading) {

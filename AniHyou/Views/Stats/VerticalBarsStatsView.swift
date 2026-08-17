@@ -37,7 +37,7 @@ struct VerticalBarsStatsView: View {
                             }
                         }
                         .font(.footnote)
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.secondary)
                     }
                 }
             }

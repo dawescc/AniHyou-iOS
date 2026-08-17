@@ -12,7 +12,7 @@ struct AiringText: View {
     let episode: Int
     let airingAt: Int
     var episodesBehind: Int = 0
-    var behindColor: Color = .gray
+    var behindColor: Color = .secondary
     var airingColor: Color = .accentColor
     
     var body: some View {

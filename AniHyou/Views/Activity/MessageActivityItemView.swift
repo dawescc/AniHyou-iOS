@@ -62,7 +62,7 @@ struct MessageActivityItemView: View {
                 let createdAt = Date(timeIntervalSince1970: Double(activity.createdAt))
                 Text("\(createdAt, format: .relative(presentation: .numeric))")
                     .font(.footnote)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
                     .padding(.bottom, 1)
             }//:HStack
             

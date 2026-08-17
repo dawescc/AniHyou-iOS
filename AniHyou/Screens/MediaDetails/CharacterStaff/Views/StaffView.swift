@@ -33,7 +33,7 @@ struct StaffView: View {
                     }
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
                     .font(.footnote)
                 }
                 Spacer()

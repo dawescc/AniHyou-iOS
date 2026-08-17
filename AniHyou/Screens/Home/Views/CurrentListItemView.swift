@@ -40,7 +40,7 @@ struct CurrentListItemView: View {
                         airingAt: schedule.airingAt,
                         episodesBehind: (schedule.episode - 1) - (entry?.progress ?? 0),
                         behindColor: .accentColor,
-                        airingColor: .gray
+                        airingColor: .secondary
                     )
                     .font(.subheadline)
                 }

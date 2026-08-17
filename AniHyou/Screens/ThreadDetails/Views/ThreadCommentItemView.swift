@@ -50,7 +50,7 @@ struct ThreadCommentItemView: View {
                 let createdAt = Date(timeIntervalSince1970: Double(comment?.createdAt ?? 0))
                 Text("\(createdAt, format: .relative(presentation: .numeric))")
                     .font(.footnote)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
                     .padding(.bottom, 1)
             }
 

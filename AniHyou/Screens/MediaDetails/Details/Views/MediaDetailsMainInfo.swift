@@ -53,7 +53,7 @@ struct MediaDetailsMainInfo: View {
                     }
                 }
                 .font(.subheadline)
-                .foregroundStyle(.gray)
+                .foregroundStyle(.secondary)
                 
             }//:VStack
             .padding(.leading, 12)

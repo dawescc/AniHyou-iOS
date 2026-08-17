@@ -28,7 +28,7 @@ struct CharacterView: View {
                             .foregroundStyle(.primary)
                         Text(character?.role?.value?.localizedName ?? "")
                             .font(.footnote)
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.secondary)
                     }
                 }//:HStack
             }
@@ -50,7 +50,7 @@ struct CharacterView: View {
                                 .foregroundStyle(.primary)
                             Text(selectedLanguage)
                                 .font(.footnote)
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.secondary)
                         }
                         CircleImageView(imageUrl: voiceActor.image?.medium, size: imageSize)
                     }//:HStack

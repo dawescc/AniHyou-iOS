@@ -70,7 +70,7 @@ struct StaffDetailsView: View {
                 Text(staff.name?.native ?? "")
                     .font(.subheadline)
                     .multilineTextAlignment(.center)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
 
                 HStack {
                     VStack(alignment: .leading) {

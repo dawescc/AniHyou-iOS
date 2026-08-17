@@ -245,9 +245,9 @@ struct SearchView: View {
                 Spacer()
                 Text(viewModel.selectedGenresTagsJoined)
                     .lineLimit(1)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
                 Image(systemName: "chevron.right")
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
             }//:HStack
         })//:Button
         .sheet(isPresented: $isGenreSheetPresented) {
@@ -275,9 +275,9 @@ struct SearchView: View {
                 Spacer()
                 viewModel.selectedMediaFormat.map { $0.localizedName }.joined()
                     .lineLimit(1)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
                 Image(systemName: "chevron.right")
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
             }//:HStack
         })//:Button
         .sheet(isPresented: $isMediaFormatSheetPresented) {
@@ -309,9 +309,9 @@ struct SearchView: View {
                 Spacer()
                 viewModel.selectedMediaStatus.map { $0.localizedName }.joined()
                     .lineLimit(1)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
                 Image(systemName: "chevron.right")
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
             }//:HStack
         })//:Button
         .sheet(isPresented: $isMediaStatusPresented) {
@@ -343,9 +343,9 @@ struct SearchView: View {
                 Spacer()
                 viewModel.sources.map { $0.localizedName }.joined()
                     .lineLimit(1)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
                 Image(systemName: "chevron.right")
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.secondary)
             }
         })
         .sheet(isPresented: $isMediaSourcesPresented) {

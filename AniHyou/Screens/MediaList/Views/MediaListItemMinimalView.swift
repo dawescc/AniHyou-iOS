@@ -27,7 +27,7 @@ struct MediaListItemMinimalView: View {
                     airingAt: schedule.airingAt,
                     episodesBehind: (schedule.episode - 1) - (entry?.progress ?? 0),
                     behindColor: .accentColor,
-                    airingColor: .gray
+                    airingColor: .secondary
                 )
                 .font(.subheadline)
             }
@@ -35,7 +35,7 @@ struct MediaListItemMinimalView: View {
             HStack {
                 if showStatus, let status = entry?.status?.value {
                     Image(systemName: status.systemImage)
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.secondary)
                 }
                 if let maxProgress = details?.maxProgress(
                     isVolume: entry?.isVolumeProgress == true
@@ -47,11 +47,11 @@ struct MediaListItemMinimalView: View {
                 Spacer()
                 if let repeatCount = entry?.repeat, repeatCount > 0 {
                     Image(systemName: "arrow.clockwise")
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.secondary)
                 }
                 if entry?.notes?.isEmpty == false {
                     Image(systemName: "note.text")
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.secondary)
                 }
                 if let priority = entry?.priority, priority > 0 || showLowPriority {
                     Image(systemName: priority.priorityIcon)

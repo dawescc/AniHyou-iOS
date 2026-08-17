@@ -47,7 +47,7 @@ struct MediaListItemStandardView: View {
                         airingAt: schedule.airingAt,
                         episodesBehind: (schedule.episode - 1) - (entry?.progress ?? 0),
                         behindColor: .accentColor,
-                        airingColor: .gray
+                        airingColor: .secondary
                     )
                     .font(.subheadline)
                     .padding(.bottom, 1)
@@ -65,11 +65,11 @@ struct MediaListItemStandardView: View {
                     Spacer()
                     if let repeatCount = entry?.repeat, repeatCount > 0 {
                         Image(systemName: "arrow.clockwise")
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.secondary)
                     }
                     if entry?.notes?.isEmpty == false {
                         Image(systemName: "note.text")
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.secondary)
                     }
                     if let priority = entry?.priority, priority > 0 || showLowPriority {
                         Image(systemName: priority.priorityIcon)

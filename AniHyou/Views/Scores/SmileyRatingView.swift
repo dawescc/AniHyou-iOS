@@ -11,7 +11,7 @@ struct SmileyRatingView: View {
 
     @Binding var rating: Double?
     var size: CGFloat = 30
-    var offColor = Color.gray
+    var offColor = Color.secondary
 
     var body: some View {
         HStack {

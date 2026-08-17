@@ -63,7 +63,7 @@ struct MediaListScoreIndicator: View {
                         .foregroundStyle(color)
                 } else {
                     Text(UNKNOWN_CHAR)
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.secondary)
                         .font(.footnote)
                 }
             }
