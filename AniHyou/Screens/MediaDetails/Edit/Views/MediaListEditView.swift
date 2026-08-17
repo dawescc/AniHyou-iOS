@@ -52,10 +52,16 @@ struct MediaListEditView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Picker("Status", selection: $status) {
-                    ForEach(MediaListStatus.allCases, id: \.self) { status in
-                        Label(status.localizedName, systemImage: status.systemImage)
+                Label {
+                    Picker("Status", selection: $status) {
+                        ForEach(MediaListStatus.allCases, id: \.self) { status in
+                            Label(status.localizedName, systemImage: status.systemImage)
+                        }
                     }
+                    .labelStyle(.titleOnly)
+                } icon: {
+                    Image(systemName: status.systemImage)
+                        .foregroundStyle(.secondary)
                 }
                 .onChange(of: status) {
                     if status == .completed {
@@ -76,29 +82,64 @@ struct MediaListEditView: View {
                 progressSection
 
                 Section("Dates") {
-                    DatePickerToggleView(text: "Start Date", selection: $startDate, isDateSet: $isStartDateSet)
-                    DatePickerToggleView(text: "Finish Date", selection: $finishDate, isDateSet: $isFinishDateSet)
+                    DatePickerToggleView(
+                        text: "Start Date",
+                        systemImage: "calendar",
+                        selection: $startDate,
+                        isDateSet: $isStartDateSet
+                    )
+                    DatePickerToggleView(
+                        text: "Finish Date",
+                        systemImage: "calendar.badge.checkmark",
+                        selection: $finishDate,
+                        isDateSet: $isFinishDateSet
+                    )
                 }
                 
                 Section {
-                    NavigationLink("Custom lists") {
-                        MediaCustomListsView(customLists: $customLists)
+                    NavigationLink(destination: MediaCustomListsView(customLists: $customLists)) {
+                        Label {
+                            Text("Custom lists")
+                        } icon: {
+                            Image(systemName: "list.bullet")
+                                .foregroundStyle(.secondary)
+                        }
                     }
                 }
                 
                 Section("Priority") {
-                    Stepper(priority.priorityName, value: $priority, in: 0...2)
+                    Label {
+                        Stepper(priority.priorityName, value: $priority, in: 0...2)
+                    } icon: {
+                        Image(systemName: "exclamationmark")
+                            .foregroundStyle(.secondary)
+                    }
                 }
 
                 Section {
-                    Toggle("Hide from status lists", isOn: $isHiddenFromStatusLists)
-                    Toggle("Private", isOn: $isPrivate)
+                    Label {
+                        Toggle("Hide from status lists", isOn: $isHiddenFromStatusLists)
+                    } icon: {
+                        Image(systemName: isHiddenFromStatusLists ? "eye.slash" : "eye")
+                            .foregroundStyle(.secondary)
+                    }
+                    Label {
+                        Toggle("Private", isOn: $isPrivate)
+                    } icon: {
+                        Image(systemName: isPrivate ? "lock" : "lock.open")
+                            .foregroundStyle(.secondary)
+                    }
                 }
 
                 Section {
-                    TextField("Notes", text: $notes, axis: .vertical)
-                        .lineLimit(5)
-                    Button("Write a Review") {
+                    Label {
+                        TextField("Notes", text: $notes, axis: .vertical)
+                            .lineLimit(5)
+                    } icon: {
+                        Image(systemName: "text.justify.left")
+                            .foregroundStyle(.secondary)
+                    }
+                    Button("Write a Review", systemImage: "pencil") {
                         showWriteReview = true
                     }
                 }
@@ -107,9 +148,13 @@ struct MediaListEditView: View {
                     advancedScoresView
                 }
 
-                Button("Delete", role: .destructive) {
+                Button(role: .destructive) {
                     showDeleteDialog = true
+                } label: {
+                    Label("Delete", systemImage: "trash")
+                        .foregroundStyle(.red)
                 }
+                .disabled(mediaList == nil)
                 .confirmationDialog("Delete this entry?", isPresented: $showDeleteDialog) {
                     Button("Delete", role: .destructive) {
                         Task {
@@ -119,8 +164,6 @@ struct MediaListEditView: View {
                 } message: {
                     Text("Delete this entry?")
                 }
-                .disabled(mediaList == nil)
-
             }//:Form
             .navigationTitle("Edit")
             .navigationBarTitleDisplayMode(.inline)
@@ -171,14 +214,8 @@ struct MediaListEditView: View {
                     Spacer()
                 }
             default:
-                HStack {
-                    TextField("0", value: $viewModel.score, formatter: decimalFormatter)
-                        .keyboardType(.decimalPad)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(width: textFieldWidth)
-
+                Label {
                     Stepper(
-                        "/\(viewModel.scoreHint)",
                         onIncrement: {
                             if (viewModel.score ?? 0) < viewModel.scoreMax {
                                 if viewModel.score == nil {
@@ -197,7 +234,18 @@ struct MediaListEditView: View {
                                 }
                             }
                         }
-                    )
+                    ) {
+                        AutoSizeTextField(
+                            value: $viewModel.score,
+                            placeholder: "0",
+                            trailingText: "/\(viewModel.scoreHint)",
+                            formatter: decimalFormatter
+                        )
+                        .keyboardType(.decimalPad)
+                    }
+                } icon: {
+                    Image(systemName: "star")
+                        .foregroundStyle(.secondary)
                 }
             }
         }
@@ -206,18 +254,8 @@ struct MediaListEditView: View {
     @ViewBuilder
     private var progressSection: some View {
         Section("Progress") {
-            HStack {
-                TextField("0", value: $progress, formatter: NumberFormatter())
-                    .keyboardType(.numberPad)
-                    .textFieldStyle(.roundedBorder)
-                    .frame(width: textFieldWidth)
-                    .onChange(of: progress) {
-                        if let max = mediaDetails?.maxEpOrCh, (progress ?? 0) > max {
-                            progress = max
-                        }
-                    }
+            Label {
                 Stepper(
-                    mediaDetails?.type == .anime ? "Episodes" : "Chapters",
                     onIncrement: {
                         let maxValue = mediaDetails?.maxEpOrCh
                         if maxValue == nil || (progress ?? 0) < maxValue! {
@@ -237,7 +275,23 @@ struct MediaListEditView: View {
                             }
                         }
                     }
-                )
+                ) {
+                    AutoSizeTextField(
+                        value: $progress,
+                        placeholder: "0",
+                        trailingText: mediaDetails?.type == .anime ? "Episodes" : "Chapters",
+                        formatter: NumberFormatter()
+                    )
+                    .keyboardType(.numberPad)
+                }
+                .onChange(of: progress) {
+                    if let max = mediaDetails?.maxEpOrCh, (progress ?? 0) > max {
+                        progress = max
+                    }
+                }
+            } icon: {
+                Image(systemName: mediaDetails?.type == .anime ? "play.rectangle.on.rectangle" : "book.pages")
+                    .foregroundStyle(.secondary)
             }
             .onChange(of: progress) {
                 if status == .planning || mediaList == nil {
@@ -250,18 +304,8 @@ struct MediaListEditView: View {
                 }
             }
             if mediaDetails?.type == .manga {
-                HStack {
-                    TextField("0", value: $progressVolumes, formatter: NumberFormatter())
-                        .keyboardType(.numberPad)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(width: textFieldWidth)
-                        .onChange(of: progressVolumes) {
-                            if let max = mediaDetails?.volumes, (progressVolumes ?? 0) > max {
-                                progressVolumes = max
-                            }
-                        }
+                Label {
                     Stepper(
-                        "Volumes",
                         onIncrement: {
                             let maxValue = mediaDetails?.volumes
                             if maxValue == nil || (progressVolumes ?? 0) < maxValue! {
@@ -281,7 +325,23 @@ struct MediaListEditView: View {
                                 }
                             }
                         }
-                    )
+                    ) {
+                        AutoSizeTextField(
+                            value: $progressVolumes,
+                            placeholder: "0",
+                            trailingText: "Volumes",
+                            formatter: NumberFormatter()
+                        )
+                        .keyboardType(.numberPad)
+                    }
+                    .onChange(of: progressVolumes) {
+                        if let max = mediaDetails?.volumes, (progressVolumes ?? 0) > max {
+                            progressVolumes = max
+                        }
+                    }
+                } icon: {
+                    Image(systemName: "bookmark")
+                        .foregroundStyle(.secondary)
                 }
                 .onChange(of: progressVolumes) {
                     if status == .planning || mediaList == nil {
@@ -297,13 +357,8 @@ struct MediaListEditView: View {
         }
 
         Section {
-            HStack {
-                TextField("0", value: $repeatCount, formatter: NumberFormatter())
-                    .keyboardType(.numberPad)
-                    .textFieldStyle(.roundedBorder)
-                    .frame(width: textFieldWidth)
+            Label {
                 Stepper(
-                    "Repeat Count",
                     onIncrement: {
                         if repeatCount == nil {
                             repeatCount = 1
@@ -320,7 +375,18 @@ struct MediaListEditView: View {
                             }
                         }
                     }
-                )
+                ) {
+                    AutoSizeTextField(
+                        value: $repeatCount,
+                        placeholder: "0",
+                        trailingText: "Repeat Count",
+                        formatter: NumberFormatter()
+                    )
+                    .keyboardType(.numberPad)
+                }
+            } icon: {
+                Image(systemName: "repeat")
+                    .foregroundStyle(.secondary)
             }
         }
     }
@@ -380,26 +446,24 @@ struct MediaListEditView: View {
     @ViewBuilder
     private var advancedScoresView: some View {
         ForEach(advancedScores.keys.sorted(), id: \.self) { name in
-            Section {
+            Section(name) {
                 let value = Binding(
                     get: { advancedScores[name] ?? 0 },
                     set: { advancedScores[name] = $0 }
                 )
-                
-                HStack {
-                    TextField("", value: value, formatter: decimalFormatter)
-                        .keyboardType(.decimalPad)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(width: textFieldWidth)
-                    
-                    Stepper("/\(viewModel.scoreHint)",
-                            value: value,
-                            in: 0...viewModel.scoreMax,
-                            step: scoreSteps
+                Stepper(
+                    value: value,
+                    in: 0...viewModel.scoreMax,
+                    step: scoreSteps
+                ) {
+                    AutoSizeTextField(
+                        value: value,
+                        placeholder: "0",
+                        trailingText: "/\(viewModel.scoreHint)",
+                        formatter: decimalFormatter
                     )
+                    .keyboardType(.decimalPad)
                 }
-            } header: {
-                Text(name)
             }
         }
     }
@@ -456,10 +520,12 @@ struct MediaListEditView: View {
         if let customListsDict = self.mediaList?.customListsDict {
             self.customLists = customListsDict
         } else { // new entry, use custom list from settings
-            UserDefaults.standard.stringArray(
-                forKey: mediaDetails!.type!.value!.customListsKey
-            )?.forEach { name in
-                self.customLists[name] = false
+            if let customListsKey = mediaDetails?.type?.value?.customListsKey {
+                UserDefaults.standard.stringArray(
+                    forKey: customListsKey
+                )?.forEach { name in
+                    self.customLists[name] = false
+                }
             }
         }
         self.priority = self.mediaList?.priority ?? 0

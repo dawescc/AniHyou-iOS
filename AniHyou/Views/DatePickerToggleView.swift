@@ -10,32 +10,38 @@ import SwiftUI
 struct DatePickerToggleView: View {
 
     let text: LocalizedStringKey
-    let selection: Binding<Date>
-    let isDateSet: Binding<Bool>
+    let systemImage: String
+    @Binding var selection: Date
+    @Binding var isDateSet: Bool
     @State private var showDatePicker = false
 
     var body: some View {
         VStack {
-            Toggle(isOn: isDateSet) {
-                VStack(alignment: .leading) {
-                    Text(text)
-                    if isDateSet.wrappedValue {
-                        Text("\(selection.wrappedValue.formatted(date: .abbreviated, time: .omitted))")
-                            .font(.footnote)
-                            .foregroundStyle(.tint)
-                    }
+            Button {
+                if isDateSet {
+                    showDatePicker.toggle()
                 }
-                .onTapGesture {
-                    if isDateSet.wrappedValue {
-                        showDatePicker.toggle()
+            } label: {
+                Label {
+                    Toggle(isOn: $isDateSet) {
+                        Text(text)
+                        if isDateSet {
+                            Text("\(selection.formatted(date: .abbreviated, time: .omitted))")
+                                .font(.footnote)
+                                .foregroundStyle(.tint)
+                        }
                     }
+                } icon: {
+                    Image(systemName: systemImage)
+                        .foregroundStyle(.secondary)
                 }
             }
-            .onChange(of: isDateSet.wrappedValue) {
-                showDatePicker = isDateSet.wrappedValue
+            .foregroundStyle(.primary)
+            .onChange(of: isDateSet) {
+                showDatePicker = isDateSet
             }
             if showDatePicker {
-                DatePicker("Start Date", selection: selection, displayedComponents: [.date])
+                DatePicker("Start Date", selection: $selection, displayedComponents: [.date])
                     .datePickerStyle(.graphical)
             }
         }
@@ -43,5 +49,10 @@ struct DatePickerToggleView: View {
 }
 
 #Preview {
-    DatePickerToggleView(text: "Start Date", selection: .constant(Date()), isDateSet: .constant(true))
+    DatePickerToggleView(
+        text: "Start Date",
+        systemImage: "calendar",
+        selection: .constant(Date()),
+        isDateSet: .constant(true)
+    )
 }

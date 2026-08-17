@@ -175,6 +175,7 @@
 		488C26912853A10D0005EE15 /* NotLoggedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C26902853A10D0005EE15 /* NotLoggedView.swift */; };
 		488FCDB42C64C63C00D8B47D /* NumberUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7ABEE2BB4214A0047998F /* NumberUtils.swift */; };
 		488FCDB52C64C63C00D8B47D /* NumberUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B7ABEE2BB4214A0047998F /* NumberUtils.swift */; };
+		48921337303287AA0001752B /* AutoSizeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48921336303287A10001752B /* AutoSizeTextField.swift */; };
 		4892AB7D2A52E6CE004F07C9 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4892AB7C2A52E6CE004F07C9 /* ColorUtils.swift */; };
 		4892AB7E2A52E6CE004F07C9 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4892AB7C2A52E6CE004F07C9 /* ColorUtils.swift */; };
 		4892AB7F2A52E718004F07C9 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4892AB7C2A52E6CE004F07C9 /* ColorUtils.swift */; };
@@ -597,6 +598,7 @@
 		488C268B28539E240005EE15 /* TokenAddingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenAddingInterceptor.swift; sourceTree = "<group>"; };
 		488C268E28539F320005EE15 /* NetworkInterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterceptorProvider.swift; sourceTree = "<group>"; };
 		488C26902853A10D0005EE15 /* NotLoggedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLoggedView.swift; sourceTree = "<group>"; };
+		48921336303287A10001752B /* AutoSizeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizeTextField.swift; sourceTree = "<group>"; };
 		4892AB7C2A52E6CE004F07C9 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		4892DDE92A2DD768009AFB63 /* NotificationCount.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = NotificationCount.graphql; sourceTree = "<group>"; };
 		4892DDED2A2DE0B8009AFB63 /* DiscoverMediaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMediaListView.swift; sourceTree = "<group>"; };
@@ -1021,6 +1023,7 @@
 				4832B02D285F38DC00E79D27 /* TopBannerView.swift */,
 				48B7ABF22BB445080047998F /* StretchyHeader.swift */,
 				4832B035285F9E1900E79D27 /* ExpandableTextView.swift */,
+				48921336303287A10001752B /* AutoSizeTextField.swift */,
 				4815DFAB2A2ED49F00352A9B /* ExpandableRichText.swift */,
 				481A6B0828637C1D00AB9C89 /* DatePickerToggleView.swift */,
 				481AD4FD2851F677001779EE /* CoverPlaceholderView.swift */,
@@ -2570,6 +2573,7 @@
 				4820F6B62ADEAF1100A4F465 /* ListActivity.swift in Sources */,
 				482E40722CC784D200601803 /* StaffRole.swift in Sources */,
 				48801D212C3BEDC5000BEA3A /* CurrentView.swift in Sources */,
+				48921337303287AA0001752B /* AutoSizeTextField.swift in Sources */,
 				48B7AC272BB59FB70047998F /* StudiosStatsView.swift in Sources */,
 				4820F6BA2ADF9B3800A4F465 /* LikeRepository.swift in Sources */,
 				488C268F28539F320005EE15 /* NetworkInterceptorProvider.swift in Sources */,
