@@ -4,11 +4,11 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.axiel7.AniHyou</string>
+		<string>group.cc.dawes.AniHyou</string>
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.axiel7.AniHyou</string>
+		<string>$(AppIdentifierPrefix)cc.dawes.AniHyou</string>
 	</array>
 </dict>
 </plist>
