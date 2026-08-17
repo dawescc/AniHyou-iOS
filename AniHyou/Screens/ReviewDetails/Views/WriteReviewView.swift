@@ -51,26 +51,42 @@ struct WriteReviewView: View {
                 }
 
                 Section("Score") {
-                    HStack {
-                        TextField("0", value: $viewModel.score, formatter: NumberFormatter())
-                            .keyboardType(.numberPad)
-                            .textFieldStyle(.roundedBorder)
-                            .frame(width: textFieldWidth)
+                    Label {
                         Stepper(
-                            "/100",
                             value: $viewModel.score,
                             in: 0...100
-                        )
+                        ) {
+                            AutoSizeTextField(
+                                value: $viewModel.score,
+                                placeholder: "0",
+                                trailingText: "/100",
+                                formatter: NumberFormatter()
+                            )
+                            .keyboardType(.numberPad)
+                        }
+                    } icon: {
+                        Image(systemName: "star")
+                            .foregroundStyle(.secondary)
                     }
+                    .foregroundStyle(.primary)
                 }
 
                 Section {
-                    Toggle("Private", isOn: $viewModel.isPrivate)
+                    Label {
+                        Toggle("Private", isOn: $viewModel.isPrivate)
+                    } icon: {
+                        Image(systemName: viewModel.isPrivate ? "lock" : "lock.open")
+                            .foregroundStyle(.secondary)
+                    }
+                    .foregroundStyle(.primary)
                 }
 
                 if let id = viewModel.existingReview?.id {
-                    Button("Delete Review", role: .destructive) {
+                    Button(role: .destructive) {
                         showDeleteDialog = true
+                    } label: {
+                        Label("Delete Review", systemImage: "trash")
+                            .foregroundStyle(.red)
                     }
                     .confirmationDialog("Delete this review?", isPresented: $showDeleteDialog) {
                         Button("Delete", role: .destructive) {
